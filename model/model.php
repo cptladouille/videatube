@@ -11,3 +11,8 @@ function connectBdd()
             die('Erreur : ' . $e->getMessage());
     }
 }
+
+function getRecentVideo()
+{
+    
+}
