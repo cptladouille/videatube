@@ -1,12 +1,5 @@
--- phpMyAdmin SQL Dump
--- version 4.8.4
--- https://www.phpmyadmin.net/
+﻿-- 
 --
--- Hôte : 127.0.0.1
--- Généré le :  mar. 18 déc. 2018 à 16:55
--- Version du serveur :  10.1.37-MariaDB
--- Version de PHP :  7.3.0
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
@@ -31,7 +24,8 @@ SET time_zone = "+00:00";
 CREATE TABLE `commentary` (
   `id` int(11) NOT NULL,
   `content` text NOT NULL,
-  `id_video` int(11) NOT NULL
+  `id_video` int(11) NOT NULL,
+  `id_user` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -42,7 +36,7 @@ CREATE TABLE `commentary` (
 
 CREATE TABLE `purchase` (
   `id` int(11) NOT NULL,
-  `date_sub` date NOT NULL,
+  `date_purchase` date NOT NULL,
   `id_video` int(11) NOT NULL,
   `id_user` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -125,6 +119,7 @@ CREATE TABLE `video` (
 --
 
 CREATE TABLE `videotheme` (
+  `id` int(11) NOT NULL,
   `id_video` int(11) NOT NULL,
   `id_theme` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -138,7 +133,8 @@ CREATE TABLE `videotheme` (
 --
 ALTER TABLE `commentary`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_id_video_commentary` (`id_video`) USING BTREE;
+  ADD KEY `fk_id_video_commentary` (`id_video`) USING BTREE,
+  ADD KEY `fk_id_user_commentary` (`id_user`);
 
 --
 -- Index pour la table `purchase`
@@ -184,7 +180,8 @@ ALTER TABLE `video`
 -- Index pour la table `videotheme`
 --
 ALTER TABLE `videotheme`
-  ADD PRIMARY KEY (`id_video`,`id_theme`),
+  ADD PRIMARY KEY (`id`,`id_video`,`id_theme`),
+  ADD KEY `fk_id_video_videotheme` (`id_video`) USING BTREE,
   ADD KEY `fk_id_theme_videotheme` (`id_theme`) USING BTREE;
 
 --
@@ -241,7 +238,8 @@ ALTER TABLE `video`
 -- Contraintes pour la table `commentary`
 --
 ALTER TABLE `commentary`
-  ADD CONSTRAINT `fk_id_video` FOREIGN KEY (`id_video`) REFERENCES `video` (`id`);
+  ADD CONSTRAINT `fk_id_user_commentary` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`),
+  ADD CONSTRAINT `fk_id_video_commentary` FOREIGN KEY (`id_video`) REFERENCES `video` (`id`);
 
 --
 -- Contraintes pour la table `purchase`
@@ -262,9 +260,7 @@ ALTER TABLE `subscription`
 --
 ALTER TABLE `videotheme`
   ADD CONSTRAINT `fk_id_video_videotheme` FOREIGN KEY (`id_video`) REFERENCES `video` (`id`),
-  ADD CONSTRAINT `fk_video_videotheme` FOREIGN KEY (`id_video`) REFERENCES `video` (`id`),
-  ADD CONSTRAINT `videotheme_ibfk_1` FOREIGN KEY (`id_video`) REFERENCES `video` (`id`),
-  ADD CONSTRAINT `videotheme_ibfk_2` FOREIGN KEY (`id_theme`) REFERENCES `theme` (`id`);
+  ADD CONSTRAINT `fk_id_theme_videotheme` FOREIGN KEY (`id_theme`) REFERENCES `theme` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
