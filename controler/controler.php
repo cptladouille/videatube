@@ -1,5 +1,6 @@
 <?php session_start(); 
 
+
 $root = str_replace('\\', '/', dirname(__DIR__));
 
 require('model/model.php');
@@ -15,3 +16,4 @@ function getVideo(){
 function getSubscription(){
     require ('view/subscription.php');
 }
+

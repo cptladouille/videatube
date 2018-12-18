@@ -1,12 +1,14 @@
 <?php $title = 'VideaTube'; ?>
 
 <?php ob_start(); ?>
-
+<br>
+<br>
+<br>
 <h1>La meilleure plateforme de vidéastes</h1>
 <div>
 <p>Vidéos récentes :</p>
 
-    <?php
+   /* <?php
     while ($data = $posts->fetch())
     {
     ?>
@@ -24,8 +26,10 @@
     <?php
     }
     $posts->closeCursor();
-    ?>
+    ?>*/
 
 </div>
 
-<?php $content = ob_get_clean(); ?>
+<?php $content = ob_get_clean(); 
+
+?>

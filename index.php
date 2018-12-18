@@ -4,7 +4,7 @@ require_once ('controler/controler.php');
 
 require_once ('view/template.php');
 
-require_once ('view/indexView.php');
+
 
 if (isset($_GET['p'])){
     $p = $_GET['p']; 
