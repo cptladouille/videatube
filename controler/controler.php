@@ -17,3 +17,8 @@ function getSubscription(){
     require ('view/subscription.php');
 }
 
+
+function getConnexion(){
+
+    require ('view/connexion.php');
+}

@@ -1,4 +1,4 @@
-<?php
+Js<?php
 
 function connectBdd()
 {
@@ -12,7 +12,3 @@ function connectBdd()
     }
 }
 
-function getRecentVideo()
-{
-    
-}
