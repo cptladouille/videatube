@@ -3,16 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b4d80342-4073-4d16-b656-cc76257d1013" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controler/controler.php" beforeDir="false" afterPath="$PROJECT_DIR$/controler/controler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/commentaryClass.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/commentaryClass.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/model.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/purchaseClass.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/purchaseClass.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/subscriptionClass.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/subscriptionClass.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/themeClass.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/themeClass.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/typeSubClass.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/typeSubClass.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/userClass.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/userClass.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/videoClass.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/videoClass.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/template.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/videoThemeClass.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/videoThemeClass.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -62,11 +53,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="template.php" pinned="false" current-in-tab="false">
+          <file leaf-file-name="template.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/view/template.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="540">
-                  <caret line="43" column="69" selection-start-line="43" selection-start-column="69" selection-end-line="43" selection-end-column="69" />
+                <state relative-caret-position="546">
+                  <caret line="43" column="65" selection-start-line="43" selection-start-column="58" selection-end-line="43" selection-end-column="65" />
                 </state>
               </provider>
             </entry>
@@ -80,11 +71,20 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="typeSubClass.php" pinned="false" current-in-tab="true">
+          <file leaf-file-name="typeSubClass.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/model/typeSubClass.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="266">
-                  <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+                <state relative-caret-position="161">
+                  <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="videoThemeClass.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/model/videoThemeClass.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="360">
+                  <caret line="29" column="7" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
                 </state>
               </provider>
             </entry>
@@ -148,6 +148,7 @@
         <option value="$PROJECT_DIR$/model/userClass.php" />
         <option value="$PROJECT_DIR$/model/videoClass.php" />
         <option value="$PROJECT_DIR$/model/typeSubClass.php" />
+        <option value="$PROJECT_DIR$/model/videoThemeClass.php" />
       </list>
     </option>
   </component>
@@ -240,12 +241,12 @@
       <updated>1545085814289</updated>
       <workItem from="1545085817461" duration="248000" />
       <workItem from="1545123240827" duration="6432000" />
-      <workItem from="1545143291266" duration="3625000" />
+      <workItem from="1545143291266" duration="5970000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10305000" />
+    <option name="totallyTimeSpent" value="12650000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -460,29 +461,8 @@
     <entry file="file://$PROJECT_DIR$/model/model.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="6" selection-start-line="8" selection-end-line="8" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/indexView.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="7" selection-start-line="8" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/subscription.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="43" column="69" selection-start-line="43" selection-start-column="69" selection-end-line="43" selection-end-column="69" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model/commentaryClass.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -535,8 +515,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model/typeSubClass.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+        <state relative-caret-position="161">
+          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/videoThemeClass.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="29" column="7" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="6" selection-start-line="8" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/indexView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="7" selection-start-line="8" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="43" column="65" selection-start-line="43" selection-start-column="58" selection-end-line="43" selection-end-column="65" />
         </state>
       </provider>
     </entry>
