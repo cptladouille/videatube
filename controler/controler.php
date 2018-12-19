@@ -1,6 +1,4 @@
-<?php session_start(); 
-
-
+<?php
 $root = str_replace('\\', '/', dirname(__DIR__));
 
 require('model/model.php');
@@ -14,7 +12,8 @@ function getHome(){
 function getVideo(){
     require_once ('view/video.php');
 }
-function getTheme($theme){
+function getTheme($theme)
+{
     switch ($theme)
     {
         case 1:
@@ -33,7 +32,7 @@ function getTheme($theme){
             $datas = getATheme('animaux');
             break;
     }
-
+    $title = 'Thèmes';
     require_once ('view/theme.php');
 }
 

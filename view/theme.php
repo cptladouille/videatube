@@ -1,5 +1,4 @@
-<?php $title = 'Thèmes'; 
-ob_start(); ?>
+<?php ob_start(); ?>
 <div>
 
 <p>Thèmes populaires :</p>

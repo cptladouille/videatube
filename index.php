@@ -24,7 +24,7 @@
         elseif ($p == 'theme')
         {
             if(isset($_GET['theme']))
-            if ($theme == 'action')
+            if ($theme == 1)
             {
                 getTheme('action');
             }

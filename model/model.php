@@ -22,7 +22,8 @@ function getUser()
     return $data;
 }
 
-function getATheme($theme){
+function getATheme($theme)
+{
     
 }
 ?>
