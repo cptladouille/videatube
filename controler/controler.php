@@ -10,7 +10,7 @@ function getHome(){
 }
 
 function getVideo(){
-    require ('view/video.php');
+    require ('view/videoClass.php');
 }
 
 function getSubscription(){

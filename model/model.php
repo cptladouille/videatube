@@ -1,4 +1,4 @@
-Js<?php
+<?php
 
 function connectBdd()
 {

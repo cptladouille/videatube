@@ -40,6 +40,9 @@
                         <a class="dropdown-item" href="#">Action</a>
                         <a class="dropdown-item" href="#">Aventure</a>
                         <a class="dropdown-item" href="#">Cuisine</a>
+                        <a class="dropdown-item" href="#">Beauté</a>
+                        <a class="dropdown-item" href="#">Animaux</a>
+
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Tuto</a>
                     </div>
