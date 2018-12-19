@@ -4,7 +4,7 @@ $root = str_replace('\\', '/', dirname(__DIR__));
 require('model/model.php');
 
 function getHome(){
-    $data = getUser();
+    $data = getAllVideos();
     require_once ('view/home.php');
     
 }
@@ -17,7 +17,7 @@ function getTheme($theme)
     switch ($theme)
     {
         case 0:
-            $datas = 
+            $datas = getAllVideo();
             break;
         case 1:
             $datas = getVideosByTheme('action');
