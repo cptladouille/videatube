@@ -22,8 +22,19 @@ function getUser()
     return $data;
 }
 
-function getATheme($theme)
+function getTheme($theme)
 {
-    
+    $
+}
+
+function getVideosByTheme($theme)
+{
+    $bdd = connectBdd();
+    switch ($theme)
+    {
+        case 0:
+            $req = bdd->prepare('SELECT * FROM video WHERE ')
+            break;
+    }
 }
 ?>

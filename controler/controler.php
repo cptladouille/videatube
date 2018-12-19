@@ -16,20 +16,28 @@ function getTheme($theme)
 {
     switch ($theme)
     {
+        case 0:
+            $datas = 
+            break;
         case 1:
-            $datas = getATheme('action');
+            $datas = getVideosByTheme('action');
             break;
         case 2:
-            $datas = getATheme('aventure');
+            $datas = getVideosByTheme('aventure');
             break;
         case 3:
-            $datas = getATheme('cuisine');
+            $datas = getVideosByTheme('cuisine');
             break;
         case 4:
-            $datas = getATheme('beaute');
+            $datas = getVideosByTheme('beaute');
             break;
         case 5:
-            $datas = getATheme('animaux');
+            $datas = getVideosByTheme('animaux');
+            break;
+        case 6:
+            $datas = getVideosByTheme('tuto');
+            break;
+        default:
             break;
     }
     $title = 'Thèmes';

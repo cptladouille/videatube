@@ -42,6 +42,7 @@
                         <a class="dropdown-item" href="theme-cuisine">Cuisine</a>
                         <a class="dropdown-item" href="theme-beaute">Beauté</a>
                         <a class="dropdown-item" href="theme-animaux">Animaux</a>
+                        <a class="dropdown-item" href="theme-tuto">Tuto</a>
                     </div>
                 </li>
             </ul>

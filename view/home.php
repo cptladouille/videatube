@@ -5,7 +5,6 @@ ob_start(); ?>
 <br>
 <br>
 <br>
-<a><?echo( $data); ?></a>
 
 </div>
 
