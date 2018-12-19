@@ -1,0 +1,6 @@
+Options +FollowSymLinks
+RewriteEngine On
+
+RewriteRule ^home index.php
+RewriteRule ^subscription index.php?p=subscription [L]
+RewriteRule ^theme index.php?p=theme [L]

@@ -1,12 +1,10 @@
-<?php $title = 'VideaTube'; ?>
+<?php $title = 'Themes'; ?>
 
 <?php ob_start(); ?>
 
 <div>
-<br>
-<br>
-<br>
-<p>Vidéos récentes :</p>
+
+<p>Thèmes populaires :</p>
 
 </div>
 

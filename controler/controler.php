@@ -6,19 +6,24 @@ $root = str_replace('\\', '/', dirname(__DIR__));
 require('model/model.php');
 
 function getHome(){
-    require ('view/home.php');
+    echo(getUser());
+    require_once ('view/home.php');
+    
 }
 
 function getVideo(){
-    require ('view/videoClass.php');
+    require_once ('view/video.php');
+}
+function getTheme(){
+    require_once ('view/theme.php');
 }
 
 function getSubscription(){
-    require ('view/subscription.php');
+    require_once ('view/subscription.php');
 }
-
 
 function getConnexion(){
 
-    require ('view/connexion.php');
+    require_once ('view/connexion.php');
 }
+?>

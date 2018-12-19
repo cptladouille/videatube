@@ -24,27 +24,23 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav mr-auto"> 
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="index.php?p=videos"></a>
+                    <a class="nav-link" href="home">Home<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    <a class="nav-link dropdown-toggle" href="theme" id="navbarDropdown" role="button"
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Themes
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Aventure</a>
-                        <a class="dropdown-item" href="#">Cuisine</a>
-                        <a class="dropdown-item" href="#">Beauté</a>
-                        <a class="dropdown-item" href="#">Animaux</a>
-
+                        <a class="dropdown-item" href="theme">Voir tout les thèmes</a> 
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Tuto</a>
+                        <a class="dropdown-item" href="action_t">Action</a>
+                        <a class="dropdown-item" href="aventure_t">Aventure</a>
+                        <a class="dropdown-item" href="cuisine_t">Cuisine</a>
+                        <a class="dropdown-item" href="beaute_t">Beauté</a>
+                        <a class="dropdown-item" href="animaux_t">Animaux</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -62,7 +58,7 @@
 </head>
 
 <body>
-<? //= $content ?>
+<? = $content ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>

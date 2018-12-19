@@ -106,8 +106,7 @@ CREATE TABLE `user` (
 CREATE TABLE `video` (
   `id` int(11) NOT NULL,
   `title` varchar(255) NOT NULL,
-  `duration` int(11) NOT NULL,
-  `price` int(11) NOT NULL,
+  `price` decimal(11,2) NOT NULL,
   `link` varchar(255) NOT NULL,
   `date_upload` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
