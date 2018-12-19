@@ -33,4 +33,8 @@ function getUser()
     $data = $req->fetch();
     return $data;
 }
+
+function getUnThemeSTP($theme){
+    
+}
 ?>

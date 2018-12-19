@@ -23,7 +23,12 @@
         }
         elseif ($p == 'theme')
         {
-            getTheme();
+            if(isset($_GET['theme']))
+            if ($theme == 'action')
+            {
+                getTheme('action');
+            }
+            getTheme("");
         }
 
     }

@@ -14,7 +14,15 @@ function getHome(){
 function getVideo(){
     require_once ('view/video.php');
 }
-function getTheme(){
+function getTheme($theme){
+    switch ($theme)
+    {
+        case 'action':
+            $datas = getUnThemeSTP('action');
+        case 'cuisine':
+            $datas = getUnThemeSTP('cuisine');
+    }
+
     require_once ('view/theme.php');
 }
 

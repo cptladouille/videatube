@@ -36,21 +36,18 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="theme">Voir tout les thèmes</a> 
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="action_t">Action</a>
+                        <a class="dropdown-item" href="theme-action">Action</a>
                         <a class="dropdown-item" href="aventure_t">Aventure</a>
                         <a class="dropdown-item" href="cuisine_t">Cuisine</a>
                         <a class="dropdown-item" href="beaute_t">Beauté</a>
                         <a class="dropdown-item" href="animaux_t">Animaux</a>
                     </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Connexion</button>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" formaction='connexion'>Connexion</button>
             </form>
         </div>
     </nav>
