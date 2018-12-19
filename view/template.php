@@ -15,7 +15,7 @@
             crossorigin="anonymous"></script>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="home">
             <img src="./ressources/Logo_v_p.png" width="40" height="30" class="d-inline-block align-top" alt="">
             VideaTube
         </a>
@@ -30,7 +30,7 @@
                     <a class="nav-link" href="home">Home<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="theme" id="navbarDropdown" role="button"
+                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button"
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Themes
                     </a>
@@ -38,10 +38,10 @@
                         <a class="dropdown-item" href="theme">Voir tout les thèmes</a> 
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="theme-action">Action</a>
-                        <a class="dropdown-item" href="aventure_t">Aventure</a>
-                        <a class="dropdown-item" href="cuisine_t">Cuisine</a>
-                        <a class="dropdown-item" href="beaute_t">Beauté</a>
-                        <a class="dropdown-item" href="animaux_t">Animaux</a>
+                        <a class="dropdown-item" href="theme-aventure">Aventure</a>
+                        <a class="dropdown-item" href="theme-cuisine">Cuisine</a>
+                        <a class="dropdown-item" href="theme-beaute">Beauté</a>
+                        <a class="dropdown-item" href="theme-animaux">Animaux</a>
                     </div>
                 </li>
             </ul>
@@ -56,7 +56,7 @@
 </head>
 
 <body>
-<? $content ?>
+<?= $content; ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>

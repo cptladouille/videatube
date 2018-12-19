@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <div class="col-sm-12 container">
         <div class="formulaireTitle">
             <h1>CONNECTEZ VOUS !</h1>
@@ -22,3 +23,29 @@
                 </div>
         </div>
 </div>
+=======
+<?php $title = 'Connexion';
+ob_start(); ?>
+
+
+<h1>CONNECTEZ VOUS !</h1>
+<form method="post" action="action.php">
+
+
+    <label for="Login">Login :</label>
+    <input type="text" name="login" placeholder=" Choisissez un Login"/>
+    <br>
+    <br>
+
+    <label for="MotDePasse">Mot de Passe :</label>
+    <input type="password" name="mdp" placeholder="Choisissez un mdp"/>
+    <br>
+    <br>
+
+    <input type="submit" value="Se connecter" />
+
+</form>
+
+<?php $content = ob_get_clean();
+require_once ('view/template.php');?>
+>>>>>>> Stashed changes

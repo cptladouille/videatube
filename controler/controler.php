@@ -6,7 +6,7 @@ $root = str_replace('\\', '/', dirname(__DIR__));
 require('model/model.php');
 
 function getHome(){
-    echo(getUser());
+    $data = getUser();
     require_once ('view/home.php');
     
 }
@@ -17,10 +17,21 @@ function getVideo(){
 function getTheme($theme){
     switch ($theme)
     {
-        case 'action':
-            $datas = getUnThemeSTP('action');
-        case 'cuisine':
-            $datas = getUnThemeSTP('cuisine');
+        case 1:
+            $datas = getATheme('action');
+            break;
+        case 2:
+            $datas = getATheme('aventure');
+            break;
+        case 3:
+            $datas = getATheme('cuisine');
+            break;
+        case 4:
+            $datas = getATheme('beaute');
+            break;
+        case 5:
+            $datas = getATheme('animaux');
+            break;
     }
 
     require_once ('view/theme.php');

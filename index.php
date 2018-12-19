@@ -3,7 +3,7 @@
     
 
     require_once ('controler/controler.php');
-    require_once ('view/template.php');
+
 
 
     if (isset($_GET['p']))

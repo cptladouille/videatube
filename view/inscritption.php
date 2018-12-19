@@ -1,4 +1,5 @@
-
+<?php $title = 'Inscription';
+ob_start(); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -39,3 +40,5 @@
 </body>
 
 </html>
+<?php $content = ob_get_clean();
+require_once ('view/template.php');?>

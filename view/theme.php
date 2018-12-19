@@ -1,11 +1,9 @@
-<?php $title = 'Themes'; ?>
-
-<?php ob_start(); ?>
-
+<?php $title = 'Thèmes'; 
+ob_start(); ?>
 <div>
 
 <p>Thèmes populaires :</p>
 
 </div>
-
-<?php $content = ob_get_clean();?>
+<?php $content = ob_get_clean();
+require_once ('view/template.php');?>
