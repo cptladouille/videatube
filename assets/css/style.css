@@ -1,9 +1,21 @@
-.formulaireTitle{
-    text-align: center;
-    color: darkgrey;
+.formulaire h1{
+    color: #B40431;
 }
 .formulaireChamps{
+    text-align: center;
 
+}
+
+.formulaire{
+    text-align: center !important;
+
+    color: darkgrey;
+
+}
+
+.formulaire form{
+    width: 40% !important;
+    margin: 0 auto !important;
 }
 
 .video iframe{ 
@@ -17,4 +29,19 @@
 
 .locked{
     position: absolute;
+}
+
+.formulaireInput{
+    margin: 0 auto !important;
+    width: 40%;
+}
+
+.formulaire button{
+    color: whitesmoke;
+    background-color: #B40431;
+}
+
+div{
+    margin: 0 auto !important;
+    font-family:  "Lucida Console", Monaco, monospace
 }
