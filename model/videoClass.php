@@ -11,7 +11,6 @@ class videoClass
 
     var $id;
     var $title;
-    var $duration;
     var $price;
     var $link;
     var $date_upload;
@@ -20,16 +19,15 @@ class videoClass
      * videoClass constructor.
      * @param $id
      * @param $title
-     * @param $duration
+     * @param $duratio
      * @param $price
      * @param $link
      * @param $date_upload
      */
-    public function __construct($id, $title, $duration, $price, $link, $date_upload)
+    public function __construct($id, $title, $price, $link, $date_upload)
     {
         $this->id = $id;
         $this->title = $title;
-        $this->duration = $duration;
         $this->price = $price;
         $this->link = $link;
         $this->date_upload = $date_upload;
@@ -66,22 +64,6 @@ class videoClass
     public function setTitle($title)
     {
         $this->title = $title;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getDuration()
-    {
-        return $this->duration;
-    }
-
-    /**
-     * @param mixed $duration
-     */
-    public function setDuration($duration)
-    {
-        $this->duration = $duration;
     }
 
     /**

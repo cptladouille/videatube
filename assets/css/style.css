@@ -3,4 +3,18 @@
     color: darkgrey;
 }
 .formulaireChamps{
+
+}
+
+.video iframe{ 
+    width: 100%; 
+}
+
+.purchasable{
+    filter: blur(2px);
+    opacity: .5;
+}
+
+.locked{
+    position: absolute;
 }
