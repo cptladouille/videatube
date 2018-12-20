@@ -34,7 +34,8 @@ ob_start(); ?>
                     <iframe src=<?= $data[0]?> frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                     </object>
                     <div class = 'filterButtonBuy'>
-                        <button class= 'buttonBuy'>JTM</button>
+                        <p class = 'buttonBuy'></p>
+                        
                     </div>
                 </div>
                 <div class = 'col-lg-3 video'>

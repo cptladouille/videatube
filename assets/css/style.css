@@ -46,19 +46,22 @@ div{
     position: absolute;
     top: 0;
     left: 0;
-    filter: blur(2px);
-    background: red;
-    opacity: .5;
+    background-color: rgba(0, 0, 0,0.6);
     width: 100%; 
     height: 100%;
 }
 
 .buttonBuy{
+    color  : white;
+    background: rgb(16, 189, 16);
     position: absolute;
+    border: 2px;
     top: 40%;
-    left: 15%;
+    left: 10%;
+    
+    border-radius: 10px;
+    text-align: center;
     height: 150;
-    width: 150;
-    filter: none;
-    opacity: 1;
+    width: 70%;
+    
 }

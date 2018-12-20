@@ -1,5 +1,6 @@
 <?php
-
+require_once ('model/videoClass')
+require_once ('model/videoManager')
 function connectBdd()
 {
     try
@@ -27,14 +28,19 @@ function getAllVideos()
     $req = $bdd->prepare('SELECT * FROM video ORDER BY price');
     $req->execute();
     $i = 0;
-    $res = $req->fetchAll(PDO::FETCH_ASSOC);
+    $res = $req->fetchAll(PDO::FETCH_OBJ);
     foreach($res as $row)
     {
-        $data[$i] =  $row['link'];
+        $data[$i] =  getObj;
         $i++;
     }
 
     return $data;
+}
+
+function lol()
+{
+    $vM = new videoManager(connectBdd);
 }
 
 function getVideosByTheme($theme)
