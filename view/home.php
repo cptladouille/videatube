@@ -3,7 +3,8 @@ ob_start(); ?>
 <div class='container'>
 
     <div class = 'row'>
-        <div>Vidéos Récentes gratuites :
+        <div>Vidéos Récentes gratuites :    
+            <br>
             <div class='row'>
                 <div class = 'col-lg-3 video'>
                     <iframe src=<?= $data[0]?> frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -24,25 +25,27 @@ ob_start(); ?>
             </div>
         </div>
     </div>
-
-    <div class = 'row'></div>
+    <br>
 
     <div class = 'row'>
         <div>Vidéos Récentes monétisées :
             <div class='row'>
-                <div class = 'col-lg-3 video purchasable locked'>
-                    <iframe src=<?= $data[0]?> frameborder="0" allow="autoplay; encrypted-media" allowfullscreen z-index='1'></iframe>
-                    <button position = 'absolute' z-index = '2' height='100' width='200'></button>
+                <div class ='col-lg-3 video'>
+                    <iframe src=<?= $data[0]?> frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </object>
+                    <div class = 'filterButtonBuy'>
+                        <button class= 'buttonBuy'>JTM</button>
+                    </div>
                 </div>
-                <div class = 'col-lg-3 video purchasable locked'>
+                <div class = 'col-lg-3 video'>
                     <iframe src=<?= $data[1]?> frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                     </object>
                 </div>
-                <div class = 'col-lg-3 video purchasable locked'>
+                <div class = 'col-lg-3 video'>
                     <iframe src=<?= $data[2]?> frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                     </object>
                 </div>
-                <div class = 'col-lg-3 video purchasable locked'>
+                <div class = 'col-lg-3 video'>
                     <iframe src=<?= $data[3]?> frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                     </object>
                 </div>
