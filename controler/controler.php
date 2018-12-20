@@ -12,6 +12,7 @@ function getHome(){
 function getVideo(){
     require_once ('view/video.php');
 }
+
 function getTheme($theme)
 {
     switch ($theme)
@@ -51,5 +52,9 @@ function getSubscription(){
 function getConnexion(){
 
     require_once ('view/connexion.php');
+}
+
+function getInscription(){
+    require_once ('view/inscription.php');
 }
 ?>

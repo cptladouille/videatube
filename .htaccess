@@ -4,6 +4,7 @@ RewriteEngine On
 RewriteRule ^home index.php
 RewriteRule ^subscription index.php?p=subscription [L]
 RewriteRule ^connexion index.php?p=connexion [L]
+RewriteRule ^inscription index.php?p=inscription [L]
 RewriteRule ^theme index.php?p=theme [L]
 RewriteRule ^theme-action index.php?p=theme&theme=1 [L]
 RewriteRule ^theme-aventure index.php?p=theme&theme=2 [L]

@@ -21,6 +21,10 @@
         {
             getConnexion();
         }
+        elseif ($p == 'inscription')
+        {
+            getInscription();
+        }
         elseif ($p == 'theme')
         {
             if(isset($_GET['theme']))

@@ -22,6 +22,10 @@ ob_start(); ?>
                 <div>
                     <button type="button" class="btn" value="Se connecter">Se connecter</button>
                 </div>
+                <br>
+                <div>
+                    <button type="button" class="btn" formaction='inscription'>S'inscrire</button>
+                </div>
             </form>
 
         </div>
