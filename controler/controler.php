@@ -1,12 +1,18 @@
 <?php
 $root = str_replace('\\', '/', dirname(__DIR__));
 
-require('model/model.php');
+require_once('model/videoManager.php');
 
 function getHome(){
-    $data = getAllVideos();
+    $vM = new videoManager();
+    $data = $vM->getListOfLinks();
     require_once ('view/home.php');
     
+}
+
+function showRecentVideos()
+{
+
 }
 
 function getVideo(){

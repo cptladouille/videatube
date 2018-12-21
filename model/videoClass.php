@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: chloethonin
@@ -23,13 +24,9 @@ class videoClass
      * @param $link
      * @param $date_upload
      */
-    public function __construct($id, $title, $price, $link, $date_upload)
+    public function __construct(array $donnees)
     {
-        $this->id = $id;
-        $this->title = $title;
-        $this->price = $price;
-        $this->link = $link;
-        $this->date_upload = $date_upload;
+        $this->hydrate($donnees);
     }
 
     public function hydrate(array $donnees)

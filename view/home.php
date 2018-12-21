@@ -1,7 +1,6 @@
 <?php $title = 'Acceuil';
 ob_start(); ?>
 <div class='container'>
-
     <div class = 'row'>
         <div>Vidéos Récentes gratuites :    
             <br>

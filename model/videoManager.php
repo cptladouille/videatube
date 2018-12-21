@@ -1,11 +1,13 @@
 <?php
-    class videoManager
+require_once('model/model.php');
+require_once('model/videoClass.php');
+    class videoManager extends Model
     {
         private $_db; // Instance de PDO.
 
-        public function __construct($db)
+        public function __construct()
         {
-            $this->setDb($db);
+            $this->setDb($this->connectBDD());
 
         }
 
@@ -35,9 +37,9 @@
             // Exécute une requête de type SELECT avec une clause WHERE, et retourne un objet Video.
             $id = (int) $id;
 
-            $q = $this->_db->query('SELECT id, title, price, link, date_upload FROM video WHERE id = '.$id);
+            $q = $this->_db->query('SELECT * FROM video WHERE id = '.$id);
             $donnees = $q->fetch(PDO::FETCH_ASSOC);
-
+                
             return new videoClass($donnees);
         }
 
@@ -50,7 +52,7 @@
 
             while ($donnees = $q->fetch(PDO::FETCH_ASSOC))
             {
-            $videos[] = new videoClass($donnees);
+                $videos[] = new videoClass($donnees);
             }
 
             return $videos;
@@ -58,11 +60,12 @@
 
         public function getListOfLinks()
         {
-           $videos = this->getList();
+           $videos = $this->getList();
            foreach($videos as $video)
            {
-               $video->getLink
+               $links[] = $video->getLink();
            }
+           return $links;
         }
 
         public function update(videoClass $video)
