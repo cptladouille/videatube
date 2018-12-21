@@ -17,18 +17,26 @@ div{
 
 .formulaire h1{
     color: #B40431;
+    margin: 20px ;
 }
 .formulaireChamps{
     text-align: center;
-
 }
 
 .formulaire{
     text-align: center !important;
-
     color: darkgrey;
-
+    margin: 0 auto !important;
+    border-radius: 20px;
+    border-color:#B40431;
+    background: antiquewhite;
+    border-style: dotted;
 }
+
+.formulaireInscription{
+    text-align: center !important;
+}
+
 
 .formulaire form{
     width: 40% !important;
@@ -51,6 +59,7 @@ div{
     height: 100%;
 }
 
+<<<<<<< HEAD
 .buttonBuy{
     color  : white;
     background: rgb(16, 189, 16);
@@ -64,4 +73,58 @@ div{
     height: 150;
     width: 70%;
     
+=======
+.formulaireInput{
+    margin: 0 auto !important;
+
+    width: 100%;
+}
+
+
+
+.formulaire div{
+    margin: 0 auto !important;
+
+}
+
+.firstColonne{
+    text-align: center;
+
+}
+
+.secondColonne{
+    text-align: center;
+
+}
+
+.formulaireInput2 {
+    margin: 0 auto !important;
+    width: 50%;
+}
+
+
+.lab{
+    text-align: left !important;
+}
+
+
+
+.BoutonForm{
+    color: whitesmoke;
+    background-color: #B40431;
+    text-align: left;
+    margin-bottom: 20px;
+
+
+}
+.BoutonFormInscription{
+    color: whitesmoke;
+    background-color: #B40431;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.container{
+    font-family:  "Lucida Console", Monaco, monospace
+>>>>>>> master
 }

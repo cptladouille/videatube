@@ -2,7 +2,7 @@
 ob_start(); ?>
 <div class="container">
     <div class="row">
-        <div class="col-lg-12 formulaire">
+        <div class="formulaire">
             <h1>CONNECTEZ VOUS !</h1>
             <form method="post" action="action.php">
                 <div class="formulaireChamps">
@@ -20,17 +20,20 @@ ob_start(); ?>
                 </div>
                 <br>
                 <div>
-                    <button type="button" class="btn" value="Se connecter">Se connecter</button>
+                    <button type="button" class="btn BoutonForm" value="Se connecter">Se connecter</button>
                 </div>
                 <br>
                 <div>
+<<<<<<< HEAD
                     <button type="submit" class="btn" formaction='inscription'>S'inscrire</button>
+=======
+                    <button type="submit" class="btn BoutonFormInscription" formaction='inscription'>S'inscrire</button>
+>>>>>>> master
                 </div>
             </form>
-
         </div>
-    </div>
 
+    </div>
 </div>
 
 
