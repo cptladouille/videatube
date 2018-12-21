@@ -24,7 +24,7 @@ ob_start(); ?>
                 </div>
                 <br>
                 <div>
-                    
+
                     <button type="submit" class="btn BoutonFormInscription" formaction='inscription'>S'inscrire</button>
 
                 </div>

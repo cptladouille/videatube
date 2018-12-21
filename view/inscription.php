@@ -2,7 +2,7 @@
 ob_start(); ?>
 <div class="container">
     <div class="row">
-        <div class="col-lg-12 formulaire">
+        <div class="col-lg-8 formulaire">
             <div>
                 <h1>INSCRIVEZ VOUS !</h1>
             </div>
@@ -27,7 +27,7 @@ ob_start(); ?>
                             <label class="lab" for="Mail">Mail :</label>
                         </div>
                         <div>
-                            <input type="text" name="mail" class="form-control formulaireInput2" placeholder="Mail"/>
+                            <input type="text" name="mail" class="form-control formulaireInputMail" placeholder="Mail"/>
                         </div>
                         <br>
                     </form>
@@ -42,10 +42,10 @@ ob_start(); ?>
                         </div>
                         <br>
                         <div>
-                            <label class="lab" for="MotDePasse">Mot de Passe :</label>
+                            <label class="labMdp" for="MotDePasse">Mot de Passe :</label>
                         </div>
                         <div>
-                            <input type="password" name="motDePasse" class="form-control formulaireInput2" placeholder="Mot de Passe"/>
+                            <input type="password" name="motDePasse" class="form-control formulaireInputMdp" placeholder="Mot de Passe"/>
                         </div>
                         <br>
                         <div>

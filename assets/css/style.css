@@ -89,18 +89,20 @@ div{
 }
 
 .firstColonne{
-    text-align: center;
+    text-align: left;
 
 }
 
 .secondColonne{
-    text-align: center;
+    text-align: left;
 
 }
 
 .formulaireInput2 {
     margin: 0 auto !important;
-    width: 50%;
+    width: 150%;
+    text-align: left;
+
 }
 
 
@@ -109,6 +111,19 @@ div{
 }
 
 
+.formulaireInputMail{
+    text-align: left !important;
+    width: 300%;
+}
+
+.formulaireInputMdp{
+    text-align: left !important;
+    width: 200%;
+}
+
+.labMdp{
+    width: 170%;
+}
 
 .BoutonForm{
     color: whitesmoke;
