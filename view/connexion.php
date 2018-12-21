@@ -24,11 +24,9 @@ ob_start(); ?>
                 </div>
                 <br>
                 <div>
-<<<<<<< HEAD
-                    <button type="submit" class="btn" formaction='inscription'>S'inscrire</button>
-=======
+                    
                     <button type="submit" class="btn BoutonFormInscription" formaction='inscription'>S'inscrire</button>
->>>>>>> master
+
                 </div>
             </form>
         </div>

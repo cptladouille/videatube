@@ -59,7 +59,7 @@ div{
     height: 100%;
 }
 
-<<<<<<< HEAD
+
 .buttonBuy{
     color  : white;
     background: rgb(16, 189, 16);
@@ -70,10 +70,11 @@ div{
     
     border-radius: 10px;
     text-align: center;
-    height: 150;
+    height: 150%;
     width: 70%;
+}
     
-=======
+
 .formulaireInput{
     margin: 0 auto !important;
 
@@ -126,5 +127,5 @@ div{
 
 .container{
     font-family:  "Lucida Console", Monaco, monospace
->>>>>>> master
 }
+
