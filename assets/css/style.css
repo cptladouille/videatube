@@ -165,3 +165,11 @@ div{
 .inputHome:hover{
     border-color:  #fb3768;
 }
+
+.titreRecurrent{
+    color:#B40431;
+    text-align: center;
+    font-family:  "Lucida Console", Monaco, monospace
+}
+
+
