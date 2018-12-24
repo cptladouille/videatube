@@ -30,16 +30,24 @@ class userClass
      * @param $nickname
      * @param $role
      */
-    public function __construct($id, $lastname, $firstname, $mail, $log, $password, $nickname, $role)
+    public function __construct($donnees)
     {
-        $this->id = $id;
-        $this->lastname = $lastname;
-        $this->firstname = $firstname;
-        $this->mail = $mail;
-        $this->log = $log;
-        $this->password = $password;
-        $this->nickname = $nickname;
-        $this->role = $role;
+        $this->hydrate($donnees);
+    }
+
+    public function hydrate(array $donnees)
+    {
+        foreach ($donnees as $key => $value)
+        {
+            // On récupère le nom du setter correspondant à l'attribut.
+            $method = 'set'.ucfirst($key);
+            // Si le setter correspondant existe.
+            if (method_exists($this, $method))
+            {
+                // On appelle le setter.
+                $this->$method($value);
+            }
+        }
     }
 
 

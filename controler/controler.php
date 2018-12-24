@@ -2,9 +2,11 @@
 $root = str_replace('\\', '/', dirname(__DIR__));
 
 require_once('model/videoManager.php');
-
+require_once('model/userManager.php');
 function getHome(){
     $vM = new videoManager();
+    $uM = new userManager();
+    $data2 = $uM->getListOfNicknames();
     $data = $vM->getListOfLinks();
     require_once ('view/home.php');
     

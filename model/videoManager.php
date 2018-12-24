@@ -8,7 +8,6 @@ require_once('model/videoClass.php');
         public function __construct()
         {
             $this->setDb($this->connectBDD());
-
         }
 
         public function add(videoClass $video)

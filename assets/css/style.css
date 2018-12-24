@@ -1,20 +1,19 @@
+/*CSS Stylesheet
+
+
+
+
+Formulaires*/
+
 .formulaireInput{
     margin: 0 auto !important;
     width: 40%;
 }
-
 .formulaire button{
     color: whitesmoke;
     background-color: #B40431;
     text-align: left;
-
 }
-
-div{
-    margin: 0 auto !important;
-    font-family:  "Lucida Console", Monaco, monospace
-}
-
 .formulaire h1{
     color: #B40431;
     margin: 20px ;
@@ -22,7 +21,6 @@ div{
 .formulaireChamps{
     text-align: center;
 }
-
 .formulaire{
     text-align: center !important;
     color: darkgrey;
@@ -32,24 +30,13 @@ div{
     background: antiquewhite;
     border-style: dotted;
 }
-
 .formulaireInscription{
     text-align: center !important;
 }
-
-
 .formulaire form{
     width: 40% !important;
     margin: 0 auto !important;
 }
-
-.video iframe{ 
-    width: 100%; 
-}
-.video{
-    position: relative;
-}
-
 .filterButtonBuy{
     position: absolute;
     top: 0;
@@ -58,54 +45,27 @@ div{
     width: 100%; 
     height: 100%;
 }
-
-
-.buttonBuy{
-    color  : white;
-    background: rgb(16, 189, 16);
-    position: absolute;
-    border: 2px;
-    top: 40%;
-    left: 10%;
-    
-    border-radius: 10px;
-    text-align: center;
-    height: 150%;
-    width: 70%;
-}
-    
-
 .formulaireInput{
     margin: 0 auto !important;
-
     width: 100%;
 }
-
-
-
 .formulaire div{
     margin: 0 auto !important;
-
 }
-
 .firstColonne{
     text-align: left;
 
 }
-
 .secondColonne{
     text-align: left;
 
 }
-
 .formulaireInput2 {
     margin: 0 auto !important;
     width: 150%;
     text-align: left;
 
 }
-
-
 .lab{
     text-align: left !important;
 }
@@ -130,8 +90,6 @@ div{
     background-color: #B40431;
     text-align: left;
     margin-bottom: 20px;
-
-
 }
 .BoutonFormInscription{
     color: whitesmoke;

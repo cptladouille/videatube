@@ -1,9 +1,6 @@
 <?php
-
-class Model
-{
-
-
+    class Model
+    {
         protected function connectBdd()
         {
             try {
@@ -13,9 +10,5 @@ class Model
                 die('Erreur : ' . $e->getMessage());
             }
         }
-
-
-
-}
-
+    }
 ?>

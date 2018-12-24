@@ -2,7 +2,7 @@
 ob_start(); ?>
 <div class='container'>
     <div class = 'row'>
-        <div>Vidéos Récentes gratuites :    
+        <div class ='col-lg-12'>Vidéos Récentes gratuites :    
             <br>
             <div class='row'>
                 <div class = 'col-lg-3 video'>
@@ -27,13 +27,13 @@ ob_start(); ?>
     <br>
 
     <div class = 'row'>
-        <div>Vidéos Récentes monétisées :
+        <div class ='col-lg-12'>Vidéos Récentes monétisées :
             <div class='row'>
                 <div class ='col-lg-3 video'>
                     <iframe src=<?= $data[0]?> frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                     </object>
                     <div class = 'filterButtonBuy'>
-                        <p class = 'buttonBuy'></p>
+                        <p class = 'buttonBuy'>Payant</p>
                         
                     </div>
                 </div>
@@ -52,6 +52,9 @@ ob_start(); ?>
             </div>
         </div>
     </div>
+    <br>
+    <br>
+    <div><?= $data2[3] ?></div>
 
 </div>
 <?php $content = ob_get_clean();
