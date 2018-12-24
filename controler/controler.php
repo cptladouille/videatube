@@ -63,4 +63,10 @@ function getConnexion(){
 function getInscription(){
     require_once ('view/inscription.php');
 }
+
+function getProfil(){
+    require_once ('view/profil.php');
+}
+
+
 ?>

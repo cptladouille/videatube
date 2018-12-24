@@ -25,6 +25,10 @@
         {
             getInscription();
         }
+        elseif ($p == 'profil')
+        {
+            getProfil();
+        }
         elseif ($p == 'theme')
         {
             if(isset($_GET['theme']))
