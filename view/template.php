@@ -56,6 +56,7 @@
         </div>
     </nav>
     <h1 class="titreRecurrent">La meilleure plateforme de vidéastes</h1>
+    </div>
 </head>
 
 <body>

@@ -1,10 +1,11 @@
 <?php $title = 'Inscription';
 ob_start(); ?>
+<html>
 <div class="container">
     <div class="row">
         <div class="col-lg-8 formulaire">
             <div>
-                <h1>INSCRIVEZ VOUS !</h1>
+                <h1>INSCRIVEZ VOUS!</h1>
             </div>
             <div class="row justify-content-md-center">
                 <div class="col-lg-4 firstColonne">
@@ -64,6 +65,8 @@ ob_start(); ?>
         </div>
     </div>
 </div>
+
+</html>
 
 <?php $content = ob_get_clean();
 require_once('view/template.php'); ?>
