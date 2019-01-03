@@ -37,6 +37,14 @@ Formulaires*/
     width: 40% !important;
     margin: 0 auto !important;
 }
+
+.video iframe{
+    width: 100%;
+}
+.video{
+    position: relative;
+}
+
 .filterButtonBuy{
     position: absolute;
     top: 0;
@@ -128,6 +136,19 @@ Formulaires*/
     color:#B40431;
     text-align: center;
     font-family:  "Lucida Console", Monaco, monospace
+}
+
+.firstColonneVideo{
+    border-radius: 20px;
+    border-color:#B40431;
+    background: antiquewhite;
+    border-style: dotted;
+}
+
+
+html{
+    font-family:  "Lucida Console", Monaco, monospace;
+
 }
 
 
