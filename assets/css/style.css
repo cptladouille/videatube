@@ -159,4 +159,10 @@ html{
     font-family:  "Lucida Console", Monaco, monospace;
 }
 
+.avatar{
+-moz-border-radius:40px;
+-webkit-border-radius:40px;
+border-radius:40px;
+}
+
 

@@ -46,13 +46,17 @@
                     </div>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
+            <div class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2 inputHome" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn  my-2 my-sm-0 BoutonHome" type="submit">Search</button>
                 <?php 
                     if (isset($_SESSION['pseudo'])) 
                     { ?>
-                        <button class="btn  my-2 my-sm-0 BoutonHome" type="submit" formaction='deconnexion'>Deconnexion</button>
+                        <img src="./ressources/avatars/qs1.jpg" width="65" height="60" class="d-inline-block align-top avatar" alt="" href= ""> 
+                        <a class = "my-2 my-sm-0" href = "profil"><?= $_SESSION['pseudo']?></a>
+                        <form method = 'post' action ='connexion'>
+                            <input class="btn  my-2 my-sm-0 BoutonHome" type="submit" name = "deconnexion" value = 'deconnexion'>
+                        </form>
                     <?php 
                     }
                     else
@@ -62,7 +66,7 @@
                     }
                 ?>
                 <button class="btn  my-2 my-sm-0 BoutonHome" type="submit" formaction='profil'>Profil</button>
-            </form>
+            </div>
         </div>
     </nav>
     <h1 class="titreRecurrent">La meilleure plateforme de vidéastes</h1>

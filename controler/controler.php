@@ -41,7 +41,6 @@ function connectUser()
 {
     if (isset($_POST['login']) && $_POST['login']!="" && isset($_POST['mdp']) && $_POST['mdp'] != "" )
     {   
-        var_dump($_SESSION);
         if (isset($_SESSION['id']) && isset($_SESSION['pseudo']))
         {
             $_POST['alert'] = "Vous êtes déja connecté";
@@ -57,6 +56,10 @@ function connectUser()
 
                     $_SESSION['id'] = $user-> getId();
                     $_SESSION['pseudo'] = $user->getNickname();
+                    $_SESSION['mail'] = $user->getMail();
+                    $_SESSION['prenom'] = $user->getFirstname();
+                    $_SESSION['nom'] = $user->getLastname();
+                    $_SESSION['role'] = $user->getRole();
                 }
                 else
                 {
@@ -73,6 +76,12 @@ function connectUser()
     {
         $_POST['alert'] ='Veuillez entrez un login et un mot de passe correct';
     }
+}
+
+function disconnectUser()
+{
+    $_SESSION = array();
+    session_destroy();
 }
 
 

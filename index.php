@@ -14,11 +14,14 @@
         }
         elseif ($p == 'connexion')
         {
-            if (isset($_POST['formConnexion']) )
+            if (isset($_POST['formConnexion']))
             {
-                echo "bite";
                 connectUser();
-            }   
+            } 
+            elseif (isset($_POST['deconnexion']))
+            {
+                disconnectUser();
+            }
             getConnexion();
         }
         elseif ($p == 'inscription')
