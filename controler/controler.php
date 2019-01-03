@@ -38,7 +38,7 @@ function checkFormInscription()
 
 function connectUser()
 {
-    if (isset($_POST['login']) && isset($_POST['mdp']))
+    if (isset($_POST['login']) && $_POST['login']!="" && isset($_POST['mdp']) && $_POST['mdp'] != "" )
     {   
         if (isset($_SESSION['id']) && isset($_SESSION['pseudo']))
         {
@@ -46,14 +46,31 @@ function connectUser()
         }
         else
         {
-            //$psswrd = password_hash($_POST['mdp'],PASSWORD_DEFAULT);
-            $uM = new userManager();
-            $uM->checkConnection($_POST['login'],$_POST['mdp']);
+            $uM = new userManager();    
+            $user = $uM->getUserByLog($_POST['login']);
+            if (!is_null($user))
+            {
+                if(password_verify($_POST['mdp'],$user->getPassword()))
+                {
+                    session_start();
+                    $_SESSION['id'] = $user-> getId();
+                    $_SESSION['pseudo'] = $user->getNickname();
+                    $_POST['connect'] ='Bienvenue '.$_SESSION['pseudo'].'!';
+                }
+                else
+                {
+                    $_POST['alert'] ='Mauvaise combinaison mot de passe / Login';
+                }
+            }
+            else
+            {
+                $_POST['alert'] = "Aucun utilisateur n'existe avec ce login";
+            }
         }
     }
     else
     {
-        echo '<script>console.log("Error from check")</script>';
+        $_POST['alert'] ='Veuillez entrez un login et un mot de passe correct';
     }
 }
 

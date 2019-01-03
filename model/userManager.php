@@ -59,36 +59,21 @@ require_once('model/userClass.php');
                 $login = '"'.(string) $login.'"';
                 $q = $this->_db->query('SELECT id FROM user WHERE log = '.$login);
                 $id = $q->fetch(PDO::FETCH_ASSOC);  
-                $user = $this->get($id['id']);
-                return $user;
+                if ($id['id']!=0)
+                {
+                    $user = $this->get($id['id']);
+                    return $user;
+                }
+                else
+                {
+                    return null;  
+                }
+                
             } 
             catch (PDOException $e) 
             {
                 echo ' Échec lors de la connexion : ' . $e->getMessage();
                 return null;
-            }
-        }
-
-        public function checkConnection(string $log, string $mdp)
-        {
-            $user = $this->getUserByLog($log);
-            if (!is_null($user))
-            {
-                if(password_verify($mdp,$user->getPassword()))
-                {
-                    session_start();
-                    $_SESSION['id'] = $user-> getId();
-                    $_SESSION['pseudo'] = $user->getNickname();
-                    echo 'connecté !';
-                }
-                else
-                {
-                    echo ' Mdp erroné';
-                }
-            }
-            else
-            {
-                echo ' Log inconnu';
             }
         }
 

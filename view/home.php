@@ -58,7 +58,6 @@ ob_start(); ?>
     </div>
     <br>
     <br>
-    <div><?= $data2[3] ?></div>
 
 
 <?php $content = ob_get_clean();

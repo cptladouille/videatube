@@ -18,9 +18,18 @@ ob_start(); ?>
                 <div>
                     <input type="password" class="form-control formulaireInput" name="mdp" placeholder="Mot de passe"/>
                 </div>
-                <?php if(isset($_POST['alert'])){?>
-                    <div class = "alert"><? $_POST['alert']?></div>
-                <?php }?>
+                <?php 
+                    if(isset($_POST['alert']))
+                    {?>
+                        <div class = "alert"><label><?= $_POST['alert']?></label></div>
+                    <?php 
+                    }
+                    elseif (isset($_POST['connect']))
+                    {?>
+                        <div class = "alert"><label><?= $_POST['connect']?></label></div>
+                    <?php
+                    }
+                ?>
                 <br>
                 <div>
                     <input type="submit" class="btn BoutonForm" value="Se connecter" name="formConnexion">

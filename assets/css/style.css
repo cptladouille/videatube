@@ -85,6 +85,10 @@ div{
 .lab{
     text-align: left !important;
 }
+.test
+{
+    background-color: black;
+}
 
 
 .formulaireInputMail{
