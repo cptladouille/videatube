@@ -1,4 +1,5 @@
-<?php
+<?php 
+session_start();
 $root = str_replace('\\', '/', dirname(__DIR__));
 
 require_once('model/videoManager.php');
@@ -40,6 +41,7 @@ function connectUser()
 {
     if (isset($_POST['login']) && $_POST['login']!="" && isset($_POST['mdp']) && $_POST['mdp'] != "" )
     {   
+        var_dump($_SESSION);
         if (isset($_SESSION['id']) && isset($_SESSION['pseudo']))
         {
             $_POST['alert'] = "Vous êtes déja connecté";
@@ -52,10 +54,9 @@ function connectUser()
             {
                 if(password_verify($_POST['mdp'],$user->getPassword()))
                 {
-                    session_start();
+
                     $_SESSION['id'] = $user-> getId();
                     $_SESSION['pseudo'] = $user->getNickname();
-                    $_POST['connect'] ='Bienvenue '.$_SESSION['pseudo'].'!';
                 }
                 else
                 {

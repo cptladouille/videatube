@@ -49,9 +49,19 @@
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2 inputHome" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn  my-2 my-sm-0 BoutonHome" type="submit">Search</button>
-                <button class="btn  my-2 my-sm-0 BoutonHome" type="submit" formaction='connexion'>Connexion</button>
+                <?php 
+                    if (isset($_SESSION['pseudo'])) 
+                    { ?>
+                        <button class="btn  my-2 my-sm-0 BoutonHome" type="submit" formaction='deconnexion'>Deconnexion</button>
+                    <?php 
+                    }
+                    else
+                    {?>
+                        <button class="btn  my-2 my-sm-0 BoutonHome" type="submit" formaction='connexion'>Connexion</button>
+                    <?php
+                    }
+                ?>
                 <button class="btn  my-2 my-sm-0 BoutonHome" type="submit" formaction='profil'>Profil</button>
-
             </form>
         </div>
     </nav>

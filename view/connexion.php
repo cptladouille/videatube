@@ -1,5 +1,5 @@
 <?php $title = 'Connexion';
-ob_start(); ?>
+ob_start();?>
 <div class="container">
     <div class="row">
         <div class="formulaire">
@@ -19,14 +19,14 @@ ob_start(); ?>
                     <input type="password" class="form-control formulaireInput" name="mdp" placeholder="Mot de passe"/>
                 </div>
                 <?php 
-                    if(isset($_POST['alert']))
+                    if(isset($_SESSION['pseudo']))
                     {?>
-                        <div class = "alert"><label><?= $_POST['alert']?></label></div>
+                        <div class = "alert"><label><?= 'Vous etes connecté en tant que '.$_SESSION['pseudo'].' !' ?></label></div>
                     <?php 
                     }
-                    elseif (isset($_POST['connect']))
+                    elseif (isset($_POST['alert']))
                     {?>
-                        <div class = "alert"><label><?= $_POST['connect']?></label></div>
+                        <div class = "alert"><label><?= $_POST['alert']?></label></div>
                     <?php
                     }
                 ?>

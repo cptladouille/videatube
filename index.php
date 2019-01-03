@@ -1,11 +1,6 @@
 <?php
-    //session_start();
-    
 
     require_once ('controler/controler.php');
-
-
-
     if (isset($_GET['p']))
     {
         $p = $_GET['p']; 
@@ -21,6 +16,7 @@
         {
             if (isset($_POST['formConnexion']) )
             {
+                echo "bite";
                 connectUser();
             }   
             getConnexion();
