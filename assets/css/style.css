@@ -124,6 +124,15 @@ div{
     background-color: #fb3768;
 }
 
+.containerProfil{
+    border-radius: 20px;
+    border-color:#B40431;
+    background: antiquewhite;
+    border-style: dotted;
+    
+
+}
+
 
 .BoutonHome{
     color: whitesmoke;
@@ -163,6 +172,12 @@ html{
 -moz-border-radius:40px;
 -webkit-border-radius:40px;
 border-radius:40px;
+}
+
+
+.photoProfil img{
+    height: 10%;
+    width: 10%;
 }
 
 
