@@ -36,6 +36,28 @@ function checkFormInscription()
     }
 }
 
+function connectUser()
+{
+    if (isset($_POST['login']) && isset($_POST['mdp']))
+    {   
+        if (isset($_SESSION['id']) && isset($_SESSION['pseudo']))
+        {
+            $_POST['alert'] = "Vous êtes déja connecté";
+        }
+        else
+        {
+            //$psswrd = password_hash($_POST['mdp'],PASSWORD_DEFAULT);
+            $uM = new userManager();
+            $uM->checkConnection($_POST['login'],$_POST['mdp']);
+        }
+    }
+    else
+    {
+        echo '<script>console.log("Error from check")</script>';
+    }
+}
+
+
 function getVideo()
 {
     require_once ('view/video.php');

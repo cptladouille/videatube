@@ -19,6 +19,10 @@
         }
         elseif ($p == 'connexion')
         {
+            if (isset($_POST['formConnexion']) )
+            {
+                connectUser();
+            }   
             getConnexion();
         }
         elseif ($p == 'inscription')

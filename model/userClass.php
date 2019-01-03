@@ -49,7 +49,7 @@ class userClass
             }
         }
     }
-
+    
 
     /**
      * @return mixed

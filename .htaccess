@@ -5,7 +5,6 @@ RewriteRule ^home index.php
 RewriteRule ^subscription index.php?p=subscription [L]
 RewriteRule ^connexion index.php?p=connexion [L]
 RewriteRule ^inscription index.php?p=inscription [L]
-RewriteRule ^inscriptionUser index.php?p=inscriptionUser [L]
 RewriteRule ^profil index.php?p=profil [L]
 RewriteRule ^theme index.php?p=theme [L]
 RewriteRule ^theme-action index.php?p=theme&theme=1 [L]

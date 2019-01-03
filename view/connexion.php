@@ -4,7 +4,7 @@ ob_start(); ?>
     <div class="row">
         <div class="formulaire">
             <h1>CONNECTEZ VOUS !</h1>
-            <form method="post" action="action.php">
+            <form method="post" action="connexion">
                 <div class="formulaireChamps">
                     <label for="Login">Login :</label>
                 </div>
@@ -18,16 +18,17 @@ ob_start(); ?>
                 <div>
                     <input type="password" class="form-control formulaireInput" name="mdp" placeholder="Mot de passe"/>
                 </div>
+                <?php if(isset($_POST['alert'])){?>
+                    <div class = "alert"><? $_POST['alert']?></div>
+                <?php }?>
                 <br>
                 <div>
-                    <button type="button" class="btn BoutonForm" value="Se connecter">Se connecter</button>
+                    <input type="submit" class="btn BoutonForm" value="Se connecter" name="formConnexion">
                 </div>
                 <br>
-                <div>
-
-                    <button type="submit" class="btn BoutonFormInscription" formaction='inscription'>S'inscrire</button>
-
-                </div>
+            </form>
+            <form action="inscription">
+                <input type="submit" class="btn BoutonFormInscription" formaction='inscription' value="S'inscrire"/>
             </form>
         </div>
 
