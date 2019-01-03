@@ -12,12 +12,32 @@ function getHome(){
     
 }
 
-function showRecentVideos()
-{
 
+function checkFormInscription()
+{
+    if (isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['mail']) && isset($_POST['login']) && isset($_POST['motDePasse']) && isset($_POST['pseudo']))
+    {   
+        $psswrd = password_hash($_POST['motDePasse'],PASSWORD_DEFAULT);
+        $dataUser = array(
+            'lastname'  =>  $_POST['nom'],
+            'firstname' =>  $_POST['prenom'],
+            'mail'      =>  $_POST['mail'],
+            'log'       =>  $_POST['login'],
+            'password'  =>  $psswrd,
+            'nickname'  =>  $_POST['pseudo'],
+            'role'      =>  0);
+        $u = new userClass($dataUser);
+        $uM = new userManager();
+        $uM->add($u);
+    }
+    else
+    {
+        echo '<script>console.log("Error from check")</script>';
+    }
 }
 
-function getVideo(){
+function getVideo()
+{
     require_once ('view/video.php');
 }
 
@@ -67,6 +87,8 @@ function getInscription(){
 }
 
 function getProfil(){
+
+
     require_once ('view/profil.php');
 }
 

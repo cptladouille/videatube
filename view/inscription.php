@@ -9,7 +9,7 @@ ob_start(); ?>
             </div>
             <div class="row justify-content-md-center">
                 <div class="col-lg-4 firstColonne">
-                    <form method="post" action="action.php">
+                    <form method="post" action="inscription">
                         <div>
                             <label class="lab" for="Nom">Nom :</label>
                         </div>
@@ -55,13 +55,14 @@ ob_start(); ?>
                         </div>
                         <br>
                 </div>
+                <div class="row justify-content-md-center">
+                    <input type="submit" class="btn BoutonForm" value="S'inscrire" name="formInscription"/>
+                </div>
                 </form>
 
-
+            
             </div>
-            <div class="row justify-content-md-center">
-                <button type="button" class="btn BoutonForm" value="S'inscrire">S'inscrire</button>
-            </div>
+            
         </div>
     </div>
 </div>

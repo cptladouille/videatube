@@ -23,6 +23,10 @@
         }
         elseif ($p == 'inscription')
         {
+            if (isset($_POST['formInscription']) )
+            {
+                checkFormInscription();
+            }   
             getInscription();
         }
         elseif ($p == 'profil')

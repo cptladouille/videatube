@@ -17,13 +17,13 @@ require_once('model/userClass.php');
             // Exécution de la requête.
             $q = $this->_db->prepare('INSERT INTO user(lastname, firstname, mail, log, password, nickname, role) VALUES(:lastname, :firstname, :mail, :log, :password, :nickname, :role)');
 
-            $q->bindValue(':lastname', $user->lastname());
-            $q->bindValue(':firstname', $user->firstname());
-            $q->bindValue(':mail', $user->mail());
-            $q->bindValue(':log', $user->log());
-            $q->bindValue(':password', $user->password());
-            $q->bindValue(':nickname', $user->nickname());
-            $q->bindValue(':role', $user->role());
+            $q->bindValue(':lastname', $user->getLastname());
+            $q->bindValue(':firstname', $user->getFirstname());
+            $q->bindValue(':mail', $user->getMail());
+            $q->bindValue(':log', $user->getLog());
+            $q->bindValue(':password', $user->getPassword());
+            $q->bindValue(':nickname', $user->getNickname());
+            $q->bindValue(':role', $user->getRole());
 
             $q->execute();
         }
