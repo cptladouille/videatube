@@ -25,10 +25,12 @@ ob_start(); ?>
             <label class = "lab" for="role">Rôle : <?= $_SESSION['nomRole'] ?></label>
         </div>
     </div>
-    <div class = "row">
-        <h3 class = 'title'>Modifier mes informations</h3>
-
-    </div>
+        <div class = 'text-center'>
+            <h3>Modifier mes informations</h3>
+            <form method = "post" action ="">
+                <input class="btn  my-2 my-sm-0 BoutonHome" type="submit" name = "editUser" value = 'Modifier mon profil'> 
+            </form>
+        </div>
 </div>
 
 <?php $content = ob_get_clean();
