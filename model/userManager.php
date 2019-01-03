@@ -15,7 +15,7 @@ require_once('model/userClass.php');
             // Préparation de la requête d'insertion.
             // Assignation des valeurs du user.
             // Exécution de la requête.
-            $q = $this->_db->prepare('INSERT INTO user(lastname, firstname, mail, log, password, nickname, role) VALUES(:lastname, :firstname, :mail, :log, :password, :nickname, :role)');
+            $q = $this->_db->prepare('INSERT INTO user(lastname, firstname, mail, log, password, nickname, role, avatar) VALUES(:lastname, :firstname, :mail, :log, :password, :nickname, :role, :avatar)');
 
             $q->bindValue(':lastname', $user->getLastname());
             $q->bindValue(':firstname', $user->getFirstname());
@@ -24,6 +24,7 @@ require_once('model/userClass.php');
             $q->bindValue(':password', $user->getPassword());
             $q->bindValue(':nickname', $user->getNickname());
             $q->bindValue(':role', $user->getRole());
+            $q->bindValue(':avatar', $user->getAvatar());
 
             $q->execute();
         }

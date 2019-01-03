@@ -47,25 +47,31 @@
                 </li>
             </ul>
             <div class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2 inputHome" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn  my-2 my-sm-0 BoutonHome" type="submit">Search</button>
+                <input class="form-control mr-sm-2 inputHome" type="text" placeholder="Rechercher" aria-label="Search">
+                <input class="btn  my-2 my-sm-0 BoutonHome" type="submit" name = 'Search' value = 'Rechercher'>
                 <?php 
                     if (isset($_SESSION['pseudo'])) 
-                    { ?>
-                        <img src="./ressources/avatars/qs1.jpg" width="65" height="60" class="d-inline-block align-top avatar" alt="" href= ""> 
-                        <a class = "my-2 my-sm-0" href = "profil"><?= $_SESSION['pseudo']?></a>
+                    { 
+                        if(isset($_SESSION['avatar']))
+                        {?>
+
+                        <a  href= "profil"><img src="./ressources/avatars/<?= $_SESSION['avatar']?>" width="65" height="60" class="d-inline-block align-top avatar" alt=""></a>
+                        <?php
+                        }?>
+                        <a  href= "profil"><p class = "my-2 my-sm-0" href = "profil"><?= $_SESSION['pseudo']?></p></a>
                         <form method = 'post' action ='connexion'>
-                            <input class="btn  my-2 my-sm-0 BoutonHome" type="submit" name = "deconnexion" value = 'deconnexion'>
+                            <input class="btn  my-2 my-sm-0 BoutonHome" type="submit" name = "deconnexion" value = 'Déconnexion'>
                         </form>
                     <?php 
                     }
                     else
                     {?>
-                        <button class="btn  my-2 my-sm-0 BoutonHome" type="submit" formaction='connexion'>Connexion</button>
+                       <form method = 'post' action ='connexion'>
+                            <input class="btn  my-2 my-sm-0 BoutonHome" type="submit" name = "connexion" value = 'Connexion'>
+                        </form>
                     <?php
                     }
                 ?>
-                <button class="btn  my-2 my-sm-0 BoutonHome" type="submit" formaction='profil'>Profil</button>
             </div>
         </div>
     </nav>

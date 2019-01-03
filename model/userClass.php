@@ -17,6 +17,7 @@ class userClass
    var $password;
    var $nickname;
    var $role;
+   var $avatar;
 
 
     /**
@@ -29,6 +30,7 @@ class userClass
      * @param $password
      * @param $nickname
      * @param $role
+     * @param $avatar
      */
     public function __construct($donnees)
     {
@@ -179,6 +181,21 @@ class userClass
         $this->role = $role;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getAvatar()
+    {
+        return $this->avatar;
+    }
+
+    /**
+     * @param mixed $avatar
+     */
+    public function setAvatar($avatar)
+    {
+        $this->avatar = $avatar;
+    }
 
 
 

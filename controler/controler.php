@@ -60,6 +60,8 @@ function connectUser()
                     $_SESSION['prenom'] = $user->getFirstname();
                     $_SESSION['nom'] = $user->getLastname();
                     $_SESSION['role'] = $user->getRole();
+                    $_SESSION['nomRole'] = attribRole($user->getRole());
+                    $_SESSION['avatar'] = $user->getAvatar();
                 }
                 else
                 {
@@ -75,6 +77,18 @@ function connectUser()
     else
     {
         $_POST['alert'] ='Veuillez entrez un login et un mot de passe correct';
+    }
+}
+
+function attribRole($role)
+{
+    if($role == 0)
+    {
+        return 'Administrateur';
+    }
+    elseif($role == 1)
+    {
+        return 'Utilisateur';
     }
 }
 

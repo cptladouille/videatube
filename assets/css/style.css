@@ -169,15 +169,11 @@ html{
 }
 
 .avatar{
--moz-border-radius:40px;
--webkit-border-radius:40px;
-border-radius:40px;
+-moz-border-radius:400px;
+-webkit-border-radius:400px;
+border-radius:400px;
 }
 
 
-.photoProfil img{
-    height: 10%;
-    width: 10%;
-}
 
 
