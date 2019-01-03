@@ -14,6 +14,12 @@ Formulaires*/
     background-color: #B40431;
     text-align: left;
 }
+
+div{
+    margin: 0 auto !important;
+    font-family:  "Lucida Console", Monaco, monospace
+}
+
 .formulaire h1{
     color: #B40431;
     margin: 20px ;
@@ -70,10 +76,12 @@ Formulaires*/
 }
 .formulaireInput2 {
     margin: 0 auto !important;
-    width: 150%;
+    width: 100%;
     text-align: left;
 
 }
+
+
 .lab{
     text-align: left !important;
 }
@@ -86,10 +94,10 @@ Formulaires*/
 
 .formulaireInputMdp{
     text-align: left !important;
-    width: 200%;
+    width: 100%;
 }
 
-.labMdp{
+.secondColonne labMdp{
     width: 170%;
 }
 
@@ -111,9 +119,7 @@ Formulaires*/
 .BoutonFormInscription:hover {
     background-color: #fb3768;
 }
-.container{
-    font-family:  "Lucida Console", Monaco, monospace
-}
+
 
 .BoutonHome{
     color: whitesmoke;
@@ -135,7 +141,6 @@ Formulaires*/
 .titreRecurrent{
     color:#B40431;
     text-align: center;
-    font-family:  "Lucida Console", Monaco, monospace
 }
 
 .firstColonneVideo{
@@ -148,7 +153,6 @@ Formulaires*/
 
 html{
     font-family:  "Lucida Console", Monaco, monospace;
-
 }
 
 

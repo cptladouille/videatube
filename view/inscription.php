@@ -14,14 +14,14 @@ ob_start(); ?>
                             <label class="lab" for="Nom">Nom :</label>
                         </div>
                         <div>
-                            <input type="text" name="nom" class="form-control formulaireInput2" placeholder="Nom"/>
+                            <input type="text" name="nom" class="form-control formulaireInput3" placeholder="Nom"/>
                         </div>
                         <br>
                         <div>
                             <label class="lab" for="Prenom">Prenom :</label>
                         </div>
                         <div>
-                            <input type="text" name="prenom" class="form-control formulaireInput2" placeholder="Prenom"/>
+                            <input type="text" name="prenom" class="form-control formulaireInput3" placeholder="Prenom"/>
                         </div>
                         <br>
                         <div>
@@ -31,10 +31,8 @@ ob_start(); ?>
                             <input type="text" name="mail" class="form-control formulaireInputMail" placeholder="Mail"/>
                         </div>
                         <br>
-                    </form>
                 </div>
                 <div class="col-lg-4 secondColonne">
-                    <form method="post" action="action.php">
                         <div>
                             <label class="lab" for="Login">Login :</label>
                         </div>
@@ -56,8 +54,10 @@ ob_start(); ?>
                             <input type="text" name="pseudo" class="form-control formulaireInput2" placeholder="Pseudo"/>
                         </div>
                         <br>
-                    </form>
                 </div>
+                </form>
+
+
             </div>
             <div class="row justify-content-md-center">
                 <button type="button" class="btn BoutonForm" value="S'inscrire">S'inscrire</button>
