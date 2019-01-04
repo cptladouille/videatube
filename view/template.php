@@ -50,15 +50,15 @@
                 <input class="form-control mr-sm-2 inputHome" type="text" placeholder="Rechercher" aria-label="Search">
                 <input class="btn  my-2 my-sm-0 BoutonHome" type="submit" name = 'Search' value = 'Rechercher'>
                 <?php 
-                    if (isset($_SESSION['pseudo'])) 
+                    if (isset($_SESSION['userConnected'])) 
                     { 
-                        if(isset($_SESSION['avatar']))
+                        if($_SESSION['userConnected']['avatar'] != "")
                         {?>
 
-                        <a  href= "profil"><img src="./ressources/avatars/<?= $_SESSION['avatar']?>" width="65" height="60" class="d-inline-block align-top avatar" alt=""></a>
+                        <a  href= "profil"><img src="./ressources/avatars/<?= $_SESSION['userConnected']['avatar']; ?>" width="60" height="60" class="d-inline-block align-top avatar" alt=""></a>
                         <?php
                         }?>
-                        <a  href= "profil"><p class = "my-2 my-sm-0" href = "profil"><?= $_SESSION['pseudo']?></p></a>
+                        <a  href= "profil"><p class = "my-2 my-sm-0" href = "profil"><?= $_SESSION['userConnected']['nickname'] ;?></p></a>
                         <form method = 'post' action ='connexion'>
                             <input class="btn  my-2 my-sm-0 BoutonHome" type="submit" name = "deconnexion" value = 'Déconnexion'>
                         </form>
@@ -80,7 +80,7 @@
 </head>
 
 <body>
-<?= $content; ?>
+<?= $content;?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>

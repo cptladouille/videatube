@@ -24,7 +24,7 @@ require_once('model/userClass.php');
             $q->bindValue(':password', $user->getPassword());
             $q->bindValue(':nickname', $user->getNickname());
             $q->bindValue(':role', $user->getRole());
-            $q->bindValue(':avatar', $user->getAvatar());
+            $q->bindValue(':avatar', "user.png");
 
             $q->execute();
         }
@@ -104,12 +104,40 @@ require_once('model/userClass.php');
            return $nicknames;
         }
 
-        public function update(userClass $user)
+        public function updateEdit($id,$datas)
         {
+
             // Prépare une requête de type UPDATE.
             // Assignation des valeurs à la requête.
             // Exécution de la requête.
-
+            try{
+                $q = $this->_db->prepare("UPDATE user SET lastname=:lastname, firstname=:firstname, mail=:mail, nickname=:nickname, avatar=:avatar where id = '$id' ");
+                $q->bindValue(':lastname', $datas['lastname']);
+                $q->bindValue(':firstname', $datas['firstname']);
+                $q->bindValue(':mail', $datas['mail']);
+                $q->bindValue(':nickname', $datas['nickname']);
+                $q->bindValue(':avatar', $datas['avatar']);
+                
+                $q->execute();
+            }
+            catch (PDOException $e)
+            {
+                echo $e;
+            }
+        }
+        function updateSession($session)
+        {
+            $user=$this->get($session['id']);
+            $datas= array(
+                'id'        =>  $user->getId(),
+                'lastname'  =>  $user->getLastname(),
+                'firstname' =>  $user->getFirstname(),
+                'mail'      =>  $user->getMail(),
+                'nickname'  =>  $user->getNickname(),
+                'role'      =>  $user->getLastname(),
+                'avatar'    =>  $user->getAvatar(),
+                'roleLabel' =>  attribRole($user->getLastname()));
+            return $datas;
         }
 
         public function setDb(PDO $db)

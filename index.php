@@ -34,6 +34,10 @@
         }
         elseif ($p == 'profil')
         {
+            if (isset($_POST['validateEditUser']))
+            {
+                checkFormEdit();
+            }  
             getProfil();
         }
         elseif ($p == 'theme')

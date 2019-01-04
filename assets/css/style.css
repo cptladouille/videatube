@@ -129,15 +129,19 @@ div{
     border-color:#B40431;
     background: antiquewhite;
     border-style: dotted;
-    
-
 }
 
+.editForm{
+    width: 20%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 
 .BoutonHome{
     color: whitesmoke;
     background-color: #B40431;
     border-color: whitesmoke;
+    text-align: center;
 }
 
 .BoutonHome:hover {

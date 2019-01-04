@@ -19,9 +19,9 @@ ob_start();?>
                     <input type="password" class="form-control formulaireInput" name="mdp" placeholder="Mot de passe"/>
                 </div>
                 <?php 
-                    if(isset($_SESSION['pseudo']))
+                    if(isset($_SESSION['userConnected']))
                     {?>
-                        <div class = "alert"><label><?= 'Vous etes connecté en tant que '.$_SESSION['pseudo'].' !' ?></label></div>
+                        <div class = "alert"><label><?= 'Vous etes connecté en tant que '. $_SESSION['userConnected']['nickname'] .' !' ?></label></div>
                     <?php 
                     }
                     elseif (isset($_POST['alert']))
