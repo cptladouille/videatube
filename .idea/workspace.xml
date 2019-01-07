@@ -71,7 +71,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/home.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="373">
@@ -98,11 +98,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="connexion.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="connexion.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/view/connexion.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1425">
-              <caret line="95" column="14" selection-start-line="95" selection-start-column="14" selection-end-line="95" selection-end-column="14" />
+            <state relative-caret-position="705">
+              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
             </state>
           </provider>
         </entry>
@@ -131,8 +131,8 @@
       <find>div</find>
       <find>arousel-control-next-icon</find>
       <find>carousel-control-prev-icon</find>
-      <find>caption</find>
       <find>glyphicon-chevron-left</find>
+      <find>caption</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -160,7 +160,6 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/view/inscription.php" />
         <option value="$PROJECT_DIR$/view/profil.php" />
-        <option value="$PROJECT_DIR$/view/connexion.php" />
         <option value="$PROJECT_DIR$/assets/bootstrap/js/bootstrap.min.js" />
         <option value="$PROJECT_DIR$/assets/bootstrap/css/bootstrap.min.css" />
         <option value="$PROJECT_DIR$/assets/bootstrap/css/bootstrap-grid.min.css" />
@@ -169,6 +168,7 @@
         <option value="$PROJECT_DIR$/assets/bootstrap/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/assets/css/style.css" />
         <option value="$PROJECT_DIR$/view/home.php" />
+        <option value="$PROJECT_DIR$/view/connexion.php" />
       </list>
     </option>
   </component>
@@ -287,12 +287,12 @@
       <workItem from="1545396878763" duration="17686000" />
       <workItem from="1546503784173" duration="7970000" />
       <workItem from="1546854100321" duration="7780000" />
-      <workItem from="1546870506792" duration="2290000" />
+      <workItem from="1546870506792" duration="2804000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70341000" />
+    <option name="totallyTimeSpent" value="70855000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -525,13 +525,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/test.php" />
-    <entry file="file://$PROJECT_DIR$/view/connexion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1425">
-          <caret line="95" column="14" selection-start-line="95" selection-start-column="14" selection-end-line="95" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/bootstrap/js/bootstrap.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3326">
@@ -611,6 +604,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="373">
           <caret line="229" column="63" selection-start-line="229" selection-start-column="63" selection-end-line="229" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/connexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
         </state>
       </provider>
     </entry>
