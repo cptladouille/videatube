@@ -227,7 +227,7 @@ ob_start(); ?>
                                 <div class="colonneTab">
                                     <div class="card mb-2">
                                         <object data="<?= $data[0] ?>"></object>
-
+                                        <div class="card-body">
                                         <h4 class="card-title">Card title</h4>
                                                 <p class="card-text">Some quick example text to build on the card title
                                                     and
@@ -244,7 +244,6 @@ ob_start(); ?>
 
                                     <div class="card mb-2">
                                         <object data="<?= $data[0] ?>"></object>
-
                                         <div class="card-body">
                                                 <h4 class="card-title">Card title</h4>
                                                 <p class="card-text">Some quick example text to build on the card title
