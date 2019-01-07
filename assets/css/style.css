@@ -16,7 +16,6 @@ Formulaires*/
 }
 
 div{
-    margin: 0 auto !important;
     font-family:  "Lucida Console", Monaco, monospace
 }
 
@@ -173,11 +172,30 @@ html{
 }
 
 .avatar{
--moz-border-radius:400px;
--webkit-border-radius:400px;
-border-radius:400px;
+    -moz-border-radius:400px;
+    -webkit-border-radius:400px;
+    border-radius:400px;
+}
+
+.colonneTab{
+    width: 100%;
+}
+
+.tableauCarousel{
+    width: 90%;
+    margin-left:5%;
+
 }
 
 
+.glyphicon-chevron-left{
+    color: red !important;
+}
 
+.glyphicon-chevron-right{
+    color: red !important;
+}
 
+.btnCarou{
+    margin-left: 25%;
+}
