@@ -37,7 +37,11 @@
             if (isset($_POST['validateEditUser']))
             {
                 checkFormEdit();
-            }  
+            }
+            elseif (isset($_POST['validateEditPasswordUser']))
+            {
+                checkFormPassword();
+            }
             getProfil();
         }
         elseif ($p == 'theme')

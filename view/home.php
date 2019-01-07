@@ -1,19 +1,5 @@
 <?php $title = 'Acceuil';
 ob_start(); ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <div class='containerhome'>
         <div class='row'>
             <div>Vidéos Récentes gratuites :
@@ -35,7 +21,6 @@ ob_start(); ?>
             </div>
         </div>
         <br>
-
         <div class='row'>
             <div>Vidéos Récentes monétisées :
                 <div class='row ligneVideo'>
@@ -58,7 +43,5 @@ ob_start(); ?>
     </div>
     <br>
     <br>
-
-
 <?php $content = ob_get_clean();
 require_once('view/template.php'); ?>

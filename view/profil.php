@@ -1,7 +1,9 @@
 <?php $title = 'Profil';
 ob_start(); ?>
 
-    <?php if(isset($_POST['editUser']))
+    <?php
+    // Formulaire d'édition générale de profil
+    if(isset($_POST['editUser']))
     { ?>
         <div class="containerProfil col-lg-10 editForm">
             <div class="ChampProfil">
@@ -38,13 +40,44 @@ ob_start(); ?>
                 <?php 
                     if (isset($_POST['alert']))
                     { ?>
-                        <div class = "alert"><label><?= $_POST['alert']?></label></div>
+                        <div class = "alert"><label><?= $_POST['alert']; ?></label></div>
                     <?php
                     } ?>
             </div>
         </div>
-
-    <?php }else{ ?>
+    <?php   
+    // Formulaire de changement de mot de passe
+    }elseif(isset($_POST['editUserPassword']))
+    { ?>
+        <div class="containerProfil col-lg-10 editForm">
+            <div class="ChampProfil">
+                <form method = "post" action="profil">
+                    <div>
+                        <label class = "lab" for="password">Nouveau mot de passe : </label>
+                        <input type="text" name="password" class="form-control formulaireInput3"/>
+                    </div>
+                    <br>
+                    <div>
+                        <label class = "lab" for="password2">Confirmer le mot de passe : </label>
+                        <input type="text" name="password2" class="form-control formulaireInput3"/>
+                    </div>
+                    <br>
+                    <div class="text-center">
+                        <input class="btn  my-2 my-sm-0 BoutonHome" type="submit" name = "validateEditPasswordUser" value = 'Changer le mot de passe'>
+                    </div>
+                </form>
+                <?php 
+                    if (isset($_POST['alert']))
+                    { ?>
+                        <div class = "alert"><label><?= $_POST['alert']; ?></label></div>
+                    <?php
+                    } ?>
+            </div>
+        </div>
+    
+    <?php
+    // Formulaire d'informations générales de profil
+    } else { ?>
         <div class="containerProfil col-lg-10">
             <div class = "row">
                 <div class="photoProfil">
@@ -52,7 +85,8 @@ ob_start(); ?>
                     if($_SESSION['userConnected']['avatar']!='')
                     { ?>
                         <img src="./ressources/avatars/<?= $_SESSION['userConnected']['avatar'];?>" width="400" height="400" class="avatar" alt="">
-                    <?php }else{ ?>
+                    <?php 
+                    } else { ?>
                         <img src=http://image.noelshack.com/fichiers/2019/01/4/1546507376-profile-2092113-12802.png width="400" height="400" class = "avatar">
                     <?php } ?>
                 </div>
@@ -73,6 +107,10 @@ ob_start(); ?>
                 <h3>Modifier mes informations</h3>
                 <form method = "post" action ="profil">
                     <input class="btn  my-2 my-sm-0 BoutonHome" type="submit" name = "editUser" value = 'Modifier mon profil'> 
+                </form>
+                <br>
+                <form method = "post" action ="profil">
+                    <input class="btn  my-2 my-sm-0 BoutonHome" type="submit" name = "editUserPassword" value = 'Changer de mot de passe'> 
                 </form>
             </div>
         </div>

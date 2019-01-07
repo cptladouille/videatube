@@ -129,6 +129,7 @@ div{
     border-color:#B40431;
     background: antiquewhite;
     border-style: dotted;
+    padding: 10px;
 }
 
 .editForm{

@@ -132,69 +132,92 @@ function connectUser()
     }
 }
 
+function checkFormPassword()
+{
+    //vérifie que les deux champs de mot de passe sont bien rentrés et les comparent
+    if((isset($_POST['password']) && str_replace(" ","",trim($_POST['password'] ," \t\n\r\0\x0B")) != "") && 
+        (isset($_POST['password2']) && str_replace(" ","",trim($_POST['password2'] ," \t\n\r\0\x0B")) != ""))
+    {
+        if($_POST['password'] == $_POST['password2'])
+        {
+            $password = password_hash($_POST['password'],PASSWORD_DEFAULT);
+            try
+            {
+                $uM = new userManager();
+                $uM->updatePassword($_SESSION['userConnected']['id'],$password);
+            }
+            catch(Exception $e)
+            {
+                echo $e;
+                $_POST['alert'] = 'Impossible de modifier le mot de passe';
+                $_POST['editUserPassword'] = true;
+            }
+        }
+        else{
+            $_POST['alert'] = 'Les deux mots de passes ne correspondent pas';
+            $_POST['editUserPassword'] = true;
+        }
+    }
+    else
+    {
+        $_POST['alert'] = 'Veuillez remplir des deux champs correctement';
+        $_POST['editUserPassword'] = true;
+    }
+        
+}
 function checkFormEdit()
 {
+    //condition de vérification pour les différents champs du formulaire d'édition du profil utiisateur
         if(isset($_POST['nom']) && str_replace(" ","",trim($_POST['nom'] ," \t\n\r\0\x0B")) != "")
         {
             $nom = $_POST['nom'];
         }
-        else
-        {
-            $nom = $_SESSION['userConnected']['lastname'];
-        }
+        else{$nom = $_SESSION['userConnected']['lastname'];}
+        
         if(isset($_POST['prenom']) && str_replace(" ","",trim($_POST['prenom'] ," \t\n\r\0\x0B")) != "")
         {
             $prenom = $_POST['prenom'];
         }
-        else
-        {
-            
-            $prenom = $_SESSION['userConnected']['firstname'];
-        }
+        else{$prenom = $_SESSION['userConnected']['firstname'];}
+        
         if(isset($_POST['mail']) && str_replace(" ","",trim($_POST['mail'] ," \t\n\r\0\x0B")) != "")
         {
             $mail  = $_POST['mail'];
         }
-        else
-        {
-            $mail = $_SESSION['userConnected']['mail'];
-        }
+        else{$mail = $_SESSION['userConnected']['mail'];}
+        
         if(isset($_POST['pseudo']) && str_replace(" ","",trim($_POST['pseudo'] ," \t\n\r\0\x0B")) != "")
         {
             $pseudo  = $_POST['pseudo'];
         }
-        else
-        {
-            
-            $pseudo = $_SESSION['userConnected']['nickname'];
-        }
+        else{$pseudo = $_SESSION['userConnected']['nickname'];}
+        
         if(isset($_POST['avatar']) && str_replace(" ","",trim($_POST['avatar'] ," \t\n\r\0\x0B")) != "")
         {
             $avatar  = $_POST['avatar'];
         }
-        else
-        {
-            $avatar = $_SESSION['userConnected']['avatar'];
-          
-        }
+        else{$avatar = $_SESSION['userConnected']['avatar'];}
         $dataUser = array(
             'lastname'  =>  $nom,
             'firstname' =>  $prenom,
             'mail'      =>  $mail,
             'nickname'  =>  $pseudo,
             'avatar'    =>  $avatar);
-        $uM = new userManager();
-        if(checkDatasForm($dataUser) != null)
-        {
-            $dataUser = checkDatasForm($dataUser);
-            $uM->updateEdit($_SESSION['userConnected']['id'],$dataUser);
-            $_SESSION['userConnected'] = $uM->updateSession($_SESSION['userConnected']);
+        try{
+            if(checkDatasForm($dataUser) != null)
+            {
+                $dataUser = checkDatasForm($dataUser);
+                $uM = new userManager();
+                $uM->updateEdit($_SESSION['userConnected']['id'],$dataUser);
+                $_SESSION['userConnected'] = $uM->updateSession($_SESSION['userConnected']);
+            }
         }
-        else
+        catch(Exception $e)
         {
+            echo $e;
+            $_POST['editUser'] = true;
             $_POST['alert'] = 'Impossible de modifier les informations';
         }
-
 }
 
 function checkDatasForm($datas)
@@ -207,6 +230,8 @@ function checkDatasForm($datas)
         {
             if(!preg_match("#@#",$data))
             {
+                $_POST['alert'] = "L'email n'est pas conforme";
+                $_POST['editUser'] = true;
                 return null;
             }
         }
@@ -218,18 +243,14 @@ function checkDatasForm($datas)
 
 function attribRole($role)
 {
-    if($role == 0)
-    {
-        return 'Administrateur';
-    }
-    elseif($role == 1)
-    {
-        return 'Utilisateur';
-    }
+    //attribue le libellé de l'utilisateur en fonction de la valeur de son rôle
+    if      ($role == 0){return 'Administrateur';}
+    elseif  ($role == 1){return 'Utilisateur'   ;}
 }
 
 function disconnectUser()
 {
+    //détruit les variables de session et donc deconnecte l'utilisateur
     $_SESSION = array();
     session_destroy();
 }

@@ -69,7 +69,6 @@ require_once('model/userClass.php');
                 {
                     return null;  
                 }
-                
             } 
             catch (PDOException $e) 
             {
@@ -117,6 +116,22 @@ require_once('model/userClass.php');
                 $q->bindValue(':mail', $datas['mail']);
                 $q->bindValue(':nickname', $datas['nickname']);
                 $q->bindValue(':avatar', $datas['avatar']);
+                
+                $q->execute();
+            }
+            catch (PDOException $e)
+            {
+                echo $e;
+            }
+        }
+        public function updatePassword($id,$password)
+        {
+            // Prépare une requête de type UPDATE.
+            // Assignation des valeurs à la requête.
+            // Exécution de la requête.
+            try{
+                $q = $this->_db->prepare("UPDATE user SET password=:password where id = '$id' ");
+                $q->bindValue(':password', $password);
                 
                 $q->execute();
             }
