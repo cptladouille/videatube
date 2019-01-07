@@ -23,7 +23,7 @@ div{
 .formulaire h1{
     color: #B40431;
     margin: 20px ;
-}
+}   
 .formulaireChamps{
     text-align: center;
 }
@@ -40,7 +40,7 @@ div{
     text-align: center !important;
 }
 .formulaire form{
-    width: 40% !important;
+    width: 80% !important;
     margin: 0 auto !important;
 }
 
@@ -174,9 +174,9 @@ html{
 }
 
 .avatar{
--moz-border-radius:400px;
--webkit-border-radius:400px;
-border-radius:400px;
+-moz-border-radius:100%;
+-webkit-border-radius:100%;
+border-radius:100%;
 }
 
 

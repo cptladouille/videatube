@@ -22,13 +22,24 @@ class typeSubClass
      * @param $nbDayTrial
      * @param $title
      */
-    public function __construct($id, $price, $duration, $nbDayTrial, $title)
+    public function __construct($datas)
     {
-        $this->id = $id;
-        $this->price = $price;
-        $this->duration = $duration;
-        $this->nbDayTrial = $nbDayTrial;
-        $this->title = $title;
+        $this->hydrate($datas);
+    }
+
+    public function hydrate(array $datas)
+    {
+        foreach ($datas as $key => $value)
+        {
+            // On récupère le nom du setter correspondant à l'attribut.
+            $method = 'set'.ucfirst($key);
+            // Si le setter correspondant existe.
+            if (method_exists($this, $method))
+            {
+                // On appelle le setter.
+                $this->$method($value);
+            }
+        }
     }
 
 

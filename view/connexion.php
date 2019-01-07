@@ -8,7 +8,7 @@ ob_start();?>
                 <div class="formulaireChamps">
                     <label for="Login">Login :</label>
                 </div>
-                <div>
+                <div class = "row">
                     <input type="text" class="form-control formulaireInput" name="login" placeholder="Login"/>
                 </div>
                 <br>
@@ -31,10 +31,12 @@ ob_start();?>
                     }
                 ?>
                 <br>
+                <a class = "" href="">Mot de passe oublié ?</a>
+                <br>
+                <a class = "" href="">Login oublié ?</a>
                 <div>
                     <input type="submit" class="btn BoutonForm" value="Se connecter" name="formConnexion">
                 </div>
-                <br>
             </form>
             <form action="inscription">
                 <input type="submit" class="btn BoutonFormInscription" formaction='inscription' value="S'inscrire"/>
@@ -45,4 +47,3 @@ ob_start();?>
 </div>
 <?php $content = ob_get_clean();
 require_once('view/template.php'); ?>
-

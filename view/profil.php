@@ -101,6 +101,19 @@ ob_start(); ?>
                     <label class = "lab" for="mail">Email : <?= $_SESSION['userConnected']['mail']; ?></label>
                     <br>
                     <label class = "lab" for="role">Rôle : <?= $_SESSION['userConnected']['roleLabel']; ?></label>
+                    <br>
+                    <?php 
+                    if(isset($_SESSION['userConnected']['daysAbo']) && $_SESSION['userConnected']['daysAbo']['nbDaysLeft'] > 0)
+                    { ?>
+                        <label class = "lab" for="statutAbo">Statut abonné : Abonné</label>
+                        <br>
+                        <label class = "lab" for="jourAbo">Jours d'abonnement restant : <?= $_SESSION['userConnected']['daysAbo']['nbDaysLeft']; ?></label>
+                    <?php 
+                    }else
+                    { ?>
+                        <label class = "lab" for="statutAbo">Statut abonné : Non abonné</label>
+                    <?php
+                    } ?>
                 </div>
             </div>
             <div class = 'text-center'>

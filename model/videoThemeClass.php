@@ -18,11 +18,24 @@ class videoThemeClass
      * @param $id_video
      * @param $id_theme
      */
-    public function __construct($id, $id_video, $id_theme)
+    public function __construct($datas)
     {
-        $this->id = $id;
-        $this->id_video = $id_video;
-        $this->id_theme = $id_theme;
+        $this->hydrate($datas);
+    }
+
+    public function hydrate(array $datas)
+    {
+        foreach ($datas as $key => $value)
+        {
+            // On récupère le nom du setter correspondant à l'attribut.
+            $method = 'set'.ucfirst($key);
+            // Si le setter correspondant existe.
+            if (method_exists($this, $method))
+            {
+                // On appelle le setter.
+                $this->$method($value);
+            }
+        }
     }
 
     /**

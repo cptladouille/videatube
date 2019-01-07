@@ -2,6 +2,7 @@
 $root = str_replace('\\', '/', dirname(__DIR__));
 require_once('model/videoManager.php');
 require_once('model/userManager.php');
+require_once('model/subscriptionManager.php');
 
 function getHome(){
     $vM = new videoManager();
@@ -13,7 +14,6 @@ function getHome(){
 }
 function getVideo()
 {
-    $dataUserConnected;
     require_once ('view/video.php');
 }
 
@@ -105,6 +105,7 @@ function connectUser()
             {
                 if(password_verify($_POST['mdp'],$user->getPassword()))
                 {
+                    $sM = new subscriptionManager();
                     $_SESSION['userConnected'] = array(
                         'id'        =>  $user->getId(),
                         'lastname'  =>  $user->getLastname(),
@@ -113,11 +114,12 @@ function connectUser()
                         'nickname'  =>  $user->getNickname(),
                         'role'      =>  $user->getLastname(),
                         'avatar'    =>  $user->getAvatar(),
-                        'roleLabel' =>  attribRole($user->getLastname()));
+                        'roleLabel' =>  attribRole($user->getLastname()),
+                        'daysAbo'   =>  $sM->getDaysAbo($user->getId()));
                 }
                 else
                 {
-                    $_POST['alert'] ='Mauvaise combinaison mot de passe / Login';
+                    $_POST['alert'] ='Mauvaise combinaison mot de passe/Login';
                 }
             }
             else

@@ -21,12 +21,24 @@ class subscriptionClass
      * @param $id_user
      * @param $id_type_subscription
      */
-    public function __construct($id, $date_sub, $id_user, $id_type_subscription)
+    public function __construct($datas)
     {
-        $this->id = $id;
-        $this->date_sub = $date_sub;
-        $this->id_user = $id_user;
-        $this->id_type_subscription = $id_type_subscription;
+        $this->hydrate($datas);
+    }
+
+    public function hydrate(array $datas)
+    {
+        foreach ($datas as $key => $value)
+        {
+            // On récupère le nom du setter correspondant à l'attribut.
+            $method = 'set'.ucfirst($key);
+            // Si le setter correspondant existe.
+            if (method_exists($this, $method))
+            {
+                // On appelle le setter.
+                $this->$method($value);
+            }
+        }
     }
 
     /**

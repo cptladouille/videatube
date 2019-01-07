@@ -21,12 +21,24 @@ class purchaseClass
      * @param $id_video
      * @param $id_user
      */
-    public function __construct($id, $date_purchase, $id_video, $id_user)
+    public function __construct($datas)
     {
-        $this->id = $id;
-        $this->date_purchase = $date_purchase;
-        $this->id_video = $id_video;
-        $this->id_user = $id_user;
+        $this->hydrate($datas);
+    }
+
+    public function hydrate(array $datas)
+    {
+        foreach ($datas as $key => $value)
+        {
+            // On récupère le nom du setter correspondant à l'attribut.
+            $method = 'set'.ucfirst($key);
+            // Si le setter correspondant existe.
+            if (method_exists($this, $method))
+            {
+                // On appelle le setter.
+                $this->$method($value);
+            }
+        }
     }
 
 
