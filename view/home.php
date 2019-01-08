@@ -7,7 +7,7 @@ ob_start(); ?>
 
             <div class="col-lg-3">
 
-                <h1 class="my-4">VideaTube</h1>
+                <h1 class="my-4 titreSite">VideaTube</h1>
                 <div class="list-group">
                     <a href="#" class="list-group-item">Home</a>
                     <a href="#" class="list-group-item">Action</a>
