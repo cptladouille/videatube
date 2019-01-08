@@ -1,7 +1,7 @@
 /*CSS Stylesheet
 
 */
-/*Formulaire Connexion*/
+/*Page Connexion*/
 .formulaire{
     text-align: center !important;
     color: darkgrey;
@@ -53,6 +53,103 @@
     margin-bottom: 4% !important;
 }
 
+.linkFormConnexion{
+    color: #B40431;
+}
+.BoutonConnexion{
+    color: whitesmoke;
+    background-color: #B40431;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.BoutonInscription{
+    color: whitesmoke;
+    background-color: #B40431;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.BoutonConnexion:hover {
+    background-color: #fb3768;
+}
+
+.BoutonInscription:hover {
+    background-color: #fb3768;
+}
+
+.alert{
+    color: red;
+}
+
+
+
+
+/* Page Inscription*/
+
+.titleInscription{
+    color: #B40431;
+    margin: 2%
+
+}
+.formulaireInscription{
+    text-align: center !important;
+    color: darkgrey;
+    margin: 0 auto !important;
+    border-radius: 20px;
+    background: lightgray;
+    margin-top:5% !important;
+    height: 80%;
+}
+
+.colonne{
+    text-align: left;
+
+}
+.lab{
+    color: #B40431;
+}
+
+.inscriptionInputMail{
+    text-align: left !important;
+    width: 200%;
+}
+
+.inscriptionInputMdp{
+    text-align: left !important;
+    width: 100%;
+}
+.BoutonInscriptionForm{
+    color: whitesmoke;
+    background-color: #B40431;
+    text-align: left;
+    margin-bottom: 4% !important;
+}
+
+.labMdp{
+    color: #B40431;
+
+}
+
+.labPseudo{
+   margin-left:60%;
+    color: #B40431;
+
+}
+.inscriptionInputPseudo{
+    margin-left:60%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -73,9 +170,7 @@ div{
 
 
 
-.formulaireInscription{
-    text-align: center !important;
-}
+
 .formulaire form{
     width: 80% !important;
     margin: 0 auto !important;
@@ -98,63 +193,22 @@ div{
 }
 
 
-.firstColonne{
-    text-align: left;
-
-}
-.secondColonne{
-    text-align: left;
-
-}
-.formulaireInput2 {
-    margin: 0 auto !important;
-    width: 100%;
-    text-align: left;
-
-}
 
 
-.lab{
-    text-align: left !important;
-}
+
+
+
 .test
 {
     background-color: black;
 }
 
 
-.formulaireInputMail{
-    text-align: left !important;
-    width: 300%;
-}
 
-.formulaireInputMdp{
-    text-align: left !important;
-    width: 100%;
-}
 
-.secondColonne labMdp{
-    width: 170%;
-}
 
-.BoutonForm{
-    color: whitesmoke;
-    background-color: #B40431;
-    text-align: left;
-    margin-bottom: 20px;
-}
-.BoutonFormInscription{
-    color: whitesmoke;
-    background-color: #B40431;
-    text-align: left;
-    margin-bottom: 20px;
-}
-.BoutonForm:hover {
-    background-color: #fb3768;
-}
-.BoutonFormInscription:hover {
-    background-color: #fb3768;
-}
+
+
 
 .containerProfil{
     margin: 0 auto !important;
@@ -225,18 +279,14 @@ border-radius:100%;
 
 
 
-.linkFormConnexion{
-    color: #B40431;
-}
+
 
 .linkFormConnexion:hover {
     color: black;
 }
 
 
-.alert{
-    color: red;
-}
+
 
 .priceAbo{
     font-size: 70px;

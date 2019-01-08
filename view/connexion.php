@@ -33,15 +33,18 @@ ob_start();?>
                 <br>
                 <a class ="linkFormConnexion" href="">Login oublié ?</a>
                 <div>
-                    <input type="submit" class="btn BoutonForm" value="Se connecter" name="formConnexion">
+                    <input type="submit" class="btn BoutonConnexion" value="Se connecter" name="formConnexion">
                 </div>
             </form>
             <form action="inscription">
-                <input type="submit" class="btn BoutonFormInscription" formaction='inscription' value="S'inscrire"/>
+                <input type="submit" class="btn BoutonInscription" formaction='inscription' value="S'inscrire"/>
             </form>
         </div>
 
     </div>
 </div>
+
+
+
 <?php $content = ob_get_clean();
 require_once('view/template.php'); ?>
