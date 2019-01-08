@@ -1,14 +1,65 @@
 /*CSS Stylesheet
 
+*/
+/*Formulaire Connexion*/
+.formulaire{
+    text-align: center !important;
+    color: darkgrey;
+    margin: 0 auto !important;
+    border-radius: 20px;
+    background: lightgray;
+    margin-top:5% !important;
+    height: 80%;
+}
 
+.titleConnexion{
+    color: #B40431;
+    margin: 20px ;
+}
 
+.containImgFormConnexion{
+    width:30%;
+    height:20%;
+    margin: 0 auto !important;
 
-Formulaires*/
+}
+
+.imgFormConnexion{
+    -moz-border-radius:100%;
+    -webkit-border-radius:100%;
+    border-radius:100%;
+    width: 100%;
+    bordel-color: #B40431;
+}
+
+.formulaireChamps{
+    text-align: center;
+}
+
+.labelFormConnexion{
+    color: #B40431;
+}
+
+.labLogin{
+    margin-top: 4% ;
+}
 
 .formulaireInput{
     margin: 0 auto !important;
-    width: 40%;
+    width: 60% !important;
 }
+
+.inputMdpConnexion{
+    margin-bottom: 4% !important;
+}
+
+
+
+
+
+
+
+
 .formulaire button{
     color: whitesmoke;
     background-color: #B40431;
@@ -19,22 +70,9 @@ div{
     font-family:  "Lucida Console", Monaco, monospace
 }
 
-.formulaire h1{
-    color: #B40431;
-    margin: 20px ;
-}   
-.formulaireChamps{
-    text-align: center;
-}
-.formulaire{
-    text-align: center !important;
-    color: darkgrey;
-    margin: 0 auto !important;
-    border-radius: 20px;
-    background: lightgray;
-    margin-top:5% !important;
-    height: 80%;
-}
+
+
+
 .formulaireInscription{
     text-align: center !important;
 }
@@ -58,13 +96,8 @@ div{
     width: 100%; 
     height: 100%;
 }
-.formulaireInput{
-    margin: 0 auto !important;
-    width: 100%;
-}
-.formulaire div{
-    margin: 0 auto !important;
-}
+
+
 .firstColonne{
     text-align: left;
 
@@ -187,21 +220,11 @@ html{
 border-radius:100%;
 }
 
-.imgFormConnexion{
-    -moz-border-radius:100%;
-    -webkit-border-radius:100%;
-    border-radius:100%;
-    width: 100%;
-}
 
-.containImgFormConnexion{
-    width:30%;
-    height:20%;
-}
 
-.labelFormConnexion{
-    color: #B40431;
-}
+
+
+
 .linkFormConnexion{
     color: #B40431;
 }
@@ -210,9 +233,7 @@ border-radius:100%;
     color: black;
 }
 
-.labLogin{
-    margin-top: 4% ;
-}
+
 .alert{
     color: red;
 }

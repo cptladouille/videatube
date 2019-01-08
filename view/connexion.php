@@ -3,7 +3,7 @@ ob_start();?>
 <div class="container">
     <div class="row">
         <div class="formulaire">
-            <h1>CONNECTEZ VOUS !</h1>
+            <h1 class="titleConnexion">CONNECTEZ VOUS !</h1>
             <div class="containImgFormConnexion">
             <img  class="imgFormConnexion" src="./ressources/Logo_v_p.png">
             </div>
@@ -11,15 +11,15 @@ ob_start();?>
                 <div class="formulaireChamps ">
                     <label class="labelFormConnexion labLogin " for="Login">Login :</label>
                 </div>
-                <div class = "row">
+                <div>
                     <input type="text" class="form-control formulaireInput" name="login" placeholder="Login"/>
                 </div>
                 <br>
                 <div class="formulaireChamps">
-                    <label class="labelFormConnexion" for="MotDePasse">Mot de Passe :</label>
+                    <label class="labelFormConnexion " for="MotDePasse">Mot de Passe :</label>
                 </div>
-                <div>
-                    <input type="password" class="form-control formulaireInput" name="mdp" placeholder="Mot de passe"/>
+                <div class="inputMdpConnexion">
+                    <input type="password" class="form-control formulaireInput " name="mdp" placeholder="Mot de passe"/>
                 </div>
                 <?php 
                     if(isset($_SESSION['userConnected']))
@@ -33,10 +33,10 @@ ob_start();?>
                     <?php
                     }
                 ?>
+
+                <a class ="linkFormConnexion " href="">Mot de passe oublié ?</a>
                 <br>
-                <a class = "linkFormConnexion" href="">Mot de passe oublié ?</a>
-                <br>
-                <a class = "linkFormConnexion" href="">Login oublié ?</a>
+                <a class ="linkFormConnexion" href="">Login oublié ?</a>
                 <div>
                     <input type="submit" class="btn BoutonForm" value="Se connecter" name="formConnexion">
                 </div>
