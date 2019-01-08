@@ -32,7 +32,7 @@ div{
     margin: 0 auto !important;
     border-radius: 20px;
     background: lightgray;
-    margin-top:7% !important;
+    margin-top:5% !important;
     height: 80%;
 }
 .formulaireInscription{
@@ -205,5 +205,5 @@ border-radius:100%;
     margin-top: 4% ;
 }
 .alert{
-    color: #B40431;
+    color: red;
 }

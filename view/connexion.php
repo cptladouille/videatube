@@ -33,7 +33,7 @@ ob_start();?>
                     <?php
                     }
                 ?>
-                <br>
+
                 <a class = "linkFormConnexion" href="">Mot de passe oublié ?</a>
                 <br>
                 <a class = "linkFormConnexion" href="">Login oublié ?</a>
