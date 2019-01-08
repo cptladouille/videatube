@@ -101,6 +101,7 @@ function connectUser()
         if (isset($_SESSION['userConnected']))
         {
             $_POST['alert'] = "Vous êtes déja connecté";
+            return false;
         }
         else
         {
@@ -121,21 +122,25 @@ function connectUser()
                         'avatar'    =>  $user->getAvatar(),
                         'roleLabel' =>  attribRole($user->getLastname()),
                         'daysAbo'   =>  $sM->getDaysAbo($user->getId()));
+                        return true;
                 }
                 else
                 {
                     $_POST['alert'] ='Mauvaise combinaison mot de passe/Login';
+                    return false;
                 }
             }
             else
             {
                 $_POST['alert'] = "Aucun utilisateur n'existe avec ce login";
+                return false;
             }
         }
     }
     else
     {
         $_POST['alert'] ='Veuillez entrez un login et un mot de passe correct';
+        return false;
     }
 }
 

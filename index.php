@@ -16,13 +16,24 @@
         {
             if (isset($_POST['formConnexion']))
             {
-                connectUser();
+                if(connectUser())
+                {
+                    $p= 'home';
+                    getHome();
+                }
+                else
+                {
+                    getConnexion();
+                }
             } 
             elseif (isset($_POST['deconnexion']))
             {
                 disconnectUser();
+                getConnexion();
             }
-            getConnexion();
+            else{
+                getConnexion();
+            }
         }
         elseif ($p == 'inscription')
         {
