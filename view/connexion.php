@@ -4,16 +4,19 @@ ob_start();?>
     <div class="row">
         <div class="formulaire">
             <h1>CONNECTEZ VOUS !</h1>
+            <div class="containImgFormConnexion">
+            <img  class="imgFormConnexion" src="./ressources/Logo_v_p.png">
+            </div>
             <form method="post" action="connexion">
-                <div class="formulaireChamps">
-                    <label for="Login">Login :</label>
+                <div class="formulaireChamps ">
+                    <label class="labelFormConnexion labLogin " for="Login">Login :</label>
                 </div>
                 <div class = "row">
                     <input type="text" class="form-control formulaireInput" name="login" placeholder="Login"/>
                 </div>
                 <br>
                 <div class="formulaireChamps">
-                    <label for="MotDePasse">Mot de Passe :</label>
+                    <label class="labelFormConnexion" for="MotDePasse">Mot de Passe :</label>
                 </div>
                 <div>
                     <input type="password" class="form-control formulaireInput" name="mdp" placeholder="Mot de passe"/>
@@ -31,9 +34,9 @@ ob_start();?>
                     }
                 ?>
                 <br>
-                <a class = "" href="">Mot de passe oublié ?</a>
+                <a class = "linkFormConnexion" href="">Mot de passe oublié ?</a>
                 <br>
-                <a class = "" href="">Login oublié ?</a>
+                <a class = "linkFormConnexion" href="">Login oublié ?</a>
                 <div>
                     <input type="submit" class="btn BoutonForm" value="Se connecter" name="formConnexion">
                 </div>

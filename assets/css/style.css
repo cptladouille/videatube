@@ -31,9 +31,9 @@ div{
     color: darkgrey;
     margin: 0 auto !important;
     border-radius: 20px;
-    border-color:#B40431;
-    background: antiquewhite;
-    border-style: dotted;
+    background: lightgray;
+    margin-top:7% !important;
+    height: 80%;
 }
 .formulaireInscription{
     text-align: center !important;
@@ -178,25 +178,29 @@ html{
 border-radius:100%;
 }
 
-.colonneTab{
+.imgFormConnexion{
+    -moz-border-radius:100%;
+    -webkit-border-radius:100%;
+    border-radius:100%;
     width: 100%;
 }
 
-.tableauCarousel{
-    width: 90%;
-    margin-left:5%;
-
+.containImgFormConnexion{
+    width:30%;
+    height:20%;
 }
 
-
-.glyphicon-chevron-left{
-    color: red !important;
+.labelFormConnexion{
+    color: #B40431;
+}
+.linkFormConnexion{
+    color: #B40431;
 }
 
-.glyphicon-chevron-right{
-    color: red !important;
+.linkFormConnexion:hover {
+    color: black;
 }
 
-.btnCarou{
-    margin-left: 25%;
+.labLogin{
+    margin-top: 4% ;
 }
