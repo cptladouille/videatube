@@ -83,6 +83,27 @@
 
 
 
+/* Page Home */
+.BoutonHome{
+    color: whitesmoke;
+    background-color: #B40431;
+    border-color: whitesmoke;
+    text-align: center;
+}
+
+.BoutonHome:hover {
+    background-color: #fb3768;
+}
+
+.inputHome{
+    border-color: #B40431;
+}
+.inputHome:hover{
+    border-color:  #fb3768;
+}
+
+
+
 /* Page Inscription*/
 
 .titleInscription{
@@ -154,20 +175,9 @@
 
 
 
-
-
-
-
 div{
     font-family:  "Lucida Console", Monaco, monospace
 }
-
-
-
-
-
-
-
 
 
 .filterButtonBuy{
@@ -178,20 +188,6 @@ div{
     width: 100%; 
     height: 100%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .containerProfil{
     margin: 0 auto !important;
@@ -217,12 +213,6 @@ div{
 }
 
 
-
-
-
-
-
-
 html{
     font-family:  "Lucida Console", Monaco, monospace;
 }
@@ -234,18 +224,9 @@ border-radius:100%;
 }
 
 
-
-
-
-
-
-
 .linkFormConnexion:hover {
     color: black;
 }
-
-
-
 
 .priceAbo{
     font-size: 70px;
