@@ -156,18 +156,17 @@ if (isset($_POST['editUser'])) { ?>
                 </form>
                 <?php
                 } ?>
-                    
+
 
             </div>
         </div>
         <div class='text-center'>
-            <h3>Modifier mes informations</h3>
             <form method="post" action="profil">
                 <input class="btn  my-2 my-sm-0 BoutonHome" type="submit" name="editUser" value='Modifier mon profil'>
             </form>
             <br>
             <form method="post" action="profil">
-                <input class="btn  my-2 my-sm-0 BoutonHome" type="submit" name="editUserPassword"
+                <input class="btn  my-2 my-sm-0 BoutonEditPassword" type="submit" name="editUserPassword"
                        value='Changer de mot de passe'>
             </form>
         </div>

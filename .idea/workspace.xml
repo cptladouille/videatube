@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4d80342-4073-4d16-b656-cc76257d1013" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/profil.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/profil.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,23 +26,14 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6025145">
+    <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/view/home.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="135">
-                  <caret line="9" column="41" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="41" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/assets/css/style.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="142">
-                  <caret line="254" selection-start-line="254" selection-end-line="254" />
+                <state relative-caret-position="380">
+                  <caret line="85" column="26" lean-forward="true" selection-start-line="85" selection-start-column="26" selection-end-line="85" selection-end-column="26" />
                 </state>
               </provider>
             </entry>
@@ -65,11 +57,6 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/passwords">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/infophp.php">
               <provider selected="true" editor-type-id="text-editor" />
             </entry>
@@ -83,23 +70,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/controler/controler.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-893" />
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/model/userManager.php">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/view/profil.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="320">
-                  <caret line="156" column="21" selection-start-line="156" selection-start-column="21" selection-end-line="156" selection-end-column="21" />
+                <state relative-caret-position="430">
+                  <caret line="168" column="66" selection-start-line="168" selection-start-column="48" selection-end-line="168" selection-end-column="66" />
                 </state>
               </provider>
             </entry>
@@ -108,46 +83,13 @@
       </split-first>
       <split-second>
         <leaf>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/assets/css/style.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="353">
-                  <caret line="209" column="19" selection-start-line="209" selection-start-column="19" selection-end-line="209" selection-end-column="19" />
+                <state relative-caret-position="376">
+                  <caret line="212" column="17" selection-start-line="212" selection-start-column="17" selection-end-line="212" selection-end-column="17" />
                 </state>
               </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/view/subscription.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-2">
-                  <caret selection-end-line="5" selection-end-column="21" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/view/template.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="15">
-                  <caret line="20" column="49" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="72" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/view/theme.php">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/view/video.php">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/view/purchase.php">
-              <provider selected="true" editor-type-id="text-editor" />
             </entry>
           </file>
         </leaf>
@@ -156,7 +98,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>first</find>
       <find>src</find>
       <find>iframe</find>
       <find>video</find>
@@ -183,9 +124,10 @@
       <find>input</find>
       <find>BoutonForm</find>
       <find>list-group-item</find>
-      <find>formulaire</find>
       <find>avatar</find>
       <find>lab</find>
+      <find>&quot;lab&quot;</find>
+      <find>formulaire</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -220,8 +162,8 @@
         <option value="$PROJECT_DIR$/view/connexion.php" />
         <option value="$PROJECT_DIR$/view/inscription.php" />
         <option value="$PROJECT_DIR$/view/home.php" />
-        <option value="$PROJECT_DIR$/assets/css/style.css" />
         <option value="$PROJECT_DIR$/view/profil.php" />
+        <option value="$PROJECT_DIR$/assets/css/style.css" />
       </list>
     </option>
   </component>
@@ -262,11 +204,6 @@
               <item name="videatube" type="b2602c69:ProjectViewProjectNode" />
               <item name="videatube" type="462c0819:PsiDirectoryNode" />
               <item name="controler" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="videatube" type="b2602c69:ProjectViewProjectNode" />
-              <item name="videatube" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="videatube" type="b2602c69:ProjectViewProjectNode" />
@@ -325,12 +262,12 @@
       <workItem from="1546870506792" duration="6660000" />
       <workItem from="1546938615940" duration="345000" />
       <workItem from="1546939012442" duration="122000" />
-      <workItem from="1546939538203" duration="12867000" />
+      <workItem from="1546939538203" duration="13680000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88045000" />
+    <option name="totallyTimeSpent" value="88858000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -502,31 +439,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/connexion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="584">
-          <caret line="39" column="59" selection-start-line="39" selection-start-column="59" selection-end-line="39" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/bootstrap/css/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="218">
           <caret line="5108" column="40" selection-start-line="5108" selection-start-column="25" selection-end-line="5108" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="41" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/inscription.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="64" column="29" selection-start-line="64" selection-start-column="29" selection-end-line="64" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -551,15 +467,19 @@
     <entry file="file://$PROJECT_DIR$/model/userManager.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/style.css">
+    <entry file="file://$PROJECT_DIR$/view/template.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="254" selection-start-line="254" selection-end-line="254" />
+        <state relative-caret-position="15">
+          <caret line="20" column="49" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="72" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/purchase.php">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/view/theme.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/subscription.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -568,23 +488,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="20" column="49" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/video.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/theme.php">
+    <entry file="file://$PROJECT_DIR$/view/purchase.php">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="85" column="26" lean-forward="true" selection-start-line="85" selection-start-column="26" selection-end-line="85" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/inscription.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="64" column="29" selection-start-line="64" selection-start-column="29" selection-end-line="64" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/connexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="584">
+          <caret line="39" column="59" selection-start-line="39" selection-start-column="59" selection-end-line="39" selection-end-column="59" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/profil.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="156" column="21" selection-start-line="156" selection-start-column="21" selection-end-line="156" selection-end-column="21" />
+        <state relative-caret-position="430">
+          <caret line="168" column="66" selection-start-line="168" selection-start-column="48" selection-end-line="168" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="212" column="17" selection-start-line="212" selection-start-column="17" selection-end-line="212" selection-end-column="17" />
         </state>
       </provider>
     </entry>

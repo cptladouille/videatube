@@ -184,14 +184,14 @@
 }
 
 .ChampProfil{
-    margin: 0 auto !important;
+    margin-left:15% !important;
     margin-top: 4% !important;
 }
 
 .photoProfil{
     width: 20% !important;
     margin-top: 4% !important;
-    margin-left:4% !important;
+    margin-left:10% !important;
 }
 
 .editForm{
@@ -209,7 +209,19 @@
 .labProfil{
     color: #B40431;
 }
+.text-center{
+    margin-left:5% !important;
+    text-align: center !important;
+    width: 25%;
 
+}
+.BoutonEditPassword{
+    color: whitesmoke;
+    background-color: #B40431;
+    border-color: whitesmoke;
+    text-align: center;
+    margin-bottom: 1% !important;
+}
 
 
 
