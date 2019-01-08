@@ -101,6 +101,15 @@
 .inputHome:hover{
     border-color:  #fb3768;
 }
+.list-group-item{
+    color: #B40431 !important;
+}
+.titreVideo{
+    color: #B40431 !important;
+}
+.text-muted{
+    color: #B40431 !important;
+}
 
 
 
