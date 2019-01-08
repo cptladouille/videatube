@@ -9,27 +9,27 @@ ob_start(); ?>
             <div class="ChampProfil">
                 <form method = "post" action="profil">
                     <div>
-                        <label class = "lab" for="nom">Nom :</label>
+                        <label class = "labProfil" for="nom">Nom :</label>
                         <input type="text" name="nom" class="form-control formulaireInput3" placeholder=" <?= $_SESSION['userConnected']['lastname']; ?>"/>
                     </div>
                     <br>
                     <div>
-                        <label class = "lab" for="prenom">Prénom :</label>
+                        <label class = "labProfil" for="prenom">Prénom :</label>
                         <input type="text" name="prenom" class="form-control formulaireInput3" placeholder=" <?= $_SESSION['userConnected']['firstname']; ?>"/>
                     </div>
                     <br>
                     <div>
-                        <label class = "lab" for="pseudo">Pseudo :</label>
+                        <label class = "labProfil" for="pseudo">Pseudo :</label>
                         <input type="text" name="pseudo" class="form-control formulaireInput3" placeholder=" <?= $_SESSION['userConnected']['nickname']; ?>"/>
                     </div>
                     <br>
                     <div>
-                        <label class = "lab" for="mail">Email :</label>
+                        <label class = "labProfil" for="mail">Email :</label>
                         <input type="text" name="mail" class="form-control formulaireInput3" placeholder=" <?= $_SESSION['userConnected']['mail']; ?>"/>
                     </div>
                     <br>
                     <div>
-                        <label class = "lab" for="avatar">Avatar :<img src="./ressources/avatars/<?= $_SESSION['userConnected']['avatar'];?>" width="60" height="60" class="d-inline-block align-top avatar" alt=""></label>
+                        <label class = "labProfil" for="avatar">Avatar :<img src="./ressources/avatars/<?= $_SESSION['userConnected']['avatar'];?>" width="60" height="60" class="d-inline-block align-top avatar" alt=""></label>
                         <input type="text" name="avatar" class="form-control formulaireInput3" placeholder=" <?= $_SESSION['userConnected']['avatar']; ?>"/>
                     </div>
                     <br>
@@ -53,12 +53,12 @@ ob_start(); ?>
             <div class="ChampProfil">
                 <form method = "post" action="profil">
                     <div>
-                        <label class = "lab" for="password">Nouveau mot de passe : </label>
+                        <label class = "labProfil" for="password">Nouveau mot de passe : </label>
                         <input type="text" name="password" class="form-control formulaireInput3"/>
                     </div>
                     <br>
                     <div>
-                        <label class = "lab" for="password2">Confirmer le mot de passe : </label>
+                        <label class = "labProfil" for="password2">Confirmer le mot de passe : </label>
                         <input type="text" name="password2" class="form-control formulaireInput3"/>
                     </div>
                     <br>
@@ -84,7 +84,7 @@ ob_start(); ?>
                     <?php
                     if($_SESSION['userConnected']['avatar']!='')
                     { ?>
-                        <img src="./ressources/avatars/<?= $_SESSION['userConnected']['avatar'];?>" width="400" height="400" class="avatar" alt="">
+                        <img src="./ressources/avatars/<?= $_SESSION['userConnected']['avatar'];?>" class="avatar" alt="">
                     <?php 
                     } else { ?>
                         <img src=http://image.noelshack.com/fichiers/2019/01/4/1546507376-profile-2092113-12802.png width="400" height="400" class = "avatar">
@@ -92,26 +92,26 @@ ob_start(); ?>
                 </div>
                 <div class="ChampProfil">
                     
-                    <label class = "lab" for="nom">Nom : <?= $_SESSION['userConnected']['lastname']; ?></label>
+                    <label class = "labProfil" for="nom">Nom : <?= $_SESSION['userConnected']['lastname']; ?></label>
                     <br>
-                    <label class = "lab" for="prenom">Prénom : <?= $_SESSION['userConnected']['firstname']; ?></label>
+                    <label class = "labProfil" for="prenom">Prénom : <?= $_SESSION['userConnected']['firstname']; ?></label>
                     <br>
-                    <label class = "lab" for="pseudo">Pseudo : <?= $_SESSION['userConnected']['nickname']; ?></label>
+                    <label class = "labProfil" for="pseudo">Pseudo : <?= $_SESSION['userConnected']['nickname']; ?></label>
                     <br>
-                    <label class = "lab" for="mail">Email : <?= $_SESSION['userConnected']['mail']; ?></label>
+                    <label class = "labProfil" for="mail">Email : <?= $_SESSION['userConnected']['mail']; ?></label>
                     <br>
-                    <label class = "lab" for="role">Rôle : <?= $_SESSION['userConnected']['roleLabel']; ?></label>
+                    <label class = "labProfil" for="role">Rôle : <?= $_SESSION['userConnected']['roleLabel']; ?></label>
                     <br>
                     <?php 
                     if(isset($_SESSION['userConnected']['daysAbo']) && $_SESSION['userConnected']['daysAbo']['nbDaysLeft'] > 0)
                     { ?>
-                        <label class = "lab" for="statutAbo">Statut abonné : Abonné</label>
+                        <label class = "labProfil" for="statutAbo">Statut abonné : Abonné</label>
                         <br>
-                        <label class = "lab" for="jourAbo">Jours d'abonnement restant : <?= $_SESSION['userConnected']['daysAbo']['nbDaysLeft']; ?></label>
+                        <label class = "labProfil" for="jourAbo">Jours d'abonnement restant : <?= $_SESSION['userConnected']['daysAbo']['nbDaysLeft']; ?></label>
                     <?php 
                     }else
                     { ?>
-                        <label class = "lab" for="statutAbo">Statut abonné : Non abonné</label>
+                        <label class = "labProfil" for="statutAbo">Statut abonné : Non abonné</label>
                         <form method = 'post' action ='subscription'>
                             <input class="btn  my-2 my-sm-0 BoutonHome" type="submit" name = "subscription" value = "S'abonner">
                         </form>

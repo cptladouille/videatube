@@ -174,6 +174,47 @@
 
 
 
+/* Page Profil */
+
+.containerProfil{
+    margin: 0 auto !important;
+    border-radius: 20px;
+    background: lightgray;
+    margin-top: 3% !important;
+}
+
+.ChampProfil{
+    margin: 0 auto !important;
+    margin-top: 4% !important;
+}
+
+.photoProfil{
+    width: 20% !important;
+    margin-top: 4% !important;
+    margin-left:4% !important;
+}
+
+.editForm{
+    width: 20%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.avatar{
+    width: 80%;
+    height: 80%;
+    -moz-border-radius:100%;
+    -webkit-border-radius:100%;
+    border-radius:100%;
+}
+.labProfil{
+    color: #B40431;
+}
+
+
+
+
+
+
 
 
 
@@ -202,39 +243,14 @@ div{
     height: 100%;
 }
 
-.containerProfil{
-    margin: 0 auto !important;
-    border-radius: 20px;
-    border-color:#B40431;
-    background: antiquewhite;
-    border-style: dotted;
-    padding: 10px;
-}
 
-.ChampProfil{
-    margin: 0 auto !important;
-}
-
-.photoProfil{
-    margin: 0 auto !important;
-}
-
-.editForm{
-    width: 20%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
 
 
 html{
     font-family:  "Lucida Console", Monaco, monospace;
 }
 
-.avatar{
--moz-border-radius:100%;
--webkit-border-radius:100%;
-border-radius:100%;
-}
+
 
 
 .linkFormConnexion:hover {
