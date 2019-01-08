@@ -124,11 +124,20 @@ div{
 }
 
 .containerProfil{
+    margin: 0 auto !important;
     border-radius: 20px;
     border-color:#B40431;
     background: antiquewhite;
     border-style: dotted;
     padding: 10px;
+}
+
+.ChampProfil{
+    margin: 0 auto !important;
+}
+
+.photoProfil{
+    margin: 0 auto !important;
 }
 
 .editForm{
@@ -206,4 +215,23 @@ border-radius:100%;
 }
 .alert{
     color: red;
+}
+
+.priceAbo{
+    font-size: 70px;
+}
+
+h2{
+    text-align: center;
+}
+
+.subscriptionContainer{
+    text-align: center;
+    padding: 1%;
+    margin: 1%;
+    border-color: #B40431;
+    border-radius: 10%;
+    border-style: groove;
+    background-color: blanchedalmond;
+
 }

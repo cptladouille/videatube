@@ -5,7 +5,43 @@ ob_start(); ?>
 
         <div class="row">
 
-            <div class="col-lg-3">
+                <div class="item active">
+                    <table class="tableauCarousel">
+                        <tr>
+                            <td>
+                                <div class="colonneTab firstColTab">
+                                    <div class="card mb-2">
+                                        <object data="<?= $data[0] ?>"></object>
+                                            <div class="card-body">
+                                                <h4 class="card-title">Card title</h4>
+                                                <p class="card-text">Some quick example text to build on the card title
+                                                    and
+                                                    make up the bulk
+                                                    of the
+                                                    card's content.</p>
+                                                <a class="btn btn-primary btnCarou" href ="">Button</a>
+                                            </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="colonneTab">
+                                    <div class="card mb-2">
+                                        <object data="<?= $data[0] ?>"></object>
+                                            <div class="card-body">
+                                                <h4 class="card-title">Card title</h4>
+                                                <p class="card-text">Some quick example text to build on the card title
+                                                    and
+                                                    make up the
+                                                    bulk of the
+                                                    card's content.</p>
+                                                <a class="btn btn-primary btnCarou">Button</a>
+                                            </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="colonneTab ">
 
                 <h1 class="my-4">VideaTube</h1>
                 <div class="list-group">

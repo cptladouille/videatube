@@ -61,7 +61,7 @@
                         <?php
                         }?>
                         <a  href= "profil"><p class = "my-2 my-sm-0" href = "profil"><?= $_SESSION['userConnected']['nickname'] ;?></p></a>
-                        <form method = 'post' action ='connexion'>
+                        <form method = 'post' action ='subscription'>
                             <input class="btn  my-2 my-sm-0 BoutonHome" type="submit" name = "deconnexion" value = 'Déconnexion'>
                         </form>
                     <?php 

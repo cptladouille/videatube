@@ -11,7 +11,7 @@ class typeSubClass
     var $id;
     var $price;
     var $duration;
-    var $nbDayTrial;
+    var $nbDaysTrial;
     var $title;
 
     /**
@@ -19,7 +19,7 @@ class typeSubClass
      * @param $id
      * @param $price
      * @param $duration
-     * @param $nbDayTrial
+     * @param $nbDaysTrial
      * @param $title
      */
     public function __construct($datas)
@@ -94,17 +94,17 @@ class typeSubClass
     /**
      * @return mixed
      */
-    public function getNbDayTrial()
+    public function getnbDaysTrial()
     {
-        return $this->nbDayTrial;
+        return $this->nbDaysTrial;
     }
 
     /**
-     * @param mixed $nbDayTrial
+     * @param mixed $nbDaysTrial
      */
-    public function setNbDayTrial($nbDayTrial)
+    public function setNbDaysTrial($nbDaysTrial)
     {
-        $this->nbDayTrial = $nbDayTrial;
+        $this->nbDaysTrial = $nbDaysTrial;
     }
 
     /**

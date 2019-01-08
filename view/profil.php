@@ -8,7 +8,7 @@ ob_start(); ?>
         <div class="containerProfil col-lg-10 editForm">
             <div class="ChampProfil">
                 <form method = "post" action="profil">
-                    <div class = "row">
+                    <div>
                         <label class = "lab" for="nom">Nom :</label>
                         <input type="text" name="nom" class="form-control formulaireInput3" placeholder=" <?= $_SESSION['userConnected']['lastname']; ?>"/>
                     </div>
@@ -112,6 +112,9 @@ ob_start(); ?>
                     }else
                     { ?>
                         <label class = "lab" for="statutAbo">Statut abonné : Non abonné</label>
+                        <form method = 'post' action ='subscription'>
+                            <input class="btn  my-2 my-sm-0 BoutonHome" type="submit" name = "subscription" value = "S'abonner">
+                        </form>
                     <?php
                     } ?>
                 </div>

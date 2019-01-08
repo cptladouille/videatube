@@ -57,7 +57,8 @@ require_once('model/userClass.php');
         {
             try 
             {
-                $login = '"'.(string) $login.'"';
+                $login = "'".(string) trim($login ," \t\n\r\0\x0B")."'";
+                
                 $q = $this->_db->query('SELECT id FROM user WHERE log = '.$login);
                 $id = $q->fetch(PDO::FETCH_ASSOC);  
                 if ($id['id']!=0)

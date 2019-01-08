@@ -3,6 +3,7 @@ $root = str_replace('\\', '/', dirname(__DIR__));
 require_once('model/videoManager.php');
 require_once('model/userManager.php');
 require_once('model/subscriptionManager.php');
+require_once('model/typeSubManager.php');
 
 function getHome(){
     $vM = new videoManager();
@@ -50,6 +51,8 @@ function getTheme($theme)
 }
 
 function getSubscription(){
+    $tSM = new typeSubManager();
+    $datas = $tSM->getList();
     require_once ('view/subscription.php');
 }
 
@@ -64,6 +67,8 @@ function getInscription(){
 function getProfil(){
     require_once ('view/profil.php');
 }
+
+
 
 function checkFormInscription()
 {
