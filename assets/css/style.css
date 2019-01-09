@@ -129,7 +129,7 @@
     color: darkgrey;
     margin: 0 auto !important;
     border-radius: 20px;
-    background: lightgray;
+    background-image: linear-gradient(white, lightgray);
     margin-top:5% !important;
 }
 
