@@ -248,7 +248,7 @@
 
 /* Page Subscription */
 .bg-gradient {
-    background-image: linear-gradient(white, lightgray);
+    background-image: linear-gradient(#f8f9fa, lightgray);
 }
 ul li {
     margin-bottom:1.4rem;
