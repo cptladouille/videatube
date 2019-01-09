@@ -7,7 +7,7 @@ ob_start(); ?>
 
             <div class="col-lg-3">
 
-                <h1 class="my-4 titreSite">VideaTube</h1>
+                <h1 class="my-4">VideaTube</h1>
                 <div class="list-group">
                     <a href="#" class="list-group-item">Home</a>
                     <a href="#" class="list-group-item">Action</a>
@@ -32,13 +32,19 @@ ob_start(); ?>
                     </ol>
                     <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
+                            <a href="#">
                             <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="First slide">
+                            </a>
                         </div>
                         <div class="carousel-item">
+                            <a href="#">
                             <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Second slide">
+                            </a>
                         </div>
                         <div class="carousel-item">
+                            <a href="#">
                             <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Third slide">
+                            </a>
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
