@@ -88,6 +88,8 @@
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 
 </body>
+
+
 <footer class="py-3 bg-dark">
     <div class="container">
         <p class="m-0 text-center text-white">Copyright &copy; VideaTube 2018</p>
