@@ -121,35 +121,32 @@
 
 .titleInscription{
     color: #B40431;
-    margin: 2%
+    margin: 2%;
+    text-align: center;
 
 }
 .formulaireInscription{
-    text-align: center !important;
     color: darkgrey;
     margin: 0 auto !important;
     border-radius: 20px;
     background: lightgray;
     margin-top:5% !important;
-    height: 80%;
 }
 
-.colonne{
-    text-align: left;
 
-}
 .lab{
     color: #B40431;
+    text-align: left !important;
 }
 
 .inscriptionInputMail{
     text-align: left !important;
-    width: 200%;
+    width: 100%;
 }
 
 .inscriptionInputMdp{
-    text-align: left !important;
-    width: 100%;
+    margin-left: 18%;
+    width: 60%;
 }
 .BoutonInscriptionForm{
     color: whitesmoke;
@@ -157,20 +154,16 @@
     text-align: left;
     margin-bottom: 4% !important;
 }
-
-.labMdp{
-    color: #B40431;
-
+.colonneMdp{
+    text-align: center !important;
+}
+.avatarInscription{
+    margin-bottom: 4% !important;
 }
 
-.labPseudo{
-   margin-left:60%;
-    color: #B40431;
 
-}
-.inscriptionInputPseudo{
-    margin-left:60%;
-}
+
+
 
 
 
