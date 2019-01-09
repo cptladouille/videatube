@@ -39,7 +39,7 @@ if (isset($_POST['editUser'])) { ?>
                            placeholder=" <?= $_SESSION['userConnected']['avatar']; ?>"/>
                 </div>
                 <br>
-                <div class="text-center">
+                <div class="">
                     <input class="btn  my-2 my-sm-0 BoutonHome" type="submit" name="validateEditUser"
                            value='Accepter les modifications'>
                 </div>
@@ -83,7 +83,7 @@ if (isset($_POST['editUser'])) { ?>
     <?php
     // Formulaire d'informations générales de profil
 } else { ?>
-    <div class="containerProfil col-lg-10">
+    <div class="containerProfil col-lg-8">
         <div class="row">
             <div class="photoProfil">
                 <?php
@@ -152,7 +152,7 @@ if (isset($_POST['editUser'])) { ?>
                     </tbody>
                 </table>
                 <form method='post' action='subscription'>
-                    <input class="btn  my-2 my-sm-0 BoutonHome" type="submit" name="subscription" value="S'abonner">
+                    <input class="btn  my-2 my-sm-0 BoutonSubscribe" type="submit" name="subscription" value="S'abonner">
                 </form>
                 <?php
                 } ?>
@@ -160,13 +160,13 @@ if (isset($_POST['editUser'])) { ?>
 
             </div>
         </div>
-        <div class='text-center'>
+        <div>
             <form method="post" action="profil">
-                <input class="btn  my-2 my-sm-0 BoutonHome" type="submit" name="editUser" value='Modifier mon profil'>
+                <input class="btn  my-2 my-sm-0  BoutonEditProfil " type="submit" name="editUser" value='Modifier mon profil'>
             </form>
             <br>
             <form method="post" action="profil">
-                <input class="btn  my-2 my-sm-0 BoutonEditPassword" type="submit" name="editUserPassword"
+                <input class="btn  my-2 my-sm-0  BoutonEditPassword" type="submit" name="editUserPassword"
                        value='Changer de mot de passe'>
             </form>
         </div>

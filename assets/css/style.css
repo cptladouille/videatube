@@ -88,9 +88,9 @@
 .BoutonHome{
     color: whitesmoke;
     background-color: #B40431;
-    border-color: whitesmoke;
     text-align: center;
 }
+
 
 .BoutonHome:hover {
     background-color: #fb3768;
@@ -168,12 +168,13 @@
 
 
 
+
 /* Page Profil */
 
 .containerProfil{
+    background-image: linear-gradient(white, lightgray);
     margin: 0 auto !important;
     border-radius: 20px;
-    background: lightgray;
     margin-top: 3% !important;
 }
 
@@ -203,17 +204,38 @@
 .labProfil{
     color: #B40431;
 }
-.text-center{
-    width: 25%;
-}
+
 
 .BoutonEditPassword{
     color: whitesmoke;
     background-color: #B40431;
-    border-color: whitesmoke;
     text-align: center;
     margin-bottom: 3% !important;
+    margin-left: 6%;
+}
 
+
+.BoutonEditProfil{
+    color: whitesmoke;
+    background-color: #B40431;
+    text-align: center;
+    margin-left: 8%;
+}
+
+.BoutonEditPassword:hover{
+    background-color: #fb3768;
+}
+.BoutonEditProfil:hover{
+    background-color: #fb3768;
+}
+.BoutonSubscribe{
+    color: whitesmoke;
+    background-color: #B40431;
+    text-align: center;
+    margin-left: 15%;
+}
+.BoutonSubscribe:hover{
+    background-color: #fb3768;
 }
 
 
@@ -281,4 +303,23 @@ h2{
     border-style: groove;
     background-color: blanchedalmond;
 
+}
+
+
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+.listVideo{
+    margin-bottom: 9%;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background: #000000;
+    color: #FFFFFF;
 }
