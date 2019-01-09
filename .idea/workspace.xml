@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4d80342-4073-4d16-b656-cc76257d1013" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/profil.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/profil.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +48,16 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/view/inscription.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="218">
+                  <caret line="34" column="32" lean-forward="true" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="43" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/view/subscription.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="429">
@@ -71,16 +82,16 @@
             <entry file="file://$PROJECT_DIR$/assets/css/style.css">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="-39">
-                  <caret line="323" selection-start-line="323" selection-end-line="325" selection-end-column="1" />
+                  <caret line="338" selection-start-line="338" selection-end-line="340" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/view/profil.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-815">
-                  <caret line="85" column="31" selection-start-line="85" selection-start-column="16" selection-end-line="85" selection-end-column="31" />
+                <state relative-caret-position="347">
+                  <caret line="57" column="85" selection-start-line="57" selection-start-column="65" selection-end-line="57" selection-end-column="85" />
                 </state>
               </provider>
             </entry>
@@ -92,8 +103,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/assets/css/style.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="207">
-                  <caret line="250" column="45" selection-start-line="250" selection-start-column="45" selection-end-line="250" selection-end-column="45" />
+                <state relative-caret-position="293">
+                  <caret line="223" column="34" selection-start-line="223" selection-start-column="34" selection-end-line="223" selection-end-column="34" />
                 </state>
               </provider>
             </entry>
@@ -113,8 +124,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>arousel-control-next-icon</find>
-      <find>carousel-control-prev-icon</find>
       <find>glyphicon-chevron-left</find>
       <find>geth</find>
       <find>caption</find>
@@ -140,9 +149,11 @@
       <find>texte</find>
       <find>text-center</find>
       <find>text-center</find>
-      <find>container</find>
       <find>media</find>
       <find>red</find>
+      <find>container</find>
+      <find>accepter</find>
+      <find>col</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -177,10 +188,10 @@
         <option value="$PROJECT_DIR$/view/inscription.php" />
         <option value="$PROJECT_DIR$/view/theme.php" />
         <option value="$PROJECT_DIR$/assets/bootstrap/css/bootstrap.min.css" />
-        <option value="$PROJECT_DIR$/view/profil.php" />
         <option value="$PROJECT_DIR$/view/template.php" />
         <option value="$PROJECT_DIR$/view/home.php" />
         <option value="$PROJECT_DIR$/view/subscription.php" />
+        <option value="$PROJECT_DIR$/view/profil.php" />
         <option value="$PROJECT_DIR$/assets/css/style.css" />
       </list>
     </option>
@@ -296,12 +307,12 @@
       <workItem from="1546938615940" duration="345000" />
       <workItem from="1546939012442" duration="122000" />
       <workItem from="1546939538203" duration="14373000" />
-      <workItem from="1547022103420" duration="13029000" />
+      <workItem from="1547022103420" duration="14196000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102580000" />
+    <option name="totallyTimeSpent" value="103747000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -513,13 +524,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/inscription.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="50" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/bootstrap/css/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
@@ -531,13 +535,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/profil.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-815">
-          <caret line="85" column="31" selection-start-line="85" selection-start-column="16" selection-end-line="85" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -565,10 +562,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/view/inscription.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="34" column="32" lean-forward="true" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/profil.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="57" column="85" selection-start-line="57" selection-start-column="65" selection-end-line="57" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="250" column="45" selection-start-line="250" selection-start-column="45" selection-end-line="250" selection-end-column="45" />
+        <state relative-caret-position="293">
+          <caret line="223" column="34" selection-start-line="223" selection-start-column="34" selection-end-line="223" selection-end-column="34" />
         </state>
       </provider>
     </entry>

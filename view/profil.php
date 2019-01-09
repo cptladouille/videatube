@@ -4,45 +4,65 @@ ob_start(); ?>
 <?php
 // Formulaire d'édition générale de profil
 if (isset($_POST['editUser'])) { ?>
-    <div class="containerProfil col-lg-10 editForm">
-        <div class="ChampProfil">
+    <div class="containerProfil col-lg-6 editForm">
+        <div class="ChampProfilEdit">
             <form method="post" action="profil">
-                <div>
-                    <label class="labProfil" for="nom">Nom :</label>
-                    <input type="text" name="nom" class="form-control formulaireInput3"
-                           placeholder=" <?= $_SESSION['userConnected']['lastname']; ?>"/>
-                </div>
-                <br>
-                <div>
-                    <label class="labProfil" for="prenom">Prénom :</label>
-                    <input type="text" name="prenom" class="form-control formulaireInput3"
-                           placeholder=" <?= $_SESSION['userConnected']['firstname']; ?>"/>
-                </div>
-                <br>
-                <div>
-                    <label class="labProfil" for="pseudo">Pseudo :</label>
-                    <input type="text" name="pseudo" class="form-control formulaireInput3"
-                           placeholder=" <?= $_SESSION['userConnected']['nickname']; ?>"/>
-                </div>
-                <br>
-                <div>
-                    <label class="labProfil" for="mail">Email :</label>
-                    <input type="text" name="mail" class="form-control formulaireInput3"
-                           placeholder=" <?= $_SESSION['userConnected']['mail']; ?>"/>
-                </div>
-                <br>
-                <div>
-                    <label class="labProfil" for="avatar">Avatar :<img
-                                src="./ressources/avatars/<?= $_SESSION['userConnected']['avatar']; ?>" width="60"
-                                height="60" class="d-inline-block align-top avatar" alt=""></label>
-                    <input type="text" name="avatar" class="form-control formulaireInput3"
-                           placeholder=" <?= $_SESSION['userConnected']['avatar']; ?>"/>
-                </div>
-                <br>
-                <div class="">
-                    <input class="btn  my-2 my-sm-0 BoutonHome" type="submit" name="validateEditUser"
-                           value='Accepter les modifications'>
-                </div>
+
+                <table >
+                    <tr>
+                        <td>
+                            <div>
+                                <label class="labProfil" for="nom">Nom :</label>
+                                <input type="text" name="nom" class="form-control "
+                                       placeholder=" <?= $_SESSION['userConnected']['lastname']; ?>"/>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <label class="labProfil" for="prenom">Prénom :</label>
+                                <input type="text" name="prenom" class="form-control "
+                                       placeholder=" <?= $_SESSION['userConnected']['firstname']; ?>"/>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>
+                                <label class="labProfil" for="pseudo">Pseudo :</label>
+                                <input type="text" name="pseudo" class="form-control "
+                                       placeholder=" <?= $_SESSION['userConnected']['nickname']; ?>"/>
+                            </div>
+                        <td>
+                            <div>
+                                <label class="labProfil" for="avatar">Avatar :
+                                    <img src="./ressources/avatars/<?= $_SESSION['userConnected']['avatar']; ?>"
+                                         width="60" height="60" class="d-inline-block align-top avatar" alt="">
+                                </label>
+                                <input type="text" name="avatar" class="form-control "
+                                       placeholder=" <?= $_SESSION['userConnected']['avatar']; ?>"/>
+                            </div>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                        <div>
+                            <label class="labProfil" for="mail">Email :</label>
+                            <input type="text" name="mail" class="form-control mailEdit"
+                                   placeholder=" <?= $_SESSION['userConnected']['mail']; ?>"/>
+                        </div></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>
+                                <input class="btn  my-2 my-sm-0  BoutonFormEditProfil" type="submit" name="validateEditUser"
+                                       value='Accepter les modifications'>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+
             </form>
             <?php
             if (isset($_POST['alert'])) { ?>

@@ -182,6 +182,10 @@
     margin-left:15% !important;
     margin-top: 4% !important;
 }
+.ChampProfilEdit{
+    margin-left:10% !important;
+
+}
 
 .photoProfil{
     width: 20% !important;
@@ -190,9 +194,7 @@
 }
 
 .editForm{
-    width: 20%;
-    padding-top: 10px;
-    padding-bottom: 10px;
+
 }
 .avatar{
     width: 80%;
@@ -214,6 +216,13 @@
     margin-left: 6%;
 }
 
+.BoutonFormEditProfil{
+    color: whitesmoke;
+    background-color: #B40431;
+    text-align: center;
+    margin-left: 30%;
+    margin-bottom: 10% !important;
+}
 
 .BoutonEditProfil{
     color: whitesmoke;
@@ -238,6 +247,12 @@
     background-color: #fb3768;
 }
 
+.mailEdit{
+    margin-bottom: 3%;
+}
+.formulaireEditProfil{
+    margin-bottom: 10%;
+}
 
 /* Page Video */
 
