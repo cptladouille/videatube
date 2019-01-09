@@ -114,10 +114,14 @@
 .titreSite{
     color: #B40431 ;
 }
+.text-center{
+    margin: 0 auto !important;
+
+}
 
 
 
-/* Page Inscription*/
+    /* Page Inscription*/
 
 .titleInscription{
     color: #B40431;
@@ -203,10 +207,9 @@
     color: #B40431;
 }
 .text-center{
-    margin-left:5% !important;
-    text-align: center !important;
     width: 25%;
 }
+
 .BoutonEditPassword{
     color: whitesmoke;
     background-color: #B40431;
