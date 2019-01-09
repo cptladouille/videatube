@@ -26,7 +26,7 @@ ob_start(); ?>
         </svg>
                 </div>
                 <div class="card-body bg-white mt-0 shadow">
-                    <ul class="list-unstyled mb-5 position-relative">
+                    <ul class="list-unstyled mb-5 position-relative UL">
                         <li>Profitez d'un jour d'abonnement afin d'avoir accès a toutes les vidéos du site durant une journée!</li>
                         <li>Nombre de jours d'abonnement : <?= $datas[0]->getDuration(); ?></li>
                     </ul>
@@ -54,7 +54,7 @@ ob_start(); ?>
                 </div>
 
                 <div class="card-body bg-white mt-0 shadow">
-                    <ul class="list-unstyled mb-5 position-relative">
+                    <ul class="list-unstyled mb-5 position-relative UL">
                         <li>Profitez d'une semaine d'abonnement afin d'avoir accès a toutes les vidéos du site durant une semaine!</li>
                         <li>Nombre de jours d'abonnement : <?= $datas[1]->getDuration(); ?></li>
                     </ul>
@@ -80,7 +80,7 @@ ob_start(); ?>
                 </div>
 
                 <div class="card-body bg-white mt-0 shadow">
-                    <ul class="list-unstyled mb-5 position-relative">
+                    <ul class="list-unstyled mb-5 position-relative UL">
                         <li>Profitez d'un mois d'abonnement afin d'avoir accès a toutes les vidéos du site durant un mois!</li>
                         <li>Nombre de jours d'abonnement : <?= $datas[2]->getDuration(); ?></li>
                         <li>Nombre de jours d'essai offerts : <?= $datas[2]->getNbDaysTrial(); ?></li>
