@@ -74,8 +74,8 @@ if (isset($_POST['editUser'])) { ?>
     <?php
     // Formulaire de changement de mot de passe
 } elseif (isset($_POST['editUserPassword'])) { ?>
-    <div class="containerProfil col-lg-10 editForm">
-        <div class="ChampProfil">
+    <div class="containerProfil col-lg-4 editForm">
+        <div class="ChampEditMdp">
             <form method="post" action="profil">
                 <div>
                     <label class="labProfil" for="password">Nouveau mot de passe : </label>
@@ -88,7 +88,7 @@ if (isset($_POST['editUser'])) { ?>
                 </div>
                 <br>
                 <div class="text-center">
-                    <input class="btn  my-2 my-sm-0 BoutonHome" type="submit" name="validateEditPasswordUser"
+                    <input class="btn  my-2 my-sm-0 BoutonFormEditMdp" type="submit" name="validateEditPasswordUser"
                            value='Changer le mot de passe'>
                 </div>
             </form>
