@@ -57,12 +57,12 @@
                         if($_SESSION['userConnected']['avatar'] != "")
                         {?>
 
-                        <a  href= "profil"><img src="./ressources/avatars/<?= $_SESSION['userConnected']['avatar']; ?>" width="60" height="60" class="d-inline-block align-top avatar" alt=""></a>
+                        <a  href= "profil" class="divProfilNavBar"><img src="./ressources/avatars/<?= $_SESSION['userConnected']['avatar']; ?>" class="d-inline-block align-top avatarNavBar" alt=""></a>
                         <?php
                         }?>
-                        <a  href= "profil"><p class = "my-2 my-sm-0" href = "profil"><?= $_SESSION['userConnected']['nickname'] ;?></p></a>
+                        <a  href= "profil"><p class = "my-2 my-sm-0 nameNavBar" href = "profil"><?= $_SESSION['userConnected']['nickname'] ;?></p></a>
                         <form method = 'post' action ='connexion'>
-                            <input class="btn  my-2 my-sm-0 BoutonHome" type="submit" name = "deconnexion" value = 'Déconnexion'>
+                            <input class="btn  my-2 my-sm-0 BoutonHomeDeconnexion" type="submit" name = "deconnexion" value = 'Déconnexion'>
                         </form>
                     <?php 
                     }
@@ -79,6 +79,7 @@
     </nav>
     </div>
 </head>
+
 
 
 <body>

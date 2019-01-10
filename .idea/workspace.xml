@@ -4,7 +4,7 @@
     <list default="true" id="b4d80342-4073-4d16-b656-cc76257d1013" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/profil.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/profil.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/template.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,14 +27,14 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5955383">
+    <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/view/home.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-935">
-                  <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
+                <state relative-caret-position="-1985">
+                  <caret line="11" column="59" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="59" />
                 </state>
               </provider>
             </entry>
@@ -51,7 +51,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/view/inscription.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="218">
+                <state relative-caret-position="510">
                   <caret line="34" column="32" lean-forward="true" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="43" />
                 </state>
               </provider>
@@ -60,17 +60,17 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/view/subscription.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="433">
+                <state relative-caret-position="1230">
                   <caret line="82" column="70" selection-start-line="82" selection-start-column="70" selection-end-line="82" selection-end-column="70" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/view/template.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="503">
-                  <caret line="92" column="34" selection-start-line="92" selection-start-column="34" selection-end-line="92" selection-end-column="34" />
+                <state relative-caret-position="290">
+                  <caret line="64" column="81" selection-start-line="64" selection-start-column="60" selection-end-line="64" selection-end-column="81" />
                   <folding>
                     <element signature="e#4724#4730#0#HTML" expanded="true" />
                   </folding>
@@ -81,17 +81,17 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/assets/css/style.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-39">
-                  <caret line="355" selection-start-line="355" selection-end-line="357" selection-end-column="1" />
+                <state relative-caret-position="175">
+                  <caret line="376" selection-start-line="376" selection-end-line="378" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/view/profil.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="444">
-                  <caret line="90" column="69" selection-start-line="90" selection-start-column="52" selection-end-line="90" selection-end-column="69" />
+                <state relative-caret-position="1635">
+                  <caret line="109" column="68" lean-forward="true" selection-start-line="109" selection-start-column="68" selection-end-line="109" selection-end-column="68" />
                 </state>
               </provider>
             </entry>
@@ -103,17 +103,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/assets/css/style.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="278">
-                  <caret line="228" column="2" selection-start-line="228" selection-start-column="2" selection-end-line="228" selection-end-column="2" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/assets/bootstrap/css/bootstrap.min.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="312">
-                  <caret line="8844" column="34" selection-start-line="8844" selection-start-column="34" selection-end-line="8844" selection-end-column="34" />
+                <state relative-caret-position="353">
+                  <caret line="98" column="20" selection-start-line="98" selection-start-column="20" selection-end-line="98" selection-end-column="20" />
                 </state>
               </provider>
             </entry>
@@ -124,8 +115,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>glyphicon-chevron-left</find>
-      <find>geth</find>
       <find>caption</find>
       <find>La meill</find>
       <find>ForgotMdp</find>
@@ -141,7 +130,6 @@
       <find>input</find>
       <find>BoutonForm</find>
       <find>list-group-item</find>
-      <find>avatar</find>
       <find>lab</find>
       <find>&quot;lab&quot;</find>
       <find>formulaire</find>
@@ -152,8 +140,11 @@
       <find>media</find>
       <find>red</find>
       <find>col</find>
-      <find>accepter</find>
       <find>container</find>
+      <find>home</find>
+      <find>hom</find>
+      <find>accepter</find>
+      <find>avatar</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -188,10 +179,10 @@
         <option value="$PROJECT_DIR$/view/inscription.php" />
         <option value="$PROJECT_DIR$/view/theme.php" />
         <option value="$PROJECT_DIR$/assets/bootstrap/css/bootstrap.min.css" />
-        <option value="$PROJECT_DIR$/view/template.php" />
-        <option value="$PROJECT_DIR$/view/home.php" />
         <option value="$PROJECT_DIR$/view/subscription.php" />
+        <option value="$PROJECT_DIR$/view/home.php" />
         <option value="$PROJECT_DIR$/view/profil.php" />
+        <option value="$PROJECT_DIR$/view/template.php" />
         <option value="$PROJECT_DIR$/assets/css/style.css" />
       </list>
     </option>
@@ -253,6 +244,17 @@
             <path>
               <item name="videatube" type="b2602c69:ProjectViewProjectNode" />
               <item name="videatube" type="462c0819:PsiDirectoryNode" />
+              <item name="ressources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="videatube" type="b2602c69:ProjectViewProjectNode" />
+              <item name="videatube" type="462c0819:PsiDirectoryNode" />
+              <item name="ressources" type="462c0819:PsiDirectoryNode" />
+              <item name="avatars" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="videatube" type="b2602c69:ProjectViewProjectNode" />
+              <item name="videatube" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -307,12 +309,12 @@
       <workItem from="1546938615940" duration="345000" />
       <workItem from="1546939012442" duration="122000" />
       <workItem from="1546939538203" duration="14373000" />
-      <workItem from="1547022103420" duration="14897000" />
+      <workItem from="1547022103420" duration="18628000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104448000" />
+    <option name="totallyTimeSpent" value="108179000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -524,10 +526,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/bootstrap/css/bootstrap.min.css">
+    <entry file="file://$PROJECT_DIR$/view/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="8844" column="34" selection-start-line="8844" selection-start-column="34" selection-end-line="8844" selection-end-column="34" />
+        <state relative-caret-position="-1985">
+          <caret line="11" column="59" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="59" />
         </state>
       </provider>
     </entry>
@@ -538,48 +540,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="92" column="34" selection-start-line="92" selection-start-column="34" selection-end-line="92" selection-end-column="34" />
-          <folding>
-            <element signature="e#4724#4730#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-935">
-          <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/inscription.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
+        <state relative-caret-position="510">
           <caret line="34" column="32" lean-forward="true" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/subscription.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
+        <state relative-caret-position="1230">
           <caret line="82" column="70" selection-start-line="82" selection-start-column="70" selection-end-line="82" selection-end-column="70" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/bootstrap/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="8844" column="34" selection-start-line="8844" selection-start-column="34" selection-end-line="8844" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/superglobals/_superglobals.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2595">
+          <caret line="173" selection-start-line="173" selection-end-line="173" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ressources/avatars/keks.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ressources/avatars/rems.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/view/profil.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="90" column="69" selection-start-line="90" selection-start-column="52" selection-end-line="90" selection-end-column="69" />
+        <state relative-caret-position="1635">
+          <caret line="109" column="68" lean-forward="true" selection-start-line="109" selection-start-column="68" selection-end-line="109" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="64" column="81" selection-start-line="64" selection-start-column="60" selection-end-line="64" selection-end-column="81" />
+          <folding>
+            <element signature="e#4724#4730#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="228" column="2" selection-start-line="228" selection-start-column="2" selection-end-line="228" selection-end-column="2" />
+        <state relative-caret-position="353">
+          <caret line="98" column="20" selection-start-line="98" selection-start-column="20" selection-end-line="98" selection-end-column="20" />
         </state>
       </provider>
     </entry>

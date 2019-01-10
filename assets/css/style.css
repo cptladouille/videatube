@@ -85,13 +85,23 @@
 
 
 /* Page Home */
+
+
 .BoutonHome{
     color: whitesmoke;
     background-color: #B40431;
     text-align: center;
 }
+.BoutonHomeDeconnexion{
+    color: whitesmoke;
+    background-color: #B40431;
+    text-align: center;
+    margin-left: 10%;
+}
 
-
+.BoutonHomeDeconnexion:hover {
+    background-color: #fb3768;
+}
 .BoutonHome:hover {
     background-color: #fb3768;
 }
@@ -194,7 +204,16 @@
     margin-left:10% !important;
 }
 
-
+.avatarNavBar{
+    width: 30%;
+    -moz-border-radius:100%;
+    -webkit-border-radius:100%;
+    border-radius:100%;
+    margin-left: 40%;
+}
+.divProfilNavBar{
+    width: 15%;
+}
 .avatar{
     width: 80%;
     height: 80%;
@@ -206,7 +225,9 @@
     color: #B40431;
 }
 
-
+.nameNavBar{
+    margin-right: 15%;
+}
 .BoutonEditPassword{
     color: whitesmoke;
     background-color: #B40431;
