@@ -15,12 +15,15 @@ require_once('model/videoClass.php');
             // Préparation de la requête d'insertion.
             // Assignation des valeurs pour le titre, le prix, le lien et la date de mise en ligne.
             // Exécution de la requête.
-            $q = $this->_db->prepare('INSERT INTO video(title, price, link, date_upload) VALUES(:title, :price, :link, :date_upload)');
+            $q = $this->_db->prepare('INSERT INTO video(title, price, link, date_upload, thumbnail, nbViews,description) VALUES(:title, :price, :link, :date_upload, :thumbnail, :nbViews, :description)');
 
             $q->bindValue(':title', $video->title());
             $q->bindValue(':price', $video->price());
             $q->bindValue(':link', $video->link());
             $q->bindValue(':date_upload', $video->date_upload());
+            $q->bindValue(':thumbnail', $video->thumbnail());
+            $q->bindValue(':nbViews', $video->nbViews());
+            $q->bindValue(':description', $video->description());
 
             $q->execute();
         }
@@ -47,7 +50,7 @@ require_once('model/videoClass.php');
             // Retourne la liste de toutes les videos.
             $videos = [];
 
-            $q = $this->_db->query('SELECT id, title, price, link, date_upload FROM video ORDER BY price');
+            $q = $this->_db->query('SELECT id, title, price, link, date_upload,thumbnail, nbViews, description FROM video ORDER BY date_upload DESC');
 
             while ($donnees = $q->fetch(PDO::FETCH_ASSOC))
             {

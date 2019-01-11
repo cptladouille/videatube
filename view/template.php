@@ -37,16 +37,21 @@
                         Themes
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="theme-tous">Voir tout les thèmes</a> 
+                        <a class="dropdown-item" href="theme-0">Voir tout les thèmes</a> 
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="theme-action">Action</a>
-                        <a class="dropdown-item" href="theme-aventure">Aventure</a>
-                        <a class="dropdown-item" href="theme-cuisine">Cuisine</a>
-                        <a class="dropdown-item" href="theme-beaute">Beauté</a>
-                        <a class="dropdown-item" href="theme-animaux">Animaux</a>
-                        <a class="dropdown-item" href="theme-tuto">Tuto</a>
+                        <a class="dropdown-item" href="theme-1">Action</a>
+                        <a class="dropdown-item" href="theme-2">Aventure</a>
+                        <a class="dropdown-item" href="theme-3">Cuisine</a>
+                        <a class="dropdown-item" href="theme-4">Beauté</a>
+                        <a class="dropdown-item" href="theme-5">Animaux</a>
+                        <a class="dropdown-item" href="theme-6">Tuto</a>
                     </div>
                 </li>
+                <?php if (isset($_SESSION['userConnected'])){ ?>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="upload">Mettre en ligne une vidéo</a>
+                    </li>
+                <?php } ?> 
             </ul>
             <div class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2 inputHome" type="text" placeholder="Rechercher" aria-label="Search">

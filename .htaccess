@@ -6,4 +6,5 @@ RewriteRule ^subscription index.php?p=subscription [L]
 RewriteRule ^connexion index.php?p=connexion [L]
 RewriteRule ^inscription index.php?p=inscription [L]
 RewriteRule ^profil index.php?p=profil [L]
-    RewriteRule ^theme-([0-9]+) index.php?p=theme&t=$1
+RewriteRule ^theme-([0-9]+) index.php?p=theme&t=$1 [L]
+RewriteRule ^video-([0-9]+) index.php?p=video&vId=$1

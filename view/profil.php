@@ -1,13 +1,11 @@
 <?php $title = 'Profil';
 ob_start(); ?>
-
 <?php
 // Formulaire d'édition générale de profil
 if (isset($_POST['editUser'])) { ?>
     <div class="containerProfil col-lg-6 editForm">
         <div class="ChampProfilEdit">
             <form method="post" action="profil">
-
                 <table >
                     <tr>
                         <td>
@@ -61,8 +59,6 @@ if (isset($_POST['editUser'])) { ?>
                         </td>
                     </tr>
                 </table>
-
-
             </form>
             <?php
             if (isset($_POST['alert'])) { ?>
@@ -117,7 +113,6 @@ if (isset($_POST['editUser'])) { ?>
             </div>
             <div class="ChampProfil">
                 <table>
-
                     <tbody>
                     <tr>
                         <td><label class="labProfil" for="nom">Nom : </label>
@@ -176,8 +171,6 @@ if (isset($_POST['editUser'])) { ?>
                 </form>
                 <?php
                 } ?>
-
-
             </div>
         </div>
         <div>

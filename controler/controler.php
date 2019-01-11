@@ -7,22 +7,25 @@ require_once('model/typeSubManager.php');
 
 function getHome(){
     $vM = new videoManager();
-    $uM = new userManager();
-    $data2 = $uM->getListOfNicknames();
-    $data = $vM->getListOfLinks();
+    $data = $vM->getList();
     require_once ('view/home.php');
     
 }
 function getVideo()
 {
+    if (isset ($_GET['vId']))
+    {
+        $vM = new videoManager();
+        $v = $vM->get($_GET['vId']);
+    }
     require_once ('view/video.php');
 }
 
 function getTheme()
 {
-    
     if (isset ($_GET['t']))
     {
+        
         $theme = $_GET['t'];
         if($theme == 1){$data = 'action';}
         elseif($theme == 2){$data = 'aventure';}
@@ -31,18 +34,9 @@ function getTheme()
         elseif($theme == 5){$data = 'tuto';}
         elseif($theme == 6){$data = 'beaute';}
         else{$data = null;}
-        $title = 'Thèmes';
-        require_once ('view/theme.php');
     }
- 
-
-    if (isset ($_GET['t']) && is_numeric($_GET['id'])){
-        $datas = getAll('brand', ' * ', '', 'id = '.$_GET['id'], '');
-        require('view/brandView.php');
-    }
-    else{
-        require('view/annexe/404.php');
-    }
+    $title = 'Thèmes';
+    require_once ('view/theme.php');
 }
 
 function getSubscription(){

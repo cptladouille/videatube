@@ -15,6 +15,9 @@ class videoClass
     var $price;
     var $link;
     var $date_upload;
+    var $thumbnail;
+    var $nbViews;
+    var $description;
 
     /**
      * videoClass constructor.
@@ -23,6 +26,9 @@ class videoClass
      * @param $price
      * @param $link
      * @param $date_upload
+     * @param $thumbnail;
+     * @param $nbViews;
+     * @param $description;
      */
     public function __construct($datas)
     {
@@ -124,5 +130,51 @@ class videoClass
         $this->date_upload = $date_upload;
     }
 
+/**
+     * @return mixed
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
 
+    /**
+     * @param mixed $description
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getNbViews()
+    {
+        return $this->nbViews;
+    }
+
+    /**
+     * @param mixed $nbViews
+     */
+    public function setNbViews($nbViews)
+    {
+        $this->nbViews = $nbViews;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getThumbnail()
+    {
+        return $this->thumbnail;
+    }
+
+    /**
+     * @param mixed $thumbnail
+     */
+    public function setThumbnail($thumbnail)
+    {
+        $this->thumbnail = $thumbnail;
+    }
 }

@@ -30,18 +30,18 @@ ob_start(); ?>
                     </ol>
                     <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
-                            <a href="#">
-                            <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="First slide">
+                            <a href="video-<?= $data[0]->getId(); ?>">
+                            <img class="d-block img-fluid" src="./ressources/thumb/<?= $data[0]->getThumbnail(); ?>" alt="First slide">
                             </a>
                         </div>
                         <div class="carousel-item">
-                            <a href="#">
-                            <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Second slide">
+                            <a href="video-<?= $data[1]->getId(); ?>">
+                            <img class="d-block img-fluid" src="./ressources/thumb/<?= $data[1]->getThumbnail(); ?>" alt="Second slide">
                             </a>
                         </div>
                         <div class="carousel-item">
-                            <a href="#">
-                            <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Third slide">
+                            <a href="video-<?= $data[2]->getId(); ?>">
+                            <img class="d-block img-fluid" src="./ressources/thumb/<?= $data[2]->getThumbnail(); ?>" alt="Third slide">
                             </a>
                         </div>
                     </div>
@@ -59,16 +59,16 @@ ob_start(); ?>
 
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card h-100">
-                            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                            <a href="video-<?= $data[3]->getId(); ?>"><img class="card-img-top" src="./ressources/thumb/<?= $data[3]->getThumbnail(); ?>" alt=""></a>
                             <div class="card-body">
                                 <h4 class="card-title">
-                                    <a href="#" class="titreVideo">Item One</a>
+                                    <a href="video-<?= $data[3]->getId(); ?>" class="titreVideo"><?= $data[3]->getTitle(); ?></a>
                                 </h4>
-                                <h5>$24.99</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                                <h5><?= $data[3]->getPrice(); ?>€</h5>
+                                <p class="card-text"><?= $data[3]->getDescription(); ?></p>
                             </div>
                             <div class="card-footer">
-                                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                                <small class="text-muted"><?= $data[3]->getNbViews(); ?> vues</small>
                             </div>
                         </div>
                     </div>
