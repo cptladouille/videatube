@@ -4,17 +4,25 @@
             <div class="col-lg-3">
                 <h1 class="my-4">VideaTube</h1>
                 <div class="list-group">
-                    <a href="#" class="list-group-item">Home</a>
-                    <a href="#" class="list-group-item">Action</a>
-                    <a href="#" class="list-group-item">Aventure</a>
-                    <a href="#" class="list-group-item">Beauté</a>
-                    <a href="#" class="list-group-item">Animaux</a>
-                    <a href="#" class="list-group-item">Cuisine</a>
-                    <a href="#" class="list-group-item">Tuto</a>
-                    <a href="#" class="list-group-item">Voir tous les thèmes</a>
+                    <a href="home" class="list-group-item">Home</a>
+                    <a href="theme-1" class="list-group-item">Action</a>
+                    <a href="theme-2" class="list-group-item">Aventure</a>
+                    <a href="theme-3" class="list-group-item">Beauté</a>
+                    <a href="theme-4" class="list-group-item">Animaux</a>
+                    <a href="theme-5" class="list-group-item">Cuisine</a>
+                    <a href="theme-6" class="list-group-item">Tuto</a>
+                    <a href="theme-0" class="list-group-item">Voir tous les thèmes</a>
                 </div>
             </div>
             <!-- /.col-lg-3 -->
+            <?php 
+            if($data == null)
+            { ?>
+            <h2>Toutes les vidéos par thème</h2>
+            <?php }
+            else{ ?>
+            <h2>Toutes les vidéos du theme <?= $data; ?></h2>
+            <?php } ?>
 
             <div class="col-lg-9">
                 <div class="row">
@@ -126,13 +134,10 @@
     </div>
     <!-- /.container -->
 
-
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
+     <!-- Bootstrap core JavaScript -->
+     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    </body>
 
 <?php $content = ob_get_clean();
 require_once ('view/template.php');?>

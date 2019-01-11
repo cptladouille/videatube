@@ -5,8 +5,8 @@
     <title>VideaTube</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="assets/css/style.css" rel="stylesheet"/>
+    <link href=" http://localhost/videatube/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href=" http://localhost/videatube/assets/css/style.css" rel="stylesheet"/>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
             integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
             crossorigin="anonymous"></script>
@@ -37,7 +37,7 @@
                         Themes
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="theme">Voir tout les thèmes</a> 
+                        <a class="dropdown-item" href="theme-tous">Voir tout les thèmes</a> 
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="theme-action">Action</a>
                         <a class="dropdown-item" href="theme-aventure">Aventure</a>
@@ -86,7 +86,7 @@
 <?= $content;?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="http://localhost/videatube/assets/bootstrap/js/bootstrap.min.js"></script>
 
 </body>
 

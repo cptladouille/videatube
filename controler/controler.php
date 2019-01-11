@@ -18,36 +18,31 @@ function getVideo()
     require_once ('view/video.php');
 }
 
-function getTheme($theme)
+function getTheme()
 {
-    switch ($theme)
+    
+    if (isset ($_GET['t']))
     {
-        case 0:
-            $datas = getAllVideo();
-            break;
-        case 1:
-            $datas = getVideosByTheme('action');
-            break;
-        case 2:
-            $datas = getVideosByTheme('aventure');
-            break;
-        case 3:
-            $datas = getVideosByTheme('cuisine');
-            break;
-        case 4:
-            $datas = getVideosByTheme('beaute');
-            break;
-        case 5:
-            $datas = getVideosByTheme('animaux');
-            break;
-        case 6:
-            $datas = getVideosByTheme('tuto');
-            break;
-        default:
-            break;
+        $theme = $_GET['t'];
+        if($theme == 1){$data = 'action';}
+        elseif($theme == 2){$data = 'aventure';}
+        elseif($theme == 3){$data = 'cuisine';}
+        elseif($theme == 4){$data = 'animaux';}
+        elseif($theme == 5){$data = 'tuto';}
+        elseif($theme == 6){$data = 'beaute';}
+        else{$data = null;}
+        $title = 'Thèmes';
+        require_once ('view/theme.php');
     }
-    $title = 'Thèmes';
-    require_once ('view/theme.php');
+ 
+
+    if (isset ($_GET['t']) && is_numeric($_GET['id'])){
+        $datas = getAll('brand', ' * ', '', 'id = '.$_GET['id'], '');
+        require('view/brandView.php');
+    }
+    else{
+        require('view/annexe/404.php');
+    }
 }
 
 function getSubscription(){
