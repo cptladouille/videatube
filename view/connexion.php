@@ -1,8 +1,9 @@
 <?php $title = 'Connexion';
 ob_start();?>
+<html>
 <div class="container">
     <div class="row">
-        <div class="formulaire">
+        <div class="formulaire connexionForm">
             <h1 class="titleConnexion">CONNECTEZ VOUS !</h1>
             <div class="containImgFormConnexion">
             <img  class="imgFormConnexion" src="./ressources/Logo_v_p.png">
@@ -43,6 +44,7 @@ ob_start();?>
 
     </div>
 </div>
+</html>
 
 
 

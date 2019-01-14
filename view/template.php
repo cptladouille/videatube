@@ -27,7 +27,7 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto"> 
+            <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
                     <a class="nav-link" href="home">Home<span class="sr-only">(current)</span></a>
                 </li>
@@ -37,7 +37,7 @@
                         Themes
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="theme-0">Voir tout les thèmes</a> 
+                        <a class="dropdown-item" href="theme-0">Voir tout les thèmes</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="theme-1">Action</a>
                         <a class="dropdown-item" href="theme-2">Aventure</a>
@@ -51,33 +51,33 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="upload">Mettre en ligne une vidéo</a>
                     </li>
-                <?php } ?> 
+                <?php } ?>
             </ul>
             <div class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2 inputHome" type="text" placeholder="Rechercher" aria-label="Search">
                 <input class="btn  my-2 my-sm-0 BoutonHome" type="submit" name = 'Search' value = 'Rechercher'>
-                <?php 
-                    if (isset($_SESSION['userConnected'])) 
-                    { 
-                        if($_SESSION['userConnected']['avatar'] != "")
-                        {?>
+                <?php
+                if (isset($_SESSION['userConnected']))
+                {
+                    if($_SESSION['userConnected']['avatar'] != "")
+                    {?>
 
                         <a  href= "profil" class="divProfilNavBar"><img src="./ressources/avatars/<?= $_SESSION['userConnected']['avatar']; ?>" class="d-inline-block align-top avatarNavBar" alt=""></a>
                         <?php
-                        }?>
-                        <a  href= "profil"><p class = "my-2 my-sm-0 nameNavBar" href = "profil"><?= $_SESSION['userConnected']['nickname'] ;?></p></a>
-                        <form method = 'post' action ='connexion'>
-                            <input class="btn  my-2 my-sm-0 BoutonHomeDeconnexion" type="submit" name = "deconnexion" value = 'Déconnexion'>
-                        </form>
-                    <?php 
-                    }
-                    else
-                    {?>
-                       <form method = 'post' action ='connexion'>
-                            <input class="btn  my-2 my-sm-0 BoutonHome" type="submit" name = "connexion" value = 'Connexion'>
-                        </form>
+                    }?>
+                    <a  href= "profil"><p class = "my-2 my-sm-0 nameNavBar" href = "profil"><?= $_SESSION['userConnected']['nickname'] ;?></p></a>
+                    <form method = 'post' action ='connexion'>
+                        <input class="btn  my-2 my-sm-0 BoutonHomeDeconnexion" type="submit" name = "deconnexion" value = 'Déconnexion'>
+                    </form>
                     <?php
-                    }
+                }
+                else
+                {?>
+                    <form method = 'post' action ='connexion'>
+                        <input class="btn  my-2 my-sm-0 BoutonHome" type="submit" name = "connexion" value = 'Connexion'>
+                    </form>
+                    <?php
+                }
                 ?>
             </div>
         </div>
