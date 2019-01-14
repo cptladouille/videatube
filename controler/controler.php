@@ -27,13 +27,34 @@ function getTheme()
     {
         
         $theme = $_GET['t'];
-        if($theme == 1){$data = 'action';}
-        elseif($theme == 2){$data = 'aventure';}
-        elseif($theme == 3){$data = 'cuisine';}
-        elseif($theme == 4){$data = 'animaux';}
-        elseif($theme == 5){$data = 'tuto';}
-        elseif($theme == 6){$data = 'beaute';}
-        else{$data = null;}
+        if($theme == 1)
+        {
+            $data = 'action';
+        }
+        elseif($theme == 2)
+        {
+            $data = 'aventure';
+        }
+        elseif($theme == 3)
+        {
+            $data = 'cuisine';
+        }
+        elseif($theme == 4)
+        {
+            $data = 'animaux';
+        }
+        elseif($theme == 5)
+        {
+            $data = 'tuto';
+        }
+        elseif($theme == 6)
+        {
+            $data = 'beaute';
+        }
+        else
+        {
+            $data = null;
+        }
     }
     $title = 'Thèmes';
     require_once ('view/theme.php');

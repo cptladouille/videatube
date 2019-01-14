@@ -1,5 +1,13 @@
 <?php $title = 'Vidéos';
-ob_start(); ?>
+ob_start(); 
+if (isset($_POST['watch'])) 
+{ ?>
+
+
+<?php }elseif(isset['purchase']){ ?>
+
+
+<?php } ?>
 
 
 

@@ -22,7 +22,7 @@
             <?php }
             else{ ?>
             <h2>Toutes les vidéos du theme <?= $data; ?></h2>
-            <?php } ?>
+            <?php }  ?>
 
             <div class="col-lg-9">
                 <div class="row">
