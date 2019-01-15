@@ -301,8 +301,16 @@
 
 /* Page Subscription */
 
+
+.bodySub{
+    width: 100%;
+    pading:0 !important;
+    margin: auto !important;
+    background-image: linear-gradient(white, lightgray);
+}
 .containerAbo{
     background-size: 100%;
+    margin-bottom: 4.7%;
 
 }
 
@@ -328,7 +336,6 @@
 }
 
 .green{
-    margin-bottom: 10%;
 
 }
 .pricing-divider-img {
