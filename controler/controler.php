@@ -4,6 +4,7 @@ require_once('model/videoManager.php');
 require_once('model/userManager.php');
 require_once('model/subscriptionManager.php');
 require_once('model/typeSubManager.php');
+require_once('model/purchaseManager.php');
 
 function getHome(){
     $vM = new videoManager();
@@ -17,6 +18,25 @@ function getVideo()
     {
         $vM = new videoManager();
         $v = $vM->get($_GET['vId']);
+        if($v->getPrice() == 0)
+        {
+            $_POST['watch'] = true;
+        }
+        else
+        {
+            if(isset($_SESSION['userConnected']))
+            {
+                if($_SESSION['userConnected']['daysAbo']['nbDaysLeft'] > 0 ) 
+                {
+                    $_POST['watch'] = true;
+                }
+                elseif (checkUserVid($_SESSION['userConnected']['id'],$_GET['vId']))
+                {
+                    $_POST['watch'] = true;
+                    
+                }
+            }
+        }
     }
     require_once ('view/video.php');
 }
@@ -102,6 +122,20 @@ function checkFormInscription()
         echo "Erreur form inscription un des champs n'est pas rempli";
     }
 }
+
+function checkUserVid($idUser, $idVid)
+{
+    $pM = new purchaseManager();
+    if($pM->getByUserVideo($idUser,$idVid))
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
 
 function connectUser()
 {

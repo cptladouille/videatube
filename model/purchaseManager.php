@@ -40,6 +40,20 @@ require_once('model/purchaseClass.php');
                 
             return new purchaseClass($donnees);
         }
+
+        public function getByUserVideo($idUser,$idVideo)
+        {
+            $idU = (int) $idUser;
+            $idV = (int) $idVideo;
+
+            $q = $this->_db->query("SELECT * FROM purchase WHERE id_video = '".$idV. "'AND id_user = '".$idU."'");
+            $donnees = $q->fetch(PDO::FETCH_ASSOC);
+            if ($donnees != false)
+                return true;
+            else
+                return false;
+        }
+
         public function getList()
         {
             // Retourne la liste de tout les achats.

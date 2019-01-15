@@ -18,6 +18,7 @@
                 if(connectUser())
                 {
                     $p= 'home';
+                    header('Location: ./home');
                     getHome();
                 }
                 else
