@@ -291,11 +291,12 @@
 
 /* Page Video */
 
-.videoWatch{
-    width: 60%;
-    height: 60%;
-    margin: auto;
+.videoContain{
+
 }
+.videoWatch{
+margin-left: 7%}
+
 
 
 
@@ -415,7 +416,6 @@ html{
 
 
 
-
 .linkFormConnexion:hover {
     color: black;
 }
@@ -458,4 +458,8 @@ h2{
 .connexionForm{
 
     margin-bottom: 10% !important;
+}
+.btnComm{
+    margin-bottom: 10% !important;
+
 }
