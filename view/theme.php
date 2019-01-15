@@ -1,8 +1,20 @@
 <?php ob_start(); ?>
+
+<?php
+if($data == null)
+{ ?>
+    <h2>Toutes les vidéos par thème</h2>
+<?php }
+else{ ?>
+    <h2>Toutes les vidéos du theme <?= $data; ?></h2>
+<?php }  ?>
+
     <div class="container">
         <div class="row">
-            <div class="col-lg-3">
-                <h1 class="my-4">VideaTube</h1>
+
+
+            <div class="col-lg-2">
+                <h1 class="my-4 titleTheme">VideaTube</h1>
                 <div class="list-group">
                     <a href="home" class="list-group-item">Home</a>
                     <a href="theme-1" class="list-group-item">Action</a>
@@ -15,14 +27,7 @@
                 </div>
             </div>
             <!-- /.col-lg-3 -->
-            <?php 
-            if($data == null)
-            { ?>
-            <h2>Toutes les vidéos par thème</h2>
-            <?php }
-            else{ ?>
-            <h2>Toutes les vidéos du theme <?= $data; ?></h2>
-            <?php }  ?>
+
 
             <div class="col-lg-9">
                 <div class="row">

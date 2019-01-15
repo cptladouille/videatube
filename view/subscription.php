@@ -5,11 +5,12 @@ ob_start(); ?>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!------ Include the above in your HEAD tag ---------->
 
+
+
+   <!------ Include the above in your HEAD tag ---------->
     <div class="container-fluid bg-gradient p-5 containerAbo">
         <div class="row m-auto text-center w-75">
-
             <div class="col-4 princing-item red">
                 <div class="pricing-divider ">
                     <h3 class="text-light"><?=  $datas[0]->getTitle();  ?></h3>
@@ -91,7 +92,6 @@ ob_start(); ?>
 
         </div>
     </div>
-
 
 
 

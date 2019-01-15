@@ -295,11 +295,14 @@
 
 
 
-
 /* Page Subscription */
-.bg-gradient {
-    background-image: linear-gradient(#f8f9fa, lightgray);
+
+.containerAbo{
+    background-size: 100%;
+
 }
+
+
 .UL{
     margin-bottom:1.4rem;
 }
@@ -358,8 +361,9 @@
     transform: translate3d(-15px, 0, 0);
 }
 
-
-
+.titleTheme{
+    font-size: 150%;
+}
 
 
 
@@ -395,6 +399,7 @@ html{
     font-family:  "Lucida Console", Monaco, monospace;
     position: relative !important;
     min-height: 100% !important;
+
 }
 
 
