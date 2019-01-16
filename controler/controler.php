@@ -35,7 +35,15 @@ function getVideo()
                     $_POST['watch'] = true;
                     
                 }
+                else
+                {
+                    $_POST['purchase'] = true;
+                }
             }
+            else
+                {
+                    $_POST['purchase'] = true;
+                }
         }
     }
     require_once ('view/video.php');

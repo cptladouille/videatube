@@ -31,7 +31,12 @@ ob_start(); ?>
                         <li>Profitez d'un jour d'abonnement afin d'avoir accès a toutes les vidéos du site durant une journée!</li>
                         <li>Nombre de jours d'abonnement : <?= $datas[0]->getDuration(); ?></li>
                     </ul>
-                    <button type="button" class="btn btn-lg btn-block  btn-custom ">Sign up</button>
+                    <form method="post" action="signUp">
+                    <div class="text-center">
+                        <input class="btn  btn-lg btn-block btn-custom" type="submit" name="signUp-1"
+                            value="S'abonner">
+                        </div>
+                    </form>
                 </div>
             </div>
 
@@ -59,7 +64,12 @@ ob_start(); ?>
                         <li>Profitez d'une semaine d'abonnement afin d'avoir accès a toutes les vidéos du site durant une semaine!</li>
                         <li>Nombre de jours d'abonnement : <?= $datas[1]->getDuration(); ?></li>
                     </ul>
-                    <button type="button" class="btn btn-lg btn-block  btn-custom ">Sign up </button>
+                    <form method="post" action="signUp">
+                    <div class="text-center">
+                        <input class="btn  btn-lg btn-block btn-custom" type="submit" name="signUp-2"
+                            value="S'abonner">
+                        </div>
+                    </form>
                 </div>
             </div>
 
@@ -86,7 +96,12 @@ ob_start(); ?>
                         <li>Nombre de jours d'abonnement : <?= $datas[2]->getDuration(); ?></li>
                         <li>Nombre de jours d'essai offerts : <?= $datas[2]->getNbDaysTrial(); ?></li>
                     </ul>
-                    <button type="button" class="btn btn-lg btn-block  btn-custom ">Sign up </button>
+                    <form method="post" action="signUp">
+                    <div class="text-center">
+                        <input class="btn  btn-lg btn-block btn-custom" type="submit" name="signUp-3"
+                            value="S'abonner">
+                        </div>
+                    </form>
                 </div>
             </div>
 

@@ -9,6 +9,10 @@
         }
         elseif ($p == 'subscription')
         {
+            if(isset($_POST['signUp']))
+            {
+                
+            }
             getSubscription();
         }
         elseif ($p == 'connexion')
@@ -17,7 +21,7 @@
             {
                 if(connectUser())
                 {
-                    $p= 'home';
+                    $p='home';
                     header('Location: ./home');
                     getHome();
                 }

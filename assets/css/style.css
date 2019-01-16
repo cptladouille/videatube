@@ -295,16 +295,29 @@
 
 }
 .videoWatch{
-margin-left: 7%
+margin-left: 7%;
 }
 
+.btnPurchase{
+    margin: auto !important;
+     
+}
 
 .bodyVideo{
     width: 100%;
     pading:0 !important;
     margin: auto !important;
 }
-
+.frame{
+    position: relative;
+    
+}
+.frameLock{
+    height: 100%;
+    width: 100%;
+    background-color: RGBa(0,0,0,0.5);
+    position: absolute;
+}
 
 
 /* Page Subscription */

@@ -1,18 +1,9 @@
 <?php $title = 'Vidéos';
-ob_start();
-if (isset($_POST['watch'])) 
-{ ?>
+ob_start(); ?>
 
-
-<?php }elseif(isset($_POST['purchase'])){ ?>
-
-
-<?php } ?>
 <body class="bodyVideo">
     <div class="container">
-
         <div class="row">
-
             <div class="col-lg-2">
                 <h1 class="my-4 titleTheme">VideaTube</h1>
                 <div class="list-group">
@@ -27,20 +18,40 @@ if (isset($_POST['watch']))
                 </div>
             </div>
             <!-- /.col-lg-3 -->
-
-            <div class="col-lg-9">
-
-                <div class="card mt-4 videoContain">
-                    <iframe class="videoWatch" width="700" height="490" src=<?= $v->getLink(); ?> frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <div class="card-body">
-                        <h3 class="card-title">Product Name</h3>
-                        <h4>$24.99</h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta. Totam id dolores, sint aperiam sequi pariatur praesentium animi perspiciatis molestias iure, ducimus!</p>
-                        <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
-                        4.0 stars
-                    </div>
-                </div>
+    <div class="col-lg-9">
                 <!-- /.card -->
+<?php 
+if (isset($_POST['watch'])) 
+{ ?>
+            <div class="card mt-4 videoContain">
+                <iframe class="videoWatch" width="700" height="490" src=<?= $v->getLink(); ?> frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="card-body">
+                    <h3 class="card-title"><?= $v->getTitle(); ?></h3>
+                    <p class="card-text"><?= $v->getDescription(); ?></p>
+                    <span class="text-warning"><?= $v->getNbViews(); ?> vues</span>
+                </div>
+            </div>
+
+<?php }elseif(isset($_POST['purchase'])){ ?>
+
+            <div class="card mt-4 videoContain">
+                <div class = "frame">
+                    <div class="frameLock">
+                        <form method = 'post' action ='purchase'>
+                            <input class="btn  btnPurchase" type="submit" name = "purchase" value = 'Acheter'>
+                        </form>
+                    </div>
+                    <iframe class="videoWatch" width="700" height="490" src=<?= $v->getLink(); ?> frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title"><?= $v->getTitle(); ?></h3>
+                    <h4><?= $v->getPrice(); ?>€</h4>
+                    <p class="card-text"><?= $v->getDescription(); ?></p>
+                    <span class="text-warning"><?= $v->getNbViews(); ?> vues</span>
+                </div>
+            </div>
+
+<?php } ?>
 
                 <div class="card card-outline-secondary my-4 btnComm">
                     <div class="card-header">
