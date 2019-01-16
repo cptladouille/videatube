@@ -47,6 +47,10 @@
             }   
             getInscription();
         }
+        elseif ($p == 'purchase')
+        { 
+            getPurchase();
+        }
         elseif ($p == 'profil')
         {
             if (isset($_POST['validateEditUser']))

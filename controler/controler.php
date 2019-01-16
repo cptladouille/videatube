@@ -49,6 +49,14 @@ function getVideo()
     require_once ('view/video.php');
 }
 
+function getPurchase()
+{
+    $vM = new videoManager();
+    $v = $vM->get($_POST['purchase']);
+    require_once ('view/purchase.php');
+}
+
+
 function getTheme()
 {
     if (isset ($_GET['t']))

@@ -38,7 +38,7 @@ if (isset($_POST['watch']))
                 <div class = "frame">
                     <div class="frameLock">
                         <form method = 'post' action ='purchase'>
-                            <input class="btn  btnPurchase" type="submit" name = "purchase" value = 'Acheter'>
+                            <input class="btn  btnPurchase" type="submit" name = "<?= $v->getId(); ?>" value = 'Acheter'>
                         </form>
                     </div>
                     <iframe class="videoWatch" width="700" height="490" src=<?= $v->getLink(); ?> frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
