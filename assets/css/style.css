@@ -295,8 +295,15 @@
 
 }
 .videoWatch{
-margin-left: 7%}
+margin-left: 7%
+}
 
+
+.bodyVideo{
+    width: 100%;
+    pading:0 !important;
+    margin: auto !important;
+}
 
 
 

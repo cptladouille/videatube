@@ -8,7 +8,7 @@ if (isset($_POST['watch']))
 
 
 <?php } ?>
-
+<body class="bodyVideo">
     <div class="container">
 
         <div class="row">
@@ -67,6 +67,8 @@ if (isset($_POST['watch']))
         </div>
 
     </div>
+
+</body>
 
 
 
