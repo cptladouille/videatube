@@ -7,7 +7,7 @@ ob_start(); ?>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 
-<body class="bodySub">
+<div class="bodySub">
    <!------ Include the above in your HEAD tag ---------->
     <div class="container-fluid bg-gradient p-5 containerAbo">
         <div class="row m-auto text-center w-75">
@@ -107,7 +107,7 @@ ob_start(); ?>
 
         </div>
     </div>
-</body>
+</div>
 
 
 <?php $content = ob_get_clean();
