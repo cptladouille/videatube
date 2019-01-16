@@ -51,8 +51,15 @@ function getVideo()
 
 function getPurchase()
 {
+    if(isset($_POST['signUp']))
+    {
+
+    }
+    elseif(isset($_POST['purchase']))
+    {
     $vM = new videoManager();
     $v = $vM->get($_POST['purchaseVid']);
+    }
     require_once ('view/purchase.php');
 }
 

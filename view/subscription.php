@@ -31,9 +31,11 @@ ob_start(); ?>
                         <li>Profitez d'un jour d'abonnement afin d'avoir accès a toutes les vidéos du site durant une journée!</li>
                         <li>Nombre de jours d'abonnement : <?= $datas[0]->getDuration(); ?></li>
                     </ul>
-                    <form method="post" action="signUp">
+                    <form method="post" action="purchase">
                     <div class="text-center">
-                        <input class="btn  btn-lg btn-block btn-custom" type="submit" name="signUp-1"
+                        <input type="hidden" name="signUpId"
+                            value="1">
+                        <input class="btn  btn-lg btn-block btn-custom" type="submit" name="signUp"
                             value="S'abonner">
                         </div>
                     </form>
@@ -64,9 +66,11 @@ ob_start(); ?>
                         <li>Profitez d'une semaine d'abonnement afin d'avoir accès a toutes les vidéos du site durant une semaine!</li>
                         <li>Nombre de jours d'abonnement : <?= $datas[1]->getDuration(); ?></li>
                     </ul>
-                    <form method="post" action="signUp">
+                    <form method="post" action="purchase">
                     <div class="text-center">
-                        <input class="btn  btn-lg btn-block btn-custom" type="submit" name="signUp-2"
+                        <input type="hidden" name="signUpId"
+                            value="2">
+                        <input class="btn  btn-lg btn-block btn-custom" type="submit" name="signUp"
                             value="S'abonner">
                         </div>
                     </form>
@@ -96,9 +100,11 @@ ob_start(); ?>
                         <li>Nombre de jours d'abonnement : <?= $datas[2]->getDuration(); ?></li>
                         <li>Nombre de jours d'essai offerts : <?= $datas[2]->getNbDaysTrial(); ?></li>
                     </ul>
-                    <form method="post" action="signUp">
+                    <form method="post" action="purchase">
                     <div class="text-center">
-                        <input class="btn  btn-lg btn-block btn-custom" type="submit" name="signUp-3"
+                        <input type="hidden" name="signUpId"
+                            value="3">
+                        <input class="btn  btn-lg btn-block btn-custom" type="submit" name="signUp"
                             value="S'abonner">
                         </div>
                     </form>
