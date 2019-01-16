@@ -203,4 +203,4 @@ ob_start(); ?>
 
 
 <?php $content = ob_get_clean();
-require_once ('purchase/template.php');?>
+require_once ('view/template.php');?>

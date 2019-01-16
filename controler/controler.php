@@ -52,7 +52,7 @@ function getVideo()
 function getPurchase()
 {
     $vM = new videoManager();
-    $v = $vM->get($_POST['purchase']);
+    $v = $vM->get($_POST['purchaseVid']);
     require_once ('view/purchase.php');
 }
 
