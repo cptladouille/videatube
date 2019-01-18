@@ -26,37 +26,39 @@ ob_start(); ?>
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <td colspan="2" class="text-center">
                                     <div>
                                         <label class="labProfil" for="pseudo">Pseudo :</label>
-                                        <input type="text" name="pseudo" class="form-control "
+                                        <input type="text" name="pseudo" class="form-control  w-50 text-center"
                                                placeholder=" <?= $_SESSION['userConnected']['nickname']; ?>"/>
                                     </div>
-                                <td>
-                                    <div>
-                                        <label class="labProfil" for="avatar">Avatar :
-                                            <img src="./ressources/avatars/<?= $_SESSION['userConnected']['avatar']; ?>"
-                                                 width="60" height="60" class="d-inline-block align-top avatar" alt="">
-                                        </label>
-                                        <input type="text" name="avatar" class="form-control "
-                                               placeholder=" <?= $_SESSION['userConnected']['avatar']; ?>"/>
-                                    </div>
                                 </td>
-
                             </tr>
                             <tr>
-                                <td colspan="2">
+                                <td colspan="2" >
                                     <div>
                                         <label class="labProfil" for="mail">Email :</label>
                                         <input type="text" name="mail" class="form-control mailEdit"
                                                placeholder=" <?= $_SESSION['userConnected']['mail']; ?>"/>
                                     </div>
                                 </td>
+
                             </tr>
                             <tr>
-                                <td>
-                                    <div>
-                                        <input class="btn  my-2 my-sm-0  BoutonFormEditProfil" type="submit"
+                                <td colspan="2" class="text-center">
+                                    <label class="labProfil" for="avatar">Avatar :
+                                        <img src="./ressources/avatars/<?= $_SESSION['userConnected']['avatar']; ?>"
+                                            class="d-inline-block align-top avatarMini" alt="">
+                                    </label>
+                                    <input type="text" name="avatar" class="form-control "
+                                           placeholder=" <?= $_SESSION['userConnected']['avatar']; ?>"/>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <div class="text-center">
+                                        <input class="btn  my-2 my-sm-0  BoutonFormEditProfil " type="submit"
                                                name="validateEditUser"
                                                value='Accepter les modifications'>
                                     </div>
@@ -121,8 +123,10 @@ ob_start(); ?>
                         <table>
                             <tbody>
                             <tr>
-                                <td><label class="labProfil" for="nom">Nom : </label>
-                                    <?= $_SESSION['userConnected']['lastname']; ?></td>
+                                <td>
+                                    <label class="labProfil" for="nom">Nom : </label>
+                                    <?= $_SESSION['userConnected']['lastname']; ?>
+                                </td>
                             </tr>
                             <tr>
                                 <td>
@@ -181,7 +185,7 @@ ob_start(); ?>
                             <?php
                              } ?>
                     </div>
-                </div>
+
                 <div>
                     <form method="post" action="profil">
                         <input class="btn  my-2 my-sm-0  BoutonEditProfil " type="submit" name="editUser"
@@ -194,8 +198,10 @@ ob_start(); ?>
                     </form>
                 </div>
             </div>
+
         <?php } ?>
 
+    </div>
     </div>
 
 <?php $content = ob_get_clean();
