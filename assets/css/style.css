@@ -185,7 +185,7 @@ body{
 /* Page Profil */
 
 .bodyProfil{
-    min-height: 100vh !important;
+    min-height: 100vh;
 }
 
 .containerProfil{
@@ -232,14 +232,6 @@ body{
     color: #B40431;
 }
 
-.avatarMini{
-    width: 60% !important;
-    height: 60% !important;
-    -moz-border-radius:100%;
-    -webkit-border-radius:100%;
-    border-radius:100%;
-}
-
 .nameNavBar{
     margin-right: 15%;
 }
@@ -255,13 +247,14 @@ body{
     color: whitesmoke;
     background-color: #B40431;
     text-align: center;
+    margin-left: 30%;
     margin-bottom: 10% !important;
-    margin-top: 5% !important;
 }
 .BoutonFormEditMdp{
     color: whitesmoke;
     background-color: #B40431;
     text-align: center;
+
     margin-bottom: 6% !important;
 }
 
@@ -309,12 +302,12 @@ body{
 
 }
 .videoWatch{
-margin-left: 7%;
+    margin-left: 7%;
 }
 
 .btnPurchase{
     margin: auto !important;
-     
+
 }
 
 .bodyVideo{
@@ -324,7 +317,7 @@ margin-left: 7%;
 }
 .frame{
     position: relative;
-    
+
 }
 .frameLock{
     height: 100%;

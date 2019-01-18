@@ -146,7 +146,6 @@ ob_start(); ?>
                                 <label class="labProfil" for="role">Rôle : </label>
                                 <?= $_SESSION['userConnected']['roleLabel']; ?>
                             </td>
-                            </tr>
                             <?php
                             if (isset($_SESSION['userConnected']['daysAbo']) && $_SESSION['userConnected']['daysAbo']['nbDaysLeft'] > 0)
                             { ?>
@@ -170,12 +169,14 @@ ob_start(); ?>
                                     <label class="labProfil" for="statutAbo">Statut abonné : </label>
                                     Non abonné
                                 </td>
+                            </tr>
+                                <tr>
                                 <td>
                                     <form method='post' action='subscription'>
                                         <input class="btn  my-2 my-sm-0 BoutonSubscribe" type="submit" name="subscription" value="S'abonner">
                                     </form>
                                 </td>
-                            </tr>
+                        </tr>
                             </tbody>
                             </table>
                             <?php
