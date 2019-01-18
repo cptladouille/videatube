@@ -150,36 +150,36 @@ ob_start(); ?>
                             <?php
                             if (isset($_SESSION['userConnected']['daysAbo']) && $_SESSION['userConnected']['daysAbo']['nbDaysLeft'] > 0)
                             { ?>
-                                <tr>
-                                    <td>
-                                        <label class="labProfil" for="statutAbo">Statut abonné : </label>
-                                        Abonné
-                                    </td>
-                                    <td>
-                                        <label class="labProfil" for="jourAbo">Jours d'abonnement restant : </label>
-                                        <?= $_SESSION['userConnected']['daysAbo']['nbDaysLeft']; ?>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>    
-                                <?php
-                            }else
-                            { ?>
-                                <tr>
-                                    <td>
-                                        <label class="labProfil" for="statutAbo">Statut abonné : </label>
-                                        Non abonné
-                                    </td>
-                                    <td>
-                                        <form method='post' action='subscription'>
-                                                <input class="btn  my-2 my-sm-0 BoutonSubscribe" type="submit" name="subscription" value="S'abonner">
-                                        </form>
-                                    </td>
-                                </tr>
+                            <tr>
+                                <td>
+                                    <label class="labProfil" for="statutAbo">Statut abonné : </label>
+                                    Abonné
+                                </td>
+                                <td>
+                                    <label class="labProfil" for="jourAbo">Jours d'abonnement restant : </label>
+                                    <?= $_SESSION['userConnected']['daysAbo']['nbDaysLeft']; ?>
+                                </td>
+                            </tr>
                             </tbody>
                         </table>
+                        <?php
+                        }else
+                        { ?>
+                            <tr>
+                                <td>
+                                    <label class="labProfil" for="statutAbo">Statut abonné : </label>
+                                    Non abonné
+                                </td>
+                                <td>
+                                    <form method='post' action='subscription'>
+                                        <input class="btn  my-2 my-sm-0 BoutonSubscribe" type="submit" name="subscription" value="S'abonner">
+                                    </form>
+                                </td>
+                            </tr>
+                            </tbody>
+                            </table>
                             <?php
-                             } ?>
+                        } ?>
                     </div>
                 </div>
                 <div>
