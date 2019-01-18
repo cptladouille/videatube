@@ -54,6 +54,7 @@ ob_start(); ?>
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
+            </div>
 
                 <div class="row">
 
@@ -253,7 +254,7 @@ ob_start(); ?>
             </div>
             <!-- /.col-lg-9 -->
 
-        </div>
+
         <!-- /.row -->
 
     </div>

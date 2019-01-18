@@ -183,6 +183,10 @@ body{
 
 /* Page Profil */
 
+.bodyProfil{
+    min-height: 100vh;
+}
+
 .containerProfil{
     background-image: linear-gradient(white, lightgray);
     margin: 0 auto !important;
@@ -463,7 +467,7 @@ h2{
 
 
 .listVideo{
-    margin-bottom: 9%;
+    margin-bottom: 4%;
 }
 
 .footer {
