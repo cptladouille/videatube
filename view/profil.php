@@ -36,7 +36,7 @@ ob_start(); ?>
                                     <div>
                                         <label class="labProfil" for="avatar">Avatar :
                                             <img src="./ressources/avatars/<?= $_SESSION['userConnected']['avatar']; ?>"
-                                                 width="60" height="60" class="d-inline-block align-top avatar" alt="">
+                                                 width="100px" height="100px" class="d-inline-block align-top avatar" alt="">
                                         </label>
                                         <input type="text" name="avatar" class="form-control "
                                                placeholder=" <?= $_SESSION['userConnected']['avatar']; ?>"/>
