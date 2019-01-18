@@ -142,7 +142,6 @@ ob_start(); ?>
                                     <?= $_SESSION['userConnected']['mail']; ?>
                                 </td>
                             </tr>
-                            </tr>
                             <td>
                                 <label class="labProfil" for="role">Rôle : </label>
                                 <?= $_SESSION['userConnected']['roleLabel']; ?>
@@ -161,23 +160,26 @@ ob_start(); ?>
                                         <?= $_SESSION['userConnected']['daysAbo']['nbDaysLeft']; ?>
                                     </td>
                                 </tr>
+                            </tbody>
+                        </table>    
                                 <?php
                             }else
                             { ?>
-                            <tr>
-                                <td>
-                                    <label class="labProfil" for="statutAbo">Statut abonné : </label>
-                                    Non abonné
-                                </td>
-                            </tr>
+                                <tr>
+                                    <td>
+                                        <label class="labProfil" for="statutAbo">Statut abonné : </label>
+                                        Non abonné
+                                    </td>
+                                    <td>
+                                        <form method='post' action='subscription'>
+                                                <input class="btn  my-2 my-sm-0 BoutonSubscribe" type="submit" name="subscription" value="S'abonner">
+                                        </form>
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
-                        <form method='post' action='subscription'>
-                            <input class="btn  my-2 my-sm-0 BoutonSubscribe" type="submit" name="subscription"
-                                   value="S'abonner">
-                        </form>
-                        <?php
-                        } ?>
+                            <?php
+                             } ?>
                     </div>
                 </div>
                 <div>

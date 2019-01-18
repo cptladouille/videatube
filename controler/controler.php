@@ -53,12 +53,29 @@ function getPurchase()
 {
     if(isset($_POST['signUp']))
     {
-
+        $tSM = new typeSubManager();
+        if(isset($_POST['signUpId']))
+        {
+            $v = new typeSubClass();
+            $v = $tSM->get($_POST['signUpId']);
+            $data = "";
+        }
+        else
+        {
+            $_POST['alert'] = "Aucun abonnement selectionné";
+        }
     }
     elseif(isset($_POST['purchase']))
     {
     $vM = new videoManager();
-    $v = $vM->get($_POST['purchaseVid']);
+        if(isset($_POST['pruchaseVid']))
+        {
+            $data = $vM->get($_POST['purchaseVid']);
+        }
+        else
+        {
+            $_POST['alert'] = "Aucune vidéo selectionnée";
+        }
     }
     require_once ('view/purchase.php');
 }
