@@ -18,7 +18,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="home">
-            <img src="./ressources/Logo_v_p.png" width="40" height="30" class="d-inline-block align-top" alt="">
+            <img src="./ressources/Logo_v_p.png" width="40" height="40" class="d-inline-block align-top" alt="">
             VideaTube
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
