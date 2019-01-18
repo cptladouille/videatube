@@ -79,6 +79,7 @@
 
 .alert{
     color: red;
+
 }
 
 
@@ -361,7 +362,9 @@ margin-left: 7%;
     background:#990000;
 
 }
-
+.red .green .blue{
+    min-height: 75vh;
+}
 .green{
     margin-bottom: 10%;
 }
