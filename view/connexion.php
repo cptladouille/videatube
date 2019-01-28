@@ -1,6 +1,6 @@
 <?php $title = 'Connexion';
 ob_start();?>
-<html>
+<div class="bodyConnexion">
 <div class="container">
     <div class="row">
         <div class="formulaire connexionForm">
@@ -43,8 +43,8 @@ ob_start();?>
         </div>
 
     </div>
+    </div>
 </div>
-</html>
 
 
 
