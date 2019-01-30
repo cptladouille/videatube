@@ -136,6 +136,10 @@
 
 
 /* Page Inscription*/
+.bodyInscription{
+    min-height: 100vh;
+
+}
 
 .titleInscription{
     color: #B40431;
@@ -312,10 +316,21 @@ body{
 }
 
 .btnPurchase{
-    margin: auto !important;
-
+    margin-top:26.8% !important;
+    color: whitesmoke;
+    background-color: #B40431;
+    width: 20%; !important;
+    padding-bottom: 2% !important;
+    padding-top: 2% !important;
+    border-style: solid;
+    border-width: 5px;
+    border-color: white;
 }
 
+
+.btnPurchase:hover{
+    background-color: #fb3768;
+}
 .bodyVideo{
     width: 100%;
     pading:0 !important;
@@ -328,8 +343,10 @@ body{
 .frameLock{
     height: 100%;
     width: 100%;
-    background-color: RGBa(0,0,0,0.5);
+    background-color: RGBa(0,0,0,0);
     position: absolute;
+    text-align: center;
+
 }
 
 
@@ -420,7 +437,37 @@ body{
 
 
 
+/* Page Purchase */
 
+.bodyPurchase{
+    min-height: 100vh;
+
+}
+.containerPurchase{
+    width: 60%;
+    margin-top: 10%;
+}
+
+
+.align-items-left{
+    margin-left: 3%;
+    width: 70%;
+}
+.Price{
+    text-align: right;
+    margin-left: 20%;
+}
+
+.btnAchatVideo{
+    color: whitesmoke;
+    background-color: #B40431;
+    border:none;
+
+}
+.btnAchatVideo:hover{
+    background-color: #fb3768;
+
+}
 
 
 

@@ -1,7 +1,8 @@
 <?php $title = 'Purchase';
 ob_start(); ?>
 
-<div class="container">
+<div class="bodyPurchase">
+<div class="container containerPurchase">
 
     <div class="row">
         <div class="col-md-12 order-md-1">
@@ -15,9 +16,9 @@ ob_start(); ?>
                 </div>
                 <div class = "row">
                     <div class = "align-items-left">
-                        <label class="align-items-left " ><?= $data->getTitle(); ?></label>
+                        <label class="Titre " ><?= $data->getTitle(); ?></label>
                     </div>
-                    <div class = "align-items-right">
+                    <div class = "Price">
                         <label class="align-items-right" ><?= $data->getPrice(); ?></label>
                     </div>
                 </div>
@@ -69,12 +70,12 @@ ob_start(); ?>
                     }
                 ?>
                 <hr class="mb-4">
-                <button class="btn btn-primary btn-lg btn-block" type="submit">Valider la commande</button>
+                <button class="btn btn-primary btn-lg btn-block btnAchatVideo" type="submit">Valider la commande</button>
             </form>
         </div>
     </div>
 
-
+</div>
 </div>
 
 <!-- Bootstrap core JavaScript

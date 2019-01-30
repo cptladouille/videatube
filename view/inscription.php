@@ -2,7 +2,7 @@
 ob_start(); ?>
 
 
-<html>
+<div class="bodyInscription">
 <div class="container">
     <div class="row">
         <div class="col-lg-6 formulaireInscription">
@@ -93,8 +93,8 @@ ob_start(); ?>
         </div>
     </div>
 </div>
+</div>
 
-</html>
 
 <?php $content = ob_get_clean();
 require_once('view/template.php'); ?>
