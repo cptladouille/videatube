@@ -90,6 +90,10 @@
         elseif ($p == 'theme'){
             getTheme();
         }
+        elseif ($p == 'condition')
+        {
+            getCondition();
+        }
     }
     else{
         getHome();

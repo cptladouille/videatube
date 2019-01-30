@@ -194,7 +194,9 @@ function getProfil(){
     updateSession($_SESSION['userConnected']);
     require_once ('view/profil.php');
 }
-
+function getCondition(){
+    require_once ('view/condition.php');
+}
 
 function updateSession($session)
 {
