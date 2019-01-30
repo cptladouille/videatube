@@ -10,7 +10,7 @@ function getHome(){
     $vM = new videoManager();
     $data = $vM->getList();
     require_once ('view/home.php');
-    
+
 }
 function getVideo()
 {

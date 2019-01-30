@@ -1,14 +1,16 @@
 <?php $title = 'Acceuil';
 ob_start(); ?>
 
-    <div class="container">
-    <?php if(isset($_POST['alert']))
+    <div class="container"><?php if(isset($_POST['alert']))
     { ?>
-        <div class="row">
-            <div class = "col-lg-12 alert">
-                <h2><?= $_POST['alert']; ?></h2>
-            </div>
-        </div>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Erreur !</strong> <?= $_POST['alert']; ?>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+
+    </div>
+
     <?php } ?>
         <div class="row">
 
