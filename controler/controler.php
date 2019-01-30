@@ -26,7 +26,7 @@ function getVideo()
         {
             if(isset($_SESSION['userConnected']))
             {
-                if($_SESSION['userConnected']['daysAbo']['nbDaysLeft'] > 0 ) 
+                if($_SESSION['userConnected']['timeAbo']['nbMinLeft'] > 0 ) 
                 {
                     $_POST['watch'] = true;
                 }
@@ -191,12 +191,14 @@ function getInscription(){
 }
 
 function getProfil(){
+    updateSession($_SESSION['userConnected']);
     require_once ('view/profil.php');
 }
 
 
 function updateSession($session)
 {
+    $_SESSION = array();
     $uM = new userManager();
     $sM = new subscriptionManager();
     $user = $uM->get($session['id']);
@@ -209,8 +211,8 @@ function updateSession($session)
         'role'      =>  $user->getLastname(),
         'avatar'    =>  $user->getAvatar(),
         'roleLabel' =>  attribRole($user->getLastname()),
-        'daysAbo'   =>  $sM->getDaysAbo($user->getId()));
-    return $datas;
+        'timeAbo'   =>  $sM->getTimeAbo($user->getId()));
+    $_SESSION['userConnected'] = $datas;
 }
 
 function checkFormInscription()
@@ -277,7 +279,7 @@ function connectUser()
                         'role'      =>  $user->getLastname(),
                         'avatar'    =>  $user->getAvatar(),
                         'roleLabel' =>  attribRole($user->getLastname()),
-                        'daysAbo'   =>  $sM->getDaysAbo($user->getId()));
+                        'timeAbo'   =>  $sM->getTimeAbo($user->getId()));
                         return true;
                 }
                 else

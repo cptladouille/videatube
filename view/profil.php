@@ -147,7 +147,7 @@ ob_start(); ?>
                                 <?= $_SESSION['userConnected']['roleLabel']; ?>
                             </td>
                             <?php
-                            if (isset($_SESSION['userConnected']['daysAbo']) && $_SESSION['userConnected']['daysAbo']['nbDaysLeft'] > 0)
+                            if (isset($_SESSION['userConnected']['timeAbo']) && $_SESSION['userConnected']['timeAbo']['nbMinLeft'] > 0)
                             { ?>
                             <tr>
                                 <td>
@@ -156,7 +156,7 @@ ob_start(); ?>
                                 </td>
                                 <td>
                                     <label class="labProfil" for="jourAbo">Jours d'abonnement restant : </label>
-                                    <?= $_SESSION['userConnected']['daysAbo']['nbDaysLeft']; ?>
+                                    <?= floor(($_SESSION['userConnected']['timeAbo']['nbMinLeft']/60)/24)."j ".floor(($_SESSION['userConnected']['timeAbo']['nbMinLeft']/60-intval($_SESSION['userConnected']['timeAbo']['nbMinLeft']/60))*24)."h"; ?>
                                 </td>
                             </tr>
                             </tbody>
