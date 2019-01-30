@@ -60,7 +60,7 @@ class subscriptionClass
     /**
      * @return mixed
      */
-    public function getDateSub()
+    public function getDate_sub()
     {
         return $this->date_sub;
     }
@@ -68,7 +68,7 @@ class subscriptionClass
     /**
      * @param mixed $date_sub
      */
-    public function setDateSub($date_sub)
+    public function setDate_sub($date_sub)
     {
         $this->date_sub = $date_sub;
     }
@@ -76,7 +76,7 @@ class subscriptionClass
     /**
      * @return mixed
      */
-    public function getIdUser()
+    public function getId_user()
     {
         return $this->id_user;
     }
@@ -84,7 +84,7 @@ class subscriptionClass
     /**
      * @param mixed $id_user
      */
-    public function setIdUser($id_user)
+    public function setId_user($id_user)
     {
         $this->id_user = $id_user;
     }
@@ -92,7 +92,7 @@ class subscriptionClass
     /**
      * @return mixed
      */
-    public function getIdTypeSubscription()
+    public function getId_type_subscription()
     {
         return $this->id_type_subscription;
     }
@@ -100,7 +100,7 @@ class subscriptionClass
     /**
      * @param mixed $id_type_subscription
      */
-    public function setIdTypeSubscription($id_type_subscription)
+    public function setId_type_subscription($id_type_subscription)
     {
         $this->id_type_subscription = $id_type_subscription;
     }

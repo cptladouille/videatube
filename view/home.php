@@ -2,7 +2,14 @@
 ob_start(); ?>
 
     <div class="container">
-
+    <?php if(isset($_POST['alert']))
+    { ?>
+        <div class="row">
+            <div class = "col-lg-12 alert">
+                <h2><?= $_POST['alert']; ?></h2>
+            </div>
+        </div>
+    <?php } ?>
         <div class="row">
 
             <div class="col-lg-3">

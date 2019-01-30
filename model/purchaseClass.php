@@ -61,7 +61,7 @@ class purchaseClass
     /**
      * @return mixed
      */
-    public function getDatePurchase()
+    public function getDate_purchase()
     {
         return $this->date_purchase;
     }
@@ -69,7 +69,7 @@ class purchaseClass
     /**
      * @param mixed $date_purchase
      */
-    public function setDatePurchase($date_purchase)
+    public function setDate_purchase($date_purchase)
     {
         $this->date_purchase = $date_purchase;
     }
@@ -77,7 +77,7 @@ class purchaseClass
     /**
      * @return mixed
      */
-    public function getIdVideo()
+    public function getId_video()
     {
         return $this->id_video;
     }
@@ -85,7 +85,7 @@ class purchaseClass
     /**
      * @param mixed $id_video
      */
-    public function setIdVideo($id_video)
+    public function setId_video($id_video)
     {
         $this->id_video = $id_video;
     }
@@ -93,7 +93,7 @@ class purchaseClass
     /**
      * @return mixed
      */
-    public function getIdUser()
+    public function getId_user()
     {
         return $this->id_user;
     }
@@ -101,7 +101,7 @@ class purchaseClass
     /**
      * @param mixed $id_user
      */
-    public function setIdUser($id_user)
+    public function setId_user($id_user)
     {
         $this->id_user = $id_user;
     }

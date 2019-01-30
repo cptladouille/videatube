@@ -17,9 +17,9 @@ require_once('model/purchaseClass.php');
             // Exécution de la requête.
             $q = $this->_db->prepare('INSERT INTO purchase(date_purchase, id_video, id_user) VALUES(:date_purchase, :id_video, :id_user)');
 
-            $q->bindValue(':date_purchase', $purchase->date_purchase());
-            $q->bindValue(':id_video', $purchase->id_video());
-            $q->bindValue(':id_user', $purchase->id_user());
+            $q->bindValue(':date_purchase', $purchase->getDate_purchase());
+            $q->bindValue(':id_video', $purchase->getId_video());
+            $q->bindValue(':id_user', $purchase->getId_user());
 
             $q->execute();
         }

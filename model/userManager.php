@@ -141,20 +141,6 @@ require_once('model/userClass.php');
                 echo $e;
             }
         }
-        function updateSession($session)
-        {
-            $user=$this->get($session['id']);
-            $datas= array(
-                'id'        =>  $user->getId(),
-                'lastname'  =>  $user->getLastname(),
-                'firstname' =>  $user->getFirstname(),
-                'mail'      =>  $user->getMail(),
-                'nickname'  =>  $user->getNickname(),
-                'role'      =>  $user->getLastname(),
-                'avatar'    =>  $user->getAvatar(),
-                'roleLabel' =>  attribRole($user->getLastname()));
-            return $datas;
-        }
 
         public function setDb(PDO $db)
         {

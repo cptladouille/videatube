@@ -17,13 +17,13 @@ require_once('model/videoClass.php');
             // Exécution de la requête.
             $q = $this->_db->prepare('INSERT INTO video(title, price, link, date_upload, thumbnail, nbViews,description) VALUES(:title, :price, :link, :date_upload, :thumbnail, :nbViews, :description)');
 
-            $q->bindValue(':title', $video->title());
-            $q->bindValue(':price', $video->price());
-            $q->bindValue(':link', $video->link());
-            $q->bindValue(':date_upload', $video->date_upload());
-            $q->bindValue(':thumbnail', $video->thumbnail());
-            $q->bindValue(':nbViews', $video->nbViews());
-            $q->bindValue(':description', $video->description());
+            $q->bindValue(':title', $video->getTitle());
+            $q->bindValue(':price', $video->getPrice());
+            $q->bindValue(':link', $video->getLink());
+            $q->bindValue(':date_upload', $video->getDate_upload());
+            $q->bindValue(':thumbnail', $video->getThumbnail());
+            $q->bindValue(':nbViews', $video->getNbViews());
+            $q->bindValue(':description', $video->getDescription());
 
             $q->execute();
         }

@@ -49,8 +49,31 @@
         }
         elseif ($p == 'purchase')
         {
-           
-            getPurchase();
+            if (isset($_POST['purchaseSubId']) || isset($_POST['purchaseVideoId']))
+            {
+                switch(purchaseItem())
+                {
+                    case 1:
+                        $p="video";
+                        header('Location: ./video'.'-'.$_GET['vId']);
+                        getVideo();
+                        break;
+                    default:
+                        $p="home";
+                        header('Location: ./home');
+                        getHome();
+                        break;
+                }
+            }
+            else
+            {
+                if(getPurchase() == false)
+                {  
+                    $p="home";
+                    header('Location: ./home');
+                    getHome();
+                }
+            }
         }
         elseif ($p == 'profil')
         {

@@ -34,11 +34,11 @@ if (isset($_POST['watch']))
 
 <?php }elseif(isset($_POST['purchase'])){ ?>
 
-            <div class="card mt-4 videoContain">
+            <div class="card mt-4 videoContain">    
                 <div class = "frame">
                     <div class="frameLock">
                         <form method = 'post' action ='purchase'>
-                            <input class="" type="hidden" name = "purchaseVid" value = '<?= $v->getId(); ?>'>
+                            <input type="hidden" name = "purchaseVid" value = "<?= $v->getId(); ?>" >
                             <input class="btn  btnPurchase" type="submit" name = "purchase" value = 'Acheter'>
                         </form>
                     </div>

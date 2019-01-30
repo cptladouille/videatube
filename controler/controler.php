@@ -56,30 +56,86 @@ function getPurchase()
         $tSM = new typeSubManager();
         if(isset($_POST['signUpId']))
         {
-            $v = new typeSubClass();
-            $v = $tSM->get($_POST['signUpId']);
-            $data = "";
+            $data = $tSM->get($_POST['signUpId']);
+            require_once ('view/purchase.php');
+            return true;
         }
         else
         {
             $_POST['alert'] = "Aucun abonnement selectionné";
+            return false;
         }
     }
     elseif(isset($_POST['purchase']))
     {
     $vM = new videoManager();
-        if(isset($_POST['pruchaseVid']))
+        
+        if(isset($_POST['purchaseVid']))
         {
             $data = $vM->get($_POST['purchaseVid']);
+            require_once ('view/purchase.php');
+            return true;
         }
         else
         {
             $_POST['alert'] = "Aucune vidéo selectionnée";
+            return false;
         }
     }
-    require_once ('view/purchase.php');
 }
 
+function purchaseItem()
+{
+   try{
+      
+        if(isset($_SESSION['userConnected']['id']) && checkPayement())
+        {
+            if(isset($_POST['purchaseSubId']))
+            {
+                $sM = new subscriptionManager();
+                $dataSub = array (
+                    'date_sub' => date('Y-m-d H:i:s'),  
+                    'id_user' => $_SESSION['userConnected']['id'],
+                    'id_type_subscription' => $_POST['purchaseSubId']
+                );
+                $s = new subscriptionClass($dataSub);
+                $sM->add($s);
+                updateSession($_SESSION['userConnected']);
+                return 2;
+            }
+            elseif(isset($_POST['purchaseVideoId']))
+            {
+                $pM = new purchaseManager();
+                $dataPurchase = array (
+                    'date_purchase' => date('Y-m-d'),
+                    'id_video' => $_POST['purchaseVideoId'],
+                    'id_user' => $_SESSION['userConnected']['id']
+                );
+                $p = new purchaseClass($dataPurchase);
+                $pM->add($p);
+                $_GET['vId'] = $_POST['purchaseVideoId'];
+                return 1;
+            }
+            else
+            {
+                $_POST['alert'] = "L'achat a échoué";
+                return 0;
+            }
+        }
+    }
+    catch (Exception $e)
+    {
+        $_POST['alert'] = $e;
+    }
+
+}
+
+//a remplir -> vérifie le remplissage des champs de la CB
+function checkPayement()
+{
+
+ return true;
+}
 
 function getTheme()
 {
@@ -139,6 +195,23 @@ function getProfil(){
 }
 
 
+function updateSession($session)
+{
+    $uM = new userManager();
+    $sM = new subscriptionManager();
+    $user = $uM->get($session['id']);
+    $datas= array(
+        'id'        =>  $user->getId(),
+        'lastname'  =>  $user->getLastname(),
+        'firstname' =>  $user->getFirstname(),
+        'mail'      =>  $user->getMail(),
+        'nickname'  =>  $user->getNickname(),
+        'role'      =>  $user->getLastname(),
+        'avatar'    =>  $user->getAvatar(),
+        'roleLabel' =>  attribRole($user->getLastname()),
+        'daysAbo'   =>  $sM->getDaysAbo($user->getId()));
+    return $datas;
+}
 
 function checkFormInscription()
 {
@@ -175,7 +248,6 @@ function checkUserVid($idUser, $idVid)
         return false;
     }
 }
-
 
 function connectUser()
 {
@@ -305,7 +377,7 @@ function checkFormEdit()
                 $dataUser = checkDatasForm($dataUser);
                 $uM = new userManager();
                 $uM->updateEdit($_SESSION['userConnected']['id'],$dataUser);
-                $_SESSION['userConnected'] = $uM->updateSession($_SESSION['userConnected']);
+                $_SESSION['userConnected'] = $uM->  ession($_SESSION['userConnected']);
             }
         }
         catch(Exception $e)

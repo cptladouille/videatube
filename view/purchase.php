@@ -14,26 +14,22 @@ ob_start(); ?>
                     </div>
                 </div>
                 <div class = "row">
-                    <div class = "">
-                        <label class="custom-control-label" ><?= $data['title'] ?></label>
+                    <div class = "align-items-left">
+                        <label class="align-items-left " ><?= $data->getTitle(); ?></label>
                     </div>
-                    <div class = "">
-                        <label class="custom-control-label" ><?= $data['price'] ?></label>
+                    <div class = "align-items-right">
+                        <label class="align-items-right" ><?= $data->getPrice(); ?></label>
                     </div>
                 </div>
                 <hr class="mb-4">
 
-                <h4 class="mb-3">Payment</h4>
-
+                <h4 class="mb-3">Paiement</h4>
+            <form method = 'post' action ='purchase'>
                 <div class="d-block my-3">
                     <div class="custom-control custom-radio">
                         <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked
                                required>
-                        <label class="custom-control-label" for="credit">Credit card</label>
-                    </div>
-                    <div class="custom-control custom-radio">
-                        <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
-                        <label class="custom-control-label" for="debit">Debit card</label>
+                        <label class="custom-control-label" for="credit">Carte de crédit</label>
                     </div>
                     <div class="custom-control custom-radio">
                         <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
@@ -42,39 +38,38 @@ ob_start(); ?>
                 </div>
                 <div class="row">
                     <div class="col-md-6 mb-3">
-                        <label for="cc-name">Name on card</label>
-                        <input type="text" class="form-control" id="cc-name" placeholder="" required>
-                        <small class="text-muted">Full name as displayed on card</small>
-                        <div class="invalid-feedback">
-                            Name on card is required
-                        </div>
+                        <label for="cc-name">Nom du propriétaire de la carte</label>
+                        <input type="text" class="form-control" id="cc-name" placeholder="" required>   
                     </div>
                     <div class="col-md-6 mb-3">
-                        <label for="cc-number">Credit card number</label>
+                        <label for="cc-number">Numéro de carte de crédit</label>
                         <input type="text" class="form-control" id="cc-number" placeholder="" required>
-                        <div class="invalid-feedback">
-                            Credit card number is required
-                        </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-3 mb-3">
-                        <label for="cc-expiration">Expiration</label>
+                        <label for="cc-expiration">Date d'expiration</label>
                         <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
-                        <div class="invalid-feedback">
-                            Expiration date required
-                        </div>
                     </div>
                     <div class="col-md-3 mb-3">
-                        <label for="cc-expiration">CVV</label>
+                        <label for="cc-expiration">Code sercret</label>
                         <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
-                        <div class="invalid-feedback">
-                            Security code required
-                        </div>
                     </div>
                 </div>
+                <?php 
+                    if(isset($_POST['signUp']))
+                    { ?>
+                        <input type="hidden" name="purchaseSubId" value = <?= $data->getId(); ?>>
+                    <?php
+                    }
+                    elseif(isset($_POST['purchase']))
+                    { ?>
+                        <input type="hidden" name="purchaseVideoId" value = <?= $data->getId(); ?>>
+                    <?php
+                    }
+                ?>
                 <hr class="mb-4">
-                <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
+                <button class="btn btn-primary btn-lg btn-block" type="submit">Valider la commande</button>
             </form>
         </div>
     </div>

@@ -19,9 +19,9 @@ require_once('model/typeSubClass.php');
             // Exécution de la requête.
             $q = $this->_db->prepare('INSERT INTO subscription(date_sub, id_user, id_type_subscription) VALUES(:date_sub, :id_user, :id_type_subscription)');
 
-            $q->bindValue(':date_sub', $subscription->title());
-            $q->bindValue(':id_user', $subscription->price());
-            $q->bindValue(':id_type_subscription', $subscription->link());
+            $q->bindValue(':date_sub', $subscription->getDate_sub());
+            $q->bindValue(':id_user', $subscription->getId_user());
+            $q->bindValue(':id_type_subscription', $subscription->getId_type_subscription());
 
             $q->execute();
         }
