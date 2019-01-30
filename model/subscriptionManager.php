@@ -43,21 +43,21 @@ require_once('model/typeSubClass.php');
             return new subscriptionClass($datas);
         }
 
-
-        public function getDaysAbo($id)
+        //$q = $this->_db->query("SELECT SUM((ts.duration+ts.nbDaysTrial)-TIMESTAMPDIFF(DAY,s.date_sub,NOW())) as nbMinLeft FROM type_subscription ts INNER JOIN subscription s ON s.id_type_subscription = ts.id WHERE s.id_user = '".$id."'");
+        public function getTimeAbo($id)
         {
-            // Exécute une requête de type SELECT demandant le nombre de jours d'abonnement restant.
+            // recupere le nombre de jours d'abonnement jours date d'expiration de l'abonnement - date actuelle
             $id = (int) $id;
-            $q = $this->_db->query("SELECT SUM((ts.duration+ts.nbDaysTrial)-TIMESTAMPDIFF(DAY,s.date_sub,NOW())) as nbDaysLeft FROM type_subscription ts INNER JOIN subscription s ON s.id_type_subscription = ts.id WHERE s.id_user = '".$id."'");
+            $q = $this->_db->query("SELECT (TIMESTAMPDIFF(MINUTE,NOW(),ADDDATE(s.date_sub,(ts.duration+ts.nbDaysTrial)))) as nbMinLeft FROM type_subscription ts INNER JOIN subscription s ON s.id_type_subscription = ts.id WHERE s.id_user = '".$id."'");
             $data = $q->fetch(PDO::FETCH_ASSOC);
             return ($data);
         }
 
-        public function getDaysTrial($id)
+        public function getTimeTrial($id)
         {
             // Exécute une requête de type SELECT demandant le nombre de jours d'abonnement restant.
             $id = (int) $id;
-            $q = $this->_db->query("SELECT SUM((ts.nbDaysTrial)-TIMESTAMPDIFF(DAY,s.date_sub,NOW())) FROM type_subscription ts INNER JOIN subscription s ON s.id_type_subscription = ts.id WHERE s.id_user = '".$id."'");
+            $q = $this->_db->query("SELECT TIMESTAMPDIFF(MINUTE,NOW(),ADDDATE(s.date_sub,(ts.duration)) as nbMinTrialLeft FROM type_subscription ts INNER JOIN subscription s ON s.id_type_subscription = ts.id WHERE s.id_user = '".$id."'");
             $data = $q->fetch(PDO::FETCH_ASSOC);
                 
             return ($data);
