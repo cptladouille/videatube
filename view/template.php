@@ -31,22 +31,7 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="home">Home<span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button"
-                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Themes
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="theme-0">Voir tout les thèmes</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="theme-1">Action</a>
-                        <a class="dropdown-item" href="theme-2">Aventure</a>
-                        <a class="dropdown-item" href="theme-3">Cuisine</a>
-                        <a class="dropdown-item" href="theme-4">Beauté</a>
-                        <a class="dropdown-item" href="theme-5">Animaux</a>
-                        <a class="dropdown-item" href="theme-6">Tuto</a>
-                    </div>
-                </li>
+                
                 <?php if (isset($_SESSION['userConnected'])){ ?>
                     <li class="nav-item active">
                         <a class="nav-link" href="upload">Mettre en ligne une vidéo</a>
