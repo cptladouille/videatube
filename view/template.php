@@ -83,8 +83,8 @@
 
 <footer class="py-3 bg-dark footer">
     <div class="container">
-    <a class="m-0 text-center text-white" href="condition">CGU</a>
-        <p class="m-0 text-center text-white">Copyright &copy; VideaTube 2018</p>
+
+        <p class="m-0 text-center text-white">Copyright &copy; VideaTube 2018  -- <a href="condition">CGU</a> </p>
     </div>
     <!-- /.container -->
 </footer>
