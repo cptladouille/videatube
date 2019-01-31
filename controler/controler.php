@@ -26,7 +26,7 @@ function getVideo()
         {
             if(isset($_SESSION['userConnected']))
             {
-                if($_SESSION['userConnected']['timeAbo']['nbMinLeft'] > 0 ) 
+                if($_SESSION['userConnected']['isSubscribed'] == true ) 
                 {
                     $_POST['watch'] = true;
                 }
@@ -194,6 +194,7 @@ function getProfil(){
     updateSession($_SESSION['userConnected']);
     require_once ('view/profil.php');
 }
+
 function getCondition(){
     require_once ('view/condition.php');
 }
@@ -213,7 +214,8 @@ function updateSession($session)
         'role'      =>  $user->getLastname(),
         'avatar'    =>  $user->getAvatar(),
         'roleLabel' =>  attribRole($user->getLastname()),
-        'timeAbo'   =>  $sM->getTimeAbo($user->getId()));
+        'aboDate'   =>  $sM->getAboDate($user->getId()),
+        'isSubscribed'   =>   $sM->isSubscribed($user->getId()));
     $_SESSION['userConnected'] = $datas;
 }
 
@@ -281,7 +283,8 @@ function connectUser()
                         'role'      =>  $user->getLastname(),
                         'avatar'    =>  $user->getAvatar(),
                         'roleLabel' =>  attribRole($user->getLastname()),
-                        'timeAbo'   =>  $sM->getTimeAbo($user->getId()));
+                        'aboDate'   =>  $sM->getAboDate($user->getId()),
+                        'isSubscribed'   =>   $sM->isSubscribed($user->getId()));
                         return true;
                 }
                 else

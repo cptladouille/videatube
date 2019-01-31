@@ -42,6 +42,31 @@ require_once('model/typeSubClass.php');
                 
             return new subscriptionClass($datas);
         }
+        
+        public function isSubscribed($id)
+        {
+            $id = (int) $id;
+            $q = $this->_db->query("SELECT s.id FROM type_subscription ts INNER JOIN subscription s ON s.id_type_subscription = ts.id WHERE s.id_user = '".$id."'");
+            $data = $q->fetch(PDO::FETCH_ASSOC);
+            if ($data == false)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        public function getAboDate($id)
+        {
+            // recupere le nombre de jours d'abonnement jours date d'expiration de l'abonnement - date actuelle
+            $id = (int) $id;
+            $q = $this->_db->query("SELECT ADDDATE(s.date_sub,(ts.duration+ts.nbDaysTrial)) as aboDate FROM type_subscription ts INNER JOIN subscription s ON s.id_type_subscription = ts.id WHERE s.id_user = '".$id."'");
+            $data = $q->fetch(PDO::FETCH_ASSOC);
+            return ($data);
+        }
+        
 
         //$q = $this->_db->query("SELECT SUM((ts.duration+ts.nbDaysTrial)-TIMESTAMPDIFF(DAY,s.date_sub,NOW())) as nbMinLeft FROM type_subscription ts INNER JOIN subscription s ON s.id_type_subscription = ts.id WHERE s.id_user = '".$id."'");
         public function getTimeAbo($id)
