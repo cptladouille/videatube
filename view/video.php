@@ -37,10 +37,17 @@ if (isset($_POST['watch']))
             <div class="card mt-4 videoContain">    
                 <div class = "frame">
                     <div class="frameLock">
+                    <?php if(isset($_SESSION['userConnected'])) 
+                    { ?>
                         <form method = 'post' action ='purchase'>
                             <input type="hidden" name = "purchaseVid" value = "<?= $v->getId(); ?>" >
                             <input class="btn  btnPurchase" type="submit" name = "purchase" value = 'Acheter'>
                         </form>
+                    <?php }else{ ?>
+                        <form method = 'post' action ='connexion'>
+                            <input class="btn  btnPurchase" type="submit" name = "connexion" value = 'Connexion'>
+                        </form>
+                    <?php } ?>
                     </div>
                     <iframe class="videoWatch" width="700" height="490" src=<?= $v->getLink(); ?> frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
@@ -51,8 +58,7 @@ if (isset($_POST['watch']))
                     <span class="text-warning"><?= $v->getNbViews(); ?> vues</span>
                 </div>
             </div>
-
-<?php } ?>
+        <?php } ?>
 
                 <div class="card card-outline-secondary my-4 btnComm">
                     <div class="card-header">
