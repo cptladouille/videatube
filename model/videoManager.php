@@ -50,7 +50,7 @@ require_once('model/videoClass.php');
             // Retourne la liste de toutes les videos.
             $videos = [];
 
-            $q = $this->_db->query('SELECT id, title, price, link, date_upload,thumbnail, nbViews, description FROM video ORDER BY date_upload DESC');
+            $q = $this->_db->query('SELECT id, title, price, link, date_upload,thumbnail, nbViews, description FROM video ORDER BY date_upload DESC LIMIT 0,12');
 
             while ($donnees = $q->fetch(PDO::FETCH_ASSOC))
             {
