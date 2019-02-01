@@ -192,6 +192,7 @@ function getInscription(){
 
 function getProfil(){
     updateSession($_SESSION['userConnected']);
+    $isInTrial = isInTrial($_SESSION['userConnected']['id']);
     require_once ('view/profil.php');
 }
 
@@ -199,6 +200,24 @@ function getCondition(){
     require_once ('view/condition.php');
 }
 
+function unsubUser()
+{
+    try
+    {
+        if(isset($_SESSION['userConnected']))
+        {
+            $uM = new userManager();
+            $sM = new subscriptionManager();
+            $user = $uM->get($_SESSION['userConnected']['id']);
+            $s = $sM->getFromUser($user->getId());
+            $sM->delete($s);
+        }
+    }
+    catch(Exception $e)
+    {
+        $_POST['alert'] = $e;
+    }
+}
 function updateSession($session)
 {
     $_SESSION = array();
@@ -307,6 +326,23 @@ function connectUser()
     }
 }
 
+function isInTrial($id)
+{
+    $uM = new userManager();
+    $sM = new subscriptionManager();
+    $user = $uM->get($_SESSION['userConnected']['id']);
+    $dateEndTrial = new DateTime($sM->getDateTrial($user->getId())['dateTrial']);
+    $dD = (new DateTime())->format('Y-m-d H:i:s');
+    if ($dateEndTrial->format('Y-m-d H:i:s') > $dD)
+    {
+        return true;
+    }
+    else 
+     {
+         return false;
+     }
+}
+
 function checkFormPassword()
 {
     //vérifie que les deux champs de mot de passe sont bien rentrés et les comparent
@@ -384,7 +420,7 @@ function checkFormEdit()
                 $dataUser = checkDatasForm($dataUser);
                 $uM = new userManager();
                 $uM->updateEdit($_SESSION['userConnected']['id'],$dataUser);
-                $_SESSION['userConnected'] = $uM->  ession($_SESSION['userConnected']);
+                updateSession($_SESSION['userConnected']);
             }
         }
         catch(Exception $e)

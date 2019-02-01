@@ -22,7 +22,10 @@ ob_start(); ?>
                 <!-- /.card -->
 <?php 
 if (isset($_POST['watch'])) 
-{ ?>
+{   
+    
+    if(substr_count($v->getLink(),"http") > 0)
+    {?>
             <div class="card mt-4 videoContain">
                 <iframe class="videoWatch" width="700" height="490" src=<?= $v->getLink(); ?> frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <div class="card-body">
@@ -32,24 +35,49 @@ if (isset($_POST['watch']))
                 </div>
             </div>
 
-<?php }elseif(isset($_POST['purchase'])){ ?>
+    <?php }
+    else {
+         ?>
+        
+            <div class="card mt-4 videoContain">
+            <video class="videoWatch" width="700" height="490" controls src="./ressources/videos/<?= $v->getLink(); ?>"></video>
+                <div class="card-body">
+                    <h3 class="card-title"><?= $v->getTitle(); ?></h3>
+                    <p class="card-text"><?= $v->getDescription(); ?></p>
+                    <span class="text-warning"><?= $v->getNbViews(); ?> vues</span>
+                </div>
+            </div>
+    <?php } 
+}elseif(isset($_POST['purchase'])){ ?>
 
             <div class="card mt-4 videoContain">    
                 <div class = "frame">
                     <div class="frameLock">
-                    <?php if(isset($_SESSION['userConnected'])) 
-                    { ?>
-                        <form method = 'post' action ='purchase'>
-                            <input type="hidden" name = "purchaseVid" value = "<?= $v->getId(); ?>" >
-                            <input class="btn  btnPurchase" type="submit" name = "purchase" value = 'Acheter'>
-                        </form>
-                    <?php }else{ ?>
-                        <form method = 'post' action ='connexion'>
-                            <input class="btn  btnPurchase" type="submit" name = "connexion" value = 'Connexion'>
-                        </form>
-                    <?php } ?>
+                        <?php if(isset($_SESSION['userConnected'])) 
+                        { ?>
+                            <form method = 'post' action ='purchase'>
+                                <input type="hidden" name = "purchaseVid" value = "<?= $v->getId(); ?>" >
+                                <input class="btn  btnPurchase" type="submit" name = "purchase" value = 'Acheter'>
+                            </form>
+                        <?php 
+                        }else
+                        { ?>
+                            <form method = 'post' action ='connexion'>
+                                <input class="btn  btnPurchase" type="submit" name = "connexion" value = 'Connexion'>
+                            </form>
+                        <?php 
+                        } ?>
                     </div>
-                    <iframe class="videoWatch" width="700" height="490" src=<?= $v->getLink(); ?> frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <?php 
+                    if(substr_count($v->getLink(),"http") > 0)
+                    { ?>
+                        <iframe class="videoWatch" width="700" height="490" src=<?= $v->getLink(); ?> frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <?php 
+                    }else
+                    { ?>
+                        <video class="videoWatch" width="700" height="490" controls src="./ressources/videos/<?= $v->getLink(); ?>"></video>
+                    <?php 
+                    } ?>
                 </div>
                 <div class="card-body">
                     <h3 class="card-title"><?= $v->getTitle(); ?></h3>
@@ -85,9 +113,7 @@ if (isset($_POST['watch']))
         </div>
 
     </div>
-
 </body>
-
 
 
 <?php $content = ob_get_clean();

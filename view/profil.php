@@ -157,9 +157,20 @@ ob_start(); ?>
                                 <td>
 
                                     <label class="labProfil" for="dateAbo">date de fin d'abonnement : </label>
-                                    <?= $_SESSION['userConnected']['aboDate']['aboDate'] ?>
+                                    <?= $_SESSION['userConnected']['aboDate'] ?>
                                 </td>
                             </tr>
+                            <?php
+                                if($isInTrial == true)
+                                {
+                                ?>
+                                <tr>
+                                    <td>
+                                        <a href="unsub" data-confirm="Etes-vous certain de vouloir annuler votre abonnement ?">Annuler l'abonnement</a>
+                                    </td>
+                                </tr>
+                                <?php 
+                                } ?>
                             </tbody>
                         </table>
                         <?php

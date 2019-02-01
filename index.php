@@ -7,13 +7,26 @@
         {
             getVideo();
         }
+        elseif($p == 'unsub')
+        {
+            unsubUser();
+            $p="profil";
+            header('Location: ./profil');
+            getProfil();
+        }
         elseif ($p == 'subscription')
         {
-            if(isset($_POST['signUp']))
+            if(isset($_POST['subscription']))
             {
-                
+                getSubscription();
             }
-            getSubscription();
+            else
+            {
+                $p="home";
+                header('Location: ./home');
+                getHome();
+            }
+            
         }
         elseif ($p == 'connexion')
         {
