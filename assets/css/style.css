@@ -215,6 +215,14 @@ body{
     min-height: 100vh;
 }
 
+.containerAlerte{
+    margin-right:0 !important;
+    margin-left: 16% !important;
+}
+.alert-success{
+    color:green;
+}
+
 .containerProfil{
     background-image: linear-gradient(white, lightgray);
     margin: 0 auto !important;

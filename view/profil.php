@@ -1,27 +1,29 @@
 <?php $title = 'Profil';
 ob_start(); 
+?>
+    
+    <div class="bodyProfil">
+        <div class="col-lg-8  containerAlerte">
+        <?php  if(isset($_SESSION['alert'])){ ?>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Erreur !</strong> <?= $_SESSION['alert']; ?>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"  onclick="return getOutput();">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
 
-if(isset($_SESSION['alert'])){ ?>
-    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-        <strong>Erreur !</strong> <?= $_SESSION['alert']; ?>
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close"  onclick="return getOutput();">
-            <span aria-hidden="true">&times;</span>
-        </button>
-</div>
-
-<?php }
-if(isset($_SESSION['info'])){ ?>
-    <div class="alert alert-info alert-dismissible fade show" role="alert">
+        <?php }
+        if(isset($_SESSION['info'])){ ?>
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
             <strong>Info !</strong> <?= $_SESSION['info']; ?>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close" onclick="return getOutput();">
                 <span aria-hidden="true">&times;</span>
             </button>
-    </div>
-<?php
+        </div>
+        <?php
+        } ?>
+        </div>
 
-} ?>
-    
-    <div class="bodyProfil">
         <?php
         // Formulaire d'édition générale de profil
         if (isset($_POST['editUser'])) { ?>
