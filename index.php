@@ -22,11 +22,10 @@
             }
             else
             {
-                $p="home";
+                $p='home';
                 header('Location: ./home');
                 getHome();
             }
-            
         }
         elseif ($p == 'connexion')
         {

@@ -1,6 +1,26 @@
 <?php $title = 'Profil';
-ob_start(); ?>
+ob_start(); 
 
+if(isset($_SESSION['alert'])){ ?>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Erreur !</strong> <?= $_SESSION['alert']; ?>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"  onclick="return getOutput();">
+            <span aria-hidden="true">&times;</span>
+        </button>
+</div>
+
+<?php }
+if(isset($_SESSION['info'])){ ?>
+    <div class="alert alert-info alert-dismissible fade show" role="alert">
+            <strong>Info !</strong> <?= $_SESSION['info']; ?>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close" onclick="return getOutput();">
+                <span aria-hidden="true">&times;</span>
+            </button>
+    </div>
+<?php
+
+} ?>
+    
     <div class="bodyProfil">
         <?php
         // Formulaire d'édition générale de profil
