@@ -30,44 +30,75 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
+            <table class="navbar-nav mr-auto">
+                <tr>
+                <td class="nav-item active">
                     <a class="nav-link" href="home">Home<span class="sr-only">(current)</span></a>
-                </li>
+                </td>
+                    <td class="nav-item active">
+                    <?php if (isset($_SESSION['userConnected'])){ ?>
+                            <a class="nav-link" href="upload">Mettre en ligne une vidéo</a>
+                    <?php } ?>
+                    </td>
+                </tr>
+            </table>
+            <table class="navbar-nav mr-auto">
+                <tr>
+                    <td class="nav-item active">
+                        <input class="form-control mr-sm-2 inputHome" type="text" placeholder="Rechercher" aria-label="Search">
+                    </td>
+                    <td class="nav-item active">
+                        <input class="btn  my-2 my-sm-0 BoutonHome" type="submit" name = 'Search' value = 'Rechercher'>
+                    </td>
+                </tr>
+            </table>
 
-                <?php if (isset($_SESSION['userConnected'])){ ?>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="upload">Mettre en ligne une vidéo</a>
-                    </li>
-                <?php } ?>
-            </ul>
-            <div class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2 inputHome" type="text" placeholder="Rechercher" aria-label="Search">
-                <input class="btn  my-2 my-sm-0 BoutonHome" type="submit" name = 'Search' value = 'Rechercher'>
-                <?php
-                if (isset($_SESSION['userConnected']))
-                {
-                    if($_SESSION['userConnected']['avatar'] != "")
-                    {?>
 
-                        <a  href= "profil" class="divProfilNavBar"><img src="./ressources/avatars/<?= $_SESSION['userConnected']['avatar']; ?>" class="d-inline-block align-top avatarNavBar" alt=""></a>
+            <table class="navbar-nav navbar-right">
+                <tr>
+                    <?php
+                    if (isset($_SESSION['userConnected']))
+                    {
+                        if($_SESSION['userConnected']['avatar'] != "")
+                        {?>
+                            <td class="divProfilNavBar">
+                            <a  href= "profil" class="">
+                                <img src="./ressources/avatars/<?= $_SESSION['userConnected']['avatar']; ?>" class="d-inline-block align-top avatarNavBar" alt="" width="40px"
+                                height="40px">
+                            </a>
+                            </td>
+                            <?php
+                        }?>
+                        <td>
+                        <a  href= "profil"><p class = "my-2 my-sm-0 nameNavBar" href = "profil">
+                                <?= $_SESSION['userConnected']['nickname'] ;?></p>
+                        </a>
+                        </td>
+                        <td class="divDecoNavBar">
+                            <form method = 'post' action ='connexion'>
+                            <input class="btn  my-2 my-sm-0 BoutonHomeDeconnexion" type="submit" name = "deconnexion" value = 'Déconnexion'>
+
+                            </form>
+                        </td>
                         <?php
-                    }?>
-                    <a  href= "profil"><p class = "my-2 my-sm-0 nameNavBar" href = "profil"><?= $_SESSION['userConnected']['nickname'] ;?></p></a>
-                    <form method = 'post' action ='connexion'>
-                        <input class="btn  my-2 my-sm-0 BoutonHomeDeconnexion" type="submit" name = "deconnexion" value = 'Déconnexion'>
-                    </form>
-                    <?php
-                }
-                else
-                {?>
-                    <form method = 'post' action ='connexion'>
-                        <input class="btn  my-2 my-sm-0 BoutonHome" type="submit" name = "connexion" value = 'Connexion'>
-                    </form>
-                    <?php
-                }
-                ?>
-            </div>
+                    }
+                    else
+                    {?>
+                        <td>
+                        <form method = 'post' action ='connexion'>
+                            <input class="btn  my-2 my-sm-0 BoutonHome" type="submit" name = "connexion" value = 'Connexion'>
+                        </form>
+                        </td>
+                        <?php
+                    }
+                    ?>
+                </tr>
+
+
+            </table>
+
+
+
         </div>
     </nav>
     </div>

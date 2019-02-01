@@ -92,7 +92,11 @@
 
 
 /* Page Home */
-
+.BoutonHomeRecherche{
+    color: whitesmoke;
+    background-color: #B40431;
+    text-align: center;
+}
 
 .BoutonHome{
     color: whitesmoke;
@@ -106,6 +110,19 @@
     margin-left: 10%;
 }
 
+.BoutonHomeConnexion{
+    color: whitesmoke;
+    background-color: #B40431;
+    margin-left: 90%;
+}
+
+.BoutonHomeConnexion:hover {
+    background-color: #fb3768;
+}
+
+.BoutonRecherche{
+    margin-right: 3%;
+}
 .BoutonHomeDeconnexion:hover {
     background-color: #fb3768;
 }
@@ -222,14 +239,13 @@ body{
 }
 
 .avatarNavBar{
-    width: 30%;
     -moz-border-radius:100%;
     -webkit-border-radius:100%;
     border-radius:100%;
-    margin-left: 40%;
 }
 .divProfilNavBar{
     width: 15%;
+    margin-right: 10% !important;
 }
 .avatar{
     width: 80%;
@@ -242,8 +258,9 @@ body{
     color: #B40431;
 }
 
+
 .nameNavBar{
-    margin-right: 15%;
+    padding-left: 10%;
 }
 .BoutonEditPassword{
     color: whitesmoke;
@@ -252,7 +269,14 @@ body{
     margin-bottom: 3% !important;
     margin-left: 6%;
 }
+.glyphicon{
+    margin-left: 10%;
+    width: 15%;
+}
 
+.BarreRecherche{
+    width: 50%;
+}
 .BoutonFormEditProfil{
     color: whitesmoke;
     background-color: #B40431;
@@ -305,6 +329,7 @@ body{
 .formulaireEditProfil{
     margin-bottom: 10%;
 }
+
 
 /* Page Video */
 
