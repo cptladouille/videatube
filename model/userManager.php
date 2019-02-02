@@ -32,7 +32,7 @@ require_once('model/userClass.php');
         public function delete(userClass $user)
         {
             // Exécute une requête de type DELETE.
-            $this->_db->exec('DELETE FROM user WHERE id = '.$user->id());
+            $this->_db->exec('DELETE FROM user WHERE id = '.$user->getId());
         }
 
         public function get($id)

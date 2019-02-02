@@ -87,22 +87,33 @@ if (isset($_POST['watch']))
                 </div>
             </div>
         <?php } ?>
-
+                <div class="card card-outline-secondary my-4 btnComm">
+                    <form>
+                        <input class="form-control mr-sm-2 inputHome" type="text" aria-label='Ecrivez votre commentaire ici...'>
+                        <input class="btn  my-2 my-sm-0 BoutonHome" type="submit" name = 'comment' value = 'Envoyer le commentaire'>
+                    </form>
+                </div>
                 <div class="card card-outline-secondary my-4 btnComm">
                     <div class="card-header">
-                        Product Reviews
+                        Commentaires
                     </div>
                     <div class="card-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-                        <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-                        <hr>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-                        <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-                        <hr>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-                        <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-                        <hr>
-                        <a href="#" class="btn btn-success">Leave a Review</a>
+                        <?php 
+                        if ($cArray[0][0] != null)
+                        { 
+                            foreach($cArray as $commArray)
+                            {
+                                foreach($commArray as $comm)
+                                { ?>
+                                    <p><?= $comm['content'];?></p>
+                                    <small class="text-muted">Posté par <?= $comm['nickname'];?> le <?= $comm['date_comm'];?></small>
+                                    <hr>
+                            <?php }
+                            } 
+                        }else
+                        { ?>
+                            <p>Aucun commentaire pour cette vidéo n'a encore été posté</p>
+                        <?php } ?>
                     </div>
                 </div>
                 <!-- /.card -->

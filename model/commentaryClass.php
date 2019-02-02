@@ -11,6 +11,7 @@ class commentaryClass{
   var $content;
   var $id_video;
   var $id_user;
+  var $date_comm;
 
 
     /**
@@ -19,6 +20,7 @@ class commentaryClass{
      * @param $content
      * @param $id_video
      * @param $id_user
+     * @param $date_comm
      */
     public function __construct($datas)
     {
@@ -103,5 +105,20 @@ class commentaryClass{
         $this->id_user = $id_user;
     }
 
+     /**
+     * @return mixed
+     */
+    public function getDate_comm()
+    {
+        return $this->date_comm;
+    }
+
+    /**
+     * @param mixed $date_comm
+     */
+    public function setDate_comm($date_comm)
+    {
+        $this->date_comm = $date_comm;
+    }
 }
 

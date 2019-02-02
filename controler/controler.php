@@ -5,6 +5,7 @@ require_once('model/userManager.php');
 require_once('model/subscriptionManager.php');
 require_once('model/typeSubManager.php');
 require_once('model/purchaseManager.php');
+require_once('model/commentaryManager.php');
 
 function getHome(){
     $vM = new videoManager();
@@ -14,38 +15,58 @@ function getHome(){
 }
 function getVideo()
 {
-    if (isset ($_GET['vId']))
+    try
     {
-        $vM = new videoManager();
-        $v = $vM->get($_GET['vId']);
-        if($v->getPrice() == 0)
+        if (isset ($_GET['vId']))
         {
-            $_POST['watch'] = true;
-        }
-        else
-        {
-            if(isset($_SESSION['userConnected']))
+            $vM = new videoManager();
+            $v = $vM->get($_GET['vId']);
+            $cArray[] = $vM->getCommentary($v);
+            /*
+            boucle pour changer le format des dates ne foncitionne pas -> dates inchengées une fois la variable passée dans la page
+            foreach($cArray as $commArray)
             {
-                if($_SESSION['userConnected']['isSubscribed'] == true ) 
+                foreach($commArray as $comm)
                 {
-                    $_POST['watch'] = true;
+                    $date = new DateTime($comm['date_comm']);
+                    $comm['date_comm'] = $date->format('d/m/Y H:i:s');
                 }
-                elseif (checkUserVid($_SESSION['userConnected']['id'],$_GET['vId']))
-                {
-                    $_POST['watch'] = true;
-                    
-                }
-                else
-                {
-                    $_POST['purchase'] = true;
-                }
+            }*/
+            
+            if($v->getPrice() == 0)
+            {
+                $_POST['watch'] = true;
             }
             else
+            {
+                if(isset($_SESSION['userConnected']))
                 {
-                    $_POST['purchase'] = true;
+                    if($_SESSION['userConnected']['isSubscribed'] == true ) 
+                    {
+                        $_POST['watch'] = true;
+                    }
+                    elseif (checkUserVid($_SESSION['userConnected']['id'],$_GET['vId']))
+                    {
+                        $_POST['watch'] = true;
+                        
+                    }
+                    else
+                    {
+                        $_POST['purchase'] = true;
+                    }
                 }
+                else
+                    {
+                        $_POST['purchase'] = true;
+                    }
+                }
+            }
         }
-    }
+        catch(Exception $e)
+        {
+            $_SESSION['alert'] = $e;
+        }
+
     require_once ('view/video.php');
 }
 
@@ -244,23 +265,30 @@ function updateSession($session)
 function checkFormInscription()
 {
     if (isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['mail']) && isset($_POST['login']) && isset($_POST['motDePasse']) && isset($_POST['pseudo']))
-    {   
-        $psswrd = password_hash($_POST['motDePasse'],PASSWORD_DEFAULT);
-        $dataUser = array(
-            'lastname'  =>  $_POST['nom'],
-            'firstname' =>  $_POST['prenom'],
-            'mail'      =>  $_POST['mail'],
-            'log'       =>  $_POST['login'],
-            'password'  =>  $psswrd,
-            'nickname'  =>  $_POST['pseudo'],
-            'role'      =>  0);
-        $u = new userClass($dataUser);
-        $uM = new userManager();
-        $uM->add($u);
+    {  
+        try
+        { 
+            $psswrd = password_hash($_POST['motDePasse'],PASSWORD_DEFAULT);
+            $dataUser = array(
+                'lastname'  =>  $_POST['nom'],
+                'firstname' =>  $_POST['prenom'],
+                'mail'      =>  $_POST['mail'],
+                'log'       =>  $_POST['login'],
+                'password'  =>  $psswrd,
+                'nickname'  =>  $_POST['pseudo'],
+                'role'      =>  0);
+            $u = new userClass($dataUser);
+            $uM = new userManager();
+            $uM->add($u);
+        }
+        catch(Exception $e)
+        {
+            $_SESSION['alert'] = $e;
+        }
     }
     else
     {
-        echo "Erreur form inscription un des champs n'est pas rempli";
+        $_SESSION['alert'] = "Erreur form inscription un des champs n'est pas rempli";
     }
 }
 
@@ -346,7 +374,24 @@ function isInTrial($id)
          return false;
      }
 }
-
+function deleteAccount()
+{
+    try
+    {
+        if(isset($_SESSION['userConnected']))
+        {
+            $uM = new userManager();
+            $u = $uM->get($_SESSION['userConnected']['id']);
+            $uM->delete($u);
+            disconnectUser();
+            $_SESSION['info'] = "Votre compte a été supprimé";
+        }
+    }
+    catch(Exception $e)
+    {
+        $_SESSION['alert'] = $e;
+    }
+}
 function checkFormPassword()
 {
     //vérifie que les deux champs de mot de passe sont bien rentrés et les comparent
@@ -465,10 +510,17 @@ function attribRole($role)
 
 function disconnectUser()
 {
-    //détruit les variables de session et donc deconnecte l'utilisateur
-    $_SESSION['info'] = "A bientôt, ".$_SESSION['userConnected']['nickname']."!";
-    $_SESSION = array();
-    session_destroy();
+    try
+    {
+        //détruit les variables de session et donc deconnecte l'utilisateur
+        $_SESSION['info'] = "A bientôt, ".$_SESSION['userConnected']['nickname']."!";
+        $_SESSION = array();
+        session_destroy();
+    }
+    catch(Excepction $e)
+    {
+        $_SESSION['alert'] = $e;
+    }
     
 }
 

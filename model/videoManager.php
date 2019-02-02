@@ -38,11 +38,23 @@ require_once('model/videoClass.php');
         {
             // Exécute une requête de type SELECT avec une clause WHERE, et retourne un objet Video.
             $id = (int) $id;
-
             $q = $this->_db->query('SELECT * FROM video WHERE id = '.$id);
             $donnees = $q->fetch(PDO::FETCH_ASSOC);
                 
             return new videoClass($donnees);
+        }
+
+        public function getCommentary(videoClass $video)
+        {
+            // Exécute une requête de type SELECT avec une clause WHERE, et retourne un objet Video.
+            $q = $this->_db->query('SELECT c.id, c.content, c.date_comm, u.nickname FROM video v INNER JOIN commentary c ON v.id = c.id_video INNER JOIN user u ON c.id_user = u.id WHERE v.id = '.$video->getId());
+            $cArray[] = null;
+            while ($donnees = $q->fetch(PDO::FETCH_ASSOC))
+            {
+                $cArray[] = $donnees;
+            }
+            
+            return $cArray;
         }
 
         public function getList()

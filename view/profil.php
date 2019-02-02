@@ -84,11 +84,6 @@ if(isset($_SESSION['info'])){ ?>
                             </tr>
                         </table>
                     </form>
-                    <?php
-                    if (isset($_POST['alert'])) { ?>
-                        <div class="alert"><label><?= $_POST['alert']; ?></label></div>
-                        <?php
-                    } ?>
                 </div>
             </div>
             <?php
@@ -174,6 +169,8 @@ if(isset($_SESSION['info'])){ ?>
                                     <label class="labProfil" for="statutAbo">Statut abonné : </label>
                                     Abonné
                                 </td>
+                            </tr>
+                            <tr>
                                 <td>
 
                                     <label class="labProfil" for="dateAbo">date de fin d'abonnement : </label>
@@ -186,7 +183,7 @@ if(isset($_SESSION['info'])){ ?>
                                 ?>
                                 <tr>
                                     <td>
-                                        <a href="unsub" data-confirm="Etes-vous certain de vouloir annuler votre abonnement ?">Annuler l'abonnement</a>
+                                        <input href="unsub" data-confirm="Etes-vous certain de vouloir mettre fin a la période d'essai ?" class="btn  my-2 my-sm-0 BoutonSubscribe" type="submit" value="Annuler l'abonnement">
                                     </td>
                                 </tr>
                                 <?php 
@@ -211,7 +208,7 @@ if(isset($_SESSION['info'])){ ?>
                         </tr>
                             </tbody>
                             </table>
-                            <?php
+                            <?php   
                         } ?>
                     </div>
                 </div>
@@ -225,6 +222,8 @@ if(isset($_SESSION['info'])){ ?>
                         <input class="btn  my-2 my-sm-0  BoutonEditPassword" type="submit" name="editUserPassword"
                                value='Changer de mot de passe'>
                     </form>
+                    <input href="deleteAccount" data-confirm="Etes-vous certain de vouloir supprimer votre compte ?" 
+                    class="btn  my-2 my-sm-0 BoutonSubscribe" type="submit" value="Supprimer mon compte">
                 </div>
             </div>
         <?php } ?>

@@ -14,6 +14,13 @@
             header('Location: ./profil');
             getProfil();
         }
+        elseif($p == 'deleteAccount')
+        {
+            deleteAccount();
+            $p='home';
+            header('Location: ./home');
+            getHome();
+        }
         elseif ($p == 'subscription')
         {
             if(isset($_POST['subscription']))
@@ -56,6 +63,9 @@
             if (isset($_POST['formInscription']) )
             {
                 checkFormInscription();
+                $p='connexion';
+                header('Location: ./connexion');
+                getConnexion();
             }   
             getInscription();
         }
