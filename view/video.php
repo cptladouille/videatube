@@ -99,14 +99,14 @@ if (isset($_POST['watch']))
                     </div>
                     <div class="card-body">
                         <?php 
-                        if ($cArray[0][0] != null)
+                        if (isset($cArray[0][1]["id"]))
                         { 
                             foreach($cArray as $commArray)
                             {
-                                foreach($commArray as $comm)
+                                for($i = 1; $i< count($commArray);$i++)
                                 { ?>
-                                    <p><?= $comm['content'];?></p>
-                                    <small class="text-muted">Posté par <?= $comm['nickname'];?> le <?= $comm['date_comm'];?></small>
+                                    <p><?= $commArray[$i]['content'];?></p>
+                                    <small class="text-muted">Posté par <?= $commArray[$i]['nickname'];?> le <?= $commArray[$i]['date_comm'];?></small>
                                     <hr>
                             <?php }
                             } 

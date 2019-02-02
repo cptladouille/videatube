@@ -26,10 +26,10 @@ function getVideo()
             boucle pour changer le format des dates ne foncitionne pas -> dates inchengées une fois la variable passée dans la page
             foreach($cArray as $commArray)
             {
-                foreach($commArray as $comm)
+                for($i = 1; $i< count($commArray);$i++)
                 {
-                    $date = new DateTime($comm['date_comm']);
-                    $comm['date_comm'] = $date->format('d/m/Y H:i:s');
+                    $date = new DateTime($commArray[$i]['date_comm']);
+                    $commArray[$i]['date_comm'] = $date->format('d/m/Y H:i:s');
                 }
             }*/
             
