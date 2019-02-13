@@ -4,6 +4,7 @@ require_once('model/videoManager.php');
 require_once('model/userManager.php');
 require_once('model/subscriptionManager.php');
 require_once('model/typeSubManager.php');
+require_once('model/themeManager.php');
 require_once('model/purchaseManager.php');
 require_once('model/commentaryManager.php');
 
@@ -68,6 +69,44 @@ function getVideo()
         }
 
     require_once ('view/video.php');
+}
+
+function putCommentary()
+{
+    if(isset($_POST['content']) && isset($_POST['idVideo']) && isset($_SESSION['userConnected']['id']))
+    {
+        if($_POST['content'] != "")
+        {
+            try{
+                $dataComm = array(
+                    'content' => $_POST['content'],
+                    'id_video' => $_POST['idVideo'],  
+                    'id_user' => $_SESSION['userConnected']['id'],
+                    'date_comm' => date('Y-m-d H:i:s')
+                );
+                $c = new commentaryClass($dataComm);
+                $cM = new commentaryManager();
+                $cM->add($c);
+                
+            }
+            catch(Exception $e)
+            {
+
+                $_POST['alert'] = $e;
+            }
+        }
+    }
+}
+
+function refreshCommentaries()
+{
+    if(isset($_POST['idVideo']))
+    {
+        $vM = new videoManager();
+        $v = $vM->get($_POST['idVideo']);
+        $cArray[] = $vM->getCommentary($v);
+        require_once('view/commentaries.php');
+    }
 }
 
 function getPurchase()
@@ -162,37 +201,18 @@ function checkPayement()
 
 function getTheme()
 {
-    if (isset ($_GET['t']))
+    if (isset($_GET['t']))
     {
-        
-        $theme = $_GET['t'];
-        if($theme == 1)
+        $vM = new videoManager();
+        $tM = new themeManager();
+        if($_GET['t'] == 0)
         {
-            $data = 'action';
-        }
-        elseif($theme == 2)
-        {
-            $data = 'aventure';
-        }
-        elseif($theme == 3)
-        {
-            $data = 'cuisine';
-        }
-        elseif($theme == 4)
-        {
-            $data = 'animaux';
-        }
-        elseif($theme == 5)
-        {
-            $data = 'tuto';
-        }
-        elseif($theme == 6)
-        {
-            $data = 'beaute';
+            $data = $vM->getList();
         }
         else
         {
-            $data = null;
+            $data = $vM->getVideoByTheme($_GET['t']);
+            $t = $tM->get($_GET['t']);
         }
     }
     $title = 'Thèmes';

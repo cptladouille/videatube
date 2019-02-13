@@ -16,8 +16,9 @@ require_once('model/videoClass.php');
             // Préparation de la requête d'insertion.
             // Assignation des valeurs pour le titre, le prix, le lien et la date de mise en ligne.
             // Exécution de la requête.
-            $q = $this->_db->prepare('INSERT INTO commentary(id_video, id_user,date_comm) VALUES(:id_video, :id_user, :date_comm)');
-
+            $q = $this->_db->prepare('INSERT INTO commentary(content, id_video, id_user,date_comm) VALUES(:content, :id_video, :id_user, :date_comm)');
+            
+            $q->bindValue(':content', $commentary->getContent());
             $q->bindValue(':id_video', $commentary->getId_video());
             $q->bindValue(':id_user', $commentary->getId_user());
             $q->bindValue(':date_comm', $commentary->getDate_comm());

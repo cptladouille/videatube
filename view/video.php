@@ -78,7 +78,7 @@ if (isset($_POST['watch']))
                         <video class="videoWatch" width="700" height="490" controls src="./ressources/videos/<?= $v->getLink(); ?>"></video>
                     <?php 
                     } ?>
-                </div>
+                </div>  
                 <div class="card-body">
                     <h3 class="card-title"><?= $v->getTitle(); ?></h3>
                     <h4><?= $v->getPrice(); ?>€</h4>
@@ -86,36 +86,27 @@ if (isset($_POST['watch']))
                     <span class="text-warning"><?= $v->getNbViews(); ?> vues</span>
                 </div>
             </div>
-        <?php } ?>
+        <br>
+            <?php 
+            } 
+                if(isset( $_SESSION['userConnected']['id']))
+                { ?>
                 <div class="card card-outline-secondary my-4 btnComm">
-                    <form>
-                        <input class="form-control mr-sm-2 inputHome" type="text" aria-label='Ecrivez votre commentaire ici...'>
-                        <input class="btn  my-2 my-sm-0 BoutonHome" type="submit" name = 'comment' value = 'Envoyer le commentaire'>
+                    <form id ="formcomm" method = 'post' class= "comms">
+                        <textarea id="textComm" form="formcomm" class="form-control mr-sm-2 inputHome"placeholder='Ecrivez votre commentaire ici...'></textarea>
+                        <input id="refreshComms" class="btn  my-2 my-sm-0 BoutonHome"  data-id = "<?= $v->getId() ?>" value = 'Envoyer le commentaire'>
                     </form>
                 </div>
-                <div class="card card-outline-secondary my-4 btnComm">
-                    <div class="card-header">
-                        Commentaires
-                    </div>
-                    <div class="card-body">
-                        <?php 
-                        if (isset($cArray[0][1]["id"]))
-                        { 
-                            foreach($cArray as $commArray)
-                            {
-                                for($i = 1; $i< count($commArray);$i++)
-                                { ?>
-                                    <p><?= $commArray[$i]['content'];?></p>
-                                    <small class="text-muted">Posté par <?= $commArray[$i]['nickname'];?> le <?= $commArray[$i]['date_comm'];?></small>
-                                    <hr>
-                            <?php }
-                            } 
-                        }else
-                        { ?>
-                            <p>Aucun commentaire pour cette vidéo n'a encore été posté</p>
-                        <?php } ?>
-                    </div>
+                <?php 
+                }else{ ?>
+                <div>
+                    <div class="form-control mr-sm-2 inputHome">Connectez vous pour poster un commentaire !</div>
                 </div>
+                <?php 
+                } ?>
+            <div id= "commentaries" class="card card-outline-secondary my-4 btnComm">
+                <?php require_once('./view/commentaries.php'); ?>
+            </div>
                 <!-- /.card -->
 
             </div>
@@ -126,6 +117,6 @@ if (isset($_POST['watch']))
     </div>
 </body>
 
-
+<script src="./assets/js/ajax.js"> </script>
 <?php $content = ob_get_clean();
 require_once ('view/template.php');?>

@@ -34,6 +34,11 @@
                 getHome();
             }
         }
+        elseif ($p == 'refreshComms')
+        {   
+            putCommentary();
+            refreshCommentaries();
+        }
         elseif ($p == 'connexion')
         {
             if (isset($_POST['formConnexion']))

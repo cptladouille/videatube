@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href=" ./assets/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
     <link href=" ./assets/css/style.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
             integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
             crossorigin="anonymous"></script>
@@ -17,11 +18,11 @@
 
     <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="./assets/js/script.js"></script>
-
+    
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="home">
-            <img src="./ressources/Logo_v_p.png" width="40" height="40" class="d-inline-block align-top" alt="">
+        <i class="fas fa-vial d-inline-block align-top" width="40" height="40"></i>
             VideaTube
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -93,23 +94,15 @@
                     }
                     ?>
                 </tr>
-
-
             </table>
-
-
-
         </div>
     </nav>
     </div>
 </head>
 
-
-
 <body>
 <?= $content;?>
 </body>
-
 
 <footer class="py-3 bg-dark footer">
     <div class="container">

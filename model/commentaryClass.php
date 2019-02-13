@@ -76,7 +76,7 @@ class commentaryClass{
     /**
      * @return mixed
      */
-    public function getIdVideo()
+    public function getId_video()
     {
         return $this->id_video;
     }
@@ -84,7 +84,7 @@ class commentaryClass{
     /**
      * @param mixed $id_video
      */
-    public function setIdVideo($id_video)
+    public function setId_video($id_video)
     {
         $this->id_video = $id_video;
     }
@@ -92,7 +92,7 @@ class commentaryClass{
     /**
      * @return mixed
      */
-    public function getIdUser()
+    public function getId_user()
     {
         return $this->id_user;
     }
@@ -100,7 +100,7 @@ class commentaryClass{
     /**
      * @param mixed $id_user
      */
-    public function setIdUser($id_user)
+    public function setId_user($id_user)
     {
         $this->id_user = $id_user;
     }
