@@ -38,11 +38,23 @@ require_once('model/videoClass.php');
         {
             // Exécute une requête de type SELECT avec une clause WHERE, et retourne un objet Video.
             $id = (int) $id;
-
             $q = $this->_db->query('SELECT * FROM video WHERE id = '.$id);
             $donnees = $q->fetch(PDO::FETCH_ASSOC);
                 
             return new videoClass($donnees);
+        }
+
+        public function getCommentary(videoClass $video)
+        {
+            $cArray[] = null;
+            // Exécute une requête de type SELECT avec une clause WHERE, et retourne un objet Video.
+            $q = $this->_db->query('SELECT c.id, c.content, c.date_comm, u.nickname FROM video v INNER JOIN commentary c ON v.id = c.id_video INNER JOIN user u ON c.id_user = u.id WHERE v.id = '.$video->getId());
+            while ($donnees = $q->fetch(PDO::FETCH_ASSOC))
+            {
+                $cArray[] = $donnees;
+            }
+            
+            return $cArray;
         }
 
         public function getList()
@@ -51,6 +63,21 @@ require_once('model/videoClass.php');
             $videos = [];
 
             $q = $this->_db->query('SELECT id, title, price, link, date_upload,thumbnail, nbViews, description FROM video ORDER BY date_upload DESC LIMIT 0,12');
+
+            while ($donnees = $q->fetch(PDO::FETCH_ASSOC))
+            {
+                $videos[] = new videoClass($donnees);
+            }
+
+            return $videos;
+        }
+
+        public function getVideoByTheme($idTheme)
+        {
+            // Retourne la liste de toutes les videos.
+            $videos = [];
+
+            $q = $this->_db->query('SELECT v.id, title, price, link, date_upload,thumbnail, nbViews, description FROM video v INNER JOIN (videotheme vt) ON v.id = vt.id_video WHERE vt.id_theme = '.$idTheme.' ORDER BY date_upload DESC');
 
             while ($donnees = $q->fetch(PDO::FETCH_ASSOC))
             {

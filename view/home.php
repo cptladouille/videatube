@@ -83,7 +83,13 @@ ob_start(); ?>
                 { ?>
                     <div class="col-lg-4 col-md-6 mb-4">
                             <div class="card h-100">
-                                <a href="video-<?= $data[$i]->getId(); ?>"><img class="card-img-top" src="./ressources/thumb/<?= $data[$i]->getThumbnail(); ?>" alt=""></a>
+                                <?php if($data[$i]->getThumbnail() == "")
+                                { ?>
+                                    <a href="video-<?= $data[$i]->getId(); ?>"><img class="card-img-top" width="300" height="210" src="./ressources/default.svg" alt=""></a>
+                                <?php }else
+                                { ?>
+                                <a href="video-<?= $data[$i]->getId(); ?>"><img class="card-img-top" width="300" height="210" src="./ressources/thumb/<?= $data[$i]->getThumbnail(); ?>" alt=""></a>
+                                <?php } ?>
                                 <div class="card-body">
                                     <h4 class="card-title">
                                         <a href="video-<?= $data[$i]->getId(); ?>" class="titreVideo"><?= $data[$i]->getTitle(); ?></a>

@@ -1,6 +1,6 @@
 $(function() 
 {
-	$('a[data-confirm]').click(function(ev) 
+	$('input[data-confirm]').click(function(ev) 
 	{
 		var href = $(this).attr('href');
 		

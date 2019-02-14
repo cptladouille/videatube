@@ -86,11 +86,6 @@ ob_start();
                             </tr>
                         </table>
                     </form>
-                    <?php
-                    if (isset($_POST['alert'])) { ?>
-                        <div class="alert"><label><?= $_POST['alert']; ?></label></div>
-                        <?php
-                    } ?>
                 </div>
             </div>
             <?php
@@ -176,6 +171,8 @@ ob_start();
                                     <label class="labProfil" for="statutAbo">Statut abonné : </label>
                                     Abonné
                                 </td>
+                            </tr>
+                            <tr>
                                 <td>
 
                                     <label class="labProfil" for="dateAbo">date de fin d'abonnement : </label>
@@ -188,7 +185,7 @@ ob_start();
                                 ?>
                                 <tr>
                                     <td>
-                                        <a href="unsub" data-confirm="Etes-vous certain de vouloir annuler votre abonnement ?">Annuler l'abonnement</a>
+                                        <input href="unsub" data-confirm="Etes-vous certain de vouloir mettre fin a la période d'essai ?" class="btn  my-2 my-sm-0 BoutonSubscribe" type="submit" value="Annuler l'abonnement">
                                     </td>
                                 </tr>
                                 <?php 
@@ -213,7 +210,7 @@ ob_start();
                         </tr>
                             </tbody>
                             </table>
-                            <?php
+                            <?php   
                         } ?>
                     </div>
                 </div>
@@ -227,6 +224,8 @@ ob_start();
                         <input class="btn  my-2 my-sm-0  BoutonEditPassword" type="submit" name="editUserPassword"
                                value='Changer de mot de passe'>
                     </form>
+                    <input href="deleteAccount" data-confirm="Etes-vous certain de vouloir supprimer votre compte ?" 
+                    class="btn  my-2 my-sm-0 BoutonSubscribe" type="submit" value="Supprimer mon compte">
                 </div>
             </div>
         <?php } ?>

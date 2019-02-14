@@ -11,6 +11,7 @@ class commentaryClass{
   var $content;
   var $id_video;
   var $id_user;
+  var $date_comm;
 
 
     /**
@@ -19,6 +20,7 @@ class commentaryClass{
      * @param $content
      * @param $id_video
      * @param $id_user
+     * @param $date_comm
      */
     public function __construct($datas)
     {
@@ -74,7 +76,7 @@ class commentaryClass{
     /**
      * @return mixed
      */
-    public function getIdVideo()
+    public function getId_video()
     {
         return $this->id_video;
     }
@@ -82,7 +84,7 @@ class commentaryClass{
     /**
      * @param mixed $id_video
      */
-    public function setIdVideo($id_video)
+    public function setId_video($id_video)
     {
         $this->id_video = $id_video;
     }
@@ -90,7 +92,7 @@ class commentaryClass{
     /**
      * @return mixed
      */
-    public function getIdUser()
+    public function getId_user()
     {
         return $this->id_user;
     }
@@ -98,10 +100,25 @@ class commentaryClass{
     /**
      * @param mixed $id_user
      */
-    public function setIdUser($id_user)
+    public function setId_user($id_user)
     {
         $this->id_user = $id_user;
     }
 
+     /**
+     * @return mixed
+     */
+    public function getDate_comm()
+    {
+        return $this->date_comm;
+    }
+
+    /**
+     * @param mixed $date_comm
+     */
+    public function setDate_comm($date_comm)
+    {
+        $this->date_comm = $date_comm;
+    }
 }
 

@@ -200,8 +200,9 @@
     margin-bottom: 4% !important;
 }
 
-
-
+#textComm{
+    height: 100%;
+}
 
 body{
     min-height: 100% !important;
@@ -352,7 +353,7 @@ body{
     margin-top:26.8% !important;
     color: whitesmoke;
     background-color: #B40431;
-    width: 20%; !important;
+    width: 20% !important;
     padding-bottom: 2% !important;
     padding-top: 2% !important;
     border-style: solid;
