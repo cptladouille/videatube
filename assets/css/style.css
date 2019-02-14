@@ -239,6 +239,11 @@ body{
     margin-left:10% !important;
 }
 
+.TableauProfil{
+    margin-top:3% !important;
+    margin-bottom: 3% !important;
+    text-align: center;
+}
 
 
 .photoProfil{
@@ -257,8 +262,7 @@ body{
     margin-right: 10% !important;
 }
 .avatar{
-    width: 80%;
-    height: 80%;
+
     -moz-border-radius:100%;
     -webkit-border-radius:100%;
     border-radius:100%;
@@ -275,8 +279,6 @@ body{
     color: whitesmoke;
     background-color: #B40431;
     text-align: center;
-    margin-bottom: 3% !important;
-    margin-left: 6%;
 }
 .glyphicon{
     margin-left: 10%;
@@ -306,7 +308,6 @@ body{
     color: whitesmoke;
     background-color: #B40431;
     text-align: center;
-    margin-left: 8%;
 }
 
 .BoutonFormEditMdp:hover{
@@ -329,6 +330,17 @@ body{
     margin-left: 15%;
 }
 .BoutonSubscribe:hover{
+    background-color: #fb3768;
+}
+
+
+.BoutonSupprimerCompte{
+    color: whitesmoke;
+    background-color: #B40431;
+    text-align: center;
+}
+
+.BoutonSupprimerCompte:hover{
     background-color: #fb3768;
 }
 

@@ -127,12 +127,39 @@ ob_start();
                         <?php
                         if ($_SESSION['userConnected']['avatar'] != '') { ?>
                             <img src="./ressources/avatars/<?= $_SESSION['userConnected']['avatar']; ?>" class="avatar"
-                                 alt="">
+                                 alt="" width="200" height="200" >
                             <?php
                         } else { ?>
                             <img src=http://image.noelshack.com/fichiers/2019/01/4/1546507376-profile-2092113-12802.png
                                  width="400" height="400" class="avatar">
                         <?php } ?>
+
+                        <table  class="TableauProfil">
+                            <tr>
+                                <td>
+                                    <form method="post" action="profil">
+                                        <input class="btn  my-2 my-sm-0  BoutonEditProfil " type="submit" name="editUser"
+                                               value='Modifier mon profil'>
+                                    </form>
+                                </td>
+                            </tr>
+                            <tr>
+
+                                <td>
+                                    <form method="post" action="profil">
+                                        <input class="btn  my-2 my-sm-0  BoutonEditPassword" type="submit" name="editUserPassword"
+                                               value='Changer de mot de passe'>
+                                    </form>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input href="deleteAccount" data-confirm="Etes-vous certain de vouloir supprimer votre compte ?"
+                                           class="btn  my-2 my-sm-0 BoutonSupprimerCompte" type="submit" value="Supprimer mon compte">
+                                </td>
+                            </tr>
+
+                        </table>
                     </div>
                     <div class="ChampProfil">
                         <table>
@@ -175,7 +202,7 @@ ob_start();
                             <tr>
                                 <td>
 
-                                    <label class="labProfil" for="dateAbo">date de fin d'abonnement : </label>
+                                    <label class="labProfil" for="dateAbo">Date de fin d'abonnement : </label>
                                     <?= $_SESSION['userConnected']['aboDate'] ?>
                                 </td>
                             </tr>
@@ -207,6 +234,7 @@ ob_start();
                                         <input class="btn  my-2 my-sm-0 BoutonSubscribe" type="submit" name="subscription" value="S'abonner">
                                     </form>
                                 </td>
+
                         </tr>
                             </tbody>
                             </table>
@@ -214,19 +242,7 @@ ob_start();
                         } ?>
                     </div>
                 </div>
-                <div>
-                    <form method="post" action="profil">
-                        <input class="btn  my-2 my-sm-0  BoutonEditProfil " type="submit" name="editUser"
-                               value='Modifier mon profil'>
-                    </form>
-                    <br>
-                    <form method="post" action="profil">
-                        <input class="btn  my-2 my-sm-0  BoutonEditPassword" type="submit" name="editUserPassword"
-                               value='Changer de mot de passe'>
-                    </form>
-                    <input href="deleteAccount" data-confirm="Etes-vous certain de vouloir supprimer votre compte ?" 
-                    class="btn  my-2 my-sm-0 BoutonSubscribe" type="submit" value="Supprimer mon compte">
-                </div>
+
             </div>
         <?php } ?>
 

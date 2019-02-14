@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b4d80342-4073-4d16-b656-cc76257d1013" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/profil.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/profil.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,17 +27,14 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.46759722">
+    <splitter split-orientation="horizontal" split-proportion="0.481">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/view/template.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1038">
-                  <caret line="72" column="78" selection-start-line="72" selection-start-column="78" selection-end-line="72" selection-end-column="78" />
-                  <folding>
-                    <element signature="e#3968#3974#0#HTML" expanded="true" />
-                  </folding>
+                <state relative-caret-position="1080">
+                  <caret line="72" column="28" selection-start-line="72" selection-start-column="28" selection-end-line="72" selection-end-column="28" />
                 </state>
               </provider>
             </entry>
@@ -53,8 +51,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/view/profil.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="240">
-                  <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+                <state relative-caret-position="290">
+                  <caret line="136" column="52" selection-start-line="136" selection-start-column="39" selection-end-line="136" selection-end-column="52" />
                 </state>
               </provider>
             </entry>
@@ -62,21 +60,21 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="false">
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/assets/css/style.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="186">
-                  <caret line="221" column="14" selection-start-line="221" selection-start-column="1" selection-end-line="221" selection-end-column="14" />
+                <state relative-caret-position="238">
+                  <caret line="243" column="33" selection-start-line="243" selection-start-column="33" selection-end-line="243" selection-end-column="33" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/view/home.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="180">
-                  <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+                <state relative-caret-position="80">
+                  <caret line="77" column="10" lean-forward="true" selection-start-line="77" selection-start-column="10" selection-end-line="77" selection-end-column="10" />
                 </state>
               </provider>
             </entry>
@@ -87,8 +85,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>bg-gradient</find>
-      <find>html</find>
       <find>margin-top</find>
       <find>pricing-item</find>
       <find>min.js</find>
@@ -117,6 +113,8 @@
       <find>icon</find>
       <find>nameNavBar</find>
       <find>Profil</find>
+      <find>BoutonEditPassword</find>
+      <find>BoutonSubscribe</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -157,9 +155,9 @@
         <option value="$PROJECT_DIR$/view/conditon.php" />
         <option value="$PROJECT_DIR$/view/condition.php" />
         <option value="$PROJECT_DIR$/view/template.php" />
+        <option value="$PROJECT_DIR$/view/home.php" />
         <option value="$PROJECT_DIR$/view/profil.php" />
         <option value="$PROJECT_DIR$/assets/css/style.css" />
-        <option value="$PROJECT_DIR$/view/home.php" />
       </list>
     </option>
   </component>
@@ -172,7 +170,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -210,6 +207,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -267,17 +265,18 @@
       <workItem from="1547817445169" duration="5891000" />
       <workItem from="1548673594212" duration="952000" />
       <workItem from="1548852226227" duration="5204000" />
+      <workItem from="1550148803738" duration="1229000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156687000" />
+    <option name="totallyTimeSpent" value="157916000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1898223" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19224556" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -290,8 +289,8 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49596122" visible="true" weight="0.04109589" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50403875" side_tool="true" visible="true" weight="0.04109589" />
+      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.4951535" visible="true" weight="0.04109589" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5048465" side_tool="true" visible="true" weight="0.04109589" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -567,6 +566,13 @@
         <state relative-caret-position="-28" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/view/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="72" column="28" selection-start-line="72" selection-start-column="28" selection-end-line="72" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/view/condition.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -574,34 +580,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/template.php">
+    <entry file="file://$PROJECT_DIR$/view/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1038">
-          <caret line="72" column="78" selection-start-line="72" selection-start-column="78" selection-end-line="72" selection-end-column="78" />
-          <folding>
-            <element signature="e#3968#3974#0#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="80">
+          <caret line="77" column="10" lean-forward="true" selection-start-line="77" selection-start-column="10" selection-end-line="77" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/profil.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+        <state relative-caret-position="290">
+          <caret line="136" column="52" selection-start-line="136" selection-start-column="39" selection-end-line="136" selection-end-column="52" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="221" column="14" selection-start-line="221" selection-start-column="1" selection-end-line="221" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+        <state relative-caret-position="238">
+          <caret line="243" column="33" selection-start-line="243" selection-start-column="33" selection-end-line="243" selection-end-column="33" />
         </state>
       </provider>
     </entry>
