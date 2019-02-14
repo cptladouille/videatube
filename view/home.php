@@ -14,7 +14,7 @@ ob_start(); ?>
     <?php }
     if(isset($_SESSION['info'])) 
     { ?>
-        <div class="alert alert-info alert-dismissible fade show" role="alert">
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
             <strong>Info !</strong> <?= $_SESSION['info']; ?>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close" onclick="return getOutput();">
                 <span aria-hidden="true">&times;</span>
