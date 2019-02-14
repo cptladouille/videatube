@@ -477,7 +477,15 @@ body{
 
 
 
+/* Page Theme */
 
+.bodyTheme{
+    min-height: 100vh;
+}
+
+.CadrePresentation{
+  margin-top: 2% !important;
+}
 
 
 

@@ -3,7 +3,7 @@ ob_start(); ?>
 
 
 <div class="bodyInscription">
-<div class="container">
+    <div class="container">
     <div class="row">
         <div class="col-lg-6 formulaireInscription">
             <div>

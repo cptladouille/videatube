@@ -1,16 +1,10 @@
 <?php ob_start(); ?>
+<div class="bodyTheme">
 
-<?php
-if(!isset($t))
-{ ?>
-    <h2>Toutes les vidéos par thème</h2>
-<?php }
-else{ ?>
-    <h2>Toutes les vidéos du theme <?= $t->getTitle(); ?></h2>
-<?php }  ?>
 
     <div class="container">
         <div class="row">
+
 
 
             <div class="col-lg-2">
@@ -30,7 +24,20 @@ else{ ?>
 
 
             <div class="col-lg-9">  
-                <div class="row">   
+                <div class="row">
+                    <div class="CadrePresentation">
+                    <?php
+                    if(!isset($t))
+                    { ?>
+                        <h2 class="">Toutes les vidéos par thème</h2>
+                    <?php }
+                    else{ ?>
+                        <h2>Toutes les vidéos du theme <?= $t->getTitle(); ?></h2>
+                    <?php }  ?>
+                    </div>
+                </div>
+                <div class="row">
+
                     <?php
                         for($i = 1;$i<count($data);$i++)
                         { ?>
@@ -73,6 +80,7 @@ else{ ?>
     </div>
     <!-- /.container -->
      <!-- Bootstrap core JavaScript -->
+</div>
      <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
