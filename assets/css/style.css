@@ -133,9 +133,7 @@
 .inputHome{
     border-color: #B40431;
 }
-.inputHome:hover{
-    border-color:  #fb3768;
-}
+
 .list-group-item{
     color: #B40431 !important;
 }
@@ -271,9 +269,9 @@ body{
     color: #B40431;
 }
 
-
 .nameNavBar{
     padding-left: 10%;
+    color:black;
 }
 .BoutonEditPassword{
     color: whitesmoke;
@@ -373,12 +371,29 @@ body{
     border-color: white;
 }
 
+.inputCommentaire{
+    border-color: #B40431;
+    margin-bottom: 1%;
+}
+.inputCommentaire:hover{
+    border-color:  #fb3768;
+}
+.BoutonEnvoieCommentaire{
+    color: whitesmoke;
+    background-color: #B40431;
+    margin-top:4%; !important;
+    border:none;
+}
 
+.BoutonEnvoieCommentaire:hover{
+    background-color: #fb3768;
+}
 .btnPurchase:hover{
     background-color: #fb3768;
 }
 .bodyVideo{
     width: 100%;
+    min-height: 100vh;
     pading:0 !important;
     margin: auto !important;
 }

@@ -1,7 +1,7 @@
 <?php $title = 'Vidéos';
 ob_start(); ?>
 
-<body class="bodyVideo">
+<div class="bodyVideo">
     <div class="container">
         <div class="row">
             <div class="col-lg-2">
@@ -93,8 +93,8 @@ if (isset($_POST['watch']))
                 { ?>
                 <div class="card card-outline-secondary my-4 btnComm">
                     <form id ="formcomm" method = 'post' class= "comms">
-                        <textarea id="textComm" form="formcomm" class="form-control mr-sm-2 inputHome"placeholder='Ecrivez votre commentaire ici...'></textarea>
-                        <input id="refreshComms" class="btn  my-2 my-sm-0 BoutonHome"  data-id = "<?= $v->getId() ?>" value = 'Envoyer le commentaire'>
+                        <textarea id="textComm" form="formcomm" class="form-control mr-sm-2 inputCommentaire"placeholder='Ecrivez votre commentaire ici...'></textarea>
+                        <input id="refreshComms" class="btn  my-2 my-sm-0 BoutonEnvoieCommentaire"  data-id = "<?= $v->getId() ?>" value = 'Envoyer le commentaire'>
                     </form>
                 </div>
                 <?php 
@@ -115,7 +115,7 @@ if (isset($_POST['watch']))
         </div>
 
     </div>
-</body>
+</div>
 
 <script src="./assets/js/ajax.js"> </script>
 <?php $content = ob_get_clean();
