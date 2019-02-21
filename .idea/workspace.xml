@@ -5,7 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/contentSearch.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/contentSearch.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/template.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/sideSearch.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/sideSearch.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,13 +28,13 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5060729">
+    <splitter split-orientation="horizontal" split-proportion="0.4806139">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/view/template.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="158">
+                <state relative-caret-position="870">
                   <caret line="58" column="43" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="43" />
                 </state>
               </provider>
@@ -83,8 +83,17 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/assets/css/style.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="366">
-                  <caret line="524" column="40" selection-start-line="524" selection-start-column="40" selection-end-line="524" selection-end-column="40" />
+                <state relative-caret-position="328">
+                  <caret line="157" column="24" selection-start-line="157" selection-start-column="24" selection-end-line="157" selection-end-column="24" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/view/sideSearch.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="595">
+                  <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
                 </state>
               </provider>
             </entry>
@@ -99,19 +108,10 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/view/sideSearch.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="285">
-                  <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/view/contentSearch.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="585">
-                  <caret line="39" column="36" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="36" />
+                <state relative-caret-position="565">
+                  <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
                 </state>
               </provider>
             </entry>
@@ -149,11 +149,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>video</find>
-      <find>body</find>
-      <find>width</find>
-      <find>red</find>
-      <find>.red</find>
       <find>pricing-divider</find>
       <find>pricing-divider-img</find>
       <find>avatar</find>
@@ -177,8 +172,13 @@
       <find>Theme</find>
       <find>text-center</find>
       <find>border-radiu</find>
-      <find>Aucune vidéo trouvée pour l'argument de recherche :</find>
       <find>search</find>
+      <find>Aucune vidéo trouvée pour l'argument de recherche :</find>
+      <find>itemDot</find>
+      <find>iq-features</find>
+      <find>round</find>
+      <find>holder</find>
+      <find>col-lg-8</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -223,6 +223,8 @@
         <option value="$PROJECT_DIR$/view/profil.php" />
         <option value="$PROJECT_DIR$/view/template.php" />
         <option value="$PROJECT_DIR$/view/contentSearch.php" />
+        <option value="$PROJECT_DIR$/view/search.php" />
+        <option value="$PROJECT_DIR$/view/sideSearch.php" />
         <option value="$PROJECT_DIR$/assets/css/style.css" />
       </list>
     </option>
@@ -248,6 +250,12 @@
               <item name="videatube" type="b2602c69:ProjectViewProjectNode" />
               <item name="videatube" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="videatube" type="b2602c69:ProjectViewProjectNode" />
+              <item name="videatube" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="videatube" type="b2602c69:ProjectViewProjectNode" />
@@ -334,18 +342,18 @@
       <workItem from="1550148803738" duration="2256000" />
       <workItem from="1550706506519" duration="567000" />
       <workItem from="1550748958724" duration="694000" />
-      <workItem from="1550773071553" duration="2275000" />
+      <workItem from="1550773071553" duration="5262000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="162479000" />
+    <option name="totallyTimeSpent" value="165466000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20193861" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.20193861" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -617,13 +625,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ressources/jeudessai.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/home.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="990">
@@ -668,8 +669,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/view/template.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
+        <state relative-caret-position="870">
           <caret line="58" column="43" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ressources/jeudessai.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/contentSearch.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="565">
+          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
         </state>
       </provider>
     </entry>
@@ -682,22 +697,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/view/sideSearch.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/contentSearch.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="36" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="36" />
+        <state relative-caret-position="595">
+          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="524" column="40" selection-start-line="524" selection-start-column="40" selection-end-line="524" selection-end-column="40" />
+        <state relative-caret-position="328">
+          <caret line="157" column="24" selection-start-line="157" selection-start-column="24" selection-end-line="157" selection-end-column="24" />
         </state>
       </provider>
     </entry>

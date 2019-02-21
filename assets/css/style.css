@@ -153,12 +153,12 @@
 
 /* Search Button*/
 .searchTemp {
-  position: absolute;
-  color: transparent;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-          transform: translateX(-50%) translateY(-50%);
+    position: absolute;
+    color: transparent;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
 }
 .searchSide {
     position: absolute;
@@ -166,32 +166,32 @@
     top: 65%;
     left: 50%;
     -webkit-transform: translateX(-50%) translateY(-50%);
-            transform: translateX(-50%) translateY(-50%);
-  }
+    transform: translateX(-50%) translateY(-50%);
+}
 .search * {
-  outline: none;
-  box-sizing: border-box;
-  color: transparent;
-  background-color: #f8f9fa;
-  color: #f8f9fa;
-} 
+    outline: none;
+    box-sizing: border-box;
+    color: transparent;
+    background-color: #f8f9fa;
+    color: #f8f9fa;
+}
 .search__wrapper {
-  position: relative;
+    position: relative;
 }
 .search__field {
-  width: 50px;
-  height: 50px;
-  color: transparent;
-  font-family: Lato, sans-serif;
-  font-size: 1.20em;
-  padding: 0.35em 50px 0.35em 0;
-  border: 1px solid transparent;
-  border-radius: 0;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
+    width: 50px;
+    height: 50px;
+    color: transparent;
+    border-radius: 50px;
+    font-family: Lato, sans-serif;
+    font-size: 1.20em;
+    padding: 0.35em 50px 0.35em 0;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 .search__field:focus {
-  border-bottom-color: #ccc;
+    border-bottom-color: #ccc;
     width: 100% !important;
     color: #2b2b2b;
     cursor: default;
@@ -199,110 +199,110 @@
 
 }
 .search__field:focus ~ .search__icon {
-  background-color: transparent;
-  color: #000000;
-  cursor: pointer;
-  pointer-events: auto;
+    background-color: transparent;
+    color: #000000;
+    cursor: pointer;
+    pointer-events: auto;
 }
 .search__icon {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: #B40431;
-  color: #FFFFFF;
-  width: 50px;
-  height: 50px;
-  font-size: 1.35em;
-  text-align: center;
-  border-color: transparent;
-  border-radius: 50%;
-  pointer-events: none;
-  display: inline-block;
-  transition: background-color 0.2s ease-in-out;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #B40431;
+    color: #FFFFFF;
+    width: 50px;
+    height: 50px;
+    font-size: 1.35em;
+    text-align: center;
+    border-color: transparent;
+    border-radius: 50%;
+    pointer-events: none;
+    display: inline-block;
+    transition: background-color 0.2s ease-in-out;
 }
 .search__field::-webkit-input-placeholder {
-  position: relative;
-  top: 0;
-  left: 0;
-  transition-property: top, color;
-  transition-duration: .1s;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-perspective: 1000;
-  perspective: 1000;
+    position: relative;
+    top: 0;
+    left: 0;
+    transition-property: top, color;
+    transition-duration: .1s;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    perspective: 1000;
 }
 .search__field:-moz-placeholder {
-  position: relative;
-  top: 0;
-  left: 0;
-  transition-property: top, color;
-  transition-duration: .1s;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-perspective: 1000;
-  perspective: 1000;
+    position: relative;
+    top: 0;
+    left: 0;
+    transition-property: top, color;
+    transition-duration: .1s;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    perspective: 1000;
 }
 .search__field::-moz-placeholder {
-  position: relative;
-  top: 0;
-  left: 0;
-  transition-property: top, color;
-  transition-duration: .1s;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-perspective: 1000;
-  perspective: 1000;
+    position: relative;
+    top: 0;
+    left: 0;
+    transition-property: top, color;
+    transition-duration: .1s;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    perspective: 1000;
 }
 .search__field:-ms-input-placeholder {
-  position: relative;
-  top: 0;
-  left: 0;
-  transition-property: top, color;
-  transition-duration: .1s;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-perspective: 1000;
-  perspective: 1000;
+    position: relative;
+    top: 0;
+    left: 0;
+    transition-property: top, color;
+    transition-duration: .1s;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    perspective: 1000;
 }
 .search__field::-webkit-input-placeholder[style*=hidden] {
-  color: #83b0c1;
-  font-size: .65em;
-  font-weight: normal;
-  top: -20px;
-  opacity: 1;
-  visibility: visible !important;
+    color: #83b0c1;
+    font-size: .65em;
+    font-weight: normal;
+    top: -20px;
+    opacity: 1;
+    visibility: visible !important;
 }
 .search__field:-moz-placeholder[style*=hidden] {
-  color: #83b0c1;
-  font-size: .65em;
-  font-weight: normal;
-  top: -20px;
-  opacity: 1;
-  visibility: visible !important;
+    color: #83b0c1;
+    font-size: .65em;
+    font-weight: normal;
+    top: -20px;
+    opacity: 1;
+    visibility: visible !important;
 }
 .search__field::-moz-placeholder[style*=hidden] {
-  color: #83b0c1;
-  font-size: .65em;
-  font-weight: normal;
-  top: -20px;
-  opacity: 1;
-  visibility: visible !important;
+    color: #83b0c1;
+    font-size: .65em;
+    font-weight: normal;
+    top: -20px;
+    opacity: 1;
+    visibility: visible !important;
 }
 .search__field:-ms-input-placeholder[style*=hidden] {
-  color: #83b0c1;
-  font-size: .65em;
-  font-weight: normal;
-  top: -20px;
-  opacity: 1;
-  visibility: visible !important;
+    color: #83b0c1;
+    font-size: .65em;
+    font-weight: normal;
+    top: -20px;
+    opacity: 1;
+    visibility: visible !important;
 }
 
 
@@ -532,8 +532,8 @@ body{
 .dotCircle  .itemDot .forActive::before { content: ''; width: 6px; height: 6px; filter: blur(5px); top: -15px; position: absolute; transform: rotate(-45deg); border: 6px solid #B40431; right: -39px; }
 .dotCircle  .itemDot.active .forActive { display: block; }
 .round { position: absolute; left: 40px; top: 45px; width: 410px; height: 410px; border: 2px dotted #B40431; border-radius: 100%; -webkit-animation: rotation 100s infinite linear; }
-.dotCircle .itemDot:hover, .dotCircle .itemDot.active { color: #ffffff; transition: 0.5s;   
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#B40431+0,B40431+100 */ 
+.dotCircle .itemDot:hover, .dotCircle .itemDot.active { color: #ffffff; transition: 0.5s;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#B40431+0,B40431+100 */
     background: #B40431; /* Old browsers */ background: -moz-linear-gradient(left, #B40431 0%, #B40431 100%); /* FF3.6-15 */ background: -webkit-linear-gradient(left, #B40431 0%, #B40431 100%); /* Chrome10-25,Safari5.1-6 */ background: linear-gradient(to right, #B40431 0%, #B40431 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#B40431', endColorstr='#B40431', GradientType=1); /* IE6-9 */ border: 2px solid #ffffff; -webkit-box-shadow: 0 30px 30px 0 rgba(0, 0, 0, .13); -moz-box-shadow: 0 30px 30px 0 rgba(0, 0, 0, .13); box-shadow: 0 30px 30px 0 rgba(0, 0, 0, .13); }
 .dotCircle .itemDot { font-size: 40px; }
 .contentCircle { width: 250px; border-radius: 100%; color: #222222; position: relative; top: 150px; left: 50%; transform: translate(-50%, -50%); }
@@ -541,17 +541,17 @@ body{
 .CirItem.active { z-index: 1; opacity: 1; transform: scale(1); transition: 0.5s; }
 .contentCircle .CirItem i { font-size: 180px; position: absolute; top: 0; left: 50%; margin-left: -90px; color: #000000; opacity: 0.1; }
 @media only screen and (min-width:300px) and (max-width:599px) {
-	.holderCircle { width: 300px; height: 300px; margin: 110px auto; }
-	.holderCircle::after { width: 100%; height: 100%; }
-	.dotCircle { width: 100%; height: 100%; top: 0; right: 0; bottom: 0; left: 0; margin: auto; }
+    .holderCircle { width: 300px; height: 300px; margin: 110px auto; }
+    .holderCircle::after { width: 100%; height: 100%; }
+    .dotCircle { width: 100%; height: 100%; top: 0; right: 0; bottom: 0; left: 0; margin: auto; }
 }
 @media only screen and (min-width:600px) and (max-width:767px) { }
 @media only screen and (min-width:768px) and (max-width:991px) { }
 @media only screen and (min-width:992px) and (max-width:1199px) { }
 @media only screen and (min-width:1200px) and (max-width:1499px) { }
-  .title-box .title { font-weight: 600; letter-spacing: 2px; position: relative; z-index: -1; }
-        .title-box span { text-shadow: 0 10px 10px rgba(0, 0, 0, .15); font-weight: 800; color: #640178; }
-        .title-box p {font-size: 17px; line-height: 2em; }
+.title-box .title { font-weight: 600; letter-spacing: 2px; position: relative; z-index: -1; }
+.title-box span { text-shadow: 0 10px 10px rgba(0, 0, 0, .15); font-weight: 800; color: #640178; }
+.title-box p {font-size: 17px; line-height: 2em; }
 
 /* SLider price */
 
@@ -559,10 +559,10 @@ body{
 
 .slidecontainer {
     width: 100%; /* Width of the outside container */
-  }
-  
-  /* The slider itself */
-  .slider {
+}
+
+/* The slider itself */
+.slider {
     border-radius: 100%;
     -webkit-appearance: none;  /* Override default CSS styles */
     appearance: none;
@@ -573,31 +573,31 @@ body{
     opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
     -webkit-transition: .2s; /* 0.2 seconds transition on hover */
     transition: opacity .2s;
-  }
-  
-  /* Mouse-over effects */
-  .slider:hover {
+}
+
+/* Mouse-over effects */
+.slider:hover {
     opacity: 1; /* Fully shown on mouse-over */
-  }
-  
-  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
-  .slider::-webkit-slider-thumb {
-    
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+
     -webkit-appearance: none; /* Override default look */
     appearance: none;
     width: 25px; /* Set a specific slider handle width */
     height: 25px; /* Slider handle height */
     background: #4CAF50; /* Green background */
     cursor: pointer; /* Cursor on hover */
-  }
-  
-  .slider::-moz-range-thumb {
+}
+
+.slider::-moz-range-thumb {
     border-radius: 100%;
     width: 25px; /* Set a specific slider handle width */
     height: 25px; /* Slider handle height */
     background: #4CAF50; /* Green background */
     cursor: pointer; /* Cursor on hover */
-  }
+}
 
 
 /* Page Video */
@@ -746,7 +746,7 @@ body{
 }
 
 .CadrePresentation{
-  margin-top: 2% !important;
+    margin-top: 2% !important;
     margin-bottom: 1% !important;
 }
 
