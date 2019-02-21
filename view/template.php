@@ -56,7 +56,7 @@
             if(!isset($_POST['search']))
             { ?>
             <form class="searchTemp" method = 'post' action ='search'>
-                <div class="search__wrapper">
+                <div class="search__wrapper ">
                     <input type="text" name="search" placeholder="Tapez votre recherche..." class="search__field">
                     <button type="submit" class="fa fa-search search__icon"></button>
                 </div>

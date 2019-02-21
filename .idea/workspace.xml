@@ -4,9 +4,8 @@
     <list default="true" id="b4d80342-4073-4d16-b656-cc76257d1013" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/commentaries.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/commentaries.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/profil.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/profil.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/video.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/video.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/contentSearch.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/contentSearch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/template.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,19 +28,19 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.27935222">
+    <splitter split-orientation="horizontal" split-proportion="0.5060729">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/view/template.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1230">
-                  <caret line="82" column="78" selection-start-line="82" selection-start-column="78" selection-end-line="82" selection-end-column="78" />
+                <state relative-caret-position="158">
+                  <caret line="58" column="43" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="43" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/view/profil.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="229">
@@ -84,8 +83,35 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/assets/css/style.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="311">
-                  <caret line="400" column="21" selection-start-line="400" selection-start-column="21" selection-end-line="400" selection-end-column="21" />
+                <state relative-caret-position="366">
+                  <caret line="524" column="40" selection-start-line="524" selection-start-column="40" selection-end-line="524" selection-end-column="40" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/view/search.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="165">
+                  <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/view/sideSearch.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="285">
+                  <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/view/contentSearch.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="585">
+                  <caret line="39" column="36" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="36" />
                 </state>
               </provider>
             </entry>
@@ -123,10 +149,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>min.js</find>
-      <find>img</find>
-      <find>localhost</find>
-      <find>container</find>
       <find>video</find>
       <find>body</find>
       <find>width</find>
@@ -153,6 +175,10 @@
       <find>BoutonSubscribe</find>
       <find>TableauProfil</find>
       <find>Theme</find>
+      <find>text-center</find>
+      <find>border-radiu</find>
+      <find>Aucune vidéo trouvée pour l'argument de recherche :</find>
+      <find>search</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -189,13 +215,14 @@
         <option value="$PROJECT_DIR$/view/purchase.php" />
         <option value="$PROJECT_DIR$/view/conditon.php" />
         <option value="$PROJECT_DIR$/view/condition.php" />
-        <option value="$PROJECT_DIR$/view/template.php" />
         <option value="$PROJECT_DIR$/view/home.php" />
         <option value="$PROJECT_DIR$/view/inscription.php" />
         <option value="$PROJECT_DIR$/view/theme.php" />
         <option value="$PROJECT_DIR$/view/commentaries.php" />
         <option value="$PROJECT_DIR$/view/video.php" />
         <option value="$PROJECT_DIR$/view/profil.php" />
+        <option value="$PROJECT_DIR$/view/template.php" />
+        <option value="$PROJECT_DIR$/view/contentSearch.php" />
         <option value="$PROJECT_DIR$/assets/css/style.css" />
       </list>
     </option>
@@ -307,12 +334,12 @@
       <workItem from="1550148803738" duration="2256000" />
       <workItem from="1550706506519" duration="567000" />
       <workItem from="1550748958724" duration="694000" />
-      <workItem from="1550773071553" duration="1096000" />
+      <workItem from="1550773071553" duration="2275000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="161300000" />
+    <option name="totallyTimeSpent" value="162479000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -364,16 +391,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/indexView.php" />
-    <entry file="file://$PROJECT_DIR$/view/inscription.php~HEAD" />
     <entry file="file://$PROJECT_DIR$/model/userClass.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2510">
@@ -593,13 +610,6 @@
     <entry file="file://$PROJECT_DIR$/ressources/default_old.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1230">
-          <caret line="82" column="78" selection-start-line="82" selection-start-column="78" selection-end-line="82" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/theme.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -656,10 +666,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/view/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="58" column="43" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/sideSearch.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/contentSearch.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="39" column="36" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="400" column="21" selection-start-line="400" selection-start-column="21" selection-end-line="400" selection-end-column="21" />
+        <state relative-caret-position="366">
+          <caret line="524" column="40" selection-start-line="524" selection-start-column="40" selection-end-line="524" selection-end-column="40" />
         </state>
       </provider>
     </entry>
