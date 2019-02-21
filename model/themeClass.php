@@ -11,12 +11,14 @@ class themeClass
     var $id;
     var $title;
     var $description;
+    var $thumbnail;
 
     /**
      * themeClass constructor.
      * @param $id
      * @param $title
      * @param $description
+     * @param $thumbnail
      */
     public function __construct($datas)
     {
@@ -84,6 +86,21 @@ class themeClass
     public function setDescription($description)
     {
         $this->description = $description;
+    }
+     /**
+     * @return mixed
+     */
+    public function getThumbnail()
+    {
+        return $this->thumbnail;
+    }
+
+    /**
+     * @param mixed $thumbnail
+     */
+    public function setThumbnail($thumbnail)
+    {
+        $this->thumbnail = $thumbnail;
     }
 
 

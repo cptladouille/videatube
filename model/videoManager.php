@@ -87,6 +87,20 @@ require_once('model/videoClass.php');
             return $videos;
         }
 
+        public function searchVideo($str)
+        {
+            $videos = [];
+
+            $q = $this->_db->query('SELECT id, title, price, link, date_upload,thumbnail, nbViews, description FROM video WHERE INSTR(REPLACE(LOWER(title)," ",""),REPLACE(LOWER('."'".$str."'".')," ","")) > 0  ORDER BY date_upload DESC');
+
+            while ($donnees = $q->fetch(PDO::FETCH_ASSOC))
+            {
+                $videos[] = new videoClass($donnees);
+            }
+
+            return $videos;
+        }
+
         public function getListOfLinks()
         {
            $videos = $this->getList();
@@ -96,7 +110,7 @@ require_once('model/videoClass.php');
            }
            return $links;
         }
-
+        
         public function update(videoClass $video)
         {
             // Prépare une requête de type UPDATE.

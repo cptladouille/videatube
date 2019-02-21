@@ -16,10 +16,11 @@ require_once('model/themeClass.php');
             // Préparation de la requête d'insertion.
             // Assignation des valeurs pour le titre, le prix, le lien et la date de mise en ligne.
             // Exécution de la requête.
-            $q = $this->_db->prepare('INSERT INTO theme(title,description) VALUES(:title,:description)');
+            $q = $this->_db->prepare('INSERT INTO theme(title,description,thumbnail) VALUES(:title,:description,:thumbnail)');
 
             $q->bindValue(':title', $theme->title());
             $q->bindValue(':description', $theme->description());
+            $q->bindValue(':thumbnail', $theme->thumbnail());
 
             $q->execute();
         }
@@ -46,7 +47,7 @@ require_once('model/themeClass.php');
             // Retourne la liste de toutes les themes.
             $themes = [];
 
-            $q = $this->_db->query('SELECT id, title, description FROM theme');
+            $q = $this->_db->query('SELECT id, title, description, thumbnail FROM theme');
 
             while ($donnees = $q->fetch(PDO::FETCH_ASSOC))
             {

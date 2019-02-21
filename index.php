@@ -114,6 +114,12 @@
             }
             getProfil();
         }
+        elseif ($p == 'search'){
+            if(isset($_POST['search']))
+            {
+            getSearch($_POST['search']);
+            }
+        }
         elseif ($p == 'theme'){
             getTheme();
         }

@@ -1,0 +1,704 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.8.4
+- https://www.phpmyadmin.net
+-
+- Hôte : 127.0.0.1
+- Généré le :  jeu. 21 fév. 2019 à 13:18
+- Version du serveur :  10.1.37-MariaDB
+- Version de PHP :  7.3.0
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="bdd_videatube" collation="latin1_swedish_ci" charset="latin1">
+            <pma:table name="commentary">
+                CREATE TABLE `commentary` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `content` text NOT NULL,
+                  `id_video` int(11) NOT NULL,
+                  `id_user` int(11) NOT NULL,
+                  `date_comm` datetime NOT NULL,
+                  PRIMARY KEY (`id`),
+                  KEY `fk_id_video_commentary` (`id_video`) USING BTREE,
+                  KEY `fk_id_user_commentary` (`id_user`),
+                  CONSTRAINT `fk_id_user_commentary` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`),
+                  CONSTRAINT `fk_id_video_commentary` FOREIGN KEY (`id_video`) REFERENCES `video` (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="purchase">
+                CREATE TABLE `purchase` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `date_purchase` date NOT NULL,
+                  `id_video` int(11) NOT NULL,
+                  `id_user` int(11) NOT NULL,
+                  PRIMARY KEY (`id`),
+                  KEY `fk_id_video_purchase` (`id_video`),
+                  KEY `fk_id_user_purchase` (`id_user`),
+                  CONSTRAINT `fk_id_user_purchase` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`),
+                  CONSTRAINT `fk_id_video_purchase` FOREIGN KEY (`id_video`) REFERENCES `video` (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="subscription">
+                CREATE TABLE `subscription` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `date_sub` datetime NOT NULL,
+                  `id_user` int(11) NOT NULL,
+                  `id_type_subscription` int(11) NOT NULL,
+                  PRIMARY KEY (`id`),
+                  KEY `fk_id_type_subscription_subscription` (`id_type_subscription`),
+                  KEY `fk_id_user_subscription` (`id_user`),
+                  CONSTRAINT `fk_id_type_subscription_subscription` FOREIGN KEY (`id_type_subscription`) REFERENCES `type_subscription` (`id`),
+                  CONSTRAINT `fk_id_user_subscription` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="theme">
+                CREATE TABLE `theme` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `title` varchar(255) NOT NULL,
+                  `description` varchar(255) NOT NULL,
+                  `thumbnail` text NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="type_subscription">
+                CREATE TABLE `type_subscription` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `price` decimal(10,2) NOT NULL,
+                  `duration` int(10) NOT NULL,
+                  `nbDaysTrial` int(11) NOT NULL,
+                  `title` varchar(255) NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="user">
+                CREATE TABLE `user` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `lastname` varchar(255) NOT NULL,
+                  `firstname` varchar(255) NOT NULL,
+                  `mail` varchar(255) NOT NULL,
+                  `log` varchar(255) NOT NULL,
+                  `password` varchar(255) NOT NULL,
+                  `nickname` varchar(255) NOT NULL,
+                  `role` int(11) NOT NULL,
+                  `avatar` text,
+                  PRIMARY KEY (`id`),
+                  UNIQUE KEY `log` (`log`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="video">
+                CREATE TABLE `video` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `title` varchar(255) NOT NULL,
+                  `price` decimal(11,2) NOT NULL,
+                  `link` varchar(255) NOT NULL,
+                  `date_upload` date NOT NULL,
+                  `thumbnail` varchar(255) NOT NULL,
+                  `nbViews` int(11) NOT NULL,
+                  `description` varchar(255) NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="videotheme">
+                CREATE TABLE `videotheme` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `id_video` int(11) NOT NULL,
+                  `id_theme` int(11) NOT NULL,
+                  PRIMARY KEY (`id`,`id_video`,`id_theme`),
+                  KEY `fk_id_video_videotheme` (`id_video`) USING BTREE,
+                  KEY `fk_id_theme_videotheme` (`id_theme`) USING BTREE,
+                  CONSTRAINT `fk_id_theme_videotheme` FOREIGN KEY (`id_theme`) REFERENCES `theme` (`id`),
+                  CONSTRAINT `fk_id_video_videotheme` FOREIGN KEY (`id_video`) REFERENCES `video` (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Base de données :  'bdd_videatube'
+    -->
+    <database name="bdd_videatube">
+        <!-- Table commentary -->
+        <table name="commentary">
+            <column name="id">1</column>
+            <column name="content">First !!!!</column>
+            <column name="id_video">3</column>
+            <column name="id_user">6</column>
+            <column name="date_comm">2019-01-31 06:00:00</column>
+        </table>
+        <table name="commentary">
+            <column name="id">2</column>
+            <column name="content">First !!</column>
+            <column name="id_video">3</column>
+            <column name="id_user">6</column>
+            <column name="date_comm">2019-01-30 11:18:00</column>
+        </table>
+        <table name="commentary">
+            <column name="id">3</column>
+            <column name="content">ceci est un commentaire</column>
+            <column name="id_video">20</column>
+            <column name="id_user">3</column>
+            <column name="date_comm">2019-02-01 10:00:00</column>
+        </table>
+        <table name="commentary">
+            <column name="id">4</column>
+            <column name="content">cococococoooooooomentaiiiiiiiiiire</column>
+            <column name="id_video">20</column>
+            <column name="id_user">5</column>
+            <column name="date_comm">2019-02-01 15:30:00</column>
+        </table>
+        <table name="commentary">
+            <column name="id">22</column>
+            <column name="content">test</column>
+            <column name="id_video">20</column>
+            <column name="id_user">5</column>
+            <column name="date_comm">2019-02-13 12:00:27</column>
+        </table>
+        <table name="commentary">
+            <column name="id">23</column>
+            <column name="content">j'aime quentin schiff</column>
+            <column name="id_video">20</column>
+            <column name="id_user">5</column>
+            <column name="date_comm">2019-02-13 12:00:45</column>
+        </table>
+        <table name="commentary">
+            <column name="id">24</column>
+            <column name="content">test final
+
+
+
+
+
+
+
+
+
+
+
+
+
+mega long de commentaire</column>
+            <column name="id_video">20</column>
+            <column name="id_user">5</column>
+            <column name="date_comm">2019-02-13 14:41:03</column>
+        </table>
+        <table name="commentary">
+            <column name="id">25</column>
+            <column name="content">test final
+
+
+
+
+
+
+
+
+
+
+
+
+
+mega long de commentaire</column>
+            <column name="id_video">20</column>
+            <column name="id_user">5</column>
+            <column name="date_comm">2019-02-13 14:41:08</column>
+        </table>
+        <table name="commentary">
+            <column name="id">26</column>
+            <column name="content">meeega ong
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+commentaire</column>
+            <column name="id_video">20</column>
+            <column name="id_user">5</column>
+            <column name="date_comm">2019-02-13 14:42:00</column>
+        </table>
+        <!-- Table purchase -->
+        <table name="purchase">
+            <column name="id">1</column>
+            <column name="date_purchase">2018-12-19</column>
+            <column name="id_video">4</column>
+            <column name="id_user">6</column>
+        </table>
+        <table name="purchase">
+            <column name="id">2</column>
+            <column name="date_purchase">2018-12-19</column>
+            <column name="id_video">11</column>
+            <column name="id_user">6</column>
+        </table>
+        <table name="purchase">
+            <column name="id">3</column>
+            <column name="date_purchase">2019-01-31</column>
+            <column name="id_video">13</column>
+            <column name="id_user">5</column>
+        </table>
+        <table name="purchase">
+            <column name="id">4</column>
+            <column name="date_purchase">2019-02-01</column>
+            <column name="id_video">20</column>
+            <column name="id_user">16</column>
+        </table>
+        <table name="purchase">
+            <column name="id">5</column>
+            <column name="date_purchase">2019-02-14</column>
+            <column name="id_video">20</column>
+            <column name="id_user">6</column>
+        </table>
+        <!-- Table subscription -->
+        <table name="subscription">
+            <column name="id">41</column>
+            <column name="date_sub">2019-02-01 11:49:50</column>
+            <column name="id_user">5</column>
+            <column name="id_type_subscription">3</column>
+        </table>
+        <!-- Table theme -->
+        <table name="theme">
+            <column name="id">1</column>
+            <column name="title">Action</column>
+            <column name="description">Animation tenant aux aventures représentées ou racontées.
+</column>
+            <column name="thumbnail">fas fa-fist-raised</column>
+        </table>
+        <table name="theme">
+            <column name="id">2</column>
+            <column name="title">Aventure</column>
+            <column name="description">L'aventure ensemble d'activités, d'expériences qui comportent du risque et de l'imprévu.</column>
+            <column name="thumbnail">fab fa-pied-piper-hat</column>
+        </table>
+        <table name="theme">
+            <column name="id">3</column>
+            <column name="title">Cuisine</column>
+            <column name="description">Aliments préparés qu'on sert aux repas.</column>
+            <column name="thumbnail">fas fa-hamburger</column>
+        </table>
+        <table name="theme">
+            <column name="id">4</column>
+            <column name="title">Beauté</column>
+            <column name="description">Caractère de ce qui est moralement admirable.</column>
+            <column name="thumbnail">fas fa-eye</column>
+        </table>
+        <table name="theme">
+            <column name="id">5</column>
+            <column name="title">Animaux</column>
+            <column name="description">Être vivant non végétal, ne possédant pas les caractéristiques de l'espèce humaine.</column>
+            <column name="thumbnail">fas fa-cat</column>
+        </table>
+        <table name="theme">
+            <column name="id">6</column>
+            <column name="title">Tutos</column>
+            <column name="description">Guide d'apprentissage (texte, vidéo) pour se familiariser étape par étape avec une activité.</column>
+            <column name="thumbnail">fas fa-graduation-cap</column>
+        </table>
+        <!-- Table type_subscription -->
+        <table name="type_subscription">
+            <column name="id">1</column>
+            <column name="price">0.99</column>
+            <column name="duration">1</column>
+            <column name="nbDaysTrial">0</column>
+            <column name="title">Abonnement à la journée</column>
+        </table>
+        <table name="type_subscription">
+            <column name="id">2</column>
+            <column name="price">3.99</column>
+            <column name="duration">7</column>
+            <column name="nbDaysTrial">0</column>
+            <column name="title">Abonnement à la semaine</column>
+        </table>
+        <table name="type_subscription">
+            <column name="id">3</column>
+            <column name="price">9.99</column>
+            <column name="duration">30</column>
+            <column name="nbDaysTrial">7</column>
+            <column name="title">Abonnement au mois</column>
+        </table>
+        <!-- Table user -->
+        <table name="user">
+            <column name="id">3</column>
+            <column name="lastname">Mouttet</column>
+            <column name="firstname">Mimi</column>
+            <column name="mail">mimiDuD67@gmail.com</column>
+            <column name="log">CptLaDouille</column>
+            <column name="password">$2y$10$ajBhR0tGUEnbZkkL2/P0ie3LZ6Db7cvrKPEbpi.FPSwWKEGgytE8e</column>
+            <column name="nickname">MimiLaDouille</column>
+            <column name="role">0</column>
+            <column name="avatar">rems.jpg</column>
+        </table>
+        <table name="user">
+            <column name="id">4</column>
+            <column name="lastname">Thonin</column>
+            <column name="firstname">Chloe</column>
+            <column name="mail">ChloeThonin@gmail.com</column>
+            <column name="log">ChloeThonin</column>
+            <column name="password">$2y$10$sTAn0AjyNn.D84zCeDR5Sey5.KJAdFW50mTmUQdelhIWJNaLlkuRG</column>
+            <column name="nickname">ChloeThonin</column>
+            <column name="role">0</column>
+            <column name="avatar">chlo.jpg</column>
+        </table>
+        <table name="user">
+            <column name="id">5</column>
+            <column name="lastname">Schiff</column>
+            <column name="firstname">Quentin</column>
+            <column name="mail">QuentinSchiff@gmail.com</column>
+            <column name="log">SchiffQuentin</column>
+            <column name="password">$2y$10$2LOK0gDgoSC.itreRbsh6upgjVvea1WgxUYzw2xadcjTgx/Xt1Aza</column>
+            <column name="nickname">SchiffQuentin</column>
+            <column name="role">1</column>
+            <column name="avatar">qs1.jpg</column>
+        </table>
+        <table name="user">
+            <column name="id">6</column>
+            <column name="lastname">Knittle</column>
+            <column name="firstname">lapute</column>
+            <column name="mail">KevKnittle@gmail.com</column>
+            <column name="log">Kev67</column>
+            <column name="password">$2y$10$2LOK0gDgoSC.itreRbsh6upgjVvea1WgxUYzw2xadcjTgx/Xt1Aza</column>
+            <column name="nickname">KevDu67</column>
+            <column name="role">1</column>
+            <column name="avatar">keks.jpg</column>
+        </table>
+        <table name="user">
+            <column name="id">7</column>
+            <column name="lastname">test</column>
+            <column name="firstname">test</column>
+            <column name="mail">test@test.com</column>
+            <column name="log">test</column>
+            <column name="password">$2y$10$I7RgwhVON.rSzQH96lZUBeK2KlZ.22070PSD6BaLvZj85jp4fnjZa</column>
+            <column name="nickname">test</column>
+            <column name="role">0</column>
+            <column name="avatar"></column>
+        </table>
+        <table name="user">
+            <column name="id">8</column>
+            <column name="lastname">trol</column>
+            <column name="firstname">trol</column>
+            <column name="mail">trol</column>
+            <column name="log">trol</column>
+            <column name="password">$2y$10$wizjiAs6ZifPKSOUG9Fn9.O/fyeqPFglkerDnQ/bLEjptLU4F3B4i</column>
+            <column name="nickname">trol</column>
+            <column name="role">0</column>
+            <column name="avatar"></column>
+        </table>
+        <table name="user">
+            <column name="id">9</column>
+            <column name="lastname">dems</column>
+            <column name="firstname">dems</column>
+            <column name="mail">demsdems@gmail.com</column>
+            <column name="log">dems67</column>
+            <column name="password">$2y$10$9e1V9HckHU7bF9/TtL1KmO5YFExgZkfK4OeghyWR1rpzkQ/awoBMK</column>
+            <column name="nickname">dems²</column>
+            <column name="role">0</column>
+            <column name="avatar">qs1.jpg</column>
+        </table>
+        <table name="user">
+            <column name="id">10</column>
+            <column name="lastname">kevlagrongnasse</column>
+            <column name="firstname">knitos</column>
+            <column name="mail">kevkev@gmail.com</column>
+            <column name="log">keks</column>
+            <column name="password">$2y$10$2yZn0r71GxyudAdKRpHcneeqhGOZHRLsEXJJkpijMGif4mdiEPptm</column>
+            <column name="nickname">Xxkevnamescope67xX</column>
+            <column name="role">0</column>
+            <column name="avatar">keks.jpg</column>
+        </table>
+        <table name="user">
+            <column name="id">16</column>
+            <column name="lastname">jb</column>
+            <column name="firstname">jb</column>
+            <column name="mail">jb</column>
+            <column name="log">jb</column>
+            <column name="password">$2y$10$Iwpy52XyE7iX9Zg6ThftWenBOGcFQynMVD/LnerkhPWS1mgIN.MSq</column>
+            <column name="nickname">jb</column>
+            <column name="role">0</column>
+            <column name="avatar">user.png</column>
+        </table>
+        <!-- Table video -->
+        <table name="video">
+            <column name="id">2</column>
+            <column name="title">Shadow Of Mordor</column>
+            <column name="price">2.99</column>
+            <column name="link">https://www.youtube.com/embed/5xK7e0-_3oQ</column>
+            <column name="date_upload">2018-12-19</column>
+            <column name="thumbnail"></column>
+            <column name="nbViews">0</column>
+            <column name="description"></column>
+        </table>
+        <table name="video">
+            <column name="id">3</column>
+            <column name="title">CET ANIMAL = 30 FOIS MA TAILLE ! (The Last Guardian #1)</column>
+            <column name="price">4.99</column>
+            <column name="link">https://www.youtube.com/embed/JinTG_9ODuY</column>
+            <column name="date_upload">2018-12-19</column>
+            <column name="thumbnail"></column>
+            <column name="nbViews">0</column>
+            <column name="description"></column>
+        </table>
+        <table name="video">
+            <column name="id">4</column>
+            <column name="title">UNE DEUXIÈME BÊTE ?! (The Last Guardian #2)</column>
+            <column name="price">4.99</column>
+            <column name="link">https://www.youtube.com/embed/HHmizvVsRgs</column>
+            <column name="date_upload">2018-12-20</column>
+            <column name="thumbnail"></column>
+            <column name="nbViews">0</column>
+            <column name="description"></column>
+        </table>
+        <table name="video">
+            <column name="id">5</column>
+            <column name="title">S'INFILTRER OU SE FAIRE KIDNAPPER (The Last Guardian #3)</column>
+            <column name="price">4.99</column>
+            <column name="link">https://www.youtube.com/embed/raSKTwY7x8I</column>
+            <column name="date_upload">2018-12-21</column>
+            <column name="thumbnail"></column>
+            <column name="nbViews">0</column>
+            <column name="description"></column>
+        </table>
+        <table name="video">
+            <column name="id">6</column>
+            <column name="title">LA CHUTE DE TRICO ?! (The Last Guardian #4)
+</column>
+            <column name="price">4.99</column>
+            <column name="link">https://www.youtube.com/embed/GPQF0DhBnI8</column>
+            <column name="date_upload">2018-12-22</column>
+            <column name="thumbnail"></column>
+            <column name="nbViews">0</column>
+            <column name="description"></column>
+        </table>
+        <table name="video">
+            <column name="id">7</column>
+            <column name="title">MOURIR DANS UN ÉBOULEMENT ?! (The Last Guardian #5)</column>
+            <column name="price">4.99</column>
+            <column name="link">https://www.youtube.com/embed/o50L0nnmQws</column>
+            <column name="date_upload">2018-12-23</column>
+            <column name="thumbnail"></column>
+            <column name="nbViews">0</column>
+            <column name="description"></column>
+        </table>
+        <table name="video">
+            <column name="id">8</column>
+            <column name="title">CE N'EST PAS LA QUEUE DE TRICO... (The Last Guardian #6)</column>
+            <column name="price">4.99</column>
+            <column name="link">https://www.youtube.com/embed/SvzRWMpKcfQ</column>
+            <column name="date_upload">2018-12-24</column>
+            <column name="thumbnail"></column>
+            <column name="nbViews">0</column>
+            <column name="description"></column>
+        </table>
+        <table name="video">
+            <column name="id">9</column>
+            <column name="title">IL EST MORT ?.. (The Last Guardian #7)</column>
+            <column name="price">4.99</column>
+            <column name="link">https://www.youtube.com/embed/HMGmnwxaLzM</column>
+            <column name="date_upload">2018-12-24</column>
+            <column name="thumbnail"></column>
+            <column name="nbViews">0</column>
+            <column name="description"></column>
+        </table>
+        <table name="video">
+            <column name="id">10</column>
+            <column name="title">J'AI PLEURÉ DEVANT CE CHEF D’ŒUVRE (The Last Guardian FIN)</column>
+            <column name="price">4.99</column>
+            <column name="link">https://www.youtube.com/embed/lrnazIq--RU</column>
+            <column name="date_upload">2018-12-25</column>
+            <column name="thumbnail">squez15.jpg</column>
+            <column name="nbViews">122</column>
+            <column name="description">DANS CET EPISODE, JE FAIT FACE A MON PLUS GRAND DESESPOIR</column>
+        </table>
+        <table name="video">
+            <column name="id">11</column>
+            <column name="title">High &amp; Fines Herbes : Episode 1 (édition 420) - Saison 1</column>
+            <column name="price">1.99</column>
+            <column name="link">https://www.youtube.com/embed/NjkcDl1e1jc</column>
+            <column name="date_upload">2018-12-18</column>
+            <column name="thumbnail"></column>
+            <column name="nbViews">0</column>
+            <column name="description"></column>
+        </table>
+        <table name="video">
+            <column name="id">12</column>
+            <column name="title">High &amp; Fines Herbes : Episode 2 - Saison 1</column>
+            <column name="price">1.99</column>
+            <column name="link">https://www.youtube.com/embed/m0edPiv9rI4</column>
+            <column name="date_upload">2018-12-27</column>
+            <column name="thumbnail">A&amp;fhe2s1.jpg</column>
+            <column name="nbViews">959227</column>
+            <column name="description">Dans cet épisode d'Ail et fines herbes, Caba et JJ cuisinent un bon poulet curry avec un max de spatio-chanvre</column>
+        </table>
+        <table name="video">
+            <column name="id">13</column>
+            <column name="title">High &amp; Fines Herbes : Episode 4 - Saison 1</column>
+            <column name="price">1.99</column>
+            <column name="link">https://www.youtube.com/embed/XROv7HgyrWU</column>
+            <column name="date_upload">2018-12-28</column>
+            <column name="thumbnail">A&amp;fhe4s1.png</column>
+            <column name="nbViews">666</column>
+            <column name="description">Dans cet épisode Caba et JJ ouvrent leur 3e oeil et cuisine des tenders de poulet</column>
+        </table>
+        <table name="video">
+            <column name="id">14</column>
+            <column name="title">27 ASTUCES DE BEAUTÉ QUE TU AURAIS DU CONNAÎTRE PLUS TÔT
+</column>
+            <column name="price">0.00</column>
+            <column name="link">https://www.youtube.com/embed/lW4zJRItAYY</column>
+            <column name="date_upload">2018-12-26</column>
+            <column name="thumbnail">5ast.jpg</column>
+            <column name="nbViews">46285589</column>
+            <column name="description">Des astuces qui vous auriez préféré connaitre avant !</column>
+        </table>
+        <table name="video">
+            <column name="id">15</column>
+            <column name="title">Drôle ANIMAUX Eau FAILS qui vous fera MOURIR DE MOURIR - Vidéos épiques ANIMAUX FUNNY</column>
+            <column name="price">0.00</column>
+            <column name="link">https://www.youtube.com/embed/ws4V4yorkYo</column>
+            <column name="date_upload">2018-12-25</column>
+            <column name="thumbnail"></column>
+            <column name="nbViews">0</column>
+            <column name="description"></column>
+        </table>
+        <table name="video">
+            <column name="id">16</column>
+            <column name="title">Vidéos de chats à mourir de rire compilation 2013</column>
+            <column name="price">0.00</column>
+            <column name="link">https://www.youtube.com/embed/cggl4WN77Mw</column>
+            <column name="date_upload">2018-12-20</column>
+            <column name="thumbnail"></column>
+            <column name="nbViews">0</column>
+            <column name="description"></column>
+        </table>
+        <table name="video">
+            <column name="id">17</column>
+            <column name="title">5 Easy Mouse/Rat Trap</column>
+            <column name="price">0.00</column>
+            <column name="link">https://www.youtube.com/embed/EDqAcM9FQRs</column>
+            <column name="date_upload">2018-12-18</column>
+            <column name="thumbnail"></column>
+            <column name="nbViews">0</column>
+            <column name="description"></column>
+        </table>
+        <table name="video">
+            <column name="id">18</column>
+            <column name="title">TUTO COUPE DU MONDE</column>
+            <column name="price">1.99</column>
+            <column name="link">https://www.youtube.com/embed/LvEA2KHWQec</column>
+            <column name="date_upload">2018-12-18</column>
+            <column name="thumbnail"></column>
+            <column name="nbViews">0</column>
+            <column name="description"></column>
+        </table>
+        <table name="video">
+            <column name="id">20</column>
+            <column name="title">Best of Oss 117</column>
+            <column name="price">12.00</column>
+            <column name="link">best_of_oss_117.mp4</column>
+            <column name="date_upload">2019-01-31</column>
+            <column name="thumbnail">oss117.jpg</column>
+            <column name="nbViews">42</column>
+            <column name="description">le best of des meilleurs films de tout les temps</column>
+        </table>
+        <!-- Table videotheme -->
+        <table name="videotheme">
+            <column name="id">1</column>
+            <column name="id_video">2</column>
+            <column name="id_theme">1</column>
+        </table>
+        <table name="videotheme">
+            <column name="id">2</column>
+            <column name="id_video">3</column>
+            <column name="id_theme">2</column>
+        </table>
+        <table name="videotheme">
+            <column name="id">3</column>
+            <column name="id_video">4</column>
+            <column name="id_theme">2</column>
+        </table>
+        <table name="videotheme">
+            <column name="id">4</column>
+            <column name="id_video">5</column>
+            <column name="id_theme">2</column>
+        </table>
+        <table name="videotheme">
+            <column name="id">5</column>
+            <column name="id_video">6</column>
+            <column name="id_theme">2</column>
+        </table>
+        <table name="videotheme">
+            <column name="id">6</column>
+            <column name="id_video">7</column>
+            <column name="id_theme">2</column>
+        </table>
+        <table name="videotheme">
+            <column name="id">7</column>
+            <column name="id_video">8</column>
+            <column name="id_theme">2</column>
+        </table>
+        <table name="videotheme">
+            <column name="id">8</column>
+            <column name="id_video">9</column>
+            <column name="id_theme">2</column>
+        </table>
+        <table name="videotheme">
+            <column name="id">9</column>
+            <column name="id_video">10</column>
+            <column name="id_theme">2</column>
+        </table>
+        <table name="videotheme">
+            <column name="id">10</column>
+            <column name="id_video">11</column>
+            <column name="id_theme">3</column>
+        </table>
+        <table name="videotheme">
+            <column name="id">11</column>
+            <column name="id_video">12</column>
+            <column name="id_theme">3</column>
+        </table>
+        <table name="videotheme">
+            <column name="id">12</column>
+            <column name="id_video">13</column>
+            <column name="id_theme">3</column>
+        </table>
+        <table name="videotheme">
+            <column name="id">13</column>
+            <column name="id_video">14</column>
+            <column name="id_theme">4</column>
+        </table>
+        <table name="videotheme">
+            <column name="id">14</column>
+            <column name="id_video">15</column>
+            <column name="id_theme">5</column>
+        </table>
+        <table name="videotheme">
+            <column name="id">15</column>
+            <column name="id_video">16</column>
+            <column name="id_theme">5</column>
+        </table>
+        <table name="videotheme">
+            <column name="id">16</column>
+            <column name="id_video">17</column>
+            <column name="id_theme">6</column>
+        </table>
+        <table name="videotheme">
+            <column name="id">17</column>
+            <column name="id_video">18</column>
+            <column name="id_theme">6</column>
+        </table>
+    </database>
+</pma_xml_export>

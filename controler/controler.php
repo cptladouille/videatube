@@ -199,6 +199,45 @@ function checkPayement()
  return true;
 }
 
+function getSearch()
+{
+    $tM = new themeManager();
+    $dataThemes = $tM->getList();
+    
+    if(isset($_POST['search']))
+    {
+        $vM = new videoManager();
+        $videosFound = array();
+        $videosFound = $vM->searchVideo($_POST['search']);
+    }
+    require_once ('view/search.php');
+}
+
+/*
+function searchQuery($videos)
+{
+    if(isset($_POST['search']))
+    {
+        $videosFound = array();
+        foreach($videosFound as $vData)
+        {
+            foreach($vData as $v)
+            {
+                echo "titre:".strtolower($v->getTitle)."   chaine:".strtolower($str);
+                if(strpos(strtolower($v->getTitle),strtolower($str)) != false)
+                {
+                    array_push($videosFound,$v);
+                }
+            }
+        }
+        return $videosFound;
+    }
+    else
+    {
+        return null;
+    }
+}*/
+
 function getTheme()
 {
     if (isset($_GET['t']))

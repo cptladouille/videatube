@@ -5,9 +5,18 @@
     <title>VideaTube</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
     <link href=" ./assets/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
     <link href=" ./assets/css/style.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
             integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
             crossorigin="anonymous"></script>
@@ -43,16 +52,16 @@
                     </td>
                 </tr>
             </table>
-            <table class="navbar-nav mr-auto">
-                <tr>
-                    <td class="nav-item active">
-                        <input class="form-control mr-sm-2 inputHome" type="text" placeholder="Rechercher" aria-label="Search">
-                    </td>
-                    <td class="nav-item active">
-                        <input class="btn  my-2 my-sm-0 BoutonHome" type="submit" name = 'Search' value = 'Rechercher'>
-                    </td>
-                </tr>
-            </table>
+            <?php
+            if(!isset($_POST['search']))
+            { ?>
+            <form class="searchTemp" method = 'post' action ='search'>
+                <div class="search__wrapper">
+                    <input type="text" name="search" placeholder="Tapez votre recherche..." class="search__field">
+                    <button type="submit" class="fa fa-search search__icon"></button>
+                </div>
+            </form>
+            <?php } ?> 
 
 
             <table class="navbar-nav navbar-right">
@@ -103,7 +112,6 @@
 <body>
 <?= $content;?>
 </body>
-
 <footer class="py-3 bg-dark footer">
     <div class="container">
 
