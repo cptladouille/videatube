@@ -104,7 +104,8 @@ if (isset($_POST['watch']))
                 </div>
                 <?php 
                 } ?>
-            <div id= "commentaries" class="card card-outline-secondary my-4 btnComm">
+            <br>
+            <div id= "commentaries" class="card card-outline-secondary my-4 ">
                 <?php require_once('./view/commentaries.php'); ?>
             </div>
                 <!-- /.card -->

@@ -104,7 +104,7 @@ ob_start();
                             <input type="text" name="password2" class="form-control formulaireInput3"/>
                         </div>
                         <br>
-                        <div class="text-center">
+                        <div class="text-left">
                             <input class="btn  my-2 my-sm-0 BoutonFormEditMdp" type="submit"
                                    name="validateEditPasswordUser"
                                    value='Changer le mot de passe'>

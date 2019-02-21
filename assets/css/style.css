@@ -397,6 +397,9 @@ body{
     text-align: center;
 }
 
+.editForm{
+    padding-bottom: 1%;
+}
 
 .photoProfil{
     width: 20% !important;
@@ -451,7 +454,6 @@ body{
     color: whitesmoke;
     background-color: #B40431;
     text-align: center;
-
     margin-bottom: 6% !important;
 }
 
@@ -850,7 +852,6 @@ h2{
 }
 .btnComm{
     margin-bottom: 10% !important;
-
 }
 
 
