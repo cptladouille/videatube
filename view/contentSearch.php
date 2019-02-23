@@ -37,7 +37,7 @@
             }
         }
         else{ ?>
-            <h1>Aucune vidéo trouvée pour l'argument de recherche : <?= $_POST['search'] ?></h1>
+            <h3>Aucune vidéo trouvée pour l'argument de recherche : <?= $_POST['search'] ?></h3>
         <?php }
     }else
     { ?>

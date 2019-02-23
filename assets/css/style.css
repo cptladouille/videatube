@@ -148,6 +148,17 @@
 }
 
 .sideSearchBar{
+    padding-right: 0 !important;
+}
+.containerCircle{
+    width: 100%; !important;
+}
+.BodySearch{
+    min-height: 90vh !important;
+
+}
+.slidercontainer2{
+    margin-top: 10%;
 }
 
 
@@ -163,10 +174,20 @@
 .searchSide {
     position: absolute;
     color: transparent;
-    top: 65%;
     left: 50%;
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
+}
+.searchSide2 {
+    position: absolute;
+    color: transparent;
+    width: 90% !important;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+.lgsearch{
+    margin-left: 3% !important;
 }
 .search * {
     outline: none;
@@ -177,6 +198,34 @@
 }
 .search__wrapper {
     position: relative;
+}
+
+.search__field2 {
+    width: 100%;
+    height: 50px;
+    color: transparent;
+    border-radius: 50px;
+    font-family: Lato, sans-serif;
+    font-size: 1.20em;
+    padding: 0.35em 50px 0.35em 0;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.search__field2:focus {
+    border-bottom-color: #ccc;
+    width: 90% !important;
+    color: #2b2b2b;
+    cursor: default;
+    border-radius: 10px !important;
+
+}
+.search__field2:focus ~ .search__icon {
+    background-color: transparent;
+    color: #000000;
+    cursor: pointer;
+    pointer-events: auto;
 }
 .search__field {
     width: 50px;
@@ -190,6 +239,7 @@
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
+
 .search__field:focus {
     border-bottom-color: #ccc;
     width: 100% !important;
@@ -304,7 +354,9 @@
     opacity: 1;
     visibility: visible !important;
 }
-
+.iq-features{
+    width: 100%;
+}
 
 .VideoNonTrouve{
     font-size: 1.3em;
@@ -363,7 +415,7 @@
 }
 
 body{
-    min-height: 100% !important;
+    min-height: 100vh !important;
 }
 
 
@@ -522,7 +574,7 @@ body{
 
 
 /* theme side search*/
-.holderCircle { width: 500px; height: 500px; border-radius: 100%; margin: 60px auto; position: relative; }
+.holderCircle { width: 500px; height: 500px; border-radius: 100%; position: relative; }
 
 
 .dotCircle { width: 100%; height: 100%; position: absolute; margin: auto; top: 0; left: 0; right: 0; bottom: 0; border-radius: 100%; z-index: 20; }
@@ -531,12 +583,12 @@ body{
 .dotCircle  .itemDot .forActive::after { content: ''; width: 5px; height: 5px; border: 3px solid #B40431; bottom: -31px; left: -14px; filter: blur(1px); position: absolute; border-radius: 100%; }
 .dotCircle  .itemDot .forActive::before { content: ''; width: 6px; height: 6px; filter: blur(5px); top: -15px; position: absolute; transform: rotate(-45deg); border: 6px solid #B40431; right: -39px; }
 .dotCircle  .itemDot.active .forActive { display: block; }
-.round { position: absolute; left: 40px; top: 45px; width: 410px; height: 410px; border: 2px dotted #B40431; border-radius: 100%; -webkit-animation: rotation 100s infinite linear; }
+.round { margin-left: 5%; position: absolute; top: 10%; width:95%;height: 80%; border: 2px dotted #B40431; border-radius: 100%; -webkit-animation: rotation 100s infinite linear; }
 .dotCircle .itemDot:hover, .dotCircle .itemDot.active { color: #ffffff; transition: 0.5s;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#B40431+0,B40431+100 */
     background: #B40431; /* Old browsers */ background: -moz-linear-gradient(left, #B40431 0%, #B40431 100%); /* FF3.6-15 */ background: -webkit-linear-gradient(left, #B40431 0%, #B40431 100%); /* Chrome10-25,Safari5.1-6 */ background: linear-gradient(to right, #B40431 0%, #B40431 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#B40431', endColorstr='#B40431', GradientType=1); /* IE6-9 */ border: 2px solid #ffffff; -webkit-box-shadow: 0 30px 30px 0 rgba(0, 0, 0, .13); -moz-box-shadow: 0 30px 30px 0 rgba(0, 0, 0, .13); box-shadow: 0 30px 30px 0 rgba(0, 0, 0, .13); }
 .dotCircle .itemDot { font-size: 40px; }
-.contentCircle { width: 250px; border-radius: 100%; color: #222222; position: relative; top: 150px; left: 50%; transform: translate(-50%, -50%); }
+.contentCircle { width: 250px; border-radius: 100%; color: #222222; position: relative; top: 35%; left: 50%; transform: translate(-50%, -50%); }
 .contentCircle .CirItem { border-radius: 100%; color: #222222; position: absolute; text-align: center; bottom: 0; left: 0; opacity: 0; transform: scale(0); transition: 0.5s; font-size: 15px; width: 100%; height: 100%; top: 0; right: 0; margin: auto; line-height: 250px; }
 .CirItem.active { z-index: 1; opacity: 1; transform: scale(1); transition: 0.5s; }
 .contentCircle .CirItem i { font-size: 180px; position: absolute; top: 0; left: 50%; margin-left: -90px; color: #000000; opacity: 0.1; }
@@ -550,17 +602,22 @@ body{
 @media only screen and (min-width:992px) and (max-width:1199px) { }
 @media only screen and (min-width:1200px) and (max-width:1499px) { }
 .title-box .title { font-weight: 600; letter-spacing: 2px; position: relative; z-index: -1; }
-.title-box span { text-shadow: 0 10px 10px rgba(0, 0, 0, .15); font-weight: 800; color: #640178; }
+.title-box span { text-shadow: 0 10px 10px rgba(0, 0, 0, .15); font-weight: 800; color: #B40431; }
 .title-box p {font-size: 17px; line-height: 2em; }
+
 
 /* SLider price */
 
 
 
 .slidecontainer {
-    width: 100%; /* Width of the outside container */
+    width: 100%;
+    margin-bottom: 5%/* Width of the outside container */
 }
 
+slidecontainer2{
+    margin-top: 10%;
+}
 /* The slider itself */
 .slider {
     border-radius: 100%;
@@ -574,6 +631,7 @@ body{
     -webkit-transition: .2s; /* 0.2 seconds transition on hover */
     transition: opacity .2s;
 }
+
 
 /* Mouse-over effects */
 .slider:hover {

@@ -1,9 +1,9 @@
 <?php ob_start();  ?>
 <div class="row">
-    <div class="col-lg-4 sideSearchBar">
+    <div class="col-lg-4 sideSearchBar BodySearch">
         <?php require_once('./view/sideSearch.php'); ?>
     </div>
-    <div class="col-lg-8">
+    <div class="col-lg-7 lgsearch">
         <?php require_once('./view/contentSearch.php'); ?>
     </div>
 </div>
