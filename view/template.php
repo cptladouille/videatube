@@ -45,23 +45,14 @@
                 <td class="nav-item active">
                     <a class="nav-link" href="home">Home<span class="sr-only">(current)</span></a>
                 </td>
-                    <td class="nav-item active">
-                    <?php if (isset($_SESSION['userConnected'])){ ?>
-                            <a class="nav-link" href="upload">Mettre en ligne une vidéo</a>
-                    <?php } ?>
-                    </td>
                 </tr>
             </table>
-            <?php
-            if(!isset($_POST['search']))
-            { ?>
             <form class="searchTemp" method = 'post' action ='search'>
                 <div class="search__wrapper ">
                     <input type="text" name="search" placeholder="Tapez votre recherche..." class="search__field">
                     <button type="submit" class="fa fa-search search__icon"></button>
                 </div>
             </form>
-            <?php } ?> 
 
 
             <table class="navbar-nav navbar-right">
