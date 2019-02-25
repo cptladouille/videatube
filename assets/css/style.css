@@ -1,14 +1,12 @@
 /*CSS Stylesheet
-
 */
 
-/*Page Connexion*/
-
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////Page Connexion ////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 .bodyConnexion{
     min-height: 100vh;
 }
-
-
 .formulaire{
     text-align: center !important;
     color: darkgrey;
@@ -18,48 +16,38 @@
     margin-top:5% !important;
     height: 80%;
 }
-
 .titleConnexion{
     color: #B40431;
     margin: 20px ;
 }
-
 .containImgFormConnexion{
     width:30%;
     height:20%;
     margin: 0 auto !important;
-
 }
-
 .imgFormConnexion{
     -moz-border-radius:100%;
     -webkit-border-radius:100%;
     border-radius:100%;
     width: 100%;
-    bordel-color: #B40431;
+    border-color: #B40431;
 }
-
 .formulaireChamps{
     text-align: center;
 }
-
 .labelFormConnexion{
     color: #B40431;
 }
-
 .labLogin{
     margin-top: 4% ;
 }
-
 .formulaireInput{
     margin: 0 auto !important;
     width: 60% !important;
 }
-
 .inputMdpConnexion{
     margin-bottom: 4% !important;
 }
-
 .linkFormConnexion{
     color: #B40431;
 }
@@ -78,26 +66,20 @@
 .BoutonConnexion:hover {
     background-color: #fb3768;
 }
-
 .BoutonInscription:hover {
     background-color: #fb3768;
 }
-
 .alert{
     color: red;
-
 }
-
-
-
-
-/* Page Home */
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////Page Home ////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 .BoutonHomeRecherche{
     color: whitesmoke;
     background-color: #B40431;
     text-align: center;
 }
-
 .BoutonHome{
     color: whitesmoke;
     background-color: #B40431;
@@ -109,17 +91,14 @@
     text-align: center;
     margin-left: 10%;
 }
-
 .BoutonHomeConnexion{
     color: whitesmoke;
     background-color: #B40431;
     margin-left: 90%;
 }
-
 .BoutonHomeConnexion:hover {
     background-color: #fb3768;
 }
-
 .BoutonRecherche{
     margin-right: 3%;
 }
@@ -129,11 +108,9 @@
 .BoutonHome:hover {
     background-color: #fb3768;
 }
-
 .inputHome{
     border-color: #B40431;
 }
-
 .list-group-item{
     color: #B40431 !important;
 }
@@ -146,23 +123,21 @@
 .titreSite{
     color: #B40431 ;
 }
-
 .sideSearchBar{
     padding-right: 0 !important;
 }
 .containerCircle{
-    width: 100%; !important;
+    width: 100% !important;
 }
 .BodySearch{
     min-height: 90vh !important;
-
 }
 .slidercontainer2{
     margin-top: 10%;
 }
-
-
-/* Search Button*/
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////Search Button navbar////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 .searchTemp {
     position: absolute;
     color: transparent;
@@ -199,7 +174,6 @@
 .search__wrapper {
     position: relative;
 }
-
 .search__field2 {
     width: 100%;
     height: 50px;
@@ -212,7 +186,6 @@
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
-
 .search__field2:focus {
     border-bottom-color: #ccc;
     width: 90% !important;
@@ -239,7 +212,6 @@
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
-
 .search__field:focus {
     border-bottom-color: #ccc;
     width: 100% !important;
@@ -357,22 +329,19 @@
 .iq-features{
     width: 100%;
 }
-
 .VideoNonTrouve{
     font-size: 1.3em;
 }
-
-/* Page Inscription*/
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////Page Inscription ////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 .bodyInscription{
     min-height: 100vh;
-
 }
-
 .titleInscription{
     color: #B40431;
     margin: 2%;
     text-align: center;
-
 }
 .formulaireInscription{
     color: darkgrey;
@@ -381,18 +350,14 @@
     background-image: linear-gradient(white, lightgray);
     margin-top:5% !important;
 }
-
-
 .lab{
     color: #B40431;
     text-align: left !important;
 }
-
 .inscriptionInputMail{
     text-align: left !important;
     width: 100%;
 }
-
 .inscriptionInputMdp{
     margin-left: 18%;
     width: 60%;
@@ -409,23 +374,18 @@
 .avatarInscription{
     margin-bottom: 4% !important;
 }
-
 #textComm{
     height: 100%;
 }
-
 body{
     min-height: 100vh !important;
 }
-
-
-
-/* Page Profil */
-
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////// Page Profil ////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 .bodyProfil{
     min-height: 100vh;
 }
-
 .containerAlerte{
     margin-right:0 !important;
     margin-left: 16% !important;
@@ -433,14 +393,12 @@ body{
 .alert-success{
     color:green;
 }
-
 .containerProfil{
     background-image: linear-gradient(white, lightgray);
     margin: 0 auto !important;
     border-radius: 20px;
     margin-top: 3% !important;
 }
-
 .ChampProfil{
     margin-left:15% !important;
     margin-top: 4% !important;
@@ -448,23 +406,19 @@ body{
 .ChampProfilEdit{
     margin-left:10% !important;
 }
-
 .TableauProfil{
     margin-top:3% !important;
     margin-bottom: 3% !important;
     text-align: center;
 }
-
 .editForm{
     padding-bottom: 1%;
 }
-
 .photoProfil{
     width: 20% !important;
     margin-top: 4% !important;
     margin-left:10% !important;
 }
-
 .avatarNavBar{
     -moz-border-radius:100%;
     -webkit-border-radius:100%;
@@ -483,7 +437,6 @@ body{
 .labProfil{
     color: #B40431;
 }
-
 .nameNavBar{
     padding-left: 10%;
     color:black;
@@ -497,7 +450,6 @@ body{
     margin-left: 10%;
     width: 15%;
 }
-
 .BarreRecherche{
     width: 50%;
 }
@@ -514,14 +466,11 @@ body{
     text-align: center;
     margin-bottom: 6% !important;
 }
-
-
 .BoutonEditProfil{
     color: whitesmoke;
     background-color: #B40431;
     text-align: center;
 }
-
 .BoutonFormEditMdp:hover{
     background-color: #fb3768;
 }
@@ -531,7 +480,6 @@ body{
 .BoutonEditProfil:hover{
     background-color: #fb3768;
 }
-
 .BoutonFormEditProfil:hover{
     background-color: #fb3768;
 }
@@ -544,25 +492,20 @@ body{
 .BoutonSubscribe:hover{
     background-color: #fb3768;
 }
-
-
 .BoutonSupprimerCompte{
     color: whitesmoke;
     background-color: #B40431;
     text-align: center;
 }
-
 .BoutonSupprimerCompte:hover{
     background-color: #fb3768;
 }
-
 .mailEdit{
     margin-bottom: 3%;
 }
 .formulaireEditProfil{
     margin-bottom: 10%;
 }
-
 /* Search sideBar
 .twhite {color:#fff;}
  Breadcum bar 
@@ -571,12 +514,10 @@ body{
 .breadcrumb a {color: #999;}
 .breadcrumb > .active {color: #696969;}
 .breadcrumb > li + li::before {content: "\203A";color: #999;} */
-
-
-/* theme side search*/
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////side search////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 .holderCircle { width: 500px; height: 500px; border-radius: 100%; position: relative; }
-
-
 .dotCircle { width: 100%; height: 100%; position: absolute; margin: auto; top: 0; left: 0; right: 0; bottom: 0; border-radius: 100%; z-index: 20; }
 .dotCircle  .itemDot { display: block; width: 80px; height: 80px; position: absolute; background: #ffffff; color: #B40431; border-radius: 100%; text-align: center; line-height: 80px; font-size: 30px; z-index: 3; cursor: pointer; border: 2px solid #e6e6e6; }
 .dotCircle  .itemDot .forActive { width: 56px; height: 56px; position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: none; }
@@ -605,65 +546,28 @@ body{
 .title-box span { text-shadow: 0 10px 10px rgba(0, 0, 0, .15); font-weight: 800; color: #B40431; }
 .title-box p {font-size: 17px; line-height: 2em; }
 
-
-/* SLider price */
-
-
-
-.slidecontainer {
-    width: 100%;
-    margin-bottom: 5%/* Width of the outside container */
+.ButtonSearch{
+    color: whitesmoke;
+    background-color: #B40431;
+    text-align: center;
+    margin-left: 40%;
 }
 
-slidecontainer2{
-    margin-top: 10%;
+.inputSearchArea{
+    margin:auto !important;
+    width:auto !important;
 }
-/* The slider itself */
-.slider {
-    border-radius: 100%;
-    -webkit-appearance: none;  /* Override default CSS styles */
-    appearance: none;
-    width: 100%; /* Full-width */
-    height: 40%; /* Specified height */
-    background: #d3d3d3; /* Grey background */
-    outline: none; /* Remove outline */
-    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
-    transition: opacity .2s;
+.form-check{
+    margin:auto !important;
+    padding:auto !important;
+    width:auto !important;
 }
-
-
-/* Mouse-over effects */
-.slider:hover {
-    opacity: 1; /* Fully shown on mouse-over */
-}
-
-/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
-.slider::-webkit-slider-thumb {
-
-    -webkit-appearance: none; /* Override default look */
-    appearance: none;
-    width: 25px; /* Set a specific slider handle width */
-    height: 25px; /* Slider handle height */
-    background: #4CAF50; /* Green background */
-    cursor: pointer; /* Cursor on hover */
-}
-
-.slider::-moz-range-thumb {
-    border-radius: 100%;
-    width: 25px; /* Set a specific slider handle width */
-    height: 25px; /* Slider handle height */
-    background: #4CAF50; /* Green background */
-    cursor: pointer; /* Cursor on hover */
-}
-
-
-/* Page Video */
-
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////Page Video////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 .videoWatch{
     margin-left: 7%;
 }
-
 .btnPurchase{
     margin-top:26.8% !important;
     color: whitesmoke;
@@ -675,7 +579,6 @@ slidecontainer2{
     border-width: 5px;
     border-color: white;
 }
-
 .inputCommentaire{
     border-color: #B40431;
     margin-bottom: 1%;
@@ -686,10 +589,9 @@ slidecontainer2{
 .BoutonEnvoieCommentaire{
     color: whitesmoke;
     background-color: #B40431;
-    margin-top:4%; !important;
+    margin-top:4% !important;
     border:none;
 }
-
 .BoutonEnvoieCommentaire:hover{
     background-color: #fb3768;
 }
@@ -699,12 +601,11 @@ slidecontainer2{
 .bodyVideo{
     width: 100%;
     min-height: 100vh;
-    pading:0 !important;
+    padding:0 !important;
     margin: auto !important;
 }
 .frame{
     position: relative;
-
 }
 .frameLock{
     height: 100%;
@@ -712,26 +613,20 @@ slidecontainer2{
     background-color: RGBa(0,0,0,0);
     position: absolute;
     text-align: center;
-
 }
-
-
-/* Page Subscription */
-
-
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////Page Subscription/////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 .bodySub{
     width: 100%;
     min-height: 100vh;
-    pading:0 !important;
+    padding:0 !important;
     margin: auto !important;
     background-image: linear-gradient(white, lightgray);
 }
 .containerAbo{
     background-size: 100%;
-
 }
-
-
 .UL{
     margin-bottom:1.4rem;
 }
@@ -771,11 +666,9 @@ slidecontainer2{
 .btn-custom  {
     background:#C64545; color:#fff; border-radius:20px
 }
-
 .img-float {
     width:50px; position:absolute;top:-3.5rem;right:1rem
 }
-
 .princing-item {
     transition: all 150ms ease-out;
 }
@@ -790,40 +683,29 @@ slidecontainer2{
     -webkit-transform: translate3d(-15px, 0, 0);
     transform: translate3d(-15px, 0, 0);
 }
-
 .titleTheme{
     font-size: 150%;
 }
-
-
-
-/* Page Theme */
-
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////Page Theme ////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 .bodyTheme{
     min-height: 100vh;
 }
-
 .CadrePresentation{
     margin-top: 2% !important;
     margin-bottom: 1% !important;
 }
-
-
-
-
-
-/* Page Purchase */
-
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////Page Purchase ////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 .bodyPurchase{
     min-height: 100vh;
-
 }
 .containerPurchase{
     width: 60%;
     margin-top: 10%;
 }
-
-
 .align-items-left{
     margin-left: 3%;
     width: 70%;
@@ -832,23 +714,14 @@ slidecontainer2{
     text-align: right;
     margin-left: 20%;
 }
-
 .btnAchatVideo{
     color: whitesmoke;
     background-color: #B40431;
     border:none;
-
 }
 .btnAchatVideo:hover{
     background-color: #fb3768;
-
 }
-
-
-
-
-
-
 .filterButtonBuy{
     position: relative;
     top: 0;
@@ -857,32 +730,20 @@ slidecontainer2{
     width: 100%;
     height: 100%;
 }
-
-
-
-
-
 html{
     font-family:  "Arial";
     position: relative !important;
     min-height: 100% !important;
-
 }
-
-
-
 .linkFormConnexion:hover {
     color: black;
 }
-
 .priceAbo{
     font-size: 70px;
 }
-
 h2{
     text-align: center;
 }
-
 .subscriptionContainer{
     text-align: center;
     padding: 1%;
@@ -891,16 +752,10 @@ h2{
     border-radius: 10%;
     border-style: groove;
     background-color: blanchedalmond;
-
 }
-
-
-
-
 .listVideo{
     margin-bottom: 4%;
 }
-
 .footer {
     position: relative;
     bottom: 0;
@@ -909,18 +764,9 @@ h2{
     background: #000000;
     color: #FFFFFF;
 }
-
 .connexionForm{
-
     margin-bottom: 10% !important;
 }
 .btnComm{
     margin-bottom: 10% !important;
 }
-
-
-
-
-
-
-

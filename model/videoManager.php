@@ -100,6 +100,19 @@ require_once('model/videoClass.php');
 
             return $videos;
         }
+        public function getFreeVideos()
+        {
+            $videos = [];
+
+            $q = $this->_db->query('SELECT id, title, price, link, date_upload,thumbnail, nbViews, description FROM video WHERE price = 0');
+
+            while ($donnees = $q->fetch(PDO::FETCH_ASSOC))
+            {
+                $videos[] = new videoClass($donnees);
+            }
+
+            return $videos;
+        }
 
         public function getListOfLinks()
         {
@@ -111,12 +124,10 @@ require_once('model/videoClass.php');
            return $links;
         }
         
-        public function update(videoClass $video)
+        public function updateNbViews(videoClass $video)
         {
-            // Prépare une requête de type UPDATE.
-            // Assignation des valeurs à la requête.
-            // Exécution de la requête.
-
+            $cNbViews = $video->getNbViews() + 1;
+            $q = $this->_db->query("UPDATE `video` SET `nbViews`=".$cNbViews." WHERE `id`=".$video->getId());
         }
 
         public function setDb(PDO $db)

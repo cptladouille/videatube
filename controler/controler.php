@@ -37,6 +37,7 @@ function getVideo()
             if($v->getPrice() == 0)
             {
                 $_POST['watch'] = true;
+                $vM->updateNbViews($v);
             }
             else
             {
@@ -45,11 +46,12 @@ function getVideo()
                     if($_SESSION['userConnected']['isSubscribed'] == true ) 
                     {
                         $_POST['watch'] = true;
+                        $vM->updateNbViews($v);
                     }
                     elseif (checkUserVid($_SESSION['userConnected']['id'],$_GET['vId']))
                     {
                         $_POST['watch'] = true;
-                        
+                        $vM->updateNbViews($v);
                     }
                     else
                     {
@@ -97,6 +99,8 @@ function putCommentary()
         }
     }
 }
+
+
 
 function refreshCommentaries()
 {
@@ -209,9 +213,15 @@ function getSearch()
         $vM = new videoManager();
         $videosFound = array();
         $videosFound = $vM->searchVideo($_POST['search']);
+        if (count($videosFound) <1)
+        {
+            $freeVideos = array();
+            $freeVideos = $vM->getFreeVideos();
+        }
     }
     require_once ('view/search.php');
 }
+
 
 /*
 function searchQuery($videos)
