@@ -113,6 +113,35 @@ function refreshCommentaries()
     }
 }
 
+function refreshVideos()
+{
+    $idTheme = "";
+    $keyWords = "";
+    $price = "";
+    if(isset($_POST['theme']))
+    {
+        $idTheme = $_POST['theme'];
+    }
+    if(isset($_POST['keywords']))
+    {
+        $keyWords = $_POST['keywords'];
+    }
+    if(isset($_POST['price']))
+    {
+        $idPrice = $_POST['price'];
+    }
+    $vM = new videoManager();
+    $videosFound = [];
+    $videosFound = $vM->searchVideoByFilters($keyWords,$idTheme,$idPrice);
+    if (count($videosFound) <1)
+        {
+            $freeVideos = array();
+            $freeVideos = $vM->getFreeVideos();
+        }
+    $_POST['search'] = $keyWords;
+    require_once('view/contentSearch.php');
+}
+
 function getPurchase()
 {
     if(isset($_POST['signUp']))

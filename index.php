@@ -39,6 +39,10 @@
             putCommentary();
             refreshCommentaries();
         }
+        elseif($p == 'applyFilters')
+        {
+            refreshVideos();
+        }
         elseif ($p == 'connexion')
         {
             if (isset($_POST['formConnexion']))
@@ -115,10 +119,7 @@
             getProfil();
         }
         elseif ($p == 'search'){
-            if(isset($_POST['search']))
-            {
             getSearch($_POST['search']);
-            }
         }
         elseif ($p == 'theme'){
             getTheme();

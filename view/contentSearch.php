@@ -1,12 +1,14 @@
-<div class="row">
+
     <?php
+        
         if(count($videosFound)>0)
         {
             for($i = 1;$i<count($videosFound);$i++)
             { ?>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card h-100">
-                        <?php if($videosFound[$i]->getThumbnail() == "")
+                        <?php
+                         if($videosFound[$i]->getThumbnail() == "")
                         { ?>
                             <a href="video-<?= $videosFound[$i]->getId(); ?>"><img class="card-img-top" width="300" height="210" src="./ressources/default.svg" alt=""></a>
                             <?php
@@ -36,9 +38,8 @@
         }
         else
         { ?>
-            <div class = "row">
                 <h3>Aucune vidéo trouvée pour l'argument de recherche : <?= $_POST['search'] ?></h3>
-            </div>
+                <h3>Voici la liste des dernières vidéos gratuites !</h3>
             <div class = "row">
             <?php
             for($i = 1;$i<count($freeVideos);$i++)
@@ -77,4 +78,3 @@
             <?php
         }
         ?>
-</div>
