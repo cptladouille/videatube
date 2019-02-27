@@ -15,26 +15,26 @@ ob_start(); ?>
                         <tr>
                             <td>
                                 <div>
-                                    <label class="lab" for="Nom">Nom :</label>
+                                    <label class="labProfil" for="Nom">Nom :</label>
                                 </div>
                                 <div>
-                                    <input type="text" name="nom" class="form-control" placeholder="Nom"/>
+                                    <input type="text" name="nom" class="form-control" placeholder="Nom" pattern="[A-Za-z]+"/>
                                 </div>
                             </td>
                             <td>
                                 <div>
-                                    <label class="lab" for="Prenom">Prenom :</label>
+                                    <label class="labProfil" for="Prenom">Prenom :</label>
                                 </div>
 
                                 <div>
-                                    <input type="text" name="prenom" class="form-control" placeholder="Prenom"/>
+                                    <input type="text" name="prenom" class="form-control" placeholder="Prenom" pattern="[A-Za-z]+"/>
                                 </div>
                             </td>
                         </tr>
                         <tr>
                             <td colspan="2">
                                 <div>
-                                    <label class="lab" for="Mail">Mail :</label>
+                                    <label class="labProfil" for="Mail">Mail :</label>
                                 </div>
 
                                 <div>
@@ -46,7 +46,7 @@ ob_start(); ?>
                         <tr>
                             <td>
                                 <div>
-                                    <label class="lab" for="Pseudo">Pseudo :</label>
+                                    <label class="labProfil" for="Pseudo">Pseudo :</label>
                                 </div>
                                 <div>
                                     <input type="text" name="pseudo" class="form-control litle input "
@@ -55,7 +55,7 @@ ob_start(); ?>
                             </td>
                             <td>
                                 <div>
-                                    <label class="lab" for="Login">Login :</label>
+                                    <label class="labProfil" for="Login">Login :</label>
                                 </div>
                                 <div>
                                     <input type="text" name="login" class="form-control " placeholder="Login"/>
@@ -65,17 +65,17 @@ ob_start(); ?>
                         <tr>
                             <td colspan="2" class="colonneMdp" >
                                 <div>
-                                    <label class="lab" for="MotDePasse">Mot de Passe :</label>
+                                    <label class="labProfil" for="MotDePasse">Mot de Passe :</label>
                                 </div>
                                 <div>
-                                    <input type="password" name="motDePasse" class="form-control inscriptionInputMdp " placeholder="Mot de Passe"/>
+                                    <input type="password" name="motDePasse" class="form-control inscriptionInputMdp" placeholder="Mot de Passe" pattern="[A-Za-z0-9]+"/>
                                 </div>
                             </td>
                         </tr>
                         <tr>
                             <td colspan="2">
                                 <div>
-                                    <label class="lab" for="avatar">Avatar : <a href="https://www.casimages.com/">herbege-le
+                                    <label class="labProfil" for="avatar">Avatar : <a href="https://www.casimages.com/">herbege-le
                                         ici et colle nous le lien !</a></label>
                                 </div>
                                 <div>

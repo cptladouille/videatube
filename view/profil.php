@@ -50,14 +50,14 @@ ob_start();
                                     <div>
                                         <label class="labProfil" for="nom">Nom :</label>
                                         <input type="text" name="nom" class="form-control "
-                                               placeholder=" <?= $_SESSION['userConnected']['lastname']; ?>"/>
+                                               placeholder=" <?= $_SESSION['userConnected']['lastname']; ?>" pattern="[A-Za-z0-9]+"/>
                                     </div>
                                 </td>
                                 <td>
                                     <div>
                                         <label class="labProfil" for="prenom">Prénom :</label>
                                         <input type="text" name="prenom" class="form-control "
-                                               placeholder=" <?= $_SESSION['userConnected']['firstname']; ?>"/>
+                                               placeholder=" <?= $_SESSION['userConnected']['firstname']; ?>" pattern="[A-Za-z0-9]+"/>
                                     </div>
                                 </td>
                             </tr>
@@ -66,7 +66,7 @@ ob_start();
                                     <div>
                                         <label class="labProfil" for="pseudo">Pseudo :</label>
                                         <input type="text" name="pseudo" class="form-control "
-                                               placeholder=" <?= $_SESSION['userConnected']['nickname']; ?>"/>
+                                               placeholder=" <?= $_SESSION['userConnected']['nickname']; ?>" />
                                     </div>
 
                             </tr>

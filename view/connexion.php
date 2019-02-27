@@ -22,7 +22,7 @@ ob_start();?>
                 <div class="inputMdpConnexion">
                     <input type="password" class="form-control formulaireInput " name="mdp" placeholder="Mot de passe"/>
                 </div>
-                <?php 
+                <?php
                     if (isset($_POST['alert']))
                     {?>
                         <div class = "alert"><label><?= $_POST['alert']?></label></div>
