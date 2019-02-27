@@ -9,6 +9,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
     <link href=" ./assets/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
     <link href=" ./assets/css/style.css" rel="stylesheet"/>
+    <link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -45,6 +46,11 @@
                 <td class="nav-item active">
                     <a class="nav-link" href="home">Home<span class="sr-only">(current)</span></a>
                 </td>
+                    <td class="nav-item active">
+                        <?php if (isset($_SESSION['userConnected'])){ ?>
+                            <a class="nav-link" href="videoAchetee">Mes videos</a>
+                        <?php } ?>
+                    </td>
                 </tr>
             </table>
             <form class="searchTemp" method = 'post' action ='search'>
@@ -63,15 +69,16 @@
                         if($_SESSION['userConnected']['avatar'] != "")
                         {?>
                             <td class="divProfilNavBar">
-                            <a  href= "profil" class="">
+                            <a  href= "profil" class="nameNavBar">
                                 <img src="./ressources/avatars/<?= $_SESSION['userConnected']['avatar']; ?>" class="d-inline-block align-top avatarNavBar" alt="" width="40px"
                                 height="40px">
                             </a>
                             </td>
                             <?php
                         }?>
-                        <td>
-                        <a  href= "profil"><p class = "my-2 my-sm-0 nameNavBar" href = "profil">
+                        <td class="">
+                        <a style="text-decoration:none" href="profil">
+                            <p class = "my-2 my-sm-0 nameNavBar" href = "profil">
                                 <?= $_SESSION['userConnected']['nickname'] ;?></p>
                         </a>
                         </td>
@@ -105,7 +112,6 @@
 </body>
 <footer class="py-3 bg-dark footer">
     <div class="container">
-
         <p class="m-0 text-center text-white">Copyright &copy; VideaTube 2018  -- <a href="condition">CGU</a> </p>
     </div>
     <!-- /.container -->

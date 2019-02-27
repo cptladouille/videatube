@@ -1,27 +1,27 @@
 <?php $title = 'Profil';
-ob_start(); 
+ob_start();
 ?>
-    
+
     <div class="bodyProfil">
         <div class="col-lg-8  containerAlerte">
-        <?php  if(isset($_SESSION['alert'])){ ?>
-        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-            <strong>Erreur !</strong> <?= $_SESSION['alert']; ?>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close"  onclick="return getOutput();">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
+            <?php  if(isset($_SESSION['alert'])){ ?>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>Erreur !</strong> <?= $_SESSION['alert']; ?>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"  onclick="return getOutput();">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
 
-        <?php }
-        if(isset($_SESSION['info'])){ ?>
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
-            <strong>Info !</strong> <?= $_SESSION['info']; ?>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close" onclick="return getOutput();">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <?php
-        } ?>
+            <?php }
+            if(isset($_SESSION['info'])){ ?>
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>Info !</strong> <?= $_SESSION['info']; ?>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close" onclick="return getOutput();">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <?php
+            } ?>
         </div>
 
         <?php
@@ -31,7 +31,21 @@ ob_start();
                 <div class="ChampProfilEdit">
                     <form method="post" action="profil">
                         <table>
+                            <tr class="text-center">
+                                <td colspan="2">
+                                    <div>
+                                        <label class="labProfil " for="avatar">Avatar :
+                                            <img src="./ressources/avatars/<?= $_SESSION['userConnected']['avatar']; ?>"
+                                                 width="200px" height="200px" class="d-inline-block align-top avatar" alt="">
+                                        </label>
+                                        <input type="text" name="avatar" class="form-control "
+                                               placeholder=" <?= $_SESSION['userConnected']['avatar']; ?>"/>
+                                    </div>
+                                </td>
+                            </tr>
                             <tr>
+
+
                                 <td>
                                     <div>
                                         <label class="labProfil" for="nom">Nom :</label>
@@ -54,16 +68,6 @@ ob_start();
                                         <input type="text" name="pseudo" class="form-control "
                                                placeholder=" <?= $_SESSION['userConnected']['nickname']; ?>"/>
                                     </div>
-                                <td>
-                                    <div>
-                                        <label class="labProfil" for="avatar">Avatar :
-                                            <img src="./ressources/avatars/<?= $_SESSION['userConnected']['avatar']; ?>"
-                                                 width="100px" height="100px" class="d-inline-block align-top avatar" alt="">
-                                        </label>
-                                        <input type="text" name="avatar" class="form-control "
-                                               placeholder=" <?= $_SESSION['userConnected']['avatar']; ?>"/>
-                                    </div>
-                                </td>
 
                             </tr>
                             <tr>
@@ -75,7 +79,7 @@ ob_start();
                                     </div>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr class="align-items-center">
                                 <td>
                                     <div>
                                         <input class="btn  my-2 my-sm-0  BoutonFormEditProfil" type="submit"
@@ -207,16 +211,16 @@ ob_start();
                                 </td>
                             </tr>
                             <?php
-                                if($isInTrial == true)
-                                {
+                            if($isInTrial == true)
+                            {
                                 ?>
                                 <tr>
                                     <td>
                                         <input href="unsub" data-confirm="Etes-vous certain de vouloir mettre fin a la période d'essai ?" class="btn  my-2 my-sm-0 BoutonSubscribe" type="submit" value="Annuler l'abonnement">
                                     </td>
                                 </tr>
-                                <?php 
-                                } ?>
+                                <?php
+                            } ?>
                             </tbody>
                         </table>
                         <?php
@@ -228,17 +232,17 @@ ob_start();
                                     Non abonné
                                 </td>
                             </tr>
-                                <tr>
+                            <tr>
                                 <td>
                                     <form method='post' action='subscription'>
                                         <input class="btn  my-2 my-sm-0 BoutonSubscribe" type="submit" name="subscription" value="S'abonner">
                                     </form>
                                 </td>
 
-                        </tr>
+                            </tr>
                             </tbody>
                             </table>
-                            <?php   
+                            <?php
                         } ?>
                     </div>
                 </div>
@@ -250,3 +254,4 @@ ob_start();
 
 <?php $content = ob_get_clean();
 require_once('view/template.php'); ?>
+

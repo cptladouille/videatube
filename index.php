@@ -39,6 +39,9 @@
             putCommentary();
             refreshCommentaries();
         }
+        elseif ($p =='videoAchetee'){
+            getPurchaseVideo();
+        }
         elseif ($p == 'connexion')
         {
             if (isset($_POST['formConnexion']))

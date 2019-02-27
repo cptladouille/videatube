@@ -36,8 +36,8 @@
         }
         else
         { ?>
-            <div class = "row">
-                <h3>Aucune vidéo trouvée pour l'argument de recherche : <?= $_POST['search'] ?></h3>
+            <div class = "row titreSearch">
+                <h3 class="">Aucune vidéo trouvée pour l'argument de recherche : <?= $_POST['search'] ?></h3>
             </div>
             <div class = "row">
             <?php

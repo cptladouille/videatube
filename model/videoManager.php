@@ -134,5 +134,20 @@ require_once('model/videoClass.php');
         {
             $this->_db = $db;
         }
+
+        public function getPurchaseVideo($iduser)
+        {
+            // Retourne la liste des videos achetees.
+            $videos = [];
+
+            $q = $this->_db->query('SELECT p.id_video, v.title, v.description ,v.link,v.thumbnail,v.nbViews FROM purchase p, video v WHERE p.id_user = '.$iduser);
+
+            while ($donnees = $q->fetch(PDO::FETCH_ASSOC))
+            {
+                $videos[] = new videoClass($donnees);
+            }
+
+            return $videos;
+        }
     }
 ?>

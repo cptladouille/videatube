@@ -99,6 +99,14 @@ function putCommentary()
         }
     }
 }
+function getPurchaseVideo(){
+
+    if (isset($_SESSION['userConnected'])){
+        $vM = new videoManager();
+        $data=$vM->getPurchaseVideo($_SESSION['userConnected']['id']);
+        require_once ('view/videoAchetee.php');
+    }
+}
 
 
 
