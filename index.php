@@ -39,14 +39,13 @@
             putCommentary();
             refreshCommentaries();
         }
-<<<<<<< HEAD
-        elseif ($p =='videoAchetee'){
+        elseif ($p =='videoAchetee')
+        {
             getPurchaseVideo();
-=======
+        }
         elseif($p == 'applyFilters')
         {
             refreshVideos();
->>>>>>> master
         }
         elseif ($p == 'connexion')
         {
