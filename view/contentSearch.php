@@ -40,8 +40,7 @@
         { ?>
             <div class = "row">
                 <h3>Aucune vidéo trouvée pour l'argument de recherche : <?= $_POST['search'] ?></h3>
-            </div>
-            <div class = "row">
+                <br>
                 <h3>Voici la liste des dernières vidéos gratuites !</h3>
             </div>
             <div class = "row">
