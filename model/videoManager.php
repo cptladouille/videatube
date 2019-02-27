@@ -178,12 +178,12 @@ require_once('model/videoClass.php');
             $this->_db = $db;
         }
 
-        public function getPurchaseVideo($iduser)
+        public function getPurchasedVideos($iduser)
         {
             // Retourne la liste des videos achetees.
             $videos = [];
 
-            $q = $this->_db->query('SELECT p.id_video, v.title, v.description ,v.link,v.thumbnail,v.nbViews FROM purchase p, video v WHERE p.id_user = '.$iduser);
+            $q = $this->_db->query('SELECT p.id_video, v.title, v.description ,v.link,v.thumbnail,v.nbViews FROM purchase p INNER JOIN video v ON v.id = p.id_video WHERE p.id_user = '.$iduser);
 
             while ($donnees = $q->fetch(PDO::FETCH_ASSOC))
             {

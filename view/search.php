@@ -7,7 +7,9 @@
 
     <div class="col-lg-8 colSearchVideo">
         <br>
+        <div class = "row">
         <?php require_once('./view/contentSearch.php'); ?>
+        </div>
     </div>
 
 </div>

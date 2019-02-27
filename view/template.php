@@ -48,7 +48,7 @@
                 </td>
                     <td class="nav-item active">
                         <?php if (isset($_SESSION['userConnected'])){ ?>
-                            <a class="nav-link" href="videoAchetee">Mes videos</a>
+                            <a class="nav-link" href="myVideos">Mes videos</a>
                         <?php } ?>
                     </td>
                 </tr>

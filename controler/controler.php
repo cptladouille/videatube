@@ -99,16 +99,18 @@ function putCommentary()
         }
     }
 }
-function getPurchaseVideo(){
+function getMyVideos(){
 
-    if (isset($_SESSION['userConnected'])){
-        $vM = new videoManager();
-        $data=$vM->getPurchaseVideo($_SESSION['userConnected']['id']);
-        require_once ('view/videoAchetee.php');
+    if (isset($_SESSION['userConnected']))
+    {
+        if ($_SESSION['userConnected']['isSubscribed'] == false)
+        {
+            $vM = new videoManager();
+            $data=$vM->getPurchasedVideos($_SESSION['userConnected']['id']);
+        }
+        require_once('view/myVideos.php');
     }
 }
-
-
 
 function refreshCommentaries()
 {
