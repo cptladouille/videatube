@@ -63,7 +63,7 @@
             </div>
             <br>
             <div class="form-group">
-                <input class ="btn ButtonSearch" id ="applyFilters" class="form-control"  value="Rechercher" >
+                <input type="button" class ="btn ButtonSearch" id ="applyFilters" class="form-control"  value="Rechercher" >
             </div>
         </div>
     </form>

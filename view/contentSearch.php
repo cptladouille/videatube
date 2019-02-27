@@ -1,6 +1,5 @@
-
-    <?php
-        
+<div class ="row">
+<?php
         if(count($videosFound)>0)
         {
             for($i = 1;$i<count($videosFound);$i++)
@@ -81,3 +80,4 @@
             <?php
         }
         ?>
+</div>
