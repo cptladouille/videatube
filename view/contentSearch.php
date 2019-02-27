@@ -2,7 +2,7 @@
 <?php
         if(count($videosFound)>0)
         {
-            for($i = 1;$i<count($videosFound);$i++)
+            for($i = 0;$i<count($videosFound);$i++)
             { ?>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card h-100">

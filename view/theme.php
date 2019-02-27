@@ -23,7 +23,7 @@
                 </div>
                 <div class="row">
                     <?php
-                        for($i = 1;$i<count($data);$i++)
+                        for($i = 0;$i<count($data);$i++)
                         { ?>
                             <div class="col-lg-4 col-md-6 mb-4">
                                 <div class="card h-100">
