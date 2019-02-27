@@ -2,8 +2,8 @@
 -- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1
--- Généré le :  jeu. 21 fév. 2019 à 13:17
+-- Hôte : localhost
+-- Généré le :  mer. 27 fév. 2019 à 15:59
 -- Version du serveur :  10.1.37-MariaDB
 -- Version de PHP :  7.3.0
 
@@ -73,7 +73,9 @@ INSERT INTO `purchase` (`id`, `date_purchase`, `id_video`, `id_user`) VALUES
 (2, '2018-12-19', 11, 6),
 (3, '2019-01-31', 13, 5),
 (4, '2019-02-01', 20, 16),
-(5, '2019-02-14', 20, 6);
+(5, '2019-02-14', 20, 6),
+(6, '2019-02-27', 14, 4),
+(7, '2019-02-26', 4, 4);
 
 -- --------------------------------------------------------
 
@@ -174,7 +176,8 @@ INSERT INTO `user` (`id`, `lastname`, `firstname`, `mail`, `log`, `password`, `n
 (8, 'trol', 'trol', 'trol', 'trol', '$2y$10$wizjiAs6ZifPKSOUG9Fn9.O/fyeqPFglkerDnQ/bLEjptLU4F3B4i', 'trol', 0, ''),
 (9, 'dems', 'dems', 'demsdems@gmail.com', 'dems67', '$2y$10$9e1V9HckHU7bF9/TtL1KmO5YFExgZkfK4OeghyWR1rpzkQ/awoBMK', 'dems²', 0, 'qs1.jpg'),
 (10, 'kevlagrongnasse', 'knitos', 'kevkev@gmail.com', 'keks', '$2y$10$2yZn0r71GxyudAdKRpHcneeqhGOZHRLsEXJJkpijMGif4mdiEPptm', 'Xxkevnamescope67xX', 0, 'keks.jpg'),
-(16, 'jb', 'jb', 'jb', 'jb', '$2y$10$Iwpy52XyE7iX9Zg6ThftWenBOGcFQynMVD/LnerkhPWS1mgIN.MSq', 'jb', 0, 'user.png');
+(16, 'jb', 'jb', 'jb', 'jb', '$2y$10$Iwpy52XyE7iX9Zg6ThftWenBOGcFQynMVD/LnerkhPWS1mgIN.MSq', 'jb', 0, 'user.png'),
+(17, '', '', '', '', '$2y$10$a5v88SUAvJSDQq0bExoB2OinghKxa1omGa5tL.sePQIsPhcBcm6dy', '', 0, 'user.png');
 
 -- --------------------------------------------------------
 
@@ -198,23 +201,23 @@ CREATE TABLE `video` (
 --
 
 INSERT INTO `video` (`id`, `title`, `price`, `link`, `date_upload`, `thumbnail`, `nbViews`, `description`) VALUES
-(2, 'Shadow Of Mordor', '2.99', 'https://www.youtube.com/embed/5xK7e0-_3oQ', '2018-12-19', '', 0, ''),
-(3, 'CET ANIMAL = 30 FOIS MA TAILLE ! (The Last Guardian #1)', '4.99', 'https://www.youtube.com/embed/JinTG_9ODuY', '2018-12-19', '', 0, ''),
-(4, 'UNE DEUXIÈME BÊTE ?! (The Last Guardian #2)', '4.99', 'https://www.youtube.com/embed/HHmizvVsRgs', '2018-12-20', '', 0, ''),
-(5, 'S\'INFILTRER OU SE FAIRE KIDNAPPER (The Last Guardian #3)', '4.99', 'https://www.youtube.com/embed/raSKTwY7x8I', '2018-12-21', '', 0, ''),
-(6, 'LA CHUTE DE TRICO ?! (The Last Guardian #4)\r\n', '4.99', 'https://www.youtube.com/embed/GPQF0DhBnI8', '2018-12-22', '', 0, ''),
-(7, 'MOURIR DANS UN ÉBOULEMENT ?! (The Last Guardian #5)', '4.99', 'https://www.youtube.com/embed/o50L0nnmQws', '2018-12-23', '', 0, ''),
-(8, 'CE N\'EST PAS LA QUEUE DE TRICO... (The Last Guardian #6)', '4.99', 'https://www.youtube.com/embed/SvzRWMpKcfQ', '2018-12-24', '', 0, ''),
-(9, 'IL EST MORT ?.. (The Last Guardian #7)', '4.99', 'https://www.youtube.com/embed/HMGmnwxaLzM', '2018-12-24', '', 0, ''),
-(10, 'J\'AI PLEURÉ DEVANT CE CHEF D’ŒUVRE (The Last Guardian FIN)', '4.99', 'https://www.youtube.com/embed/lrnazIq--RU', '2018-12-25', 'squez15.jpg', 122, 'DANS CET EPISODE, JE FAIT FACE A MON PLUS GRAND DESESPOIR'),
-(11, 'High & Fines Herbes : Episode 1 (édition 420) - Saison 1', '1.99', 'https://www.youtube.com/embed/NjkcDl1e1jc', '2018-12-18', '', 0, ''),
-(12, 'High & Fines Herbes : Episode 2 - Saison 1', '1.99', 'https://www.youtube.com/embed/m0edPiv9rI4', '2018-12-27', 'A&fhe2s1.jpg', 959227, 'Dans cet épisode d\'Ail et fines herbes, Caba et JJ cuisinent un bon poulet curry avec un max de spatio-chanvre'),
-(13, 'High & Fines Herbes : Episode 4 - Saison 1', '1.99', 'https://www.youtube.com/embed/XROv7HgyrWU', '2018-12-28', 'A&fhe4s1.png', 666, 'Dans cet épisode Caba et JJ ouvrent leur 3e oeil et cuisine des tenders de poulet'),
+(2, 'Shadow Of Mordor', '2.99', 'https://www.youtube.com/embed/5xK7e0-_3oQ', '2018-12-19', 'shadow.png', 678, 'Shadow of Mordor OFFICIAL'),
+(3, 'CET ANIMAL = 30 FOIS MA TAILLE ! (The Last Guardian #1)', '4.99', 'https://www.youtube.com/embed/JinTG_9ODuY', '2018-12-19', 'squez15.jpg', 345, 'Premiere video de la serie gameplay sur \"The Last Guardian\"'),
+(4, 'UNE DEUXIÈME BÊTE ?! (The Last Guardian #2)', '4.99', 'https://www.youtube.com/embed/HHmizvVsRgs', '2018-12-20', 'squez15.jpg', 567, 'Deuxieme video de la serie gameplay sur \"The Last Guardian\"'),
+(5, 'S\'INFILTRER OU SE FAIRE KIDNAPPER (The Last Guardian #3)', '4.99', 'https://www.youtube.com/embed/raSKTwY7x8I', '2018-12-21', 'squez15.jpg', 321, 'Troisieme video de la serie gameplay sur \"The Last Guardian\"'),
+(6, 'LA CHUTE DE TRICO ?! (The Last Guardian #4)\r\n', '4.99', 'https://www.youtube.com/embed/GPQF0DhBnI8', '2018-12-22', 'squez15.jpg', 789, 'Quatrieme video de la serie gameplay sur \"The Last Guardian\"'),
+(7, 'MOURIR DANS UN ÉBOULEMENT ?! (The Last Guardian #5)', '4.99', 'https://www.youtube.com/embed/o50L0nnmQws', '2018-12-23', 'squez15.jpg', 587, 'Cinquieme video de la serie gameplay sur \"The Last Guardian\"'),
+(8, 'CE N\'EST PAS LA QUEUE DE TRICO... (The Last Guardian #6)', '4.99', 'https://www.youtube.com/embed/SvzRWMpKcfQ', '2018-12-24', 'squez15.jpg', 987, 'Sixieme video de la serie gameplay sur \"The Last Guardian'),
+(9, 'IL EST MORT ?.. (The Last Guardian #7)', '4.99', 'https://www.youtube.com/embed/HMGmnwxaLzM', '2018-12-24', 'squez15.jpg', 123, 'Septieme video de la seriegame play sur \"The Last Guardian\"'),
+(10, 'J\'AI PLEURÉ DEVANT CE CHEF D’ŒUVRE (The Last Guardian FIN)', '4.99', 'https://www.youtube.com/embed/lrnazIq--RU', '2018-12-25', 'squez15.jpg', 122, 'DANS CET EPISODE, JE FAIS FACE A MON PLUS GRAND DESESPOIR'),
+(11, 'The Most Fool-Proof Macarons You\'ll Ever Make\r\n', '1.99', 'https://www.youtube.com/embed/MjVgIXccYXA', '2018-12-18', 'maccaron.png', 89, 'Tuto Macarons !'),
+(12, '3 RECETTES RAPIDES À FAIRE AVEC 3 INGRÉDIENTS SEULEMENT !', '1.99', 'https://www.youtube.com/embed/J9_pgfJMw5g', '2018-12-27', 'fgc.png', 959227, 'Voici 3 recettes simples'),
+(13, 'FAIRE DE L\'ORANGINA', '1.99', 'https://www.youtube.com/embed/kVmUX3y8whU', '2018-12-28', 'orangina.png', 666, 'Apprenez a faire de l\'orangina '),
 (14, '27 ASTUCES DE BEAUTÉ QUE TU AURAIS DU CONNAÎTRE PLUS TÔT\r\n', '0.00', 'https://www.youtube.com/embed/lW4zJRItAYY', '2018-12-26', '5ast.jpg', 46285589, 'Des astuces qui vous auriez préféré connaitre avant !'),
-(15, 'Drôle ANIMAUX Eau FAILS qui vous fera MOURIR DE MOURIR - Vidéos épiques ANIMAUX FUNNY', '0.00', 'https://www.youtube.com/embed/ws4V4yorkYo', '2018-12-25', '', 0, ''),
-(16, 'Vidéos de chats à mourir de rire compilation 2013', '0.00', 'https://www.youtube.com/embed/cggl4WN77Mw', '2018-12-20', '', 0, ''),
-(17, '5 Easy Mouse/Rat Trap', '0.00', 'https://www.youtube.com/embed/EDqAcM9FQRs', '2018-12-18', '', 0, ''),
-(18, 'TUTO COUPE DU MONDE', '1.99', 'https://www.youtube.com/embed/LvEA2KHWQec', '2018-12-18', '', 0, ''),
+(15, 'Drôle ANIMAUX Eau FAILS qui vous fera MOURIR DE MOURIR - Vidéos épiques ANIMAUX FUNNY', '0.00', 'https://www.youtube.com/embed/ws4V4yorkYo', '2018-12-25', 'chiendrole.png', 0, 'Regardez ces videos super drôles d\'animaux !'),
+(16, 'Vidéos de chats à mourir de rire ', '0.00', 'https://www.youtube.com/embed/DD_QFvS7bzc', '2018-12-20', 'chatdrole.png', 0, 'Essayez de ne pas rire à ces videos'),
+(17, '5 Easy Mouse/Rat Trap', '0.00', 'https://www.youtube.com/embed/EDqAcM9FQRs', '2018-12-18', 'trap.png', 59, 'Piegez les souris avec ce tuto'),
+(18, 'TUTO COUPE DU MONDE', '1.99', 'https://www.youtube.com/embed/LvEA2KHWQec', '2018-12-18', 'tutocdm.png', 2018, 'Voici comment gagner la coupe du monde'),
 (20, 'Best of Oss 117', '12.00', 'best_of_oss_117.mp4', '2019-01-31', 'oss117.jpg', 42, 'le best of des meilleurs films de tout les temps');
 
 -- --------------------------------------------------------
@@ -327,7 +330,7 @@ ALTER TABLE `commentary`
 -- AUTO_INCREMENT pour la table `purchase`
 --
 ALTER TABLE `purchase`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT pour la table `subscription`
@@ -351,7 +354,7 @@ ALTER TABLE `type_subscription`
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT pour la table `video`
