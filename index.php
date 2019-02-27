@@ -39,8 +39,14 @@
             putCommentary();
             refreshCommentaries();
         }
+<<<<<<< HEAD
         elseif ($p =='videoAchetee'){
             getPurchaseVideo();
+=======
+        elseif($p == 'applyFilters')
+        {
+            refreshVideos();
+>>>>>>> master
         }
         elseif ($p == 'connexion')
         {
@@ -118,10 +124,7 @@
             getProfil();
         }
         elseif ($p == 'search'){
-            if(isset($_POST['search']))
-            {
             getSearch($_POST['search']);
-            }
         }
         elseif ($p == 'theme'){
             getTheme();

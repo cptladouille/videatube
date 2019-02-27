@@ -94,7 +94,7 @@ if (isset($_POST['watch']))
                 <div class="card card-outline-secondary my-4 btnComm">
                     <form id ="formcomm" method = 'post' class= "comms">
                         <textarea id="textComm" form="formcomm" class="form-control mr-sm-2 inputCommentaire"placeholder='Ecrivez votre commentaire ici...'></textarea>
-                        <input id="refreshComms" class="btn  my-2 my-sm-0 BoutonEnvoieCommentaire"  data-id = "<?= $v->getId() ?>" value = 'Envoyer le commentaire'>
+                        <input id="refreshComms" class="btn  my-2 my-sm-0 BoutonEnvoieCommentaire" data-id = "<?= $v->getId() ?>" value = 'Envoyer le commentaire'>
                     </form>
                 </div>
                 <?php 

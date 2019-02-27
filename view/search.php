@@ -11,6 +11,7 @@
     </div>
 
 </div>
-</div>
+<script src="./assets/js/ajax.js"> </script>
 <?php $content = ob_get_clean();
+
 require_once('view/template.php'); ?>
