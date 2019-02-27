@@ -1,6 +1,5 @@
 <?php $title = 'myVideos';
 ob_start(); ?>
-
     <div class="container">
             <!-- /.col-lg-3 -->
             <div class="row">
@@ -51,11 +50,8 @@ ob_start(); ?>
         </div>
         <!-- /.col-lg-9 -->
         <!-- /.row -->
-
     </div>
     <!-- /.container -->
-
-
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

@@ -1,6 +1,6 @@
 <?php $title = 'Vidéos';
 ob_start(); ?>
-
+    <link href=" ./assets/css/icons.css" rel="stylesheet"/>
 <div class="bodyVideo">
     <div class="container">
         <div class="row">
@@ -88,7 +88,18 @@ if (isset($_POST['watch']))
             </div>
         <br>
             <?php 
-            } 
+            } ?>
+            <div class="">
+                <div class="listing-block">
+                    <ul class="list-inline">
+                        <li><a href="https://www.facebook.com/" class="icoFacebook" title="Facebook"><i class="fa fa-facebook-f"></i></a></li>
+                        <li><a href="https://twitter.com/" class="icotwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://plus.google.com/" class="icogoogle-plus" title="Google Plus"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="https://fr.linkedin.com/" class="icolinkedin" title="Facebook"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+                <?php 
                 if(isset( $_SESSION['userConnected']['id']))
                 { ?>
                 <div class="card card-outline-secondary my-4 btnComm">
@@ -109,15 +120,11 @@ if (isset($_POST['watch']))
                 <?php require_once('./view/commentaries.php'); ?>
             </div>
                 <!-- /.card -->
-
             </div>
             <!-- /.col-lg-9 -->
-
         </div>
-
     </div>
 </div>
-
 <script src="./assets/js/ajax.js"> </script>
 <?php $content = ob_get_clean();
 require_once ('view/template.php');?>
