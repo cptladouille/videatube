@@ -639,9 +639,6 @@ body{
     margin-right: auto !important;
     margin-left: auto !important;
 }
-.colSearchVideo{
-    margin-left: 4%;
-}
 .titreSearch{
     margin-left: 4% !important;
 }
@@ -753,7 +750,7 @@ input[type="checkbox"], input[type="radio"]{
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
   .linear-wipe {
-    text-align: center;
+    text-align: center !important;
     background: -webkit-linear-gradient(left, #000 20%, #B40431 40%, #B40431 100%, #000 80%);
     background: linear-gradient(to right, #000 20%, #B40431 40%,, #B40431 100%, #000 80%);
     background-size: 200% auto;

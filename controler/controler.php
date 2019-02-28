@@ -329,10 +329,12 @@ function updateSession($session)
 
 function checkFormInscription()
 {
-    if (isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['mail']) && isset($_POST['login']) && isset($_POST['motDePasse']) && isset($_POST['pseudo'])) {
-        if (preg_match("/[a-zA-Z0-9]/", $_POST['nom']) && preg_match("/[a-zA-Z0-9]/", $_POST['prenom'])  && preg_match("/[a-zA-Z0-9]/", $_POST['login'])) {
-
-            try {
+    if (isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['mail']) && isset($_POST['login']) && isset($_POST['motDePasse']) && isset($_POST['pseudo'])) 
+    {
+        if (preg_match("/[a-zA-Z0-9]/", $_POST['nom']) && preg_match("/[a-zA-Z0-9]/", $_POST['prenom'])  && preg_match("/[a-zA-Z0-9]/", $_POST['login'])) 
+        {
+            try 
+            {
                 $psswrd = password_hash($_POST['motDePasse'], PASSWORD_DEFAULT);
                 $dataUser = array(
                     'lastname' => $_POST['nom'],
@@ -345,12 +347,24 @@ function checkFormInscription()
                 $u = new userClass($dataUser);
                 $uM = new userManager();
                 $uM->add($u);
-            } catch (Exception $e) {
-                $_POST['alert'] = $e;
+                return true;
             }
-        } else {
-            $_POST['alert'] = "Erreur form inscription un des champs n'est pas rempli";
+            catch (Exception $e) 
+            {
+                $_POST['alert'] = $e;
+                return false;
+            }
+        } 
+        else 
+        {
+            $_POST['alert'] = "Un des champs n'est pas rempli correctement";
+            return false;
         }
+    } 
+    else 
+    {
+        $_POST['alert'] = "Un des champs n'est pas rempli";
+        return false;
     }
 }
 

@@ -75,10 +75,12 @@ if (isset($_GET['p']))
     {
         if (isset($_POST['formInscription']) )
         {
-            checkFormInscription();
-            $p='connexion';
-            header('Location: ./connexion');
-            getConnexion();
+            if(checkFormInscription())
+            {
+                $p='connexion';
+                header('Location: ./connexion');
+                getConnexion();
+            }
         }
         getInscription();
     }
