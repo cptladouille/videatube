@@ -39,9 +39,9 @@ if (isset($_GET['p']))
         putCommentary();
         refreshCommentaries();
     }
-    elseif ($p =='videoAchetee')
+    elseif ($p =='myVideos')
     {
-        getPurchaseVideo();
+        getMyVideos();
     }
     elseif($p == 'applyFilters')
     {
