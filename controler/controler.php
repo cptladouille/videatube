@@ -330,7 +330,7 @@ function updateSession($session)
 function checkFormInscription()
 {
     if (isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['mail']) && isset($_POST['login']) && isset($_POST['motDePasse']) && isset($_POST['pseudo'])) {
-        if (preg_match("/[a-zA-Z0-9]/", $_POST['nom']) && preg_match("/[a-zA-Z0-9]/", $_POST['prenom'])  && preg_match("/[a-zA-Z0-9]/", $_POST['login'])) {
+        if (preg_match("/[a-zA-Z0-9]/", $_POST['nom']) && preg_match("/[a-zA-Z0-9]/", $_POST['prenom'])&& preg_match("#^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]{2,}\.[a-z]{2,4}$#",$_POST['mail']) && preg_match("/[a-zA-Z0-9]/", $_POST['login'])) {
 
             try {
                 $psswrd = password_hash($_POST['motDePasse'], PASSWORD_DEFAULT);

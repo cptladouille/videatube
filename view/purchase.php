@@ -40,11 +40,11 @@ ob_start(); ?>
                 <div class="row">
                     <div class="col-md-6 mb-3">
                         <label for="cc-name">Nom du propriétaire de la carte</label>
-                        <input type="text" class="form-control" id="cc-name" placeholder="" required>   
+                        <input type="text" class="form-control" id="cc-name"  placeholder="" required>
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="cc-number">Numéro de carte de crédit</label>
-                        <input type="text" class="form-control" id="cc-number" placeholder="" required>
+                        <input type="text" class="form-control" id="cc-number" formater="[0-9]" placeholder="" required>
                     </div>
                 </div>
                 <div class="row">

@@ -51,7 +51,7 @@ ob_start(); ?>
                         </div>
                         <div class="carousel-item">
                             <a href="video-<?= $data[2]->getId(); ?>">
-                            <img class="d-block img-fluid" src="./ressources/thumb/<?= $data[2]->getThumbnail(); ?>" alt="Third slide">
+                            <img class="d-block img-fluid" src="./ressources/thumb/<?= $data[2]->getThumbnail(); ?>"  alt="Third slide">
                             </a>
                         </div>
                     </div>
