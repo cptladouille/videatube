@@ -7,30 +7,31 @@ ob_start(); ?>
                 <?php
                 if (isset($_SESSION['userConnected']))
                 {
-                if ($_SESSION['userConnected']['isSubscribed'] == true)
-                { ?>
-                <h2>Vous êtes abonné, Vous avez par conséquent accès a l'ensemble des vidéos du site ! :)
-                    <h2>
-                        <?php
-                        } else {
+                    if ($_SESSION['userConnected']['isSubscribed'] == true)
+                    { ?>
+                        <h2 class = "linear-wipe col-lg-12">Vous êtes abonné, Vous avez par conséquent accès a l'ensemble des vidéos du site ! :)<h2>
+                    <?php 
+                    }
+                    else
+                    {
+                        if(count($data) >0)
+                        {
                             for ($i = 3; $i < count($data); $i++) { ?>
                                 <div class="col-lg-4 col-md-6 mb-4">
                                     <div class="card h-100">
                                         <?php if ($data[$i]->getThumbnail() == "") { ?>
                                             <a href="video-<?= $data[$i]->getId(); ?>">
-                                                <img class="card-img-top" width="300" height="210"
-                                                     src="./ressources/default.svg" alt="">
+                                                <img class="card-img-top" width="300" height="210" src="./ressources/default.svg" alt="">
                                             </a>
                                         <?php } else { ?>
                                             <a href="video-<?= $data[$i]->getId(); ?>">
-                                                <img class="card-img-top" width="300" height="210"
-                                                     src="./ressources/thumb/<?= $data[$i]->getThumbnail(); ?>" alt="">
+                                                <img class="card-img-top" width="300" height="210" src="./ressources/thumb/<?= $data[$i]->getThumbnail(); ?>" alt="">
                                             </a>
                                         <?php } ?>
                                         <div class="card-body">
                                             <h4 class="card-title">
                                                 <a href="video-<?= $data[$i]->getId(); ?>"
-                                                   class="titreVideo"><?= $data[$i]->getTitle(); ?></a>
+                                                class="titreVideo"><?= $data[$i]->getTitle(); ?></a>
                                             </h4>
                                             <?php if ($data[$i]->getPrice() == 0) { ?>
                                                 <h5>Gratuit</h5>
@@ -44,10 +45,17 @@ ob_start(); ?>
                                         </div>
                                     </div>
                                 </div>
-                            <?php }
+                            <?php 
+                            }
                         }
+                        else
+                        { ?>
+                            <h2 class ="linear-wipe col-lg-12">Vous ne possedez aucune vidéos ! </h2>
+                        <?php
                         }
-                        ?>
+                    }
+                }
+                ?>
             </div>
             <!-- /.row -->
         </div>

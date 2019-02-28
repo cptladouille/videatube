@@ -345,12 +345,24 @@ function checkFormInscription()
                 $u = new userClass($dataUser);
                 $uM = new userManager();
                 $uM->add($u);
-            } catch (Exception $e) {
-                $_POST['alert'] = $e;
+                return true;
             }
-        } else {
-            $_POST['alert'] = "Erreur form inscription un des champs n'est pas rempli";
+            catch (Exception $e) 
+            {
+                $_POST['alert'] = $e;
+                return false;
+            }
+        } 
+        else 
+        {
+            $_POST['alert'] = "Un des champs n'est pas rempli correctement";
+            return false;
         }
+    } 
+    else 
+    {
+        $_POST['alert'] = "Un des champs n'est pas rempli";
+        return false;
     }
 }
 

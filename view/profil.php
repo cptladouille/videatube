@@ -114,11 +114,6 @@ ob_start();
                                    value='Changer le mot de passe'>
                         </div>
                     </form>
-                    <?php
-                    if (isset($_POST['alert'])) { ?>
-                        <div class="alert"><label><?= $_POST['alert']; ?></label></div>
-                        <?php
-                    } ?>
                 </div>
             </div>
 

@@ -38,9 +38,9 @@
         else
         { ?>
             <div class = "row linear-wipe-background">
-                <h3 class = "linear-wipe">Aucune vidéo trouvée !!</h3>
+                <h3 class = "linear-wipe col-lg-12">Aucune vidéo trouvée !!</h3>
                 <br>
-                <h3 class = "linear-wipe">Voici la liste des dernières vidéos gratuites !</h3>
+                <h3 class = "linear-wipe col-lg-12">Voici la liste des dernières vidéos gratuites !</h3>
             </div>
             <div class = "row">
             <?php

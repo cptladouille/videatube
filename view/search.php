@@ -5,7 +5,7 @@
         <?php require_once('./view/sideSearch.php'); ?>
     </div>
 
-    <div class="col-lg-8 colSearchVideo"  id="contentSearch">
+    <div class="col-lg-8"  id="contentSearch">
         <br>
         <div class = "row">
         <?php require_once('./view/contentSearch.php'); ?>
