@@ -54,7 +54,7 @@ function getVideo()
             }
         }
     } catch (Exception $e) {
-        $_SESSION['alert'] = $e;
+        $_POST['alert'] = $e;
     }
 
     require_once('view/video.php');
@@ -139,7 +139,7 @@ function getPurchase()
             require_once('view/purchase.php');
             return true;
         } else {
-            $_SESSION['alert'] = "Aucun abonnement selectionné";
+            $_POST['alert'] = "Aucun abonnement selectionné";
             return false;
         }
     } elseif (isset($_POST['purchase'])) {
@@ -150,7 +150,7 @@ function getPurchase()
             require_once('view/purchase.php');
             return true;
         } else {
-            $_SESSION['alert'] = "Aucune vidéo selectionnée";
+            $_POST['alert'] = "Aucune vidéo selectionnée";
             return false;
         }
     }
@@ -171,7 +171,7 @@ function purchaseItem()
                 $s = new subscriptionClass($dataSub);
                 $sM->add($s);
                 updateSession($_SESSION['userConnected']);
-                $_SESSION['info'] = "L'achat de l'abonnement a été effectué avec succès!";
+                $_POST['info'] = "L'achat de l'abonnement a été effectué avec succès!";
                 return 2;
             } elseif (isset($_POST['purchaseVideoId'])) {
                 $pM = new purchaseManager();
@@ -183,15 +183,15 @@ function purchaseItem()
                 $p = new purchaseClass($dataPurchase);
                 $pM->add($p);
                 $_GET['vId'] = $_POST['purchaseVideoId'];
-                $_SESSION['info'] = "L'achat de la vidéo a été effectué avec succès!";
+                $_POST['info'] = "L'achat de la vidéo a été effectué avec succès!";
                 return 1;
             } else {
-                $_SESSION['alert'] = "L'achat a échoué";
+                $_POST['alert'] = "L'achat a échoué";
                 return 0;
             }
         }
     } catch (Exception $e) {
-        $_SESSION['alert'] = $e;
+        $_POST['alert'] = $e;
     }
 
 }
@@ -300,10 +300,10 @@ function unsubUser()
             $user = $uM->get($_SESSION['userConnected']['id']);
             $s = $sM->getFromUser($user->getId());
             $sM->delete($s);
-            $_SESSION['info'] = "Vous avez mis fin a la période d'essai de votre abonnement";
+            $_POST['info'] = "Vous avez mis fin a la période d'essai de votre abonnement";
         }
     } catch (Exception $e) {
-        $_SESSION['alert'] = $e;
+        $_POST['alert'] = $e;
     }
 }
 
@@ -346,10 +346,10 @@ function checkFormInscription()
                 $uM = new userManager();
                 $uM->add($u);
             } catch (Exception $e) {
-                $_SESSION['alert'] = $e;
+                $_POST['alert'] = $e;
             }
         } else {
-            $_SESSION['alert'] = "Erreur form inscription un des champs n'est pas rempli";
+            $_POST['alert'] = "Erreur form inscription un des champs n'est pas rempli";
         }
     }
 }
@@ -371,7 +371,7 @@ function connectUser()
         if (preg_match("/[a-zA-Z0-9]/", $_POST['login'])) {
 
             if (isset($_SESSION['userConnected'])) {
-                $_SESSION['alert'] = "Vous êtes déja connecté";
+                $_POST['alert'] = "Vous êtes déja connecté";
                 return false;
             } else {
                 $uM = new userManager();
@@ -390,21 +390,24 @@ function connectUser()
                             'roleLabel' => attribRole($user->getLastname()),
                             'aboDate' => $sM->getAboDate($user->getId()),
                             'isSubscribed' => $sM->isSubscribed($user->getId()));
-                        $_SESSION['info'] = "Bienvenue, " . $_SESSION['userConnected']['nickname'] . "!";
+                        $_POST['info'] = "Bienvenue, " . $_SESSION['userConnected']['nickname'] . "!";
                         return true;
                     } else {
-                        $_SESSION['alert'] = 'Mauvaise combinaison mot de passe/Login';
+                        $_POST['alert'] = 'Mauvaise combinaison mot de passe/Login';
                         return false;
                     }
                 } else {
-                    $_SESSION['alert'] = "Aucun utilisateur n'existe avec ce login";
+                    $_POST['alert'] = "Aucun utilisateur n'existe avec ce login";
                     return false;
                 }
             }
         } else {
-            $_SESSION['alert'] = 'Veuillez entrez un login et un mot de passe correct';
+            $_POST['alert'] = 'Veuillez entrez un login et un mot de passe correct';
             return false;
         }
+    }else{
+        $_POST['alert'] = 'Veuillez entrez un login et un mot de passe correct';
+            return false;
     }
 }
 
@@ -430,10 +433,11 @@ function deleteAccount()
             $u = $uM->get($_SESSION['userConnected']['id']);
             $uM->delete($u);
             disconnectUser();
-            $_SESSION['info'] = "Votre compte a été supprimé";
+            $_POST['info'] = "Votre compte a été supprimé";
         }
     } catch (Exception $e) {
-        $_SESSION['alert'] = $e;
+        echo $e;
+        $_POST['alert'] = $e;
     }
 }
 
@@ -449,15 +453,15 @@ function checkFormPassword()
                 $uM->updatePassword($_SESSION['userConnected']['id'], $password);
             } catch (Exception $e) {
                 echo $e;
-                $_SESSION['alert'] = 'Impossible de modifier le mot de passe';
+                $_POST['alert'] = 'Impossible de modifier le mot de passe';
                 $_POST['editUserPassword'] = true;
             }
         } else {
-            $_SESSION['alert'] = 'Les deux mots de passes ne correspondent pas';
+            $_POST['alert'] = 'Les deux mots de passes ne correspondent pas';
             $_POST['editUserPassword'] = true;
         }
     } else {
-        $_SESSION['alert'] = 'Veuillez remplir des deux champs correctement';
+        $_POST['alert'] = 'Veuillez remplir des deux champs correctement';
         $_POST['editUserPassword'] = true;
     }
 
@@ -511,7 +515,7 @@ function checkFormEdit()
     } catch (Exception $e) {
         echo $e;
         $_POST['editUser'] = true;
-        $_SESSION['alert'] = 'Impossible de modifier les informations';
+        $_POST['alert'] = 'Impossible de modifier les informations';
     }
 }
 
@@ -522,7 +526,7 @@ function checkDatasForm($datas)
         $data = str_replace(" ", "", trim($data, " \t\n\r\0\x0B"));
         if ($key == 'mail') {
             if (!preg_match("#@#", $data)) {
-                $_SESSION['alert'] = "L'email n'est pas conforme";
+                $_POST['alert'] = "L'email n'est pas conforme";
                 $_POST['editUser'] = true;
                 return null;
             }
@@ -547,11 +551,11 @@ function disconnectUser()
 {
     try {
         //détruit les variables de session et donc deconnecte l'utilisateur
-        $_SESSION['info'] = "A bientôt, " . $_SESSION['userConnected']['nickname'] . "!";
+        $_POST['info'] = "A bientôt, " . $_SESSION['userConnected']['nickname'] . "!";
         $_SESSION = array();
         session_destroy();
     } catch (Excepction $e) {
-        $_SESSION['alert'] = $e;
+        $_POST['alert'] = $e;
     }
 
 }

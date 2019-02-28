@@ -1,10 +1,11 @@
 <?php $title = 'Acceuil';
 ob_start(); ?>
 
-    <div class="container"><?php if(isset($_SESSION['alert']))
+    <div class="container">
+    <?php if(isset($_POST['alert']))
     { ?>
         <div class="alert alert-danger alert-dismissible fade show" role="alert">
-            <strong>Erreur !</strong> <?= $_SESSION['alert']; ?>
+            <strong>Erreur !</strong> <?= $_POST['alert']; ?>
             <button  type="button" class="close" data-dismiss="alert" aria-label="Close" onclick="return getOutput();">
                 <span aria-hidden="true">&times;</span>
             </button>
@@ -12,10 +13,10 @@ ob_start(); ?>
     </div>
 
     <?php }
-    if(isset($_SESSION['info'])) 
+    if(isset($_POST['info'])) 
     { ?>
         <div class="alert alert-success alert-dismissible fade show" role="alert">
-            <strong>Info !</strong> <?= $_SESSION['info']; ?>
+            <strong>Info !</strong> <?= $_POST['info']; ?>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close" onclick="return getOutput();">
                 <span aria-hidden="true">&times;</span>
             </button>

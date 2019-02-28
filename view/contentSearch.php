@@ -37,10 +37,10 @@
         }
         else
         { ?>
-            <div class = "row">
-                <h3>Aucune vidéo trouvée pour l'argument de recherche : <?= $_POST['search'] ?></h3>
+            <div class = "row linear-wipe-background">
+                <h3 class = "linear-wipe">Aucune vidéo trouvée !!</h3>
                 <br>
-                <h3>Voici la liste des dernières vidéos gratuites !</h3>
+                <h3 class = "linear-wipe">Voici la liste des dernières vidéos gratuites !</h3>
             </div>
             <div class = "row">
             <?php

@@ -2,8 +2,8 @@
 -- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
--- Hôte : localhost
--- Généré le :  mer. 27 fév. 2019 à 15:59
+-- Hôte : 127.0.0.1
+-- Généré le :  mer. 27 fév. 2019 à 18:23
 -- Version du serveur :  10.1.37-MariaDB
 -- Version de PHP :  7.3.0
 
@@ -72,7 +72,6 @@ INSERT INTO `purchase` (`id`, `date_purchase`, `id_video`, `id_user`) VALUES
 (1, '2018-12-19', 4, 6),
 (2, '2018-12-19', 11, 6),
 (3, '2019-01-31', 13, 5),
-(4, '2019-02-01', 20, 16),
 (5, '2019-02-14', 20, 6),
 (6, '2019-02-27', 14, 4),
 (7, '2019-02-26', 4, 4);
@@ -175,9 +174,7 @@ INSERT INTO `user` (`id`, `lastname`, `firstname`, `mail`, `log`, `password`, `n
 (7, 'test', 'test', 'test@test.com', 'test', '$2y$10$I7RgwhVON.rSzQH96lZUBeK2KlZ.22070PSD6BaLvZj85jp4fnjZa', 'test', 0, ''),
 (8, 'trol', 'trol', 'trol', 'trol', '$2y$10$wizjiAs6ZifPKSOUG9Fn9.O/fyeqPFglkerDnQ/bLEjptLU4F3B4i', 'trol', 0, ''),
 (9, 'dems', 'dems', 'demsdems@gmail.com', 'dems67', '$2y$10$9e1V9HckHU7bF9/TtL1KmO5YFExgZkfK4OeghyWR1rpzkQ/awoBMK', 'dems²', 0, 'qs1.jpg'),
-(10, 'kevlagrongnasse', 'knitos', 'kevkev@gmail.com', 'keks', '$2y$10$2yZn0r71GxyudAdKRpHcneeqhGOZHRLsEXJJkpijMGif4mdiEPptm', 'Xxkevnamescope67xX', 0, 'keks.jpg'),
-(16, 'jb', 'jb', 'jb', 'jb', '$2y$10$Iwpy52XyE7iX9Zg6ThftWenBOGcFQynMVD/LnerkhPWS1mgIN.MSq', 'jb', 0, 'user.png'),
-(17, '', '', '', '', '$2y$10$a5v88SUAvJSDQq0bExoB2OinghKxa1omGa5tL.sePQIsPhcBcm6dy', '', 0, 'user.png');
+(10, 'kevlagrongnasse', 'knitos', 'kevkev@gmail.com', 'keks', '$2y$10$2yZn0r71GxyudAdKRpHcneeqhGOZHRLsEXJJkpijMGif4mdiEPptm', 'Xxkevnamescope67xX', 0, 'keks.jpg');
 
 -- --------------------------------------------------------
 
@@ -218,7 +215,7 @@ INSERT INTO `video` (`id`, `title`, `price`, `link`, `date_upload`, `thumbnail`,
 (16, 'Vidéos de chats à mourir de rire ', '0.00', 'https://www.youtube.com/embed/DD_QFvS7bzc', '2018-12-20', 'chatdrole.png', 0, 'Essayez de ne pas rire à ces videos'),
 (17, '5 Easy Mouse/Rat Trap', '0.00', 'https://www.youtube.com/embed/EDqAcM9FQRs', '2018-12-18', 'trap.png', 59, 'Piegez les souris avec ce tuto'),
 (18, 'TUTO COUPE DU MONDE', '1.99', 'https://www.youtube.com/embed/LvEA2KHWQec', '2018-12-18', 'tutocdm.png', 2018, 'Voici comment gagner la coupe du monde'),
-(20, 'Best of Oss 117', '12.00', 'best_of_oss_117.mp4', '2019-01-31', 'oss117.jpg', 42, 'le best of des meilleurs films de tout les temps');
+(20, 'Best of Oss 117', '12.00', 'best_of_oss_117.mp4', '2019-01-31', 'oss117.jpg', 44, 'le best of des meilleurs films de tout les temps');
 
 -- --------------------------------------------------------
 
@@ -330,7 +327,7 @@ ALTER TABLE `commentary`
 -- AUTO_INCREMENT pour la table `purchase`
 --
 ALTER TABLE `purchase`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT pour la table `subscription`
@@ -354,7 +351,7 @@ ALTER TABLE `type_subscription`
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT pour la table `video`
@@ -376,29 +373,29 @@ ALTER TABLE `videotheme`
 -- Contraintes pour la table `commentary`
 --
 ALTER TABLE `commentary`
-  ADD CONSTRAINT `fk_id_user_commentary` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`),
-  ADD CONSTRAINT `fk_id_video_commentary` FOREIGN KEY (`id_video`) REFERENCES `video` (`id`);
+  ADD CONSTRAINT `fk_id_user_commentary` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `fk_id_video_commentary` FOREIGN KEY (`id_video`) REFERENCES `video` (`id`) ON DELETE CASCADE;
 
 --
 -- Contraintes pour la table `purchase`
 --
 ALTER TABLE `purchase`
-  ADD CONSTRAINT `fk_id_user_purchase` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`),
-  ADD CONSTRAINT `fk_id_video_purchase` FOREIGN KEY (`id_video`) REFERENCES `video` (`id`);
+  ADD CONSTRAINT `fk_id_user_purchase` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `fk_id_video_purchase` FOREIGN KEY (`id_video`) REFERENCES `video` (`id`) ON DELETE CASCADE;
 
 --
 -- Contraintes pour la table `subscription`
 --
 ALTER TABLE `subscription`
-  ADD CONSTRAINT `fk_id_type_subscription_subscription` FOREIGN KEY (`id_type_subscription`) REFERENCES `type_subscription` (`id`),
-  ADD CONSTRAINT `fk_id_user_subscription` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`);
+  ADD CONSTRAINT `fk_id_type_subscription_subscription` FOREIGN KEY (`id_type_subscription`) REFERENCES `type_subscription` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `fk_id_user_subscription` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE CASCADE;
 
 --
 -- Contraintes pour la table `videotheme`
 --
 ALTER TABLE `videotheme`
-  ADD CONSTRAINT `fk_id_theme_videotheme` FOREIGN KEY (`id_theme`) REFERENCES `theme` (`id`),
-  ADD CONSTRAINT `fk_id_video_videotheme` FOREIGN KEY (`id_video`) REFERENCES `video` (`id`);
+  ADD CONSTRAINT `fk_id_theme_videotheme` FOREIGN KEY (`id_theme`) REFERENCES `theme` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `fk_id_video_videotheme` FOREIGN KEY (`id_video`) REFERENCES `video` (`id`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
