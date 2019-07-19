@@ -345,6 +345,7 @@ function checkFormInscription()
                 $u = new userClass($dataUser);
                 $uM = new userManager();
                 $uM->add($u);
+                $_POST['info'] = "Vous avez été inscris avec succès";
                 return true;
             }
             catch (Exception $e) 
